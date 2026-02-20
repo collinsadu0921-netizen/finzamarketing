@@ -30,10 +30,10 @@ export default function Home() {
         <Container>
           <div className="mx-auto max-w-[800px] space-y-8 text-center flex flex-col items-center">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl leading-tight">
-              Structured accounting for African operations.
+              Premium accounting built for Ghana.
             </h1>
             <p className="mx-auto max-w-[600px] text-lg text-zinc-600 sm:text-xl">
-              An immutable ledger system built for compliance, clarity, and scale—starting with Ghana.
+              Finza delivers structured, ledger-based accounting in a clean, intuitive environment designed for growing businesses.
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link
@@ -128,6 +128,9 @@ export default function Home() {
             <p className="text-lg text-zinc-600">
               Select the environment that matches your business model.
             </p>
+            <p className="text-sm font-medium text-zinc-500 pt-2 uppercase tracking-wide">
+              Professional-grade accounting without enterprise complexity
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -208,15 +211,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Immutable History</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">Every transaction is posted through a structured double-entry engine. Records cannot be silently altered.</p>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Structured Workflows</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Transactions follow strict double-entry logic. The system enforces clarity and balance without clutter.</p>
             </div>
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
               <h3 className="text-xl font-semibold text-zinc-900 mb-4">Regulatory Logic</h3>
               <p className="text-base text-zinc-600 leading-relaxed">Ghana tax logic including VAT, NHIL, and GETFund is embedded directly into transaction workflows.</p>
             </div>
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Operational Controls</h3>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Controlled Editing</h3>
               <p className="text-base text-zinc-600 leading-relaxed">Period locking, journal oversight, and accountant-level visibility ensure operational discipline.</p>
             </div>
           </div>
