@@ -50,7 +50,15 @@ export default function DemoPage() {
         // Simulate backend process and redirect
         setTimeout(() => {
             clearInterval(messageInterval);
-            router.push("/workspace-demo");
+
+            // Store demo session data
+            if (typeof window !== 'undefined') {
+                localStorage.setItem("finza_demo_workspace", selectedWorkspace);
+                localStorage.setItem("finza_demo_business", formData.businessName || "My Business");
+                localStorage.setItem("finza_demo_mode", "true");
+            }
+
+            router.push(`/workspace-demo/${selectedWorkspace}`);
         }, 2400);
     };
 
