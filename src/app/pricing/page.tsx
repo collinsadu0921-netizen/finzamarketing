@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PricingSection } from "@/components/pricing-section";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function PricingPage() {
     return (
         <main className="min-h-screen bg-background">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="py-24 bg-primary text-primary-foreground text-center">

@@ -1,11 +1,9 @@
-import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CheckCircle2, RotateCw, ShoppingCart, PieChart, Lock, Users, FileText, Briefcase, Calculator } from "lucide-react";
 
 export default function FeaturesPage() {
     return (
         <main className="min-h-screen bg-background">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="py-24 bg-primary text-primary-foreground text-center">

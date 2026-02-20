@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Link2, Users, FileBarChart, ShieldCheck } from "lucide-react";
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function AccountantsPage() {
     return (
         <main className="min-h-screen bg-background">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="py-24 md:py-32 bg-primary text-primary-foreground text-center relative overflow-hidden">
