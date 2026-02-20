@@ -1,35 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { Container } from "@/components/container";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Finza - Accurate Accounting. Automatically.",
-    template: "%s | Finza",
-  },
-  description: "Finza is a ledger-first accounting platform built for Ghanaian businesses. Automatic posting. Built-in VAT logic. Accountant-ready.",
-  openGraph: {
-    type: "website",
-    locale: "en_GH",
-    url: "https://finza.gh",
-    title: "Finza - Accurate Accounting. Automatically.",
-    description: "Finza is a ledger-first accounting platform built for Ghanaian businesses. Automatic posting. Built-in VAT logic. Accountant-ready.",
-    siteName: "Finza",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Finza - Accurate Accounting. Automatically.",
-    description: "Finza is a ledger-first accounting platform built for Ghanaian businesses. Automatic posting. Built-in VAT logic. Accountant-ready.",
-    creator: "@finzagh",
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  title: "Finza",
+  description: "Ledger-first accounting for Ghanaian businesses.",
 };
 
 export default function RootLayout({
@@ -39,10 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.className} antialiased h-full`}>
+        <Container>{children}</Container>
       </body>
     </html>
   );

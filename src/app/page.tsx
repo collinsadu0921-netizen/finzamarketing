@@ -1,29 +1,12 @@
-
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { Trust } from "@/components/trust";
-import { Problem } from "@/components/problem";
-
-import { Autoposting } from "@/components/autoposting";
-import { Ghana } from "@/components/ghana";
-import { Audience } from "@/components/audience";
-import { PricingSection } from "@/components/pricing-section";
-import { CTA } from "@/components/cta";
-import { Footer } from "@/components/footer";
-
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <Problem />
-      <Autoposting />
-      <Ghana />
-      <Audience />
-      <PricingSection />
-      <Trust />
-      <CTA />
-      <Footer />
+    <main className="flex flex-col items-center justify-center min-h-[80vh] text-center space-y-4">
+      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+        Finza
+      </h1>
+      <p className="text-lg text-zinc-600 sm:text-xl">
+        Ledger-first accounting for Ghanaian businesses.
+      </p>
     </main>
   );
 }
