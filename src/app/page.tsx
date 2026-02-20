@@ -80,6 +80,55 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      {/* How It Works Section */}
+      <section className="py-24 bg-zinc-50 border-t border-zinc-200">
+        <Container>
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              How Finza works
+            </h2>
+            <p className="text-lg text-zinc-600">
+              From transaction to financial clarity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                number: "01",
+                title: "Record",
+                description: "Create invoices, record expenses, or process sales.",
+              },
+              {
+                number: "02",
+                title: "Auto-post",
+                description: "Every action automatically posts to the double-entry ledger.",
+              },
+              {
+                number: "03",
+                title: "Report",
+                description: "Generate real-time financial statements and tax-ready reports.",
+              },
+            ].map((step) => (
+              <div
+                key={step.number}
+                className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm"
+              >
+                <div className="text-4xl font-bold text-zinc-200 mb-6">
+                  {step.number}
+                </div>
+                <h3 className="text-xl font-semibold text-zinc-900 mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-base text-zinc-600 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
     </main>
   );
 }
