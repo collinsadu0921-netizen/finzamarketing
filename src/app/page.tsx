@@ -135,6 +135,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">For Business Operators</p>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Retail Workspace</h3>
               <div className="mt-4 mb-2">
                 <span className="text-4xl font-bold text-zinc-900">150 GHS</span>
@@ -155,6 +156,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">For Business Operators</p>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Service Workspace</h3>
               <div className="mt-4 mb-2">
                 <span className="text-4xl font-bold text-zinc-900">150 GHS</span>
@@ -174,13 +176,17 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-700 bg-white shadow-sm">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest">For Accounting Professionals</p>
+                <span className="text-xs font-semibold text-zinc-700 bg-zinc-100 px-2 py-0.5 rounded">Professional Workspace</span>
+              </div>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Accountant Workspace</h3>
               <div className="mt-4 mb-2">
                 <span className="text-4xl font-bold text-zinc-900">300 GHS</span>
                 <span className="text-base font-medium text-zinc-600"> / month</span>
               </div>
-              <p className="text-sm text-zinc-600 mb-6">For independent financial controllers.</p>
+              <p className="text-sm text-zinc-600 mb-6">Oversee and manage multiple business workspaces from a single professional dashboard.</p>
               <ul className="mb-8 space-y-3 flex-1">
                 {["Client workspace management", "Period locking", "Journal controls", "Advanced reporting", "Ledger oversight tools"].map((feature) => (
                   <li key={feature} className="flex items-center text-sm text-zinc-600">
