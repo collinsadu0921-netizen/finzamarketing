@@ -30,23 +30,23 @@ export default function Home() {
         <Container>
           <div className="mx-auto max-w-[800px] space-y-8 text-center flex flex-col items-center">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl leading-tight">
-              Modern accounting infrastructure for serious African businesses.
+              Structured accounting for African operations.
             </h1>
             <p className="mx-auto max-w-[600px] text-lg text-zinc-600 sm:text-xl">
-              Finza is a ledger-first accounting system built for compliance, clarity, and scale — starting with Ghana.
+              An immutable ledger system built for compliance, clarity, and scale—starting with Ghana.
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link
                 href="/demo"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
               >
-                Start Free Demo
+                View Demo
               </Link>
               <Link
                 href="/how-it-works"
                 className="rounded-md bg-white px-6 py-3 text-base font-semibold text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors"
               >
-                See How It Works
+                System Workflow
               </Link>
             </div>
           </div>
@@ -58,27 +58,30 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Built differently from day one.
+              Engineered for control.
             </h2>
             <p className="text-lg text-zinc-600">
-              Finza is not a spreadsheet clone. It is financial infrastructure.
+              Finza enforces accounting standards at the source. It is not just a spreadsheet replacement.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="flex flex-col p-6 rounded-lg border border-zinc-200 bg-white shadow-sm"
-              >
-                <h3 className="text-lg font-semibold text-zinc-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-base text-zinc-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+            <div className="flex flex-col p-6 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-lg font-semibold text-zinc-900 mb-2">Double-entry core</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Every entry balances. Records are immutable.</p>
+            </div>
+            <div className="flex flex-col p-6 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-lg font-semibold text-zinc-900 mb-2">Local tax engine</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">VAT, levies, and withholding rules built into the workflow.</p>
+            </div>
+            <div className="flex flex-col p-6 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-lg font-semibold text-zinc-900 mb-2">Accountant oversight</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Tools for audit capability, review, and period locking.</p>
+            </div>
+            <div className="flex flex-col p-6 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-lg font-semibold text-zinc-900 mb-2">Scalable architecture</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Designed to support high-volume data and multiple users.</p>
+            </div>
           </div>
         </Container>
       </section>
@@ -88,46 +91,29 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              How Finza works
+              Operational Workflow
             </h2>
             <p className="text-lg text-zinc-600">
-              From transaction to financial clarity.
+              Automated logic from input to reporting.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                number: "01",
-                title: "Record",
-                description: "Create invoices, record expenses, or process sales.",
-              },
-              {
-                number: "02",
-                title: "Auto-post",
-                description: "Every action automatically posts to the double-entry ledger.",
-              },
-              {
-                number: "03",
-                title: "Report",
-                description: "Generate real-time financial statements and tax-ready reports.",
-              },
-            ].map((step) => (
-              <div
-                key={step.number}
-                className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm"
-              >
-                <div className="text-4xl font-bold text-zinc-200 mb-6">
-                  {step.number}
-                </div>
-                <h3 className="text-xl font-semibold text-zinc-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-base text-zinc-600 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <div className="text-4xl font-bold text-zinc-200 mb-6">01</div>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-3">Record</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Record invoices, sales, or expenses.</p>
+            </div>
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <div className="text-4xl font-bold text-zinc-200 mb-6">02</div>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-3">Process</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">The engine handles debits, credits, and tax calculations.</p>
+            </div>
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <div className="text-4xl font-bold text-zinc-200 mb-6">03</div>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-3">Report</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Generate standard financial statements instantly.</p>
+            </div>
           </div>
         </Container>
       </section>
@@ -137,93 +123,73 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Choose Your Workspace
+              Workspace Options
             </h2>
             <p className="text-lg text-zinc-600">
-              Finza is one platform with specialized environments for different business needs.
+              Select the environment that matches your business model.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Retail Workspace",
-                price: "150 GHS",
-                description: "Built for retail stores and inventory-driven businesses.",
-                features: [
-                  "Sales & POS tracking",
-                  "Inventory management",
-                  "VAT handling",
-                  "Auto-posting ledger",
-                  "Financial reports",
-                ],
-                cta: "Start Retail Demo",
-              },
-              {
-                title: "Service Workspace",
-                price: "150 GHS",
-                description: "Designed for service businesses and growing SMEs.",
-                features: [
-                  "Invoicing & billing",
-                  "Expense management",
-                  "VAT logic",
-                  "Auto-posting ledger",
-                  "Financial reports",
-                ],
-                cta: "Start Service Demo",
-              },
-              {
-                title: "Accountant Workspace",
-                price: "300 GHS",
-                description: "For accountants managing multiple businesses.",
-                features: [
-                  "Client workspace management",
-                  "Period locking",
-                  "Journal controls",
-                  "Advanced reporting",
-                  "Ledger oversight tools",
-                ],
-                cta: "Start Accountant Demo",
-              },
-            ].map((plan) => (
-              <div
-                key={plan.title}
-                className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm"
-              >
-                <h3 className="text-xl font-semibold text-zinc-900 mb-2">
-                  {plan.title}
-                </h3>
-                <div className="mt-4 mb-2">
-                  <span className="text-4xl font-bold text-zinc-900">{plan.price}</span>
-                  <span className="text-base font-medium text-zinc-600"> / month</span>
-                </div>
-                <p className="text-sm text-zinc-600 mb-6">{plan.description}</p>
-
-                <ul className="mb-8 space-y-3 flex-1">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm text-zinc-600">
-                      <svg
-                        className="h-5 w-5 text-zinc-900 mr-3 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/demo"
-                  className="w-full rounded-md bg-[#0F172A] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
-                >
-                  {plan.cta}
-                </Link>
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Retail Workspace</h3>
+              <div className="mt-4 mb-2">
+                <span className="text-4xl font-bold text-zinc-900">150 GHS</span>
+                <span className="text-base font-medium text-zinc-600"> / month</span>
               </div>
-            ))}
+              <p className="text-sm text-zinc-600 mb-6">For high-volume inventory and sales.</p>
+              <ul className="mb-8 space-y-3 flex-1">
+                {["Sales & POS tracking", "Inventory management", "VAT handling", "Auto-posting ledger", "Financial reports"].map((feature) => (
+                  <li key={feature} className="flex items-center text-sm text-zinc-600">
+                    <svg className="h-5 w-5 text-zinc-900 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/demo" className="w-full rounded-md bg-[#0F172A] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors">
+                Retail Demo
+              </Link>
+            </div>
+
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Service Workspace</h3>
+              <div className="mt-4 mb-2">
+                <span className="text-4xl font-bold text-zinc-900">150 GHS</span>
+                <span className="text-base font-medium text-zinc-600"> / month</span>
+              </div>
+              <p className="text-sm text-zinc-600 mb-6">For agencies, consultants, and service providers.</p>
+              <ul className="mb-8 space-y-3 flex-1">
+                {["Invoicing & billing", "Expense management", "VAT logic", "Auto-posting ledger", "Financial reports"].map((feature) => (
+                  <li key={feature} className="flex items-center text-sm text-zinc-600">
+                    <svg className="h-5 w-5 text-zinc-900 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/demo" className="w-full rounded-md bg-[#0F172A] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors">
+                Service Demo
+              </Link>
+            </div>
+
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Accountant Workspace</h3>
+              <div className="mt-4 mb-2">
+                <span className="text-4xl font-bold text-zinc-900">300 GHS</span>
+                <span className="text-base font-medium text-zinc-600"> / month</span>
+              </div>
+              <p className="text-sm text-zinc-600 mb-6">For independent financial controllers.</p>
+              <ul className="mb-8 space-y-3 flex-1">
+                {["Client workspace management", "Period locking", "Journal controls", "Advanced reporting", "Ledger oversight tools"].map((feature) => (
+                  <li key={feature} className="flex items-center text-sm text-zinc-600">
+                    <svg className="h-5 w-5 text-zinc-900 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/demo" className="w-full rounded-md bg-[#0F172A] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors">
+                Accountant Demo
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
@@ -233,40 +199,26 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Built for financial integrity.
+              Audit-ready infrastructure.
             </h2>
             <p className="text-lg text-zinc-600">
-              Finza is engineered for accuracy, compliance, and long-term reliability.
+              Engineered for compliance and protection.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                title: "Immutable Ledger Core",
-                description: "Every transaction is posted through a structured double-entry engine. Records cannot be silently altered or rewritten.",
-              },
-              {
-                title: "Compliance by Design",
-                description: "Ghana tax logic including VAT, NHIL, and GETFund is embedded directly into transaction workflows.",
-              },
-              {
-                title: "Structured Controls",
-                description: "Period locking, journal oversight, and accountant-level visibility ensure operational discipline.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm"
-              >
-                <h3 className="text-xl font-semibold text-zinc-900 mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-base text-zinc-600 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Immutable History</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Every transaction is posted through a structured double-entry engine. Records cannot be silently altered.</p>
+            </div>
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Regulatory Logic</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Ghana tax logic including VAT, NHIL, and GETFund is embedded directly into transaction workflows.</p>
+            </div>
+            <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Operational Controls</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">Period locking, journal oversight, and accountant-level visibility ensure operational discipline.</p>
+            </div>
           </div>
 
           <div className="text-center">
@@ -276,6 +228,7 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-white border-t border-zinc-200">
         <Container>
@@ -291,21 +244,21 @@ export default function Home() {
           <div className="max-w-2xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Is Finza a replacement for my accountant?</AccordionTrigger>
+                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
                 <AccordionContent>
                   No. Finza is built to work alongside accountants. The Accountant Workspace is designed to improve collaboration and oversight.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>Can I switch from Excel or another accounting system?</AccordionTrigger>
+                <AccordionTrigger>Is migration difficult?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is designed for structured migration. Your business data can be imported and organized into the ledger system.
+                  No. Finza is designed for structured migration. Your business data can be imported and organized into the ledger system.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Is my financial data secure?</AccordionTrigger>
+                <AccordionTrigger>How is data integrity protected?</AccordionTrigger>
                 <AccordionContent>
-                  Finza uses structured ledger logic and controlled workflows to protect data integrity. Records are not silently editable.
+                  Finza uses structured ledger logic and controlled workflows. Records are not silently editable.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
@@ -315,7 +268,7 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger>Do I need accounting knowledge to use Finza?</AccordionTrigger>
+                <AccordionTrigger>Do I need accounting knowledge?</AccordionTrigger>
                 <AccordionContent>
                   No. Daily operations are simple. The system handles posting logic automatically.
                 </AccordionContent>
@@ -324,22 +277,23 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
       {/* Final CTA Section */}
       <section className="py-24 bg-zinc-50 border-t border-zinc-200 text-center">
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Ready to run your business with structure?
+              Structure your financial operations.
             </h2>
             <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
-              Choose your workspace and experience ledger-first accounting built for growth.
+              Start with a system built for clarity.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/demo"
                 className="rounded-md bg-[#0F172A] px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors w-full sm:w-auto"
               >
-                Start Free Demo
+                View Demo
               </Link>
               <Link
                 href="/contact"
@@ -348,6 +302,61 @@ export default function Home() {
                 Contact Sales
               </Link>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Positioning Section */}
+      <section className="py-20 bg-white border-t border-zinc-200">
+        <Container>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
+              Who Finza is built for
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16 relative">
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-zinc-200 -translate-x-1/2" aria-hidden="true" />
+
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-4">Finza is for:</h3>
+              <ul className="space-y-4">
+                {[
+                  "Retail businesses with structured sales operations",
+                  "Service businesses that require clean financial records",
+                  "Accountants managing multiple clients",
+                  "Businesses preparing for growth or external oversight"
+                ].map((item) => (
+                  <li key={item} className="flex items-start text-zinc-600">
+                    <svg className="h-6 w-6 text-zinc-900 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-4">Finza is not for:</h3>
+              <ul className="space-y-4">
+                {[
+                  "Hobby projects",
+                  "Personal budgeting",
+                  "Businesses avoiding structured accounting",
+                  "Short-term bookkeeping shortcuts"
+                ].map((item) => (
+                  <li key={item} className="flex items-start text-zinc-600">
+                    <svg className="h-6 w-6 text-zinc-400 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center pt-8 border-t border-zinc-100">
+            <p className="text-lg font-medium text-zinc-900">
+              “Finza is accounting infrastructure, not a spreadsheet replacement.”
+            </p>
           </div>
         </Container>
       </section>
