@@ -324,6 +324,35 @@ export default function Home() {
           </div>
         </Container>
       </section>
+      {/* Final CTA Section */}
+      <section className="py-24 bg-zinc-50 border-t border-zinc-200 text-center">
+        <Container>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              Ready to run your business with structure?
+            </h2>
+            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
+              Choose your workspace and experience ledger-first accounting built for growth.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/demo"
+                className="rounded-md bg-[#0F172A] px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors w-full sm:w-auto"
+              >
+                Start Free Demo
+              </Link>
+              <Link
+                href="/contact"
+                className="text-base font-semibold text-zinc-900 hover:text-zinc-700 transition-colors"
+              >
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <Footer />
     </main>
   );
 }
