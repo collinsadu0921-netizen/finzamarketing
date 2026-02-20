@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   const features = [
@@ -131,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-white border-t border-zinc-200">
+      <section id="pricing" className="py-24 bg-white border-t border-zinc-200">
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
@@ -222,6 +224,103 @@ export default function Home() {
                 </Link>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Trust & Infrastructure Section */}
+      <section className="py-24 bg-white border-t border-zinc-200">
+        <Container>
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              Built for financial integrity.
+            </h2>
+            <p className="text-lg text-zinc-600">
+              Finza is engineered for accuracy, compliance, and long-term reliability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "Immutable Ledger Core",
+                description: "Every transaction is posted through a structured double-entry engine. Records cannot be silently altered or rewritten.",
+              },
+              {
+                title: "Compliance by Design",
+                description: "Ghana tax logic including VAT, NHIL, and GETFund is embedded directly into transaction workflows.",
+              },
+              {
+                title: "Structured Controls",
+                description: "Period locking, journal oversight, and accountant-level visibility ensure operational discipline.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm"
+              >
+                <h3 className="text-xl font-semibold text-zinc-900 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-base text-zinc-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-lg font-medium text-zinc-500 italic">
+              “Financial software should protect your numbers — not manipulate them.”
+            </p>
+          </div>
+        </Container>
+      </section>
+      {/* FAQ Section */}
+      <section className="py-24 bg-white border-t border-zinc-200">
+        <Container>
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-zinc-600">
+              Clear answers before you commit.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Is Finza a replacement for my accountant?</AccordionTrigger>
+                <AccordionContent>
+                  No. Finza is built to work alongside accountants. The Accountant Workspace is designed to improve collaboration and oversight.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Can I switch from Excel or another accounting system?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Finza is designed for structured migration. Your business data can be imported and organized into the ledger system.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Is my financial data secure?</AccordionTrigger>
+                <AccordionContent>
+                  Finza uses structured ledger logic and controlled workflows to protect data integrity. Records are not silently editable.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Can I upgrade workspaces later?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Businesses can switch or add workspaces as operational needs grow.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Do I need accounting knowledge to use Finza?</AccordionTrigger>
+                <AccordionContent>
+                  No. Daily operations are simple. The system handles posting logic automatically.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </Container>
       </section>

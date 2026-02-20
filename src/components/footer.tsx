@@ -1,40 +1,57 @@
+import Link from "next/link";
+import { Container } from "@/components/container";
+
 export function Footer() {
     return (
-        <footer className="py-12 border-t bg-muted/20">
-            <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 className="font-bold mb-4 text-primary text-lg">Finza</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                        Automated accounting for modern businesses in Ghana.
+        <footer className="bg-zinc-50 border-t border-zinc-200 text-left">
+            <Container className="py-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    {/* Column 1 */}
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-bold text-zinc-900">Finza</h3>
+                        <p className="text-sm text-zinc-600 leading-relaxed">
+                            Ledger-first accounting for modern African businesses.
+                        </p>
+                    </div>
+
+                    {/* Column 2 */}
+                    <div>
+                        <h4 className="font-semibold text-zinc-900 mb-4">Product</h4>
+                        <ul className="space-y-3 text-sm text-zinc-600">
+                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">Retail Workspace</Link></li>
+                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">Service Workspace</Link></li>
+                            <li><Link href="/accountants" className="hover:text-zinc-900 transition-colors">Accountant Workspace</Link></li>
+                            <li><Link href="/#pricing" className="hover:text-zinc-900 transition-colors">Pricing</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Column 3 */}
+                    <div>
+                        <h4 className="font-semibold text-zinc-900 mb-4">Company</h4>
+                        <ul className="space-y-3 text-sm text-zinc-600">
+                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">About</Link></li>
+                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Security</Link></li>
+                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Contact</Link></li>
+                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Terms</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Column 4 */}
+                    <div>
+                        <h4 className="font-semibold text-zinc-900 mb-4">Legal</h4>
+                        <ul className="space-y-3 text-sm text-zinc-600">
+                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Terms of Service</Link></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="mt-16 pt-8 border-t border-zinc-200 text-center">
+                    <p className="text-sm text-zinc-500">
+                        &copy; 2026 Finza. All rights reserved.
                     </p>
                 </div>
-                <div>
-                    <h4 className="font-semibold mb-3 text-primary">Product</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li><a href="/features" className="hover:text-primary transition-colors">Features</a></li>
-                        <li><a href="/pricing" className="hover:text-primary transition-colors">Pricing</a></li>
-                        <li><a href="/accountants" className="hover:text-primary transition-colors">For Accountants</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="font-semibold mb-3 text-primary">Company</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-                        <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="font-semibold mb-3 text-primary">Legal</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div className="container mx-auto px-6 mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} Finza. All rights reserved.
-            </div>
+            </Container>
         </footer>
     );
 }
