@@ -32,6 +32,32 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Dashboard screenshot */}
+          <div className="mt-16 mx-auto max-w-5xl">
+            <div className="rounded-xl overflow-hidden border border-zinc-200 shadow-2xl ring-1 ring-zinc-900/5">
+              {/* Browser chrome bar */}
+              <div className="bg-zinc-100 border-b border-zinc-200 px-4 py-3 flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-zinc-300" />
+                  <div className="w-3 h-3 rounded-full bg-zinc-300" />
+                  <div className="w-3 h-3 rounded-full bg-zinc-300" />
+                </div>
+                <div className="flex-1 mx-4">
+                  <div className="bg-white rounded border border-zinc-200 px-3 py-1 text-xs text-zinc-400 text-center max-w-xs mx-auto">
+                    app.finza.gh/workspace/service
+                  </div>
+                </div>
+              </div>
+              {/* Screenshot */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/dashboard-service.png"
+                alt="Finza Service Workspace dashboard showing revenue, expenses, net profit, and recent invoices"
+                className="w-full block"
+              />
+            </div>
+          </div>
         </Container>
       </section>
 
