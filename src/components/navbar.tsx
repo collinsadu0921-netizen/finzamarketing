@@ -44,12 +44,6 @@ export function Navbar() {
                         >
                             Login
                         </a>
-                        <a
-                            href="https://app.finza.africa"
-                            className="rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors"
-                        >
-                            Create Account
-                        </a>
                         <Link
                             href="/demo"
                             className="rounded-md bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
@@ -90,13 +84,6 @@ export function Navbar() {
                                 onClick={() => setIsOpen(false)}
                             >
                                 Login
-                            </a>
-                            <a
-                                href="https://app.finza.africa"
-                                className="rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 text-center"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Create Account
                             </a>
                             <Link
                                 href="/demo"
