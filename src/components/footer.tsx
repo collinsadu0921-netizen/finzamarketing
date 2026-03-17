@@ -32,7 +32,7 @@ export function Footer() {
                             <li><Link href="/features" className="hover:text-zinc-900 transition-colors">About</Link></li>
                             <li><Link href="/features#security" className="hover:text-zinc-900 transition-colors">Security</Link></li>
                             <li>
-                                <a href="mailto:hello@finza.gh" className="hover:text-zinc-900 transition-colors">
+                                <a href="mailto:hello@finza.africa" className="hover:text-zinc-900 transition-colors">
                                     Contact
                                 </a>
                             </li>

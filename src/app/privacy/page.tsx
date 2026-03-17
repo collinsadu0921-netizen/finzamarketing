@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "Finza Privacy Policy — how we collect, use, and protect your data.",
     alternates: {
-        canonical: "https://finza.gh/privacy",
+        canonical: "https://finza.africa/privacy",
     },
 };
 
@@ -61,8 +61,8 @@ export default function PrivacyPage() {
                             <h2 className="text-xl font-semibold text-zinc-900">5. Contact Us</h2>
                             <p>
                                 For privacy-related inquiries, contact us at{" "}
-                                <a href="mailto:hello@finza.gh" className="text-zinc-900 font-medium underline underline-offset-2">
-                                    hello@finza.gh
+                                <a href="mailto:hello@finza.africa" className="text-zinc-900 font-medium underline underline-offset-2">
+                                    hello@finza.africa
                                 </a>.
                             </p>
                         </section>

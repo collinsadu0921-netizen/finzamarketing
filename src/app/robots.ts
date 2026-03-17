@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ["/private/", "/workspace-demo/"],
             },
         ],
-        sitemap: "https://finza.gh/sitemap.xml",
+        sitemap: "https://finza.africa/sitemap.xml",
     };
 }

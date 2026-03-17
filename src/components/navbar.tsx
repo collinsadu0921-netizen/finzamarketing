@@ -39,13 +39,13 @@ export function Navbar() {
 
                     <div className="flex items-center gap-3">
                         <a
-                            href="https://app.finza.gh/login"
+                            href="https://app.finza.africa"
                             className="text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors"
                         >
                             Login
                         </a>
                         <a
-                            href="https://app.finza.gh/signup"
+                            href="https://app.finza.africa"
                             className="rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors"
                         >
                             Create Account
@@ -85,14 +85,14 @@ export function Navbar() {
                         <hr className="border-zinc-100" />
                         <div className="flex flex-col gap-3 pt-2">
                             <a
-                                href="https://app.finza.gh/login"
+                                href="https://app.finza.africa"
                                 className="text-sm font-medium text-zinc-500 hover:text-zinc-900 py-2"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Login
                             </a>
                             <a
-                                href="https://app.finza.gh/signup"
+                                href="https://app.finza.africa"
                                 className="rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 text-center"
                                 onClick={() => setIsOpen(false)}
                             >

@@ -59,7 +59,7 @@ export default function ServiceDemoPage() {
                             <p className="text-zinc-400 text-xs mt-0.5">Create a free account to set up your real workspace with your own data.</p>
                         </div>
                         <a
-                            href="https://app.finza.gh/signup"
+                            href="https://app.finza.africa"
                             className="shrink-0 rounded-md bg-white text-[#0F172A] px-4 py-2 text-sm font-semibold hover:bg-zinc-100 transition-colors text-center"
                         >
                             Create Account →
@@ -87,7 +87,7 @@ export default function ServiceDemoPage() {
                                 Back to site
                             </Link>
                             <a
-                                href="https://app.finza.gh/signup"
+                                href="https://app.finza.africa"
                                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0F172A]/90 transition-colors"
                             >
                                 Get Started

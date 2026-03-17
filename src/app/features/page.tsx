@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description:
         "Explore Finza's full feature set — auto-posting engine, Ghana VAT logic, financial reports, multi-user roles, and period locking. Built for African businesses.",
     alternates: {
-        canonical: "https://finza.gh/features",
+        canonical: "https://finza.africa/features",
     },
 };
 

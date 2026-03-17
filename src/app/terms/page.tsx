@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Terms of Service",
     description: "Finza Terms of Service — the rules that govern your use of the Finza platform.",
     alternates: {
-        canonical: "https://finza.gh/terms",
+        canonical: "https://finza.africa/terms",
     },
 };
 
@@ -46,8 +46,8 @@ export default function TermsPage() {
                                 You are responsible for maintaining the confidentiality of your account credentials and
                                 for all activity that occurs under your account. Notify us immediately of any unauthorized
                                 access at{" "}
-                                <a href="mailto:hello@finza.gh" className="text-zinc-900 font-medium underline underline-offset-2">
-                                    hello@finza.gh
+                                <a href="mailto:hello@finza.africa" className="text-zinc-900 font-medium underline underline-offset-2">
+                                    hello@finza.africa
                                 </a>.
                             </p>
                         </section>
@@ -73,8 +73,8 @@ export default function TermsPage() {
                             <h2 className="text-xl font-semibold text-zinc-900">6. Contact</h2>
                             <p>
                                 For terms-related inquiries, contact us at{" "}
-                                <a href="mailto:hello@finza.gh" className="text-zinc-900 font-medium underline underline-offset-2">
-                                    hello@finza.gh
+                                <a href="mailto:hello@finza.africa" className="text-zinc-900 font-medium underline underline-offset-2">
+                                    hello@finza.africa
                                 </a>.
                             </p>
                         </section>

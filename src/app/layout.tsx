@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const BASE_URL = "https://finza.gh";
+const BASE_URL = "https://finza.africa";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -76,6 +76,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased h-full`}>
+        {/* ── Announcement Bar ── */}
+        <div className="w-full bg-[#0F172A] text-white text-center py-2.5 px-4 text-sm font-medium">
+          <span className="mr-2">🎉</span>
+          <span>
+            <strong>Early Access:</strong> First 50 users get{" "}
+            <strong>1 month free</strong> — no card required.
+          </span>
+          <a
+            href="https://app.finza.africa"
+            className="ml-3 underline underline-offset-2 font-semibold hover:text-zinc-300 transition-colors"
+          >
+            Claim your spot →
+          </a>
+        </div>
         <Navbar />
         {children}
       </body>

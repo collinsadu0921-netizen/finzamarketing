@@ -24,40 +24,18 @@ export default function Home() {
               >
                 View Demo
               </Link>
-              <Link
-                href="#pricing"
+              <a
+                href="https://app.finza.africa"
                 className="rounded-md bg-white px-6 py-3 text-base font-semibold text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors"
               >
-                See Pricing
-              </Link>
+                Get Started Free
+              </a>
             </div>
+            <p className="text-sm text-zinc-500">
+              🎉 First 50 users get <strong className="text-zinc-700">1 month free</strong> — no card required.
+            </p>
           </div>
 
-          {/* Dashboard screenshot */}
-          <div className="mt-16 mx-auto max-w-5xl">
-            <div className="rounded-xl overflow-hidden border border-zinc-200 shadow-2xl ring-1 ring-zinc-900/5">
-              {/* Browser chrome bar */}
-              <div className="bg-zinc-100 border-b border-zinc-200 px-4 py-3 flex items-center gap-2">
-                <div className="flex items-center gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-zinc-300" />
-                  <div className="w-3 h-3 rounded-full bg-zinc-300" />
-                  <div className="w-3 h-3 rounded-full bg-zinc-300" />
-                </div>
-                <div className="flex-1 mx-4">
-                  <div className="bg-white rounded border border-zinc-200 px-3 py-1 text-xs text-zinc-400 text-center max-w-xs mx-auto">
-                    app.finza.gh/workspace/service
-                  </div>
-                </div>
-              </div>
-              {/* Screenshot */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/dashboard-service.png"
-                alt="Finza Service Workspace dashboard showing revenue, expenses, net profit, and recent invoices"
-                className="w-full block"
-              />
-            </div>
-          </div>
         </Container>
       </section>
 
@@ -158,12 +136,16 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Retail */}
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
-              <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">For Business Operators</p>
-              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Retail Workspace</h3>
-              <div className="mt-4 mb-2">
-                <span className="text-4xl font-bold text-zinc-900">250 GHS</span>
-                <span className="text-base font-medium text-zinc-600"> / month</span>
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest">For Business Operators</p>
+                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">1 Month Free</span>
               </div>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Retail Workspace</h3>
+              <div className="mt-4 mb-1 flex items-baseline gap-2">
+                <span className="text-4xl font-bold text-zinc-900">250 GHS</span>
+                <span className="text-base font-medium text-zinc-600">/ month</span>
+              </div>
+              <p className="text-sm font-medium text-emerald-600 mb-4">First month on us — no card needed</p>
               <p className="text-sm text-zinc-600 mb-6">For inventory-based businesses and point-of-sale operations.</p>
               <ul className="mb-8 space-y-3 flex-1">
                 {["Sales & POS tracking", "Inventory management", "VAT handling", "Automated ledger posting", "Financial reporting"].map((feature) => (
@@ -180,12 +162,16 @@ export default function Home() {
 
             {/* Service */}
             <div className="flex flex-col p-8 rounded-lg border border-zinc-200 bg-white shadow-sm">
-              <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">For Business Operators</p>
-              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Service Workspace</h3>
-              <div className="mt-4 mb-2">
-                <span className="text-4xl font-bold text-zinc-900">200 GHS</span>
-                <span className="text-base font-medium text-zinc-600"> / month</span>
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest">For Business Operators</p>
+                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">1 Month Free</span>
               </div>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Service Workspace</h3>
+              <div className="mt-4 mb-1 flex items-baseline gap-2">
+                <span className="text-4xl font-bold text-zinc-900">200 GHS</span>
+                <span className="text-base font-medium text-zinc-600">/ month</span>
+              </div>
+              <p className="text-sm font-medium text-emerald-600 mb-4">First month on us — no card needed</p>
               <p className="text-sm text-zinc-600 mb-6">For consultants, agencies, and service providers.</p>
               <ul className="mb-8 space-y-3 flex-1">
                 {["Invoicing & billing", "Expense tracking", "VAT logic", "Automated ledger posting", "Financial reporting"].map((feature) => (
@@ -204,13 +190,17 @@ export default function Home() {
             <div className="flex flex-col p-8 rounded-lg border border-zinc-700 bg-white shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest">For Accounting Professionals</p>
-                <span className="text-xs font-semibold text-zinc-700 bg-zinc-100 px-2 py-0.5 rounded">Professional Workspace</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">1 Month Free</span>
+                  <span className="text-xs font-semibold text-zinc-700 bg-zinc-100 px-2 py-0.5 rounded">Professional</span>
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Accountant Workspace</h3>
-              <div className="mt-4 mb-2">
+              <div className="mt-4 mb-1 flex items-baseline gap-2">
                 <span className="text-4xl font-bold text-zinc-900">700 GHS</span>
-                <span className="text-base font-medium text-zinc-600"> / month</span>
+                <span className="text-base font-medium text-zinc-600">/ month</span>
               </div>
+              <p className="text-sm font-medium text-emerald-600 mb-4">First month on us — no card needed</p>
               <p className="text-sm text-zinc-600 mb-6">For accounting professionals managing multiple businesses.</p>
               <ul className="mb-8 space-y-3 flex-1">
                 {["Client workspace oversight", "Period locking", "Journal review controls", "Advanced reporting"].map((feature) => (
@@ -346,7 +336,7 @@ export default function Home() {
                 View Demo
               </Link>
               <a
-                href="https://app.finza.gh"
+                href="https://app.finza.africa"
                 className="text-base font-semibold text-zinc-900 hover:text-zinc-700 transition-colors"
               >
                 Start Workspace

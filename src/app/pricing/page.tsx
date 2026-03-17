@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description:
         "Simple, transparent pricing for Finza workspaces. Retail and Service at 150 GHS/month. Accountant Workspace at 300 GHS/month. No hidden fees.",
     alternates: {
-        canonical: "https://finza.gh/pricing",
+        canonical: "https://finza.africa/pricing",
     },
 };
 
