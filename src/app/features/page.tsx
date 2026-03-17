@@ -69,33 +69,13 @@ export default function FeaturesPage() {
                             <li className="flex items-center gap-3"><Calculator className="w-5 h-5 text-primary" /> GRA-ready reports</li>
                         </ul>
                     </div>
-                    <div className="relative aspect-video bg-white rounded-2xl border shadow-lg overflow-hidden flex items-center justify-center p-8">
-                        <div className="w-full space-y-4">
-                            <div className="flex justify-between items-center border-b pb-2">
-                                <span className="font-semibold text-primary">Subtotal</span>
-                                <span>GH₵ 1,000.00</span>
-                            </div>
-                            <div className="flex justify-between items-center text-sm text-muted-foreground">
-                                <span>NHIL (2.5%)</span>
-                                <span>GH₵ 25.00</span>
-                            </div>
-                            <div className="flex justify-between items-center text-sm text-muted-foreground">
-                                <span>GETFund (2.5%)</span>
-                                <span>GH₵ 25.00</span>
-                            </div>
-                            <div className="flex justify-between items-center text-sm text-muted-foreground">
-                                <span>COVID-19 (1%)</span>
-                                <span>GH₵ 10.00</span>
-                            </div>
-                            <div className="flex justify-between items-center text-sm text-muted-foreground">
-                                <span>VAT (12.5%)</span>
-                                <span>GH₵ 159.00</span> // (1000+25+25+10 * 15%) simplified for mock
-                            </div>
-                            <div className="flex justify-between items-center border-t pt-2 font-bold text-primary text-lg">
-                                <span>Total</span>
-                                <span>GH₵ 1,219.00</span>
-                            </div>
-                        </div>
+                    <div className="rounded-2xl border shadow-lg overflow-hidden bg-white">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="/report-vat.png"
+                            alt="Finza VAT Control Report — showing Opening Balance, VAT Collected, VAT Reversed and Closing Balance"
+                            className="w-full block"
+                        />
                     </div>
                 </div>
             </section>
