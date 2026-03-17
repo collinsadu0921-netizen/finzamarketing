@@ -45,7 +45,7 @@ export function Navbar() {
                             Login
                         </a>
                         <a
-                            href="https://app.finza.africa"
+                            href="https://app.finza.africa/signup"
                             className="rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors"
                         >
                             Sign Up
@@ -92,7 +92,7 @@ export function Navbar() {
                                 Login
                             </a>
                             <a
-                                href="https://app.finza.africa"
+                                href="https://app.finza.africa/signup"
                                 className="rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 text-center"
                                 onClick={() => setIsOpen(false)}
                             >

@@ -25,7 +25,7 @@ export default function Home() {
                 View Demo
               </Link>
               <a
-                href="https://app.finza.africa"
+                href="https://app.finza.africa/signup"
                 className="rounded-md bg-white px-6 py-3 text-base font-semibold text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors"
               >
                 Get Started Free
@@ -336,7 +336,7 @@ export default function Home() {
                 View Demo
               </Link>
               <a
-                href="https://app.finza.africa"
+                href="https://app.finza.africa/signup"
                 className="text-base font-semibold text-zinc-900 hover:text-zinc-700 transition-colors"
               >
                 Start Workspace

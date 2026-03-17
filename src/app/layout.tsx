@@ -84,7 +84,7 @@ export default function RootLayout({
             <strong>1 month free</strong> — no card required.
           </span>
           <a
-            href="https://app.finza.africa"
+            href="https://app.finza.africa/signup"
             className="ml-3 underline underline-offset-2 font-semibold hover:text-zinc-300 transition-colors"
           >
             Claim your spot →
