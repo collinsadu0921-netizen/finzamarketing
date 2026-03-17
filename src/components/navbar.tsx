@@ -37,12 +37,18 @@ export function Navbar() {
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                         <a
                             href="https://app.finza.gh/login"
-                            className="text-sm font-medium text-zinc-900 hover:text-zinc-700 transition-colors"
+                            className="text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors"
                         >
                             Login
+                        </a>
+                        <a
+                            href="https://app.finza.gh/signup"
+                            className="rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors"
+                        >
+                            Create Account
                         </a>
                         <Link
                             href="/demo"
@@ -80,10 +86,17 @@ export function Navbar() {
                         <div className="flex flex-col gap-3 pt-2">
                             <a
                                 href="https://app.finza.gh/login"
-                                className="text-sm font-medium text-zinc-900 hover:text-zinc-700 py-2"
+                                className="text-sm font-medium text-zinc-500 hover:text-zinc-900 py-2"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Login
+                            </a>
+                            <a
+                                href="https://app.finza.gh/signup"
+                                className="rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 text-center"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Create Account
                             </a>
                             <Link
                                 href="/demo"
