@@ -135,7 +135,7 @@ export default function Home() {
               <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">For Business Operators</p>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Retail Workspace</h3>
               <div className="mt-4 mb-2">
-                <span className="text-4xl font-bold text-zinc-900">150 GHS</span>
+                <span className="text-4xl font-bold text-zinc-900">250 GHS</span>
                 <span className="text-base font-medium text-zinc-600"> / month</span>
               </div>
               <p className="text-sm text-zinc-600 mb-6">For inventory-based businesses and point-of-sale operations.</p>
@@ -157,7 +157,7 @@ export default function Home() {
               <p className="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">For Business Operators</p>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Service Workspace</h3>
               <div className="mt-4 mb-2">
-                <span className="text-4xl font-bold text-zinc-900">150 GHS</span>
+                <span className="text-4xl font-bold text-zinc-900">200 GHS</span>
                 <span className="text-base font-medium text-zinc-600"> / month</span>
               </div>
               <p className="text-sm text-zinc-600 mb-6">For consultants, agencies, and service providers.</p>
@@ -182,7 +182,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-zinc-900 mb-2">Accountant Workspace</h3>
               <div className="mt-4 mb-2">
-                <span className="text-4xl font-bold text-zinc-900">300 GHS</span>
+                <span className="text-4xl font-bold text-zinc-900">700 GHS</span>
                 <span className="text-base font-medium text-zinc-600"> / month</span>
               </div>
               <p className="text-sm text-zinc-600 mb-6">For accounting professionals managing multiple businesses.</p>
@@ -319,12 +319,12 @@ export default function Home() {
               >
                 View Demo
               </Link>
-              <Link
-                href="/demo"
+              <a
+                href="https://app.finza.gh"
                 className="text-base font-semibold text-zinc-900 hover:text-zinc-700 transition-colors"
               >
                 Start Workspace
-              </Link>
+              </a>
             </div>
           </div>
         </Container>

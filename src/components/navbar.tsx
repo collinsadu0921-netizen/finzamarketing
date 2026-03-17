@@ -38,12 +38,12 @@ export function Navbar() {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Link
-                            href="/login"
+                        <a
+                            href="https://app.finza.gh/login"
                             className="text-sm font-medium text-zinc-900 hover:text-zinc-700 transition-colors"
                         >
                             Login
-                        </Link>
+                        </a>
                         <Link
                             href="/demo"
                             className="rounded-md bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
@@ -78,13 +78,13 @@ export function Navbar() {
                         ))}
                         <hr className="border-zinc-100" />
                         <div className="flex flex-col gap-3 pt-2">
-                            <Link
-                                href="/login"
+                            <a
+                                href="https://app.finza.gh/login"
                                 className="text-sm font-medium text-zinc-900 hover:text-zinc-700 py-2"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Login
-                            </Link>
+                            </a>
                             <Link
                                 href="/demo"
                                 className="rounded-md bg-[#0F172A] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 text-center"

@@ -18,8 +18,8 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-zinc-900 mb-4">Product</h4>
                         <ul className="space-y-3 text-sm text-zinc-600">
-                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">Retail Workspace</Link></li>
-                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">Service Workspace</Link></li>
+                            <li><Link href="/features#retail" className="hover:text-zinc-900 transition-colors">Retail Workspace</Link></li>
+                            <li><Link href="/features#service" className="hover:text-zinc-900 transition-colors">Service Workspace</Link></li>
                             <li><Link href="/accountants" className="hover:text-zinc-900 transition-colors">Accountant Workspace</Link></li>
                             <li><Link href="/#pricing" className="hover:text-zinc-900 transition-colors">Pricing</Link></li>
                         </ul>
@@ -29,10 +29,14 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-zinc-900 mb-4">Company</h4>
                         <ul className="space-y-3 text-sm text-zinc-600">
-                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">About</Link></li>
-                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Security</Link></li>
-                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Contact</Link></li>
-                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Terms</Link></li>
+                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">About</Link></li>
+                            <li><Link href="/features#security" className="hover:text-zinc-900 transition-colors">Security</Link></li>
+                            <li>
+                                <a href="mailto:hello@finza.gh" className="hover:text-zinc-900 transition-colors">
+                                    Contact
+                                </a>
+                            </li>
+                            <li><Link href="/terms" className="hover:text-zinc-900 transition-colors">Terms</Link></li>
                         </ul>
                     </div>
 
@@ -40,8 +44,8 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-zinc-900 mb-4">Legal</h4>
                         <ul className="space-y-3 text-sm text-zinc-600">
-                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="#" className="hover:text-zinc-900 transition-colors">Terms of Service</Link></li>
+                            <li><Link href="/privacy" className="hover:text-zinc-900 transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="hover:text-zinc-900 transition-colors">Terms of Service</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -55,3 +59,4 @@ export function Footer() {
         </footer>
     );
 }
+

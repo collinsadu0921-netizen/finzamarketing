@@ -1,5 +1,15 @@
+import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { CheckCircle2, RotateCw, ShoppingCart, PieChart, Lock, Users, FileText, Briefcase, Calculator } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Features",
+    description:
+        "Explore Finza's full feature set — auto-posting engine, Ghana VAT logic, financial reports, multi-user roles, and period locking. Built for African businesses.",
+    alternates: {
+        canonical: "https://finza.gh/features",
+    },
+};
 
 export default function FeaturesPage() {
     return (
