@@ -11,7 +11,7 @@ export function Navbar() {
 
     const navLinks = [
         { href: "/features", label: "Features" },
-        { href: "/#pricing", label: "Pricing" },
+        { href: "/pricing", label: "Pricing" },
         { href: "/accountants", label: "For Accountants" },
     ];
 
@@ -54,7 +54,7 @@ export function Navbar() {
                             href="/demo"
                             className="rounded-md bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
                         >
-                            Book a Demo
+                            Try Demo
                         </Link>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ export function Navbar() {
                                 className="rounded-md bg-[#0F172A] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 text-center"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Book a Demo
+                                Try Demo
                             </Link>
                         </div>
                     </Container>
