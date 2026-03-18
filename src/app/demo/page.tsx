@@ -21,8 +21,8 @@ export default function DemoPage() {
 
     const loadingMessages = [
         "Setting up ledger structure...",
-        "Configuring tax logic...",
-        "Initializing reporting engine...",
+        "Configuring Ghana tax logic...",
+        "Initialising reporting engine...",
     ];
 
     const workspaces = [
@@ -30,18 +30,35 @@ export default function DemoPage() {
             id: "retail",
             title: "Retail Workspace",
             desc: "POS, inventory & sales.",
+            preview: [
+                "See how a POS sale posts to the ledger automatically",
+                "View inventory tracking and COGS accounting in action",
+                "Check VAT, NHIL, and GETFund separated per transaction",
+            ],
         },
         {
             id: "service",
             title: "Service Workspace",
             desc: "Invoicing, AR & billing.",
+            preview: [
+                "Raise an invoice and watch it post to accounts receivable",
+                "Record a payment and see the receivable clear instantly",
+                "View the income statement update in real time",
+            ],
         },
         {
             id: "accountant",
             title: "Accountant Workspace",
             desc: "Client ledger management.",
+            preview: [
+                "Navigate client workspaces from one professional login",
+                "Post a manual journal entry with full audit trail",
+                "Lock a period and see how history is protected",
+            ],
         },
     ];
+
+    const selectedWorkspaceData = workspaces.find((w) => w.id === selectedWorkspace);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -62,13 +79,11 @@ export default function DemoPage() {
         setIsSubmitting(true);
         setSubmitError("");
 
-        // Rotate loading messages while processing
         const messageInterval = setInterval(() => {
             setLoadingStep((prev) => (prev + 1) % loadingMessages.length);
         }, 800);
 
         try {
-            // Send lead data to API route (webhook + optional email)
             await fetch("/api/demo-submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -80,19 +95,16 @@ export default function DemoPage() {
                     method: formData.method,
                 }),
             });
-            // We don't block the demo on API failure — continue regardless
         } catch {
             // Silent fail — demo UX is never blocked by a network error
         }
 
-        // Store in localStorage so workspace demo pages can read the business name
         if (typeof window !== "undefined") {
             localStorage.setItem("finza_demo_workspace", selectedWorkspace);
             localStorage.setItem("finza_demo_business", formData.businessName || "My Business");
             localStorage.setItem("finza_demo_mode", "true");
         }
 
-        // Hold the loading screen for a beat, then redirect
         setTimeout(() => {
             clearInterval(messageInterval);
             router.push(`/workspace-demo/${selectedWorkspace}`);
@@ -130,7 +142,6 @@ export default function DemoPage() {
                         Finza
                     </Link>
 
-                    {/* Preview badge */}
                     <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-semibold text-zinc-600">
                         <span className="w-2 h-2 rounded-full bg-amber-400" />
                         Simulated preview — not a live account
@@ -140,8 +151,36 @@ export default function DemoPage() {
                         Preview Finza
                     </h1>
                     <p className="text-base text-zinc-600 max-w-md mx-auto leading-relaxed">
-                        Walk through a workspace environment with sample data. Takes 30 seconds.
+                        Choose a workspace and walk through a real environment with sample data. Takes about 2 minutes.
                     </p>
+                </div>
+
+                {/* What you will see */}
+                <div className="rounded-xl border border-zinc-200 bg-white px-6 py-5 space-y-4">
+                    <p className="text-sm font-bold text-zinc-900">What you will see in the demo</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {workspaces.map((ws) => (
+                            <div
+                                key={ws.id}
+                                className={cn(
+                                    "rounded-lg border p-4 transition-all",
+                                    selectedWorkspace === ws.id
+                                        ? "border-zinc-900 bg-zinc-50"
+                                        : "border-zinc-200 bg-white"
+                                )}
+                            >
+                                <p className="text-xs font-bold text-zinc-900 mb-2">{ws.title}</p>
+                                <ul className="space-y-1.5">
+                                    {ws.preview.map((point) => (
+                                        <li key={point} className="flex items-start gap-2 text-xs text-zinc-600">
+                                            <span className="mt-1 w-1 h-1 rounded-full bg-zinc-400 flex-shrink-0" />
+                                            {point}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Form card */}
@@ -154,7 +193,7 @@ export default function DemoPage() {
                                 Which workspace do you want to preview?
                             </label>
                             <p className="text-xs text-zinc-500 mt-0.5">
-                                Each workspace has a different operating model — same ledger engine underneath.
+                                Each workspace has a different operating model — all running on the same ledger engine.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -175,6 +214,21 @@ export default function DemoPage() {
                                 </button>
                             ))}
                         </div>
+                        {selectedWorkspaceData && (
+                            <div className="rounded-md bg-zinc-50 border border-zinc-200 px-4 py-3">
+                                <p className="text-xs font-semibold text-zinc-700 mb-1">In this preview you will see:</p>
+                                <ul className="space-y-1">
+                                    {selectedWorkspaceData.preview.map((point) => (
+                                        <li key={point} className="flex items-start gap-2 text-xs text-zinc-600">
+                                            <svg className="h-3 w-3 text-zinc-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                            </svg>
+                                            {point}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
                     </div>
 
                     <div className="w-full h-px bg-zinc-100" />
@@ -184,14 +238,14 @@ export default function DemoPage() {
                         <div>
                             <p className="text-sm font-semibold text-zinc-900">Your details</p>
                             <p className="text-xs text-zinc-500 mt-0.5">
-                                Used to personalise the preview and follow up if you'd like to talk.
+                                Used to personalise the preview. We may follow up — but only if you&apos;d like to talk.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div className="space-y-1.5">
                                 <label htmlFor="businessName" className="block text-sm font-medium text-zinc-700">
-                                    Business Name
+                                    Business name
                                 </label>
                                 <input
                                     id="businessName"
@@ -199,14 +253,15 @@ export default function DemoPage() {
                                     required
                                     autoComplete="organization"
                                     className="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none focus:border-transparent transition-all"
-                                    placeholder="Acme Ltd"
+                                    placeholder="e.g. Ama Foods Ltd"
                                     onChange={handleInputChange}
                                     value={formData.businessName}
                                 />
+                                <p className="text-xs text-zinc-400">Will appear in the demo interface</p>
                             </div>
                             <div className="space-y-1.5">
                                 <label htmlFor="email" className="block text-sm font-medium text-zinc-700">
-                                    Work Email
+                                    Work email
                                 </label>
                                 <input
                                     id="email"
@@ -225,7 +280,7 @@ export default function DemoPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div className="space-y-1.5">
                                 <label htmlFor="revenue" className="block text-sm font-medium text-zinc-700">
-                                    Monthly Revenue
+                                    Monthly revenue (GHS)
                                 </label>
                                 <div className="relative">
                                     <select
@@ -236,12 +291,12 @@ export default function DemoPage() {
                                         onChange={handleInputChange}
                                         value={formData.revenue}
                                     >
-                                        <option value="">Select range...</option>
-                                        <option value="pre-revenue">Pre-revenue</option>
-                                        <option value="<10k">&lt; 10k GHS</option>
-                                        <option value="10k-50k">10k – 50k GHS</option>
-                                        <option value="50k-200k">50k – 200k GHS</option>
-                                        <option value="200k+">200k+ GHS</option>
+                                        <option value="">Select a range...</option>
+                                        <option value="pre-revenue">Pre-revenue / just starting</option>
+                                        <option value="<10k">Below 10,000 GHS</option>
+                                        <option value="10k-50k">10,000 – 50,000 GHS</option>
+                                        <option value="50k-200k">50,000 – 200,000 GHS</option>
+                                        <option value="200k+">200,000+ GHS</option>
                                     </select>
                                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-500">
                                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -252,7 +307,7 @@ export default function DemoPage() {
                             </div>
                             <div className="space-y-1.5">
                                 <label htmlFor="method" className="block text-sm font-medium text-zinc-700">
-                                    Current Method
+                                    Current method
                                 </label>
                                 <div className="relative">
                                     <select
@@ -263,11 +318,12 @@ export default function DemoPage() {
                                         onChange={handleInputChange}
                                         value={formData.method}
                                     >
-                                        <option value="">How do you track finances now?</option>
-                                        <option value="excel">Spreadsheets</option>
-                                        <option value="paper">Pen &amp; Paper</option>
-                                        <option value="software">Other Software</option>
-                                        <option value="new">New Business</option>
+                                        <option value="">How do you manage finances now?</option>
+                                        <option value="excel">Spreadsheets (Excel / Google Sheets)</option>
+                                        <option value="paper">Pen & paper / manual records</option>
+                                        <option value="software">Another accounting software</option>
+                                        <option value="accountant">My accountant manages everything</option>
+                                        <option value="new">New business — nothing yet</option>
                                     </select>
                                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-500">
                                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -293,7 +349,7 @@ export default function DemoPage() {
                             disabled={!isFormValid}
                             className="w-full rounded-md bg-[#0F172A] px-4 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                         >
-                            Preview workspace →
+                            Launch workspace preview →
                         </button>
 
                         <p className="text-xs text-center text-zinc-500 leading-relaxed">
@@ -307,12 +363,12 @@ export default function DemoPage() {
                 </form>
 
                 {/* Below-form clarification */}
-                <div className="rounded-xl border border-zinc-200 bg-white px-6 py-5 text-center space-y-1.5">
+                <div className="rounded-xl border border-zinc-200 bg-white px-6 py-5 space-y-3">
                     <p className="text-sm font-semibold text-zinc-900">
-                        You&apos;re viewing a simulated environment.
+                        This is a simulated environment.
                     </p>
                     <p className="text-sm text-zinc-500 leading-relaxed">
-                        Sample data is used throughout. Your real business data will live in your Finza account — create one at{" "}
+                        Sample data is used throughout. No real transactions are posted. Your actual business data will live in your Finza account — create one at{" "}
                         <a
                             href="https://app.finza.africa/signup"
                             className="font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600"
@@ -321,9 +377,19 @@ export default function DemoPage() {
                         </a>
                         .
                     </p>
+                    <div className="flex gap-4 pt-1">
+                        <Link href="/features" className="text-xs text-zinc-500 hover:text-zinc-900 underline underline-offset-2 transition-colors">
+                            What Finza does
+                        </Link>
+                        <Link href="/pricing" className="text-xs text-zinc-500 hover:text-zinc-900 underline underline-offset-2 transition-colors">
+                            Pricing
+                        </Link>
+                        <Link href="/accountants" className="text-xs text-zinc-500 hover:text-zinc-900 underline underline-offset-2 transition-colors">
+                            For accountants
+                        </Link>
+                    </div>
                 </div>
 
-                {/* Back link */}
                 <div className="text-center">
                     <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
                         ← Back to home
