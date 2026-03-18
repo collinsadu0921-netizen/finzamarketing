@@ -18,41 +18,110 @@ export default function Home() {
     <main className="flex flex-col">
 
       {/* ── 1. HERO ── */}
-      <section className="pt-28 pb-24 w-full border-b border-zinc-100">
+      <section className="pt-20 pb-20 w-full border-b border-zinc-100">
         <Container>
-          <div className="mx-auto max-w-[760px] space-y-7 text-center flex flex-col items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[60vh]">
 
-            <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wide uppercase">
-              Ledger-first · Ghana-built
-            </span>
+            {/* Left: text */}
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wide uppercase">
+                Ledger-first · Ghana-built
+              </span>
+              <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
+                Know your real numbers —{" "}
+                <span className="block">in real time.</span>
+              </h1>
+              <p className="text-lg text-zinc-600 leading-relaxed max-w-lg">
+                Finza is a <strong className="text-zinc-900 font-semibold">ledger-first financial system</strong>. Every sale,
+                invoice, and expense creates a{" "}
+                <strong className="text-zinc-900 font-semibold">balanced journal entry automatically</strong> — so
+                your books are always accurate, never behind.
+              </p>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                Ghana tax natively embedded — VAT, NHIL, and GETFund calculated at the point of transaction.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start gap-3 pt-1">
+                <a
+                  href="https://app.finza.africa/signup"
+                  className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
+                >
+                  Start free — no card required
+                </a>
+                <Link
+                  href="/demo"
+                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors text-center"
+                >
+                  View demo
+                </Link>
+              </div>
+            </div>
 
-            <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl leading-[1.1]">
-              Know your real numbers —<br className="hidden sm:block" /> in real time.
-            </h1>
+            {/* Right: layered product visual */}
+            <div className="hidden lg:flex items-center justify-center">
+              <div className="relative w-full max-w-[440px]">
 
-            <p className="max-w-[600px] text-lg text-zinc-600 sm:text-xl leading-relaxed">
-              Finza is a <strong className="text-zinc-900 font-semibold">ledger-first financial system</strong>. Every sale,
-              invoice, and expense creates a <strong className="text-zinc-900 font-semibold">balanced journal entry automatically</strong> — so
-              your books are always accurate, never behind.
-            </p>
+                {/* Background card — balance sheet */}
+                <div className="absolute -bottom-4 -right-4 w-full rounded-xl border border-zinc-200 bg-zinc-50 shadow-sm p-5 z-0">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Balance Sheet</span>
+                    <span className="text-xs text-zinc-400">Mar 2026</span>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs text-zinc-500">
+                      <span>Total Assets</span><span className="font-semibold text-zinc-700">GHS 142,850.00</span>
+                    </div>
+                    <div className="flex justify-between text-xs text-zinc-500">
+                      <span>Total Liabilities</span><span className="font-semibold text-zinc-700">GHS 38,200.00</span>
+                    </div>
+                    <div className="h-px bg-zinc-200 my-1" />
+                    <div className="flex justify-between text-xs">
+                      <span className="font-bold text-zinc-900">Equity</span>
+                      <span className="font-extrabold text-zinc-900">GHS 104,650.00</span>
+                    </div>
+                  </div>
+                </div>
 
-            <p className="text-sm text-zinc-500 max-w-[480px] leading-relaxed">
-              Built with Ghana tax structure natively embedded — VAT, NHIL, and GETFund calculated at the point of transaction. No manual adjustments.
-            </p>
+                {/* Middle card — journal entry */}
+                <div className="relative z-10 w-full rounded-xl border border-zinc-200 bg-white shadow-md p-5">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Journal Entry</span>
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
+                      Posted
+                    </span>
+                  </div>
+                  <div className="space-y-2.5">
+                    <div className="grid grid-cols-3 text-xs font-semibold text-zinc-400 pb-1 border-b border-zinc-100">
+                      <span>Account</span><span className="text-center">Dr</span><span className="text-right">Cr</span>
+                    </div>
+                    {[
+                      { account: "Accounts Receivable", dr: "GHS 5,665", cr: "" },
+                      { account: "Revenue", dr: "", cr: "GHS 5,000" },
+                      { account: "VAT Output (15%)", dr: "", cr: "GHS 450" },
+                      { account: "NHIL (2.5%)", dr: "", cr: "GHS 125" },
+                      { account: "GETFund (2.5%)", dr: "", cr: "GHS 90" },
+                    ].map((row) => (
+                      <div key={row.account} className="grid grid-cols-3 text-xs">
+                        <span className="text-zinc-700 truncate pr-2">{row.account}</span>
+                        <span className="text-center font-medium text-blue-700">{row.dr}</span>
+                        <span className="text-right font-medium text-zinc-600">{row.cr}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a
-                href="https://app.finza.africa/signup"
-                className="rounded-md bg-[#0F172A] px-7 py-3.5 text-base font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors w-full sm:w-auto text-center"
-              >
-                Start free — no card required
-              </a>
-              <Link
-                href="/demo"
-                className="rounded-md bg-white px-7 py-3.5 text-base font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors w-full sm:w-auto text-center"
-              >
-                View demo
-              </Link>
+                {/* Top badge — ledger balanced */}
+                <div className="absolute -top-4 -left-4 z-20 rounded-lg border border-green-200 bg-white shadow-md px-4 py-2.5 flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="text-xs font-bold text-zinc-900">Ledger balanced</p>
+                    <p className="text-xs text-zinc-500">Dr = Cr · Always</p>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -221,9 +290,9 @@ export default function Home() {
       </section>
 
       {/* ── 5. FEATURES (CONDENSED) ── */}
-      <section className="py-28 bg-white border-b border-zinc-100">
+      <section className="py-20 bg-white border-b border-zinc-100">
         <Container>
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-10">
             <div className="space-y-3">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">What it does</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
@@ -231,35 +300,54 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* 2×2 card grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
                 {
                   title: "Real-time ledger posting",
-                  desc: "Every transaction is posted immediately. No batch processing, no overnight updates — your books reflect reality right now.",
+                  bullets: [
+                    "Every transaction posts the moment it's confirmed",
+                    "Both sides of every journal entry written automatically",
+                    "Books are never behind — no overnight sync",
+                  ],
                 },
                 {
                   title: "Ghana tax handling",
-                  desc: "VAT, NHIL, and GETFund are calculated at the point of transaction, separated correctly, and reported in GRA-ready format.",
+                  bullets: [
+                    "VAT, NHIL, and GETFund calculated at transaction level",
+                    "Input and output tax tracked as separate ledger accounts",
+                    "GRA-ready VAT report always available",
+                  ],
                 },
                 {
                   title: "Reports from the ledger",
-                  desc: "Income statement, balance sheet, and aged receivables are live at all times — generated directly from the general ledger, not assembled manually.",
+                  bullets: [
+                    "Income statement, balance sheet, and trial balance are live",
+                    "Generated directly from the general ledger — no re-entry",
+                    "Aged receivables updated in real time",
+                  ],
                 },
                 {
                   title: "Retail and Service support",
-                  desc: "Retail businesses get POS and inventory tracking. Service businesses get invoicing and accounts receivable. Both post to the same ledger.",
+                  bullets: [
+                    "Retail: POS, inventory tracking, and COGS calculation",
+                    "Service: invoicing, accounts receivable, and payments",
+                    "Both workspace types post to the same ledger engine",
+                  ],
                 },
               ].map((f) => (
-                <div key={f.title} className="flex gap-4">
-                  <div className="flex-shrink-0 mt-0.5">
-                    <svg className="h-5 w-5 text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-zinc-900 mb-1">{f.title}</p>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{f.desc}</p>
-                  </div>
+                <div key={f.title} className="flex flex-col p-6 rounded-xl border border-zinc-200 bg-white shadow-sm">
+                  <p className="text-sm font-bold text-zinc-900 mb-4">{f.title}</p>
+                  <ul className="space-y-2.5">
+                    {f.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-sm text-zinc-600">
+                        <svg className="h-4 w-4 text-zinc-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -268,9 +356,9 @@ export default function Home() {
       </section>
 
       {/* ── 6. HOW IT WORKS ── */}
-      <section className="py-28 bg-zinc-50 border-b border-zinc-100">
+      <section className="py-20 bg-zinc-50 border-b border-zinc-100">
         <Container>
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-10">
             <div className="space-y-3">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The flow</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
@@ -278,35 +366,43 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  step: "01",
-                  title: "Run your business",
-                  desc: "Make a sale, raise an invoice, record an expense. Use Finza exactly as you'd use any daily tool.",
-                },
-                {
-                  step: "02",
-                  title: "Finza posts automatically",
-                  desc: "Behind the scenes, every action writes a balanced journal entry to your general ledger. No input needed from you.",
-                },
-                {
-                  step: "03",
-                  title: "Reports update instantly",
-                  desc: "Your income statement, balance sheet, and VAT position reflect the latest data — always, without waiting.",
-                },
-                {
-                  step: "04",
-                  title: "Close your books",
-                  desc: "At period end, lock the ledger. Historical records are frozen. Corrections happen via reversals, not deletions.",
-                },
-              ].map((s) => (
-                <div key={s.step} className="flex flex-col p-7 rounded-xl border border-zinc-200 bg-white shadow-sm">
-                  <div className="text-4xl font-extrabold text-zinc-100 mb-5 leading-none">{s.step}</div>
-                  <p className="text-sm font-bold text-zinc-900 mb-2">{s.title}</p>
-                  <p className="text-sm text-zinc-600 leading-relaxed">{s.desc}</p>
-                </div>
-              ))}
+            {/* Steps with connectors */}
+            <div className="relative">
+              {/* Connector line — desktop only */}
+              <div className="hidden lg:block absolute top-[2.25rem] left-[calc(12.5%+1.75rem)] right-[calc(12.5%+1.75rem)] h-px bg-zinc-200 z-0" />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
+                {[
+                  {
+                    step: "01",
+                    title: "Run your business",
+                    desc: "Make a sale, raise an invoice, record an expense — as normal.",
+                  },
+                  {
+                    step: "02",
+                    title: "Finza posts automatically",
+                    desc: "Every action writes a balanced journal entry to your ledger.",
+                  },
+                  {
+                    step: "03",
+                    title: "Reports update instantly",
+                    desc: "P&L, balance sheet, and VAT position reflect the latest data.",
+                  },
+                  {
+                    step: "04",
+                    title: "Close your books",
+                    desc: "Lock the period. Corrections go through reversals, not edits.",
+                  },
+                ].map((s) => (
+                  <div key={s.step} className="flex flex-col bg-white rounded-xl border border-zinc-200 shadow-sm p-6">
+                    <div className="w-9 h-9 rounded-full border-2 border-zinc-200 bg-white flex items-center justify-center text-xs font-extrabold text-zinc-500 mb-5 flex-shrink-0">
+                      {s.step}
+                    </div>
+                    <p className="text-sm font-bold text-zinc-900 mb-1.5">{s.title}</p>
+                    <p className="text-xs text-zinc-600 leading-relaxed">{s.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
