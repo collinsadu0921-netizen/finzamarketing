@@ -87,6 +87,12 @@ export default function VatSoftwareGhanaPage() {
             <p className="text-sm text-zinc-600 leading-relaxed">
               For a GRA-registered business raising a taxable invoice of GHS 5,000, the total tax-inclusive amount is GHS 5,000 × (1 + 15% + 2.5% + 2.5%) = GHS 6,000. Each levy must appear separately on the invoice and be tracked separately in the accounting records.
             </p>
+            <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3">
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Framework in effect</p>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                Tax treatment shown here follows Ghana&apos;s rules effective 1 January 2026, including input tax deduction treatment for NHIL and GETFund.
+              </p>
+            </div>
             <Link href="/ghana-vat-nhil-getfund" className="text-sm font-semibold text-zinc-900 underline underline-offset-4 hover:text-zinc-600 transition-colors">
               Full guide: Ghana VAT, NHIL, and GETFund explained →
             </Link>
@@ -175,11 +181,11 @@ export default function VatSoftwareGhanaPage() {
               {[
                 {
                   title: "GRA-ready VAT report — always current",
-                  body: "Because VAT is posted correctly at every transaction, your VAT control account is always accurate. At period end, the VAT report shows opening balance, output VAT collected, input VAT reclaimable, reversals, and net VAT payable — formatted for GRA filing.",
+                  body: "Because VAT is posted correctly at every transaction, your VAT control account is always accurate. At period end, the VAT report shows opening balance, output VAT collected, input VAT deductions, and net VAT payable — formatted for GRA filing. Tax treatment follows Ghana's rules effective 1 January 2026.",
                 },
                 {
-                  title: "Input VAT tracked per purchase",
-                  body: "Every taxable purchase you record in Finza creates an input VAT entry. Your net VAT position — the amount actually owed to GRA after subtracting reclaimable input — is visible at all times.",
+                  title: "Input tax tracked per purchase",
+                  body: "Every taxable purchase you record in Finza creates input VAT entries. Effective 1 January 2026, NHIL and GETFund are also treated as input tax deductions under Ghana's revised framework. Your net position — what is actually owed after deductions — is visible at all times.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-5 p-6 bg-white rounded-xl border border-zinc-200 shadow-sm">

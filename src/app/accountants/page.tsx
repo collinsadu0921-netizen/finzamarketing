@@ -201,6 +201,12 @@ export default function AccountantsPage() {
               <p className="text-base text-zinc-600 max-w-xl leading-relaxed">
                 Finza has Ghana&apos;s indirect tax structure built into its transaction engine — not bolted on at reporting time.
               </p>
+              <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-5 py-4 max-w-xl">
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Framework in effect</p>
+                <p className="text-sm text-zinc-700 leading-relaxed">
+                  Tax treatment shown here follows Ghana&apos;s rules effective 1 January 2026, including input tax deduction treatment for NHIL and GETFund.
+                </p>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -211,11 +217,11 @@ export default function AccountantsPage() {
                 },
                 {
                   title: "NHIL and GETFund tracked separately",
-                  desc: "The 2.5% NHIL and 2.5% GETFund levies are calculated and posted as separate liability entries. They are not bundled into VAT. Your VAT schedule and levy schedule remain distinct.",
+                  desc: "The 2.5% NHIL and 2.5% GETFund levies are calculated and posted as separate liability entries. They are not bundled into VAT. Effective 1 January 2026, NHIL and GETFund are treated as input tax deductions under Ghana's revised VAT framework. Your VAT schedule and levy schedules remain distinct.",
                 },
                 {
                   title: "GRA-ready VAT report always available",
-                  desc: "The VAT control report shows opening balance, output VAT collected, input VAT reclaimable, and net VAT payable — formatted for GRA filing. No manual assembly at quarter end.",
+                  desc: "The VAT control report shows opening balance, output VAT collected, input VAT deductions, input levy deductions (NHIL and GETFund), and net VAT payable — formatted for GRA filing. Tax treatment follows Ghana's rules effective 1 January 2026. No manual assembly at quarter end.",
                 },
                 {
                   title: "Period-specific financial statements",

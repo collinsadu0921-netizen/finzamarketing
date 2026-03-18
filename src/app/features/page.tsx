@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Features — Accounting Software for Ghanaian Businesses | Finza",
   description:
-    "Finza handles VAT, invoicing, bookkeeping, and financial reports for Ghanaian businesses. Ledger-first. Real-time posting. Ghana tax built in. No spreadsheets.",
+    "Finza handles VAT, NHIL, and GETFund for Ghanaian businesses under the revised framework effective 1 January 2026. Ledger-first. Real-time posting. Input tax deduction treatment for NHIL and GETFund included.",
   alternates: {
     canonical: "https://finza.africa/features",
   },
@@ -261,6 +261,12 @@ export default function FeaturesPage() {
               <p className="text-sm text-zinc-600 max-w-xl">
                 Ghana&apos;s tax system applies multiple levies at point of transaction. Finza calculates and separates each one — the moment the transaction is confirmed, not at month end.
               </p>
+              <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 max-w-xl">
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Framework in effect</p>
+                <p className="text-xs text-zinc-600 leading-relaxed">
+                  Effective 1 January 2026, Finza follows Ghana&apos;s revised VAT framework: VAT remains 15%, NHIL remains 2.5%, and GETFund remains 2.5%. Under this framework, NHIL and GETFund are treated as input tax deductions.
+                </p>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -273,12 +279,12 @@ export default function FeaturesPage() {
                 {
                   name: "NHIL",
                   rate: "2.5%",
-                  desc: "National Health Insurance Levy. Calculated and posted as a separate liability line on every applicable transaction. Not bundled with VAT.",
+                  desc: "National Health Insurance Levy. Calculated and posted as a separate liability line on every applicable transaction. Not bundled with VAT. Treated as an input tax deduction effective 1 January 2026.",
                 },
                 {
                   name: "GETFund",
                   rate: "2.5%",
-                  desc: "Ghana Education Trust Fund levy. Separated from VAT and tracked as its own ledger account for clean, accurate compliance reporting.",
+                  desc: "Ghana Education Trust Fund levy. Separated from VAT and tracked as its own ledger account. Treated as an input tax deduction effective 1 January 2026.",
                 },
               ].map((t) => (
                 <div key={t.name} className="p-6 rounded-xl border border-zinc-200 bg-white shadow-sm">

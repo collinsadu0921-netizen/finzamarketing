@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Accounting Software in Ghana | Finza",
   description:
-    "Finza is accounting software built for Ghanaian businesses. Real-time ledger posting, VAT and NHIL handling, and financial reports — always current, never assembled by hand.",
+    "Finza is accounting software built for Ghanaian businesses. Real-time ledger posting, VAT (15%), NHIL (2.5%), and GETFund (2.5%) handling under Ghana's revised framework effective 1 January 2026 — with input tax deduction treatment for NHIL and GETFund.",
   alternates: {
     canonical: "https://finza.africa",
   },
@@ -356,12 +356,12 @@ export default function Home() {
                 {
                   name: "NHIL",
                   rate: "2.5%",
-                  desc: "National Health Insurance Levy. Posted as a separate credit entry on every applicable transaction — not bundled with VAT.",
+                  desc: "National Health Insurance Levy. Posted as a separate credit entry on every applicable transaction — not bundled with VAT. Treated as an input tax deduction effective 1 January 2026.",
                 },
                 {
                   name: "GETFund",
                   rate: "2.5%",
-                  desc: "Ghana Education Trust Fund levy. Separated from VAT and tracked as its own ledger account for clean, accurate reporting.",
+                  desc: "Ghana Education Trust Fund levy. Separated from VAT and tracked as its own ledger account. Treated as an input tax deduction effective 1 January 2026.",
                 },
               ].map((t) => (
                 <div key={t.name} className="p-7 rounded-xl border border-zinc-200 bg-white shadow-sm">
@@ -385,6 +385,9 @@ export default function Home() {
 
             <p className="text-sm text-zinc-500">
               All three are calculated at transaction level and posted to the ledger automatically. No manual adjustment at period end.
+            </p>
+            <p className="text-xs text-zinc-400">
+              Based on Ghana tax rules effective 1 January 2026, including input tax deduction treatment for NHIL and GETFund.
             </p>
           </div>
         </Container>

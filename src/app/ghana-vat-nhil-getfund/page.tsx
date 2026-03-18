@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Ghana VAT, NHIL and GETFund — How They Work | Finza",
   description:
-    "A complete guide to Ghana's indirect tax structure — VAT (15%), NHIL (2.5%), and GETFund (2.5%) — and how Finza handles all three automatically at the point of every transaction.",
+    "A complete guide to Ghana's indirect tax structure effective 1 January 2026 — VAT (15%), NHIL (2.5%), and GETFund (2.5%) with input tax deduction treatment for NHIL and GETFund — and how Finza handles all three automatically.",
   alternates: {
     canonical: "https://finza.africa/ghana-vat-nhil-getfund",
   },
@@ -28,6 +28,12 @@ export default function GhanaVatNhilGetfundPage() {
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
               Ghana does not apply a single VAT rate. It applies three separate indirect levies on applicable transactions. Understanding how they work — and how they must be tracked — matters for every registered business. This page explains the structure and how Finza handles all three automatically.
             </p>
+            <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-5 py-4 max-w-2xl">
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Framework in effect</p>
+              <p className="text-sm text-zinc-700 leading-relaxed">
+                Effective 1 January 2026, Finza follows Ghana&apos;s revised VAT framework: VAT remains 15%, NHIL remains 2.5%, and GETFund remains 2.5%. Under this framework, NHIL and GETFund are treated as input tax deductions.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
@@ -62,7 +68,7 @@ export default function GhanaVatNhilGetfundPage() {
                   full: "National Health Insurance Levy",
                   authority: "National Health Insurance Authority",
                   body: "Applied on the same taxable base as VAT. NHIL is collected alongside VAT but remitted to the National Health Insurance Fund to finance Ghana's public health insurance system. It is shown separately on GRA-issued tax invoices.",
-                  note: "Input NHIL is generally not reclaimable.",
+                  note: "Effective 1 January 2026, NHIL is treated as an input tax deduction under Ghana's revised VAT framework.",
                 },
                 {
                   name: "GETFund",
@@ -70,7 +76,7 @@ export default function GhanaVatNhilGetfundPage() {
                   full: "Ghana Education Trust Fund Levy",
                   authority: "GETFund Secretariat",
                   body: "Applied on the same taxable base as VAT and NHIL. GETFund proceeds are earmarked for educational infrastructure projects across Ghana. It is collected at point of transaction and must be shown as a separate line on the tax invoice.",
-                  note: "Input GETFund is generally not reclaimable.",
+                  note: "Effective 1 January 2026, GETFund is treated as an input tax deduction under Ghana's revised VAT framework.",
                 },
               ].map((t) => (
                 <div key={t.name} className="flex flex-col p-7 rounded-xl border border-zinc-200 bg-white shadow-sm">
@@ -213,8 +219,8 @@ export default function GhanaVatNhilGetfundPage() {
                   body: "Your VAT control account shows every output VAT entry and every input VAT entry — from the first transaction to the most recent. The report is available for any period, at any time. At filing time, the report is ready. There is no manual assembly step.",
                 },
                 {
-                  title: "Input VAT tracked on purchases",
-                  body: "When you record a taxable purchase, the input VAT is posted to an Input VAT account. The net VAT position — output minus input — is always visible in the VAT control report. You know exactly what you owe to GRA at any point in time.",
+                  title: "Input tax tracked on purchases",
+                  body: "When you record a taxable purchase, input VAT is posted to an Input VAT account. Effective 1 January 2026, NHIL and GETFund are also treated as input tax deductions under Ghana's revised framework — and are tracked accordingly. The net position for each levy is always visible. You know exactly what you owe to GRA at any point in time.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-5 p-6 bg-zinc-50 rounded-xl border border-zinc-200">
