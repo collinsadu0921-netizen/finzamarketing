@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
   title: "Features — Accounting Software for Ghanaian Businesses | Finza",
@@ -553,6 +554,16 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
+      <RelatedClusterLinks
+        related={[
+          { href: "/blog", label: "Finza blog", desc: "Accounting & VAT" },
+          {
+            href: "/accounting-vs-excel-ghana",
+            label: "Accounting vs Excel",
+            desc: "Spreadsheet limits",
+          },
+        ]}
+      />
       <Footer />
     </main>
   );

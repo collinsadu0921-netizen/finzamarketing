@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Container } from "@/components/container";
 import { Footer } from "@/components/footer";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
     title: "Privacy Policy",
@@ -69,6 +70,12 @@ export default function PrivacyPage() {
                     </div>
                 </div>
             </Container>
+            <RelatedClusterLinks
+                related={[
+                    { href: "/security", label: "Security", desc: "Data & integrity" },
+                    { href: "/contact", label: "Contact", desc: "Privacy questions" },
+                ]}
+            />
             <Footer />
         </main>
     );

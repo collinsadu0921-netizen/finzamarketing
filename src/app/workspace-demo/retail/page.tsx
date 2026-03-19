@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export default function RetailDemoPage() {
     const [businessName, setBusinessName] = useState("Retail Store");
@@ -192,6 +193,16 @@ export default function RetailDemoPage() {
                             </a>
                         </div>
 
+                        <RelatedClusterLinks
+                            related={[
+                                {
+                                    href: "/accounting-for-retail-ghana",
+                                    label: "Retail accounting guide",
+                                    desc: "Inventory & VAT",
+                                },
+                                { href: "/pricing", label: "Pricing", desc: "Retail workspace" },
+                            ]}
+                        />
                     </div>
                 </main>
             </div>

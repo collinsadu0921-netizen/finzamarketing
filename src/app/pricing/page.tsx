@@ -8,6 +8,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
     title: "Pricing — Accounting Software for Ghanaian Businesses | Finza",
@@ -457,6 +458,16 @@ export default function PricingPage() {
                 </Container>
             </section>
 
+            <RelatedClusterLinks
+                related={[
+                    {
+                        href: "/best-accounting-software-ghana",
+                        label: "Choose accounting software",
+                        desc: "Buyer framework",
+                    },
+                    { href: "/demo", label: "Try the demo", desc: "Workspace preview" },
+                ]}
+            />
             <Footer />
         </main>
     );

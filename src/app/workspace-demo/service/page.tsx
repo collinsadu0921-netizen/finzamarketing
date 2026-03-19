@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 const invoices = [
     { id: "INV-2031", client: "TechStart Ltd", amount: "GHS 8,500.00", issued: "10 Mar 2026", due: "24 Mar 2026", status: "Unpaid" },
@@ -240,6 +241,16 @@ export default function ServiceDemoPage() {
                             </a>
                         </div>
 
+                        <RelatedClusterLinks
+                            related={[
+                                {
+                                    href: "/accounting-for-service-business-ghana",
+                                    label: "Service accounting guide",
+                                    desc: "Invoices & AR",
+                                },
+                                { href: "/invoice-software-ghana", label: "Invoice software", desc: "Ghana billing" },
+                            ]}
+                        />
                     </div>
                 </main>
             </div>

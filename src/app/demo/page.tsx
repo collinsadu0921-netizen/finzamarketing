@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export default function DemoPage() {
     const router = useRouter();
@@ -396,6 +397,17 @@ export default function DemoPage() {
                     </Link>
                 </div>
             </div>
+
+            <RelatedClusterLinks
+                related={[
+                    {
+                        href: "/accounting-for-small-business-ghana",
+                        label: "Small business accounting",
+                        desc: "Practical guide",
+                    },
+                    { href: "/pricing", label: "Pricing", desc: "Workspaces" },
+                ]}
+            />
         </main>
     );
 }

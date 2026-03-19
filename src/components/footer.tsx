@@ -29,13 +29,10 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-zinc-900 mb-4">Company</h4>
                         <ul className="space-y-3 text-sm text-zinc-600">
-                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">About</Link></li>
-                            <li><Link href="/features#security" className="hover:text-zinc-900 transition-colors">Security</Link></li>
-                            <li>
-                                <a href="mailto:hello@finza.africa" className="hover:text-zinc-900 transition-colors">
-                                    Contact
-                                </a>
-                            </li>
+                            <li><Link href="/about" className="hover:text-zinc-900 transition-colors">About</Link></li>
+                            <li><Link href="/security" className="hover:text-zinc-900 transition-colors">Security</Link></li>
+                            <li><Link href="/contact" className="hover:text-zinc-900 transition-colors">Contact</Link></li>
+                            <li><Link href="/blog" className="hover:text-zinc-900 transition-colors">Blog</Link></li>
                             <li><Link href="/terms" className="hover:text-zinc-900 transition-colors">Terms</Link></li>
                         </ul>
                     </div>

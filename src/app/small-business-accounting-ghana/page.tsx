@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
   title: "Small Business Accounting Software in Ghana | Finza",
@@ -215,6 +216,16 @@ export default function SmallBusinessAccountingGhanaPage() {
         </Container>
       </section>
 
+      <RelatedClusterLinks
+        related={[
+          {
+            href: "/accounting-for-small-business-ghana",
+            label: "Small business guide",
+            desc: "Scenarios & tips",
+          },
+          { href: "/best-accounting-software-ghana", label: "Choose software", desc: "Buyer framework" },
+        ]}
+      />
       <Footer />
     </main>
   );

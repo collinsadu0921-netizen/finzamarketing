@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Container } from "@/components/container";
 import { Footer } from "@/components/footer";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
     title: "Terms of Service",
@@ -81,6 +82,12 @@ export default function TermsPage() {
                     </div>
                 </div>
             </Container>
+            <RelatedClusterLinks
+                related={[
+                    { href: "/privacy", label: "Privacy Policy", desc: "Data use" },
+                    { href: "/contact", label: "Contact", desc: "Legal questions" },
+                ]}
+            />
             <Footer />
         </main>
     );

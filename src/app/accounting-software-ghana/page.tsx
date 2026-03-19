@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
   title: "Accounting Software in Ghana | Finza",
@@ -191,27 +192,14 @@ export default function AccountingSoftwareGhanaPage() {
         </Container>
       </section>
 
-      {/* INTERNAL LINKS */}
-      <section className="py-16 bg-zinc-50 border-b border-zinc-100">
-        <Container>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">Explore Finza</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { label: "Features", desc: "What Finza does", href: "/features" },
-                { label: "Pricing", desc: "Workspace plans", href: "/pricing" },
-                { label: "For accountants", desc: "Professional workspace", href: "/accountants" },
-                { label: "Demo", desc: "Try before you start", href: "/demo" },
-              ].map((l) => (
-                <Link key={l.href} href={l.href} className="p-5 rounded-xl border border-zinc-200 bg-white hover:border-zinc-400 transition-colors">
-                  <p className="text-sm font-bold text-zinc-900">{l.label}</p>
-                  <p className="text-xs text-zinc-500 mt-1">{l.desc}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
+      <RelatedClusterLinks
+        mode="no-primary"
+        related={[
+          { href: "/features", label: "Features", desc: "What Finza does" },
+          { href: "/pricing", label: "Pricing", desc: "Workspace plans" },
+          { href: "/how-vat-works-ghana", label: "How VAT works", desc: "Ghana tax guide" },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-24 bg-[#0F172A] text-center">

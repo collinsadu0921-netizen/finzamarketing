@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/container";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Footer } from "@/components/footer";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -777,6 +778,12 @@ export default function Home() {
         </Container>
       </section>
 
+      <RelatedClusterLinks
+        related={[
+          { href: "/how-vat-works-ghana", label: "How VAT works in Ghana", desc: "Tax guide" },
+          { href: "/blog", label: "Finza blog", desc: "Ledgers & VAT" },
+        ]}
+      />
       <Footer />
     </main>
   );

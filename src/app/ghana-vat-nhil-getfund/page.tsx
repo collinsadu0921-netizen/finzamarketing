@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
   title: "Ghana VAT, NHIL and GETFund — How They Work | Finza",
@@ -280,6 +281,12 @@ export default function GhanaVatNhilGetfundPage() {
         </Container>
       </section>
 
+      <RelatedClusterLinks
+        related={[
+          { href: "/how-vat-works-ghana", label: "How VAT works", desc: "Ghana overview" },
+          { href: "/vat-software-ghana", label: "VAT software", desc: "Product angle" },
+        ]}
+      />
       <Footer />
     </main>
   );

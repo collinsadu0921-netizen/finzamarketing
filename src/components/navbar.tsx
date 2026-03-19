@@ -13,6 +13,7 @@ export function Navbar() {
         { href: "/features", label: "Features" },
         { href: "/pricing", label: "Pricing" },
         { href: "/accountants", label: "For Accountants" },
+        { href: "/blog", label: "Blog" },
     ];
 
     return (

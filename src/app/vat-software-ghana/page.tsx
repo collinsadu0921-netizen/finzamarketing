@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
   title: "VAT Software in Ghana | Finza",
@@ -245,6 +246,12 @@ export default function VatSoftwareGhanaPage() {
         </Container>
       </section>
 
+      <RelatedClusterLinks
+        related={[
+          { href: "/ghana-vat-calculator", label: "VAT calculator", desc: "Illustrative totals" },
+          { href: "/nhil-getfund-explained", label: "NHIL & GETFund", desc: "Levy explainer" },
+        ]}
+      />
       <Footer />
     </main>
   );

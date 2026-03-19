@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export default function AccountantDemoPage() {
     const [businessName, setBusinessName] = useState("Accounting Firm");
@@ -232,6 +233,12 @@ export default function AccountantDemoPage() {
                             </a>
                         </div>
 
+                        <RelatedClusterLinks
+                            related={[
+                                { href: "/accountants", label: "For accountants", desc: "Practice workspace" },
+                                { href: "/security", label: "Security", desc: "Data & audit trail" },
+                            ]}
+                        />
                     </div>
                 </main>
             </div>
