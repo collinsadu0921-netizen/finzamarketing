@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Move from manual books and spreadsheets to a live accounting ledger. Finza is bookkeeping software for Ghanaian businesses — real-time, always balanced, with Ghana VAT built in.",
   alternates: {
-    canonical: "https://finza.africa/bookkeeping-software-ghana",
+    canonical: "https://www.finza.africa/bookkeeping-software-ghana",
   },
 };
 

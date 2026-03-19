@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza is VAT software built for Ghana — calculating VAT, NHIL, and GETFund at the point of every transaction and posting each levy to a separate ledger account. GRA-ready reports included.",
   alternates: {
-    canonical: "https://finza.africa/vat-software-ghana",
+    canonical: "https://www.finza.africa/vat-software-ghana",
   },
 };
 

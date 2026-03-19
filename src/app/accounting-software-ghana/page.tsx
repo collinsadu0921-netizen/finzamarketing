@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Looking for accounting software in Ghana? Finza gives Ghanaian businesses a real-time ledger, VAT (15%), NHIL (2.5%), and GETFund (2.5%) handling under Ghana's revised framework effective 1 January 2026 — invoicing and financial reports always current.",
   alternates: {
-    canonical: "https://finza.africa/accounting-software-ghana",
+    canonical: "https://www.finza.africa/accounting-software-ghana",
   },
 };
 

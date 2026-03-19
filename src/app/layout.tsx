@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const BASE_URL = "https://finza.africa";
+const BASE_URL = "https://www.finza.africa";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

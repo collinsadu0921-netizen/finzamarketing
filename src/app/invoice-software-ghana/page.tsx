@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza is invoice software for Ghanaian businesses. Raise invoices, track accounts receivable, record payments, and handle Ghana VAT — all posted to a live ledger automatically.",
   alternates: {
-    canonical: "https://finza.africa/invoice-software-ghana",
+    canonical: "https://www.finza.africa/invoice-software-ghana",
   },
 };
 
@@ -93,11 +93,11 @@ export default function InvoiceSoftwareGhanaPage() {
                 <span className="text-right">Cr</span>
               </div>
               {[
-                { account: "Accounts Receivable", dr: "GHS 5,650.00", cr: "" },
+                { account: "Accounts Receivable", dr: "GHS 6,000.00", cr: "" },
                 { account: "Revenue", dr: "", cr: "GHS 5,000.00" },
-                { account: "VAT Output (15%)", dr: "", cr: "GHS 450.00" },
+                { account: "VAT Output (15%)", dr: "", cr: "GHS 750.00" },
                 { account: "NHIL (2.5%)", dr: "", cr: "GHS 125.00" },
-                { account: "GETFund (2.5%)", dr: "", cr: "GHS 75.00" },
+                { account: "GETFund (2.5%)", dr: "", cr: "GHS 125.00" },
               ].map((row) => (
                 <div key={row.account} className="grid grid-cols-3 text-sm py-1">
                   <span className="text-zinc-700">{row.account}</span>

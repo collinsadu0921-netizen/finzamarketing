@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza is accounting software for retailers in Ghana. POS sales post to the ledger automatically — with inventory tracking, COGS accounting, and Ghana VAT separated at every transaction.",
   alternates: {
-    canonical: "https://finza.africa/accounting-software-for-retailers-ghana",
+    canonical: "https://www.finza.africa/accounting-software-for-retailers-ghana",
   },
 };
 

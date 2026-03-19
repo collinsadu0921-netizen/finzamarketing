@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
         "Finza workspace pricing: Retail at GHS 250/month, Service at GHS 200/month, Accountant at GHS 700/month. First month free, no card required. Cancel anytime.",
     alternates: {
-        canonical: "https://finza.africa/pricing",
+        canonical: "https://www.finza.africa/pricing",
     },
 };
 

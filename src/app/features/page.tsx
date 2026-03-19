@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza handles VAT, NHIL, and GETFund for Ghanaian businesses under the revised framework effective 1 January 2026. Ledger-first. Real-time posting. Input tax deduction treatment for NHIL and GETFund included.",
   alternates: {
-    canonical: "https://finza.africa/features",
+    canonical: "https://www.finza.africa/features",
   },
 };
 

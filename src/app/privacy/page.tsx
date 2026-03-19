@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "Finza Privacy Policy — how we collect, use, and protect your data.",
     alternates: {
-        canonical: "https://finza.africa/privacy",
+        canonical: "https://www.finza.africa/privacy",
     },
 };
 

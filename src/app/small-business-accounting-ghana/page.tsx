@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza is accounting software for small businesses in Ghana. Real-time profit and loss, Ghana VAT handling, and financial reports that are always current — without an accountant every month.",
   alternates: {
-    canonical: "https://finza.africa/small-business-accounting-ghana",
+    canonical: "https://www.finza.africa/small-business-accounting-ghana",
   },
 };
 

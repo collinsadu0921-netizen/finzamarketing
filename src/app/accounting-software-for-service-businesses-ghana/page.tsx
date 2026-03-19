@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza is accounting software for Ghanaian service businesses. Raise invoices, track accounts receivable, record expenses, and handle Ghana VAT — all posted to a live ledger automatically.",
   alternates: {
-    canonical: "https://finza.africa/accounting-software-for-service-businesses-ghana",
+    canonical: "https://www.finza.africa/accounting-software-for-service-businesses-ghana",
   },
 };
 

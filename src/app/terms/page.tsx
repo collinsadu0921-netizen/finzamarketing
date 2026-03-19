@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Terms of Service",
     description: "Finza Terms of Service — the rules that govern your use of the Finza platform.",
     alternates: {
-        canonical: "https://finza.africa/terms",
+        canonical: "https://www.finza.africa/terms",
     },
 };
 

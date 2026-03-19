@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Finza gives accountants a dedicated workspace to manage Ghanaian client ledgers. Journal entries, period locking, reversal-based corrections, and client oversight — built for professional practice.",
   alternates: {
-    canonical: "https://finza.africa/accountants",
+    canonical: "https://www.finza.africa/accountants",
   },
 };
 

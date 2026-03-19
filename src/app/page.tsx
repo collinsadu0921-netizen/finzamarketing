@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Finza is accounting software built for Ghanaian businesses. Real-time ledger posting, VAT (15%), NHIL (2.5%), and GETFund (2.5%) handling under Ghana's revised framework effective 1 January 2026 — with input tax deduction treatment for NHIL and GETFund.",
   alternates: {
-    canonical: "https://finza.africa",
+    canonical: "https://www.finza.africa",
   },
 };
 
@@ -282,13 +282,13 @@ export default function Home() {
                     <span className="text-right">Cr</span>
                   </div>
                   <div className="space-y-3">
-                    {[
-                      { account: "Accounts Receivable", dr: "GHS 5,665.00", cr: "" },
-                      { account: "Revenue", dr: "", cr: "GHS 5,000.00" },
-                      { account: "VAT Output (15%)", dr: "", cr: "GHS 450.00" },
-                      { account: "NHIL (2.5%)", dr: "", cr: "GHS 125.00" },
-                      { account: "GETFund (2.5%)", dr: "", cr: "GHS 90.00" },
-                    ].map((row) => (
+                  {[
+                    { account: "Accounts Receivable", dr: "GHS 6,000.00", cr: "" },
+                    { account: "Revenue", dr: "", cr: "GHS 5,000.00" },
+                    { account: "VAT Output (15%)", dr: "", cr: "GHS 750.00" },
+                    { account: "NHIL (2.5%)", dr: "", cr: "GHS 125.00" },
+                    { account: "GETFund (2.5%)", dr: "", cr: "GHS 125.00" },
+                  ].map((row) => (
                       <div key={row.account} className="grid grid-cols-3 text-sm">
                         <span className="text-zinc-700">{row.account}</span>
                         <span className="text-center font-semibold text-blue-700">{row.dr}</span>
@@ -298,8 +298,8 @@ export default function Home() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-zinc-100 grid grid-cols-3 text-sm">
                     <span className="font-bold text-zinc-900">Total</span>
-                    <span className="text-center font-extrabold text-zinc-900">GHS 5,665.00</span>
-                    <span className="text-right font-extrabold text-zinc-900">GHS 5,665.00</span>
+                    <span className="text-center font-extrabold text-zinc-900">GHS 6,000.00</span>
+                    <span className="text-right font-extrabold text-zinc-900">GHS 6,000.00</span>
                   </div>
                 </div>
               </div>
