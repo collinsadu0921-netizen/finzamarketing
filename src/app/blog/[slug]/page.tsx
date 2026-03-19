@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { Container } from "@/components/container";
 import { Footer } from "@/components/footer";
+import { JsonLd } from "@/components/json-ld";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { articleSchema, breadcrumbListSchema } from "@/lib/schema";
 import { getAllSlugs, getPostBySlug } from "@/lib/blog-posts";
 
 interface Props {
@@ -35,6 +37,22 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd
+        data={[
+          articleSchema({
+            headline: post.title,
+            description: post.excerpt,
+            urlPath: `/blog/${post.slug}`,
+            datePublished: post.publishedAt,
+            authorName: post.author,
+          }),
+          breadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
+      />
       <article>
         <header className="border-b border-zinc-100 pt-28 pb-12">
           <Container>

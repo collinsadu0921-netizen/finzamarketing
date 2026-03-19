@@ -3,6 +3,8 @@ import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "VAT Software in Ghana | Finza",
@@ -16,6 +18,12 @@ export const metadata: Metadata = {
 export default function VatSoftwareGhanaPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", path: "/" },
+          { name: "VAT software for Ghana", path: "/vat-software-ghana" },
+        ])}
+      />
 
       <section className="pt-28 pb-20 border-b border-zinc-100">
         <Container>
@@ -28,6 +36,21 @@ export default function VatSoftwareGhanaPage() {
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
               Finza calculates Ghana VAT, NHIL, and GETFund at the point of every transaction — posting each levy to a separate ledger account automatically. GRA-ready VAT reports are always available.
+            </p>
+            <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
+              VAT is one slice of the full books — see the wider{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                accounting software story for Ghana
+              </Link>
+              , then check{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                pricing in GHS
+              </Link>{" "}
+              or{" "}
+              <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                contact us
+              </Link>
+              .
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://app.finza.africa/signup" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">

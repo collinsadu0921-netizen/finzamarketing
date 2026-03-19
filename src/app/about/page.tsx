@@ -26,7 +26,11 @@ export default function AboutPage() {
               Built in Africa, for businesses that need real books
             </h1>
             <p className="text-lg leading-relaxed text-zinc-600">
-              Finza exists because <strong className="text-zinc-900">most Ghanaian SMEs</strong> still run finance on spreadsheets and memory. That is not a discipline problem — it is a <strong className="text-zinc-900">tools problem</strong>. Generic global software often ignores how Ghana actually taxes transactions; manual sheets cannot enforce double-entry.
+              Finza exists because <strong className="text-zinc-900">most Ghanaian SMEs</strong> still run finance on spreadsheets and memory. That is not a discipline problem — it is a <strong className="text-zinc-900">tools problem</strong>. Generic global software often ignores how Ghana actually taxes transactions; manual sheets cannot enforce double-entry. See the product in motion via the{" "}
+              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
+                interactive demo
+              </Link>
+              .
             </p>
           </div>
         </Container>

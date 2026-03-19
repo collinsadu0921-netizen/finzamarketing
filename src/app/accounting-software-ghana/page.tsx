@@ -3,9 +3,11 @@ import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbListSchema, softwareApplicationSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accounting Software in Ghana | Finza",
+  title: "Accounting Software for Ghana — Ledger, VAT & Live Reports | Finza",
   description:
     "Looking for accounting software in Ghana? Finza gives Ghanaian businesses a real-time ledger, VAT (15%), NHIL (2.5%), and GETFund (2.5%) handling under Ghana's revised framework effective 1 January 2026 — invoicing and financial reports always current.",
   alternates: {
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
 export default function AccountingSoftwareGhanaPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={[softwareApplicationSchema(), breadcrumbListSchema([{ name: "Home", path: "/" }, { name: "Accounting software for Ghana", path: "/accounting-software-ghana" }])]} />
 
       <section className="pt-28 pb-20 border-b border-zinc-100">
         <Container>
@@ -28,6 +31,17 @@ export default function AccountingSoftwareGhanaPage() {
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
               Finza is accounting software built specifically for Ghana — with VAT, NHIL, and GETFund handling, real-time ledger posting, and financial reports that are always current. No spreadsheets. No month-end catch-up.
+            </p>
+            <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
+              Need levy-specific automation first? See{" "}
+              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT software for Ghana
+              </Link>
+              . Ready to compare plans?{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Workspace pricing
+              </Link>{" "}
+              lists Retail, Service, and Accountant workspaces in GHS.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a

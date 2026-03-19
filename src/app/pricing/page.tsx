@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbListSchema, faqPageSchema, pricingPageFaqForSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
     title: "Pricing — Accounting Software for Ghanaian Businesses | Finza",
@@ -107,6 +109,15 @@ const comparisonRows = [
 export default function PricingPage() {
     return (
         <main className="flex flex-col min-h-screen bg-white">
+            <JsonLd
+                data={[
+                    faqPageSchema(pricingPageFaqForSchema),
+                    breadcrumbListSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Pricing", path: "/pricing" },
+                    ]),
+                ]}
+            />
 
             {/* ── HEADER ── */}
             <section className="pt-28 pb-16 border-b border-zinc-100">
@@ -116,7 +127,15 @@ export default function PricingPage() {
                             Simple pricing.<br />Built for Ghanaian businesses.
                         </h1>
                         <p className="text-lg text-zinc-600 leading-relaxed">
-                            One workspace per business type. No hidden tiers, no feature gating. Start free — upgrade when you&apos;re ready.
+                            One workspace per business type. No hidden tiers, no feature gating. Start free — upgrade when you&apos;re ready. For what sits behind these plans, read{" "}
+                            <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                                accounting software for Ghana
+                            </Link>
+                            ; questions before you buy go to{" "}
+                            <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                                contact
+                            </Link>
+                            .
                         </p>
                         <div className="flex flex-wrap items-center gap-3 pt-2">
                             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">

@@ -3,12 +3,14 @@ import { Container } from "@/components/container";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Footer } from "@/components/footer";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { JsonLd } from "@/components/json-ld";
+import { faqPageSchema, homePageFaqForSchema } from "@/lib/schema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accounting Software in Ghana | Finza",
+  title: "Finza — Real-time ledger accounting for teams in Ghana",
   description:
-    "Finza is accounting software built for Ghanaian businesses. Real-time ledger posting, VAT (15%), NHIL (2.5%), and GETFund (2.5%) handling under Ghana's revised framework effective 1 January 2026 — with input tax deduction treatment for NHIL and GETFund.",
+    "Finza is the ledger-first finance layer for owners and accountants who are done with month-end surprises. Live P&L, balanced journals, and Ghana tax lines handled at the transaction — see the full product breakdown on our accounting software page for Ghana.",
   alternates: {
     canonical: "https://www.finza.africa",
   },
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="flex flex-col">
+      <JsonLd data={faqPageSchema(homePageFaqForSchema)} />
 
       {/* ────────────────────────────────────────────────────
           SECTION 1 — HERO
@@ -28,7 +31,7 @@ export default function Home() {
             {/* Left: headline + CTA */}
             <div className="space-y-7">
               <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wide uppercase">
-                Accounting software · Built for Ghana
+                Finza · Ledger-first · Ghana
               </span>
 
               <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
@@ -37,9 +40,13 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-zinc-600 leading-relaxed max-w-[520px]">
-                Finza is{" "}
-                <strong className="text-zinc-900 font-semibold">accounting software for Ghanaian businesses</strong>
-                {" "}— with automatic ledger posting, Ghana VAT and NHIL handling, and financial reports that are always current.
+                Finza gives growing teams <strong className="text-zinc-900 font-semibold">one balanced ledger</strong>{" "}
+                instead of scattered sheets — so profit, VAT, and cash move together as you operate. For the full Ghana tax
+                and product story (VAT, NHIL, GETFund, workspaces), read our{" "}
+                <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  overview of accounting software for Ghana
+                </Link>
+                .
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-3">
@@ -171,7 +178,15 @@ export default function Home() {
                 Most Ghanaian businesses don&apos;t struggle with revenue.
               </p>
               <p className="text-base text-zinc-600 leading-relaxed">
-                They struggle with knowing what they actually made, what they owe in VAT, and whether their books are correct — until an accountant or audit forces the question.
+                They struggle with knowing what they actually made, what they owe in VAT, and whether their books are correct — until an accountant or audit forces the question. If you want to talk it through with us, use{" "}
+                <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  contact
+                </Link>
+                {" "}or jump into a{" "}
+                <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  guided demo
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -760,7 +775,11 @@ export default function Home() {
               Stop guessing your numbers.
             </h2>
             <p className="text-base text-zinc-400 leading-relaxed">
-              Accounting software for Ghanaian businesses — a real-time ledger that keeps itself balanced, so you always know exactly where you stand.
+              Start from a brand you can trust for ledger discipline — then dive into{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-white underline underline-offset-2 hover:text-zinc-200">
+                how Finza handles Ghana VAT and reporting
+              </Link>
+              {" "}when you&apos;re ready to compare in depth.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <a

@@ -5,9 +5,9 @@ import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
-  title: "Small Business Accounting Software in Ghana | Finza",
+  title: "Small Business Accounting with Finza — Ghana SME Software | Finza",
   description:
-    "Finza is accounting software for small businesses in Ghana. Real-time profit and loss, Ghana VAT handling, and financial reports that are always current — without an accountant every month.",
+    "The Finza SME landing page: real-time P&L, Ghana VAT/NHIL/GETFund in the ledger, and accountant-ready books. Distinct from our free operational guide — start here to evaluate the product.",
   alternates: {
     canonical: "https://www.finza.africa/small-business-accounting-ghana",
   },
@@ -21,13 +21,28 @@ export default function SmallBusinessAccountingGhanaPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wide uppercase">
-              Small business accounting · Ghana
+              SME product page · Ghana
             </span>
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Accounting software for small businesses in Ghana.
+              Small business accounting on a live Ghana ledger.
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
-              Finza gives Ghanaian SME owners real-time visibility into their profit, tax position, and cash — without spreadsheets, without waiting for an accountant, and without month-end confusion.
+              This page is for owners evaluating <strong className="text-zinc-900">Finza as software</strong> — workspaces, pricing, and what posts automatically. For day-in-the-life scenarios and “what to stop doing,” read the separate{" "}
+              <Link href="/accounting-for-small-business-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                practical SME accounting guide
+              </Link>
+              .
+            </p>
+            <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
+              Still want the big-picture product story first? Start with{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                accounting software for Ghana
+              </Link>
+              {" "}or jump to{" "}
+              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT software
+              </Link>{" "}
+              if levies are your main pain.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://app.finza.africa/signup" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">

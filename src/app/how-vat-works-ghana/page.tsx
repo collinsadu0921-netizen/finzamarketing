@@ -87,7 +87,15 @@ export default function HowVatWorksGhanaPage() {
 
             <h2>How Finza fits</h2>
             <p>
-              Finza is built <strong>ledger-first</strong>: invoices and sales flows post journal entries that separate revenue from VAT and levies. That is the same discipline accountants expect — automated so owners are not hand-calculating percentages at month-end.
+              Finza is built <strong>ledger-first</strong>: invoices and sales flows post journal entries that separate revenue from VAT and levies. That is the same discipline accountants expect — automated so owners are not hand-calculating percentages at month-end. When you want the product angle on returns and control accounts, start with{" "}
+              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT software for Ghana
+              </Link>{" "}
+              and the broader{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Finza accounting overview
+              </Link>
+              .
             </p>
           </article>
         </Container>

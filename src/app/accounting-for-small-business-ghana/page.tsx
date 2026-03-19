@@ -26,7 +26,11 @@ export default function AccountingForSmallBusinessGhanaPage() {
               Accounting for small business in Ghana — what actually matters
             </h1>
             <p className="text-lg leading-relaxed text-zinc-600">
-              Small businesses rarely fail because they lack a 40-page chart of accounts. They fail because <strong className="text-zinc-900">no one knows real profit</strong>, <strong className="text-zinc-900">VAT is guessed</strong>, and the accountant receives a spreadsheet in March that cannot be audited.
+              Small businesses rarely fail because they lack a 40-page chart of accounts. They fail because <strong className="text-zinc-900">no one knows real profit</strong>, <strong className="text-zinc-900">VAT is guessed</strong>, and the accountant receives a spreadsheet in March that cannot be audited. This article is editorial — the dedicated{" "}
+              <Link href="/small-business-accounting-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Finza SME product page
+              </Link>{" "}
+              is where we pitch workspaces and trials.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -66,6 +70,19 @@ export default function AccountingForSmallBusinessGhanaPage() {
               <li>Deleting wrong rows instead of reversing entries.</li>
             </ul>
 
+            <h2>Guide vs software page</h2>
+            <p>
+              Use this guide to sanity-check habits and scenarios. When you want screenshots-level positioning and signup CTAs, switch to the{" "}
+              <Link href="/small-business-accounting-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                SME product overview
+              </Link>
+              . Levy-heavy operators should skim{" "}
+              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT software for Ghana
+              </Link>{" "}
+              before you buy anything.
+            </p>
+
             <h2>How Finza helps</h2>
             <p>
               Finza keeps a <strong>single general ledger</strong> for the business. Retail and service workspaces match how SMEs actually operate;{" "}
@@ -78,6 +95,10 @@ export default function AccountingForSmallBusinessGhanaPage() {
               For product detail, start at{" "}
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 accounting software for Ghana
+              </Link>
+              . Prefer to talk first?{" "}
+              <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Contact Finza
               </Link>
               .
             </p>

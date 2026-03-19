@@ -60,7 +60,15 @@ export default function GhanaVatCalculatorPage() {
             </p>
             <h2>2026 framework note</h2>
             <p>
-              Effective <strong>1 January 2026</strong>, NHIL and GETFund are treated as <strong>input tax deductions</strong> under Ghana&apos;s revised VAT framework. A calculator shows outputs on sales; your books must still track <strong>inputs</strong> on purchases correctly.
+              Effective <strong>1 January 2026</strong>, NHIL and GETFund are treated as <strong>input tax deductions</strong> under Ghana&apos;s revised VAT framework. A calculator shows outputs on sales; your books must still track <strong>inputs</strong> on purchases correctly. When you outgrow illustrative math,{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                compare workspace pricing
+              </Link>{" "}
+              or ask a question through{" "}
+              <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                contact
+              </Link>
+              .
             </p>
           </article>
         </Container>

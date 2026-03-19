@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/navbar";
+import { JsonLd } from "@/components/json-ld";
+import { organizationAndWebsiteGraph } from "@/lib/schema";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -76,6 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased h-full`}>
+        <JsonLd data={organizationAndWebsiteGraph} />
         {/* ── Announcement Bar ── */}
         <div className="w-full bg-[#0F172A] text-white text-center py-2.5 px-4 text-sm font-medium">
           <span className="mr-2">🎉</span>

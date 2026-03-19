@@ -85,6 +85,23 @@ export default function NhilGetfundExplainedPage() {
               </li>
             </ul>
 
+            <h2>Automating this in software</h2>
+            <p>
+              If your goal is to stop re-typing levy lines into a sheet,{" "}
+              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT-focused software for Ghana
+              </Link>{" "}
+              should post each levy beside the sale. The full ledger story — including P&amp;L and balance sheet — sits under{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                accounting software for Ghana
+              </Link>
+              ; compare{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                workspace pricing
+              </Link>{" "}
+              when you are ready to trial.
+            </p>
+
             <h2>Where to go next</h2>
             <p>
               For step-by-step VAT mechanics, read{" "}

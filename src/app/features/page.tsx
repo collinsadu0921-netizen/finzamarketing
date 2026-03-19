@@ -3,6 +3,8 @@ import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Features — Accounting Software for Ghanaian Businesses | Finza",
@@ -16,6 +18,12 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", path: "/" },
+          { name: "Features", path: "/features" },
+        ])}
+      />
 
       {/* ── PAGE HERO ── */}
       <section className="pt-28 pb-20 border-b border-zinc-100">
@@ -29,6 +37,17 @@ export default function FeaturesPage() {
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
               Most accounting tools record transactions and reassemble reports later. Finza starts with the general ledger. Invoicing, POS, VAT, and reports all flow directly into one continuously balanced system.
+            </p>
+            <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
+              For the positioning page on Ghana tax and workspaces, see{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                accounting software for Ghana
+              </Link>
+              ; numbers live on{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                pricing
+              </Link>
+              .
             </p>
           </div>
         </Container>

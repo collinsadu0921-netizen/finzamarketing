@@ -66,6 +66,19 @@ export default function SecurityPage() {
               <li>Limit shared logins; accountants should use their own professional access.</li>
               <li>Export critical period-end reports and store them with your engagement file.</li>
             </ul>
+
+            <h2>Questions</h2>
+            <p>
+              For privacy requests, use{" "}
+              <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                contact
+              </Link>
+              . To preview how controls feel in-app, open the{" "}
+              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
+                demo workspace
+              </Link>
+              .
+            </p>
           </article>
         </Container>
       </section>

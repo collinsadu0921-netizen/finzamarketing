@@ -32,6 +32,14 @@ export default function ContactPage() {
                 <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                   accounting software for Ghana
                 </Link>
+                {" "}or the levy-focused{" "}
+                <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  VAT software page
+                </Link>
+                . Numbers and trials are on{" "}
+                <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  pricing
+                </Link>
                 .
               </p>
               <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-5 text-sm text-zinc-700">

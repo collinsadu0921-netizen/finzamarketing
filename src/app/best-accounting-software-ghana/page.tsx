@@ -105,6 +105,14 @@ export default function BestAccountingSoftwareGhanaPage() {
                 <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
                   try the demo
                 </Link>
+                . Levy-heavy shops should also read{" "}
+                <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  VAT software for Ghana
+                </Link>
+                ; bespoke questions belong in{" "}
+                <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  contact
+                </Link>
                 .
               </p>
             </article>

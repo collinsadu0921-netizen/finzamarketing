@@ -98,6 +98,22 @@ export default function AccountingVsExcelGhanaPage() {
               <p>
                 A single wrongly copied VAT rate on a 200-row sheet can misstate <strong>GHS thousands</strong> across a quarter. Ledger software applies rates at transaction level — the same place your customer sees them on the invoice.
               </p>
+              <h3 className="text-xl font-bold text-zinc-900">When you are ready to switch</h3>
+              <p>
+                Map your opening balances, pick a workspace, and run parallel for a week if you need confidence. The product deep-dive is on{" "}
+                <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  accounting software for Ghana
+                </Link>
+                ; if you want help choosing,{" "}
+                <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  message the team
+                </Link>{" "}
+                or book context via{" "}
+                <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  the demo
+                </Link>
+                .
+              </p>
             </article>
           </div>
         </Container>
