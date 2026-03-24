@@ -27,7 +27,7 @@ export default function RetailDemoPage() {
                     Preview environment — not live data
                 </span>
                 <a
-                    href="https://app.finza.africa/signup"
+                    href="/pricing"
                     className="rounded-md bg-[#0F172A] text-white px-3 py-1 text-xs font-semibold hover:bg-[#0F172A]/90 transition-colors"
                 >
                     Create account
@@ -186,7 +186,7 @@ export default function RetailDemoPage() {
                                 <p className="text-xs text-zinc-500 mt-0.5">250 GHS / month. First month free. No setup fees.</p>
                             </div>
                             <a
-                                href="https://app.finza.africa/signup"
+                                href="/pricing"
                                 className="flex-shrink-0 rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0F172A]/90 transition-colors"
                             >
                                 Get started free →

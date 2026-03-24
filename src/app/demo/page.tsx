@@ -371,7 +371,7 @@ export default function DemoPage() {
                     <p className="text-sm text-zinc-500 leading-relaxed">
                         Sample data is used throughout. No real transactions are posted. Your actual business data will live in your Finza account — create one at{" "}
                         <a
-                            href="https://app.finza.africa/signup"
+                            href="/pricing"
                             className="font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600"
                         >
                             app.finza.africa

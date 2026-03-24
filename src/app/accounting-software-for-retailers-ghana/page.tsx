@@ -30,8 +30,8 @@ export default function RetailAccountingGhanaPage() {
               Finza&apos;s Retail Workspace connects your point-of-sale, inventory, and accounting into one system. Every sale posts to the general ledger automatically — with inventory adjustments, COGS entries, and Ghana VAT separated at the moment of the transaction.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://app.finza.africa/signup" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Start free — no card required
+              <a href="/pricing" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
+                Start your 14-day free trial
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
                 Preview the retail workspace
@@ -218,7 +218,7 @@ export default function RetailAccountingGhanaPage() {
               Accounting software for Ghanaian retailers. Every sale posts to the ledger automatically.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a href="https://app.finza.africa/signup" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
+              <a href="/pricing" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
                 Get started free
               </a>
               <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">

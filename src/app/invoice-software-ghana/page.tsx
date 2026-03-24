@@ -30,8 +30,8 @@ export default function InvoiceSoftwareGhanaPage() {
               Finza lets you raise invoices, track what clients owe, record payments, and handle Ghana VAT — all posted directly to a live accounting ledger. No spreadsheet required.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://app.finza.africa/signup" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Start free — no card required
+              <a href="/pricing" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
+                Start your 14-day free trial
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
                 View demo
@@ -209,7 +209,7 @@ export default function InvoiceSoftwareGhanaPage() {
               Raise invoices. Track receivables. Record payments. Ghana VAT handled automatically. All in one accounting system.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a href="https://app.finza.africa/signup" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
+              <a href="/pricing" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
                 Get started free
               </a>
               <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">

@@ -32,10 +32,10 @@ export default function AccountantsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
-                href="https://app.finza.africa/signup"
+                href="/pricing"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
               >
-                Start free — no card required
+                Start your 14-day free trial
               </a>
               <Link
                 href="/demo"
@@ -315,10 +315,10 @@ export default function AccountantsPage() {
               </div>
               <div className="flex flex-col gap-3 flex-shrink-0 w-full md:w-auto md:min-w-[200px]">
                 <a
-                  href="https://app.finza.africa/signup"
+                  href="/pricing"
                   className="block w-full rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
                 >
-                  Start free
+                  Start your 14-day free trial
                 </a>
                 <Link
                   href="/demo"
@@ -347,10 +347,10 @@ export default function AccountantsPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <a
-                href="https://app.finza.africa/signup"
+                href="/pricing"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
-                Start free — no card required
+                Start your 14-day free trial
               </a>
               <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
                 Preview the workspace →

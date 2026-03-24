@@ -563,7 +563,7 @@ export default function FeaturesPage() {
                 Try the demo
               </Link>
               <a
-                href="https://app.finza.africa/signup"
+                href="/pricing"
                 className="text-base font-semibold text-zinc-400 hover:text-white transition-colors"
               >
                 Get started free →

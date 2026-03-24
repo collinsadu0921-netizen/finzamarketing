@@ -83,11 +83,11 @@ export default function RootLayout({
         <div className="w-full bg-[#0F172A] text-white text-center py-2.5 px-4 text-sm font-medium">
           <span className="mr-2">🎉</span>
           <span>
-            <strong>Early Access:</strong> First 50 users get{" "}
-            <strong>1 month free</strong> — no card required.
+            <strong>Early Access:</strong> Start your{" "}
+            <strong>14-day free trial</strong> — no card required.
           </span>
           <a
-            href="https://app.finza.africa/signup"
+            href="/pricing"
             className="ml-3 underline underline-offset-2 font-semibold hover:text-zinc-300 transition-colors"
           >
             Claim your spot →
