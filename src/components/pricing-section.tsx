@@ -10,8 +10,8 @@ export function PricingSection() {
     const [cycle, setCycle] = useState<BillingCycle>("monthly");
 
     const getPrice = (monthlyPrice: number) => {
-        if (cycle === "quarterly") return monthlyPrice * 3;
-        if (cycle === "annual") return monthlyPrice * 12;
+        if (cycle === "quarterly") return Math.round(monthlyPrice * 3 * 0.95);
+        if (cycle === "annual") return Math.round(monthlyPrice * 12 * 0.83);
         return monthlyPrice;
     };
 
@@ -33,21 +33,26 @@ export function PricingSection() {
 
                 {/* Billing Toggle */}
                 <div className="flex justify-center mb-16">
-                    <div className="flex bg-white/50 border border-zinc-200 p-1.5 rounded-xl shadow-sm relative">
+                    <div className="flex bg-white/50 border border-zinc-200 p-1.5 rounded-xl shadow-sm relative overflow-x-auto max-w-full">
                         {(["monthly", "quarterly", "annual"] as BillingCycle[]).map((c) => (
                             <button
                                 key={c}
                                 onClick={() => setCycle(c)}
-                                className={`relative px-6 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+                                className={`relative flex items-center gap-2 px-5 sm:px-6 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                                     cycle === c
                                         ? "bg-white text-zinc-900 shadow border border-zinc-200/50"
                                         : "text-zinc-500 hover:text-zinc-900"
                                 }`}
                             >
-                                <span className="capitalize">{c}</span>
+                                <span className="capitalize whitespace-nowrap">{c}</span>
+                                {c === "quarterly" && (
+                                    <span className="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">
+                                        Save 5%
+                                    </span>
+                                )}
                                 {c === "annual" && (
-                                    <span className="absolute -top-3 -right-3 bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-200 whitespace-nowrap">
-                                        Save up to 20%
+                                    <span className="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">
+                                        Save 17%
                                     </span>
                                 )}
                             </button>
@@ -58,7 +63,11 @@ export function PricingSection() {
                 <div className="grid md:grid-cols-3 gap-8">
                     {/* Essentials Plan */}
                     <div className="flex flex-col p-8 bg-background border border-border/50 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 relative">
-                        <h3 className="text-xl font-semibold text-primary mb-2">Essentials</h3>
+                        <div className="mb-4">
+                            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-sm font-bold bg-zinc-100 text-zinc-800">
+                                Essentials
+                            </span>
+                        </div>
                         <div className="text-4xl font-extrabold mb-1">
                             GHS {getPrice(149).toLocaleString()}
                             <span className="text-base font-normal text-muted-foreground">{formatCycleLabel()}</span>
@@ -85,7 +94,11 @@ export function PricingSection() {
                         <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl uppercase tracking-wider">
                             Most Popular
                         </div>
-                        <h3 className="text-xl font-semibold text-primary mb-2">Professional</h3>
+                        <div className="mb-4">
+                            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-sm font-bold bg-blue-100 text-blue-700">
+                                Professional
+                            </span>
+                        </div>
                         <div className="text-4xl font-extrabold mb-1">
                             GHS {getPrice(449).toLocaleString()}
                             <span className="text-base font-normal text-muted-foreground">{formatCycleLabel()}</span>
@@ -109,7 +122,11 @@ export function PricingSection() {
 
                     {/* Business Plan */}
                     <div className="flex flex-col p-8 bg-background border border-border/50 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 relative">
-                        <h3 className="text-xl font-semibold text-primary mb-2">Business</h3>
+                        <div className="mb-4">
+                            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-sm font-bold bg-fuchsia-100 text-fuchsia-700">
+                                Business
+                            </span>
+                        </div>
                         <div className="text-4xl font-extrabold mb-1">
                             GHS {getPrice(949).toLocaleString()}
                             <span className="text-base font-normal text-muted-foreground">{formatCycleLabel()}</span>

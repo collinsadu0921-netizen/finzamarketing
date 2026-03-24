@@ -114,7 +114,7 @@ export const pricingPageFaqForSchema = [
   {
     questionName: "When am I billed?",
     acceptedAnswerText:
-      "Subscriptions are billed monthly on the same date you activated. Payments are processed via Paystack. You can cancel at any time before the next billing date and retain access until the period ends. No partial refunds — you keep access through the end of the month you paid for. You can also save up to 20% by paying annually.",
+      "Subscriptions are billed monthly on the same date you activated. Payments are processed via Paystack. You can cancel at any time before the next billing date and retain access until the period ends. No partial refunds — you keep access through the end of the month you paid for. You can also save 17% by paying annually.",
   },
   {
     questionName: "Can I upgrade or downgrade my tier?",

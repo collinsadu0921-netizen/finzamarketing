@@ -164,8 +164,8 @@ export function PricingTiers() {
     const [cycle, setCycle] = useState<BillingCycle>("monthly");
 
     const getPrice = (monthlyPrice: number) => {
-        if (cycle === "quarterly") return monthlyPrice * 3;
-        if (cycle === "annual") return monthlyPrice * 12;
+        if (cycle === "quarterly") return Math.round(monthlyPrice * 3 * 0.95);
+        if (cycle === "annual") return Math.round(monthlyPrice * 12 * 0.83);
         return monthlyPrice;
     };
 
@@ -179,26 +179,37 @@ export function PricingTiers() {
         <section className="py-20 bg-white border-b border-zinc-100">
             <Container>
                 {/* Billing Toggle */}
-                <div className="flex justify-center mb-16">
-                    <div className="flex bg-zinc-50 border border-zinc-200 p-1.5 rounded-xl shadow-sm relative">
+                <div className="flex flex-col items-center justify-center mb-16 space-y-8">
+                    <div className="flex bg-white border border-zinc-200 p-1.5 rounded-xl shadow-sm relative overflow-x-auto max-w-full">
                         {(["monthly", "quarterly", "annual"] as BillingCycle[]).map((c) => (
                             <button
                                 key={c}
                                 onClick={() => setCycle(c)}
-                                className={`relative px-6 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+                                className={`relative flex items-center gap-2 px-5 sm:px-6 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                                     cycle === c
-                                        ? "bg-white text-zinc-900 shadow border border-zinc-200/50"
+                                        ? "bg-[#1E293B] text-white shadow border border-transparent"
                                         : "text-zinc-500 hover:text-zinc-900"
                                 }`}
                             >
-                                <span className="capitalize">{c}</span>
+                                <span className="capitalize whitespace-nowrap">{c}</span>
+                                {c === "quarterly" && (
+                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap ${cycle === c ? "bg-emerald-400/20 text-emerald-300" : "bg-emerald-100 text-emerald-700"}`}>
+                                        Save 5%
+                                    </span>
+                                )}
                                 {c === "annual" && (
-                                    <span className="absolute -top-3 -right-3 bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-200 whitespace-nowrap">
-                                        Save up to 20%
+                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap ${cycle === c ? "bg-emerald-400/20 text-emerald-300" : "bg-emerald-100 text-emerald-700"}`}>
+                                        Save 17%
                                     </span>
                                 )}
                             </button>
                         ))}
+                    </div>
+                    
+                    <div className="max-w-3xl text-center">
+                        <p className="text-[14px] leading-relaxed text-zinc-500">
+                            <strong className="font-semibold text-zinc-700">Billing cycle:</strong> Prices update when you switch Monthly, Quarterly, or Annual. If you pay after switching, you are charged the full amount for that cycle and a <strong className="font-semibold text-zinc-700">new period begins immediately</strong> from the payment date. There is no credit for unused time and no prorated adjustment. "Save %" compares paying a longer cycle upfront to paying month by month — it is not a refund from a previous subscription.
+                        </p>
                     </div>
                 </div>
 
@@ -220,7 +231,15 @@ export function PricingTiers() {
 
                             <div className="p-7 flex flex-col flex-1">
                                 <div className="mb-6">
-                                    <h2 className="text-2xl font-bold text-zinc-900 mb-2">{plan.name}</h2>
+                                    <div className="mb-4">
+                                        <span className={`inline-flex items-center px-3.5 py-1 rounded-full text-sm font-bold ${
+                                            plan.id === "essentials" ? "bg-zinc-100 text-zinc-800" :
+                                            plan.id === "professional" ? "bg-blue-100 text-blue-700" :
+                                            "bg-fuchsia-100 text-fuchsia-700"
+                                        }`}>
+                                            {plan.name}
+                                        </span>
+                                    </div>
                                     <p className="text-sm font-medium text-zinc-600 mb-6 min-h-[40px]">
                                         {plan.subtitle}
                                     </p>
