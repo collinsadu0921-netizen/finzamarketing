@@ -193,14 +193,14 @@ export default function PricingPage() {
             <section className="pt-28 pb-16 border-b border-zinc-100">
                 <Container>
                     <div className="max-w-2xl space-y-4">
-                        <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 mb-4 uppercase tracking-widest">
-                            Service Workspace Pricing
-                        </span>
                         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-                            Choose the plan that matches your business.
+                            Service Workspace Pricing
                         </h1>
+                        <p className="text-lg text-zinc-600 leading-relaxed font-medium">
+                            Built for service businesses managing clients, invoices, and financial operations.
+                        </p>
                         <p className="text-lg text-zinc-600 leading-relaxed">
-                            Built for service businesses managing clients, invoices, and financial operations. Clear monthly pricing to match your growth. Start your 14-day free trial — upgrade when you&apos;re ready.
+                            Choose the plan that matches the level of control your business needs.
                         </p>
                         <div className="flex flex-wrap items-center gap-3 pt-2">
                             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
@@ -343,9 +343,17 @@ export default function PricingPage() {
                         ))}
                     </div>
 
-                    <p className="text-center text-sm text-zinc-500 mt-12 mb-4">
-                        You can subscribe to your selected plan at any time during your 14-day trial.
-                    </p>
+                    <div className="mt-16 text-center max-w-2xl mx-auto space-y-4">
+                        <div className="bg-zinc-50 rounded-xl p-6 border border-zinc-200">
+                            <h3 className="text-lg font-bold text-zinc-900 mb-2">Built for structured businesses</h3>
+                            <p className="text-sm text-zinc-600 leading-relaxed">
+                                Finza is designed for businesses that need accurate numbers, consistent records, and financial visibility as they operate.
+                            </p>
+                        </div>
+                        <p className="text-sm text-zinc-500 pt-4">
+                            Note: Trial applies to the selected Service plan. You can subscribe at any time before the trial ends.
+                        </p>
+                    </div>
                 </Container>
             </section>
 
