@@ -13,47 +13,48 @@ export function PricingSection() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {/* Starter Plan */}
+                    {/* Essentials Plan */}
                     <div className="flex flex-col p-8 bg-background border border-border/50 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 relative">
-                        <h3 className="text-xl font-semibold text-primary mb-2">Starter</h3>
-                        <div className="text-4xl font-extrabold mb-6">$0<span className="text-base font-normal text-muted-foreground">/mo</span></div>
-                        <p className="text-muted-foreground mb-8 text-sm leading-relaxed">Perfect for hobbyists and side projects.</p>
-                        <Button variant="outline" className="w-full mb-8 font-semibold">Get Started</Button>
+                        <h3 className="text-xl font-semibold text-primary mb-2">Essentials</h3>
+                        <div className="text-4xl font-extrabold mb-6">GHS 149<span className="text-base font-normal text-muted-foreground">/mo</span></div>
+                        <p className="text-muted-foreground mb-8 text-sm leading-relaxed">Core tools to manage operations and billing.</p>
+                        <Button variant="outline" className="w-full mb-8 font-semibold">Start free</Button>
                         <ul className="space-y-4 text-sm text-muted-foreground flex-1">
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> 1 User</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> 5 Projects</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Community Support</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Dashboard, Customers, Quotes</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Invoices & Payments</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Profit & Loss, Balance Sheet</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Basic VAT Report</li>
                         </ul>
                     </div>
 
-                    {/* Pro Plan */}
+                    {/* Professional Plan */}
                     <div className="flex flex-col p-8 bg-white border-2 border-primary rounded-3xl shadow-2xl relative transform scale-105 z-10">
                         <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl uppercase tracking-wider">
                             Most Popular
                         </div>
-                        <h3 className="text-xl font-semibold text-primary mb-2">Pro</h3>
-                        <div className="text-4xl font-extrabold mb-6">$29<span className="text-base font-normal text-muted-foreground">/mo</span></div>
-                        <p className="text-muted-foreground mb-8 text-sm leading-relaxed">For professional developers and small teams.</p>
-                        <Button className="w-full mb-8 font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg">Start Free Trial</Button>
+                        <h3 className="text-xl font-semibold text-primary mb-2">Professional</h3>
+                        <div className="text-4xl font-extrabold mb-6">GHS 449<span className="text-base font-normal text-muted-foreground">/mo</span></div>
+                        <p className="text-muted-foreground mb-8 text-sm leading-relaxed">For growing teams and active businesses.</p>
+                        <Button className="w-full mb-8 font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg">Start free</Button>
                         <ul className="space-y-4 text-sm text-foreground/80 flex-1">
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> 5 Users</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Unlimited Projects</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Priority Support</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Advanced Analytics</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Everything in Essentials</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Projects & Materials</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Payroll & Staff Management</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> VAT & WHT Returns</li>
                         </ul>
                     </div>
 
-                    {/* Enterprise Plan */}
+                    {/* Business Plan */}
                     <div className="flex flex-col p-8 bg-background border border-border/50 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 relative">
-                        <h3 className="text-xl font-semibold text-primary mb-2">Enterprise</h3>
-                        <div className="text-4xl font-extrabold mb-6">Custom</div>
-                        <p className="text-muted-foreground mb-8 text-sm leading-relaxed">For large organizations with specific needs.</p>
-                        <Button variant="outline" className="w-full mb-8 font-semibold">Contact Sales</Button>
+                        <h3 className="text-xl font-semibold text-primary mb-2">Business</h3>
+                        <div className="text-4xl font-extrabold mb-6">GHS 949<span className="text-base font-normal text-muted-foreground">/mo</span></div>
+                        <p className="text-muted-foreground mb-8 text-sm leading-relaxed">Full-scale accounting and control.</p>
+                        <Button variant="outline" className="w-full mb-8 font-semibold">Start free</Button>
                         <ul className="space-y-4 text-sm text-muted-foreground flex-1">
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Unlimited Users</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> SLA</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Dedicated Account Manager</li>
-                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Custom Integrations</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Everything in Professional</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Full General Ledger</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Trail Balance & Recons</li>
+                            <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Full Audit Logs & Period Locks</li>
                         </ul>
                     </div>
                 </div>

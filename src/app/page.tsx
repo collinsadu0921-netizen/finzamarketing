@@ -596,44 +596,44 @@ export default function Home() {
       </section>
 
       {/* ────────────────────────────────────────────────────
-          SECTION 10 — WORKSPACES
+          SECTION 10 — PLANS
       ──────────────────────────────────────────────────── */}
       <section className="py-24 bg-zinc-50 border-b border-zinc-100">
         <Container>
           <div className="max-w-4xl mx-auto space-y-10">
             <div className="space-y-3">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Workspaces</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Plans</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-                One ledger engine. Three workspace types.
+                One ledger engine. Three flexible plans.
               </h2>
               <p className="text-sm text-zinc-600 max-w-xl">
-                Choose the workspace that matches your business model. All three post to the same double-entry system.
+                Choose the plan that matches your business model. All three post to the same double-entry system in the background.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  tag: "Retail Workspace",
-                  headline: "For inventory-based and point-of-sale businesses",
-                  desc: "Manage stock, process sales at point of sale, and let Finza handle the accounting behind every transaction.",
+                  tag: "Essentials",
+                  headline: "For simple operations and basic billing",
+                  desc: "Send professional quotes, invoice clients, track what you are owed, and monitor basic expenses effortlessly.",
                   bullets: [
-                    "POS sales post directly to the ledger",
-                    "Inventory tracked with automatic COGS entries",
-                    "VAT collected, separated, and reported automatically",
+                    "Dashboard, Customers & Quotes",
+                    "Proforma Invoices, Invoices & Payments",
+                    "VAT Report & Profit/Loss Tracking",
                   ],
-                  price: "GHS 250",
+                  price: "GHS 149",
                 },
                 {
-                  tag: "Service Workspace",
-                  headline: "For agencies, consultants, and service providers",
-                  desc: "Raise invoices, track payments, and manage expenses — all flowing into a live, always-balanced ledger.",
+                  tag: "Professional",
+                  headline: "For growing teams and active businesses",
+                  desc: "Manage team members, track projects, run payroll, and automatically generate precise VAT & WHT statutory returns.",
                   bullets: [
-                    "Invoices post to accounts receivable automatically",
-                    "Expense entries create immediate ledger records",
-                    "Aged receivables always current",
+                    "Projects, Materials & Supplier Bills",
+                    "Payroll, Salary Advances & Staff",
+                    "VAT Returns & WHT Returns",
                   ],
-                  price: "GHS 200",
+                  price: "GHS 449",
                 },
               ].map((ws) => (
                 <div key={ws.tag} className="flex flex-col p-8 rounded-xl border border-zinc-200 bg-white">
@@ -659,8 +659,8 @@ export default function Home() {
                       <span className="text-2xl font-extrabold text-zinc-900">{ws.price}</span>
                       <span className="text-sm text-zinc-500 ml-1.5">/ month</span>
                     </div>
-                    <Link href="/demo" className="text-sm font-semibold text-zinc-900 hover:text-zinc-600 transition-colors underline underline-offset-4">
-                      See demo →
+                    <Link href="/pricing" className="text-sm font-semibold text-zinc-900 hover:text-zinc-600 transition-colors underline underline-offset-4">
+                      See details →
                     </Link>
                   </div>
                 </div>
@@ -669,12 +669,12 @@ export default function Home() {
 
             <div className="rounded-xl border border-zinc-200 bg-white px-7 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
               <div>
-                <p className="text-sm font-bold text-zinc-900">Accountant Workspace</p>
+                <p className="text-sm font-bold text-zinc-900">Business Plan</p>
                 <p className="text-sm text-zinc-600 mt-0.5 max-w-lg">
-                  For accounting professionals managing multiple client ledgers. Period locking, journal review, and client oversight in one portal. <span className="font-semibold text-zinc-700">GHS 700 / month.</span>
+                  Complete end-to-end accounting. Full General Ledger, Trial Balance, Bank Reconciliations, Period locks, and full Audit logs. <span className="font-semibold text-zinc-700">GHS 949 / month.</span>
                 </p>
               </div>
-              <Link href="/accountants" className="flex-shrink-0 rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors whitespace-nowrap">
+              <Link href="/pricing" className="flex-shrink-0 rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors whitespace-nowrap">
                 Learn more
               </Link>
             </div>
