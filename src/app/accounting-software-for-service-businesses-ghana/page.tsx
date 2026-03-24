@@ -27,14 +27,14 @@ export default function ServiceBusinessAccountingGhanaPage() {
               Accounting software for service businesses in Ghana.
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
-              Finza&apos;s Service Workspace gives Ghanaian service businesses a live accounting system — invoicing that feeds accounts receivable, expense tracking that feeds the ledger, and real-time financial reports. Ghana VAT is handled automatically.
+              Finza gives Ghanaian service businesses complete financial control — project profitability, payroll management, automated VAT & WHT returns, and a continuously balanced general ledger. Not just invoicing, but accounting-grade infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://app.finza.africa/signup" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
                 Start free — no card required
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
-                Preview the service workspace
+                Preview the platform
               </Link>
             </div>
           </div>
@@ -81,28 +81,28 @@ export default function ServiceBusinessAccountingGhanaPage() {
             <div className="space-y-3">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The problem</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                Service businesses in Ghana have a receivables problem.
+                Service businesses outgrow basic invoicing tools quickly.
               </h2>
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Most service businesses invoice clients and then hope the money arrives. There is often no system tracking which invoices are outstanding, which are overdue, and which clients have partial balances. The accounts receivable balance — what clients actually owe — exists only as a physical pile of invoices or a spreadsheet cell that someone updates when they remember.
+              Most service businesses start by sending invoices and hoping the money arrives. But as consulting firms, agencies, and clinics grow, they realize that invoicing is only 10% of the financial picture.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
-              When revenue is high but cash is tight, the problem is almost always in the receivables. Outstanding invoices represent earned revenue that has not been collected. Without a live receivables system, those invoices age silently.
+              Managing projects, tracking supplier bills, processing payroll, recording staff salary advances, and filing Ghana Withholding Tax (WHT) correctly require serious accounting infrastructure. Without a unified ledger, financial data fragments across spreadsheets, leaving owners blind to their true cash position and profitability.
             </p>
             <div className="space-y-4">
               {[
                 {
-                  headline: "Outstanding invoices are invisible",
-                  body: "No live system tracking which invoices are unpaid, how long they have been outstanding, or what each client's total outstanding balance is at this moment.",
+                  headline: "Project costs are disconnected from revenue",
+                  body: "You know what you billed the client, but the material costs, supplier bills, and staff time are tracked in separate spreadsheets. You don't know if the project was actually profitable.",
                 },
                 {
-                  headline: "VAT on invoices is often wrong",
-                  body: "Many Ghanaian service businesses apply VAT as a single line item without separating NHIL and GETFund — or miss the levies entirely on some invoices. The liability mismatch compounds across the period.",
+                  headline: "WHT and VAT liabilities are a mess",
+                  body: "Ghanaian service businesses deal heavily with Withholding Tax. When tax logic isn't built into the ledger at the transaction level, period-end returns become a frantic, error-prone reconstruction.",
                 },
                 {
-                  headline: "Invoicing and accounting are two separate jobs",
-                  body: "An invoice is created in one system. The accounting entry is supposed to be made separately in another. In practice, the accounting entry is often not made at all — or is made weeks later.",
+                  headline: "No real financial governance",
+                  body: "Basic tools don't offer bank reconciliation, period locking, or full audit logs. When errors happen, history is quietly overwritten instead of properly reversed, destroying the audit trail.",
                 },
               ].map((item) => (
                 <div key={item.headline} className="flex gap-5 p-6 bg-zinc-50 rounded-xl border border-zinc-200">
@@ -123,31 +123,31 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="space-y-3">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">How the Service Workspace works</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">How Finza works</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                Invoice. Post. Track. Record payment. Done.
+                Accounting-grade infrastructure for serious operations.
               </h2>
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              In Finza&apos;s Service Workspace, raising an invoice is also an accounting action. The moment you confirm an invoice, it is posted to the ledger as a balanced journal entry — accounts receivable debited, revenue credited, VAT and levies separated. There is no second step.
+              Finza is built on a double-entry general ledger. Every operational action — from client invoicing and project tracking to payroll processing and supplier bill payments — automatically posts balanced journal entries. You get complete financial traceability and audit-ready reports without manual intervention.
             </p>
             <div className="space-y-4">
               {[
                 {
-                  title: "Every invoice is an accounting entry",
-                  body: "You raise the invoice. Finza writes the journal: accounts receivable debited, revenue credited, VAT output credited, NHIL payable credited, GETFund payable credited. All at once, automatically. The income statement updates. The balance sheet updates. The receivables balance updates.",
+                  title: "Project & Material Tracking",
+                  body: "Group invoices, supplier bills, and material usage by project. Finza links operational costs directly to client revenue, giving you real-time profitability tracking for every consulting gig or contract.",
                 },
                 {
-                  title: "Live accounts receivable tracking",
-                  body: "At any time, you can see the full aged receivables report — every outstanding invoice, every client, every balance, sorted by how many days it has been outstanding. When a client is 45 days overdue, you know it immediately — not when your accountant compiles the books.",
+                  title: "Payroll & Staff Management",
+                  body: "Process payroll, track staff costs, and manage salary advances directly within the system. Payroll expenses hit your income statement immediately, ensuring your net profitability is accurate.",
                 },
                 {
-                  title: "Payments clear receivables instantly",
-                  body: "When a client pays — in full or partially — you record the payment. Cash is debited, accounts receivable is credited by the corresponding amount. The outstanding balance drops immediately. The income statement stays accurate.",
+                  title: "Statutory Tax Returns (VAT & WHT)",
+                  body: "Withholding tax and VAT schedules are dynamically generated from your ledger. Whether you are withholding tax from a supplier or tracking VAT output on a service matrix, Finza prepares the exact figures for GRA.",
                 },
                 {
-                  title: "Expenses post to the ledger directly",
-                  body: "Every expense you record creates an accounting entry. The expense account is debited, the asset or liability is credited. Your income statement reflects operating costs in real time — not at month end when someone compiles the spreadsheet.",
+                  title: "Reconciliations & Audit Integrity",
+                  body: "Lock accounting periods, reconcile bank transactions against your ledger, and track every single modification through an immutable system audit log. Built for businesses that need to pass strict financial audits.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-5 p-6 bg-white rounded-xl border border-zinc-200 shadow-sm">
@@ -175,12 +175,12 @@ export default function ServiceBusinessAccountingGhanaPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {[
-                { q: "What revenue have I earned this month?", a: "Income statement updates with every invoice. Revenue is always current — including partial-period views." },
-                { q: "Which clients owe me money, and how much?", a: "Aged receivables report always current. Every outstanding invoice with days overdue visible at a glance." },
-                { q: "What is my VAT liability right now?", a: "VAT, NHIL, and GETFund are tracked at every invoice. Net liability is visible at all times — not just at filing time." },
-                { q: "How profitable am I after expenses?", a: "Net income on the income statement reflects both revenue earned and expenses recorded — always current." },
-                { q: "What is my total cash position?", a: "Cash and bank accounts reflect every payment received. Balance sheet always shows current liquidity position." },
-                { q: "Am I ready to give my accountant the books?", a: "Your ledger is being maintained in real time. Your accountant can review and close any period at any time." },
+                { q: "Was that specific project actually profitable?", a: "Project tracking links your supplier bills and material costs directly to your client invoices for instant margin visibility." },
+                { q: "Are we bleeding cash on fixed expenses?", a: "The live profit and loss statement, backed by the general ledger, tracks operational overhead automatically." },
+                { q: "What is my true WHT and VAT liability?", a: "Statutory returns are actively prepared in the background at the transaction level—ready to file at any time." },
+                { q: "Are staff salary advances accounted for?", a: "Advances are properly treated as receivables against staff profiles, automatically deducting from payroll processing." },
+                { q: "Does our bank balance match our books?", a: "Bank reconciliation modules ensure your cash flow statement perfectly aligns with your actual bank feeds." },
+                { q: "Can my books survive an external audit?", a: "Yes. Period closing controls, append-only reversals, and full system audit logs enforce accounting governance." },
               ].map((item) => (
                 <div key={item.q} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50">
                   <p className="text-sm font-semibold text-zinc-900 mb-2">{item.q}</p>
@@ -201,7 +201,7 @@ export default function ServiceBusinessAccountingGhanaPage() {
               {[
                 { label: "Invoice software Ghana", desc: "Invoicing with AR posting", href: "/invoice-software-ghana" },
                 { label: "Features", desc: "Full accounting system", href: "/features" },
-                { label: "Pricing", desc: "Service Workspace — GHS 200/mo", href: "/pricing" },
+                { label: "Pricing", desc: "View flexible plans", href: "/pricing" },
                 { label: "VAT software Ghana", desc: "VAT, NHIL & GETFund", href: "/vat-software-ghana" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="p-5 rounded-xl border border-zinc-200 bg-white hover:border-zinc-400 transition-colors">
@@ -218,20 +218,20 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="max-w-xl mx-auto space-y-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Invoice. Post. Know your numbers.
+              Take complete financial control.
             </h2>
             <p className="text-base text-zinc-400 leading-relaxed">
-              Accounting software for Ghanaian service businesses. Live receivables, Ghana VAT, real-time P&L.
+              Accounting software for Ghanaian service businesses. Full general ledger, WHT returns, payroll, and strict audit logs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <a href="https://app.finza.africa/signup" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
                 Get started free
               </a>
               <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
-                Preview the service workspace →
+                Preview the platform →
               </Link>
             </div>
-            <p className="text-xs text-zinc-500 pt-1">Service Workspace · GHS 200/month · First month free</p>
+            <p className="text-xs text-zinc-500 pt-1">First month free · Cancel anytime</p>
           </div>
         </Container>
       </section>

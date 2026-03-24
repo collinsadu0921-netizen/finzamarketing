@@ -21,86 +21,159 @@ export const metadata: Metadata = {
     },
 };
 
-const plans = [
+const plansData = [
     {
         id: "essentials",
         name: "Essentials",
-        audience: "Core tools to manage operations and billing",
+        subtitle: "Core financial operations for running your business",
         price: "149",
-        description:
-            "The essential operational toolset. Manage customers, send quotes, raise invoices, record payments and track basic expenses. Includes fundamental reporting and WhatsApp integration.",
-        features: [
-            "Dashboard, Customers, Quotes & Services",
-            "Proforma Invoices, Invoices & Payments",
-            "Credit Notes & Expenses",
-            "Profit & Loss and Balance Sheet",
-            "Basic VAT Report",
-            "WhatsApp connection & Business Profile",
-        ],
-        cta: "Start free",
-        ctaHref: "https://app.finza.africa/signup",
         highlight: false,
+        cta: "Start 14-day free trial",
+        ctaHref: "https://app.finza.africa/signup?workspace=service&plan=starter&trial=1",
+        groups: [
+            {
+                name: "Financial Operations",
+                items: [
+                    "Real-time business overview and performance tracking",
+                    "Customer management and activity history",
+                    "Quote creation and conversion to invoices",
+                    "Service-based workflow management"
+                ]
+            },
+            {
+                name: "Billing & Cash Management",
+                items: [
+                    "Proforma invoice generation",
+                    "Invoice creation and tracking",
+                    "Payment recording and status tracking",
+                    "Credit notes and adjustments",
+                    "Expense tracking and categorisation"
+                ]
+            },
+            {
+                name: "Financial Reporting",
+                items: [
+                    "Profit & Loss (real-time view)",
+                    "Balance Sheet (automatically generated)"
+                ]
+            },
+            {
+                name: "Tax & Compliance",
+                items: [
+                    "VAT tracking and reporting"
+                ]
+            },
+            {
+                name: "Business Configuration",
+                items: [
+                    "Business profile management",
+                    "Invoice configuration (numbering, structure)",
+                    "Payment setup and preferences",
+                    "WhatsApp communication integration"
+                ]
+            }
+        ]
     },
     {
         id: "professional",
         name: "Professional",
-        audience: "For growing teams and active businesses",
+        subtitle: "Operational control and structured financial management",
         price: "449",
-        description:
-            "Advanced operational tools on top of everything in Essentials. Manage team members, track projects and materials, handle payroll, fixed assets and precise statutory returns.",
-        features: [
-            "Everything in Essentials",
-            "Projects, Materials & Supplier Bills",
-            "Payroll, Salary Advances & Staff Management",
-            "Fixed Assets & Cash Flow Statement",
-            "VAT Returns & WHT Returns",
-            "Accountant Requests & Activity Log",
-        ],
-        cta: "Start free",
-        ctaHref: "https://app.finza.africa/signup",
         highlight: true,
+        cta: "Start 14-day free trial",
+        ctaHref: "https://app.finza.africa/signup?workspace=service&plan=professional&trial=1",
+        addedText: "Everything in Essentials, plus:",
+        groups: [
+            {
+                name: "Operations & Resource Management",
+                items: [
+                    "Project tracking and management",
+                    "Material usage tracking",
+                    "Supplier bill management"
+                ]
+            },
+            {
+                name: "Workforce & Internal Management",
+                items: [
+                    "Payroll processing",
+                    "Salary advances management",
+                    "Team member access control",
+                    "Staff management"
+                ]
+            },
+            {
+                name: "Financial Management & Reporting",
+                items: [
+                    "Fixed asset tracking",
+                    "Cash flow statement",
+                    "Statement of changes in equity"
+                ]
+            },
+            {
+                name: "Tax & Regulatory Reporting",
+                items: [
+                    "VAT return preparation",
+                    "Withholding tax (WHT) tracking and returns"
+                ]
+            },
+            {
+                name: "Collaboration & Oversight",
+                items: [
+                    "Accountant collaboration requests",
+                    "Accounting activity log"
+                ]
+            }
+        ]
     },
     {
         id: "business",
         name: "Business",
-        audience: "Full-scale accounting and control",
+        subtitle: "Full financial control with accounting-grade infrastructure",
         price: "949",
-        description:
-            "Complete end-to-end accounting. Take complete control with a full double-entry General Ledger, Bank Reconciliation, Trial Balance, Period management and audit trails.",
-        features: [
-            "Everything in Professional",
-            "Full General Ledger & Chart of Accounts",
-            "Trial Balance & Reconciliations",
-            "Accounting Periods & CIT Provisions",
-            "Loans & Equity Management",
-            "Bank Reconciliation & Full Audit Log",
-        ],
-        cta: "Start free",
-        ctaHref: "https://app.finza.africa/signup",
         highlight: false,
-    },
-];
-
-const comparisonRows = [
-    { feature: "Dashboard, Customers, Quotes, Services", essentials: true, professional: true, business: true },
-    { feature: "Proforma Invoices, Invoices, Payments", essentials: true, professional: true, business: true },
-    { feature: "Credit Notes, Expenses", essentials: true, professional: true, business: true },
-    { feature: "Profit & Loss, Balance Sheet", essentials: true, professional: true, business: true },
-    { feature: "VAT Report, Business Profile", essentials: true, professional: true, business: true },
-    { feature: "WhatsApp Integration", essentials: true, professional: true, business: true },
-    { feature: "Projects, Materials, Supplier Bills", essentials: false, professional: true, business: true },
-    { feature: "Payroll & Salary Advances", essentials: false, professional: true, business: true },
-    { feature: "Cash Flow Statement, Changes in Equity", essentials: false, professional: true, business: true },
-    { feature: "VAT Returns, WHT Returns", essentials: false, professional: true, business: true },
-    { feature: "Fixed Assets", essentials: false, professional: true, business: true },
-    { feature: "Team Members, Staff Management", essentials: false, professional: true, business: true },
-    { feature: "Accountant Requests, Activity Log", essentials: false, professional: true, business: true },
-    { feature: "General Ledger, Chart of Accounts", essentials: false, professional: false, business: true },
-    { feature: "Trial Balance", essentials: false, professional: false, business: true },
-    { feature: "Bank Reconciliation, Reconciliation", essentials: false, professional: false, business: true },
-    { feature: "Accounting Periods", essentials: false, professional: false, business: true },
-    { feature: "Loans & Equity, CIT Provisions", essentials: false, professional: false, business: true },
-    { feature: "Full System Audit Log", essentials: false, professional: false, business: true },
+        cta: "Start 14-day free trial",
+        ctaHref: "https://app.finza.africa/signup?workspace=service&plan=business&trial=1",
+        addedText: "Everything in Professional, plus:",
+        groups: [
+            {
+                name: "Core Accounting Infrastructure",
+                items: [
+                    "General Ledger (system-generated and continuously updated)",
+                    "Chart of Accounts management",
+                    "Trial Balance (automatically maintained)"
+                ]
+            },
+            {
+                name: "Reconciliation & Accuracy Control",
+                items: [
+                    "Transaction reconciliation",
+                    "Bank reconciliation"
+                ]
+            },
+            {
+                name: "Financial Governance",
+                items: [
+                    "Accounting period management",
+                    "Period closing controls"
+                ]
+            },
+            {
+                name: "Capital & Financial Structuring",
+                items: [
+                    "Loan tracking and management",
+                    "Equity tracking and structuring",
+                    "Corporate Income Tax (CIT) provisions"
+                ]
+            },
+            {
+                name: "Audit & System Integrity",
+                items: [
+                    "Full system audit log",
+                    "End-to-end financial traceability"
+                ]
+            }
+        ]
+    }
 ];
 
 export default function PricingPage() {
@@ -120,23 +193,18 @@ export default function PricingPage() {
             <section className="pt-28 pb-16 border-b border-zinc-100">
                 <Container>
                     <div className="max-w-2xl space-y-4">
+                        <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 mb-4 uppercase tracking-widest">
+                            Service Workspace Pricing
+                        </span>
                         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-                            Simple pricing.<br />Built for Ghanaian businesses.
+                            Choose the plan that matches your business.
                         </h1>
                         <p className="text-lg text-zinc-600 leading-relaxed">
-                            One platform, three powerful tiers. Clear monthly pricing to match your growth. Save up to 20% on annual billing. Start free — upgrade when you&apos;re ready. For what sits behind these plans, read {" "}
-                            <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                                accounting software for Ghana
-                            </Link>
-                            ; questions before you buy go to{" "}
-                            <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
-                                contact
-                            </Link>
-                            .
+                            Built for service businesses managing clients, invoices, and financial operations. Clear monthly pricing to match your growth. Start your 14-day free trial — upgrade when you&apos;re ready.
                         </p>
                         <div className="flex flex-wrap items-center gap-3 pt-2">
                             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
-                                ✓ First month free
+                                ✓ 14-day free trial
                             </span>
                             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
                                 ✓ No card required to start
@@ -193,14 +261,14 @@ export default function PricingPage() {
             {/* ── PRICING TIERS ── */}
             <section className="py-20 bg-white border-b border-zinc-100">
                 <Container>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        {plans.map((plan) => (
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        {plansData.map((plan) => (
                             <div
                                 key={plan.id}
                                 className={`flex flex-col rounded-xl border shadow-sm overflow-hidden ${
                                     plan.highlight
-                                        ? "border-zinc-800 bg-white ring-1 ring-zinc-800 transform scale-105 z-10"
-                                        : "border-zinc-200 bg-white"
+                                        ? "border-zinc-800 bg-white ring-1 ring-zinc-800 transform lg:scale-[1.02] z-10"
+                                        : "border-zinc-200 bg-zinc-50/50"
                                 }`}
                             >
                                 {plan.highlight && (
@@ -211,42 +279,20 @@ export default function PricingPage() {
 
                                 <div className="p-7 flex flex-col flex-1">
                                     <div className="mb-6">
-                                        <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1.5">
-                                            {plan.audience}
+                                        <h2 className="text-2xl font-bold text-zinc-900 mb-2">{plan.name}</h2>
+                                        <p className="text-sm font-medium text-zinc-600 mb-6 min-h-[40px]">
+                                            {plan.subtitle}
                                         </p>
-                                        <h2 className="text-xl font-bold text-zinc-900 mb-3">{plan.name}</h2>
-                                        <div className="flex items-baseline gap-1.5 mb-4">
+                                        <div className="flex items-baseline gap-1.5 mb-2">
                                             <span className="text-4xl font-extrabold text-zinc-900">
                                                 GHS {plan.price}
                                             </span>
                                             <span className="text-sm font-medium text-zinc-500">/ month</span>
                                         </div>
-                                        <p className="text-xs font-semibold text-emerald-600 mb-4">
-                                            First month free — no card needed
+                                        <p className="text-xs font-semibold text-emerald-600 mb-6">
+                                            14-day free trial on the {plan.name} plan
                                         </p>
-                                        <p className="text-sm text-zinc-600 leading-relaxed">
-                                            {plan.description}
-                                        </p>
-                                    </div>
-
-                                    <ul className="space-y-3 mb-8 flex-1">
-                                        {plan.features.map((f: string) => (
-                                            <li key={f} className="flex items-start gap-3 text-sm text-zinc-700">
-                                                <svg
-                                                    className="h-4 w-4 text-zinc-900 mt-0.5 flex-shrink-0"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                    strokeWidth="2.5"
-                                                >
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                {f}
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <div className="space-y-3 mt-auto">
+                                        
                                         <a
                                             href={plan.ctaHref}
                                             className={`block w-full rounded-md px-4 py-3 text-center text-sm font-bold shadow-sm transition-colors ${
@@ -255,77 +301,51 @@ export default function PricingPage() {
                                                     : "bg-white border border-zinc-200 text-zinc-900 hover:bg-zinc-50"
                                             }`}
                                         >
-                                            {plan.cta} — no card required
+                                            {plan.cta}
                                         </a>
+                                    </div>
+
+                                    <div className="flex-1">
+                                        {plan.addedText && (
+                                            <p className="text-sm font-bold text-zinc-900 mt-4 mb-6 pb-2 border-b border-zinc-200">
+                                                {plan.addedText}
+                                            </p>
+                                        )}
+
+                                        <div className={`space-y-8 ${!plan.addedText ? 'mt-4' : ''}`}>
+                                            {plan.groups.map((group) => (
+                                                <div key={group.name}>
+                                                    <p className="text-sm font-bold text-zinc-900 mb-3 block">
+                                                        {group.name}
+                                                    </p>
+                                                    <ul className="space-y-2.5">
+                                                        {group.items.map((item) => (
+                                                            <li key={item} className="flex items-start gap-3 text-sm text-zinc-700">
+                                                                <svg
+                                                                    className="h-4 w-4 text-zinc-400 mt-0.5 flex-shrink-0"
+                                                                    fill="none"
+                                                                    viewBox="0 0 24 24"
+                                                                    stroke="currentColor"
+                                                                    strokeWidth="2.5"
+                                                                >
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                                </svg>
+                                                                <span className="leading-snug">{item}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <p className="text-center text-sm text-zinc-500 mt-10">
-                        You can upgrade or downgrade your plan at any time based on your business needs.
+                    <p className="text-center text-sm text-zinc-500 mt-12 mb-4">
+                        You can subscribe to your selected plan at any time during your 14-day trial.
                     </p>
-                </Container>
-            </section>
-
-            {/* ── COMPARISON TABLE ── */}
-            <section className="py-20 bg-zinc-50 border-b border-zinc-100">
-                <Container>
-                    <div className="max-w-4xl mx-auto space-y-8">
-                        <div className="space-y-2">
-                            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Feature comparison</p>
-                            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                                What&apos;s included in each workspace.
-                            </h2>
-                        </div>
-                        <div className="rounded-xl border border-zinc-200 bg-white overflow-hidden">
-                            <table className="w-full text-sm">
-                                <thead>
-                                    <tr className="border-b border-zinc-200 bg-zinc-50">
-                                        <th className="text-left px-6 py-4 font-semibold text-zinc-900">Feature</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-zinc-900">Essentials</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-zinc-900">Professional</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-zinc-900">Business</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {comparisonRows.map((row, i) => (
-                                        <tr key={row.feature} className={`border-b border-zinc-100 ${i % 2 === 0 ? "bg-white" : "bg-zinc-50/50"}`}>
-                                            <td className="px-6 py-3.5 text-zinc-700">{row.feature}</td>
-                                            <td className="px-4 py-3.5 text-center">
-                                                {row.essentials ? (
-                                                    <svg className="h-4 w-4 text-green-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                ) : (
-                                                    <span className="text-zinc-300">—</span>
-                                                )}
-                                            </td>
-                                            <td className="px-4 py-3.5 text-center">
-                                                {row.professional ? (
-                                                    <svg className="h-4 w-4 text-green-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                ) : (
-                                                    <span className="text-zinc-300">—</span>
-                                                )}
-                                            </td>
-                                            <td className="px-4 py-3.5 text-center">
-                                                {row.business ? (
-                                                    <svg className="h-4 w-4 text-green-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                ) : (
-                                                    <span className="text-zinc-300">—</span>
-                                                )}
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </Container>
             </section>
 
@@ -392,9 +412,9 @@ export default function PricingPage() {
 
                         <Accordion type="single" collapsible className="w-full">
                             <AccordionItem value="free-trial">
-                                <AccordionTrigger>How does the free month work?</AccordionTrigger>
+                                <AccordionTrigger>How does the 14-day free trial work?</AccordionTrigger>
                                 <AccordionContent>
-                                    Your first month on any plan is free with no card required. At the end of that period, you&apos;ll be prompted to subscribe to continue. There is no automatic charge — you choose when to activate billing. If you don&apos;t subscribe, your workspace moves to read-only and your data remains intact.
+                                    Your first 14 days on any Service plan are free with no card required. At the end of that period, you&apos;ll be prompted to subscribe to continue. There is no automatic charge — you choose when to activate billing. If you don&apos;t subscribe, your workspace moves to read-only and your data remains intact.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="billing-cycle">
@@ -431,14 +451,14 @@ export default function PricingPage() {
                 <Container>
                     <div className="max-w-xl mx-auto space-y-6">
                         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                            Start free — no card required.
+                            Start your 14-day free trial.
                         </h2>
                         <p className="text-base text-zinc-400 leading-relaxed">
-                            First month on us. Real-time bookkeeping, Ghana VAT handling, and financial reports from day one.
+                            No card required. Real-time bookkeeping, Ghana VAT handling, and financial reports from day one.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                             <a
-                                href="https://app.finza.africa/signup"
+                                href="https://app.finza.africa/signup?workspace=service&plan=starter&trial=1"
                                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
                             >
                                 Get started free
@@ -447,7 +467,7 @@ export default function PricingPage() {
                                 href="/demo"
                                 className="text-base font-semibold text-zinc-400 hover:text-white transition-colors"
                             >
-                                Preview a workspace →
+                                Preview the Service Workspace →
                             </Link>
                         </div>
                     </div>

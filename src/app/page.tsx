@@ -51,10 +51,10 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row items-start gap-3">
                 <a
-                  href="https://app.finza.africa/signup"
+                  href="https://app.finza.africa/signup?workspace=service&plan=starter&trial=1"
                   className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
                 >
-                  Start free — no card required
+                  Start 14-day free trial
                 </a>
                 <Link
                   href="/demo"
@@ -748,9 +748,9 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="upgrade">
-                  <AccordionTrigger>Can I upgrade or switch workspaces?</AccordionTrigger>
+                  <AccordionTrigger>Can I upgrade or downgrade my plan?</AccordionTrigger>
                   <AccordionContent>
-                    Yes. Workspaces can be added or changed as your business needs evolve. Each workspace is billed separately and maintains its own ledger — switching or adding one does not affect existing data.
+                    Yes. You can switch between Essentials, Professional, and Business plans as your business needs evolve. Each plan simply unlocks more functionality within your workspace.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="spreadsheets">
@@ -783,16 +783,16 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <a
-                href="https://app.finza.africa/signup"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&trial=1"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
-                Get started free
+                Start 14-day free trial
               </a>
               <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
                 View demo →
               </Link>
             </div>
-            <p className="text-xs text-zinc-500 pt-1">No card required · First month free · Cancel anytime</p>
+            <p className="text-xs text-zinc-500 pt-1">No card required · 14-day free trial · Cancel anytime</p>
           </div>
         </Container>
       </section>

@@ -93,9 +93,9 @@ export const homePageFaqForSchema = [
       "You post a reversing journal entry. The original entry stays in the ledger — the reversal corrects the effect. Your historical record remains untouched and fully auditable. This is the same standard followed in professional accounting practice.",
   },
   {
-    questionName: "Can I upgrade or switch workspaces?",
+    questionName: "Can I upgrade or downgrade my plan?",
     acceptedAnswerText:
-      "Yes. Workspaces can be added or changed as your business needs evolve. Each workspace is billed separately and maintains its own ledger — switching or adding one does not affect existing data.",
+      "Yes. You can switch between Essentials, Professional, and Business plans as your business needs evolve. Each plan simply unlocks more functionality within your workspace.",
   },
   {
     questionName: "Can I migrate from spreadsheets?",
@@ -107,24 +107,19 @@ export const homePageFaqForSchema = [
 /** Matches pricing page billing FAQ accordion. */
 export const pricingPageFaqForSchema = [
   {
-    questionName: "How does the free month work?",
+    questionName: "How does the 14-day free trial work?",
     acceptedAnswerText:
-      "Your first month on any workspace is free with no card required. At the end of that period, you'll be prompted to subscribe to continue. There is no automatic charge — you choose when to activate billing. If you don't subscribe, your workspace moves to read-only and your data remains intact.",
+      "Your first 14 days on any Service plan are free with no card required. At the end of that period, you'll be prompted to subscribe to continue. There is no automatic charge — you choose when to activate billing. If you don't subscribe, your workspace moves to read-only and your data remains intact.",
   },
   {
     questionName: "When am I billed?",
     acceptedAnswerText:
-      "Subscriptions are billed monthly on the same date you activated. Payments are processed via Paystack. You can cancel at any time before the next billing date and retain access until the period ends. No partial refunds — you keep access through the end of the month you paid for.",
+      "Subscriptions are billed monthly on the same date you activated. Payments are processed via Paystack. You can cancel at any time before the next billing date and retain access until the period ends. No partial refunds — you keep access through the end of the month you paid for. You can also save up to 20% by paying annually.",
   },
   {
-    questionName: "Can I have more than one workspace?",
+    questionName: "Can I upgrade or downgrade my tier?",
     acceptedAnswerText:
-      "Yes. Workspaces are independent and billed separately. A business owner could hold a Retail Workspace for their shop and a Service Workspace for a consultancy they also operate. An accountant could hold an Accountant Workspace while their clients hold their own workspaces. Each workspace has its own ledger — they do not share data.",
-  },
-  {
-    questionName: "Can I switch or add a different workspace?",
-    acceptedAnswerText:
-      "Yes. You can add a different workspace type at any time. Each workspace maintains its own ledger, so your existing data is never affected when you add or change a workspace. You cannot currently merge two workspaces — each maintains separate books.",
+      "Yes. You can move between Essentials, Professional, and Business tiers at any time. When upgrading, changes apply immediately and your billing is prorated. When downgrading, the new tier takes effect at the start of your next billing cycle.",
   },
   {
     questionName: "Who owns my data?",
@@ -134,12 +129,7 @@ export const pricingPageFaqForSchema = [
   {
     questionName: "What happens when I cancel?",
     acceptedAnswerText:
-      "You retain full access until the end of your current billing period. After that, your workspace moves to read-only mode — you can view and export everything, but you cannot post new transactions. Your data is not deleted immediately. You can reactivate at any time by choosing a subscription plan.",
-  },
-  {
-    questionName: "Does my accountant pay separately for access?",
-    acceptedAnswerText:
-      "Yes. Your accountant manages their own Accountant Workspace (GHS 700/month), which gives them access to your workspace as a client. Your own workspace subscription (Retail or Service) is billed separately. The accountant's fee covers their professional tools — your workspace fee covers your own ledger.",
+      "You retain full access until the end of your current billing period. After that, your workspace moves to read-only mode — you can view and export everything, but you cannot post new transactions. Your data is not deleted immediately. You can reactivate at any time by renewing a subscription.",
   },
 ];
 

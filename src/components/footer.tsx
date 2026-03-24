@@ -18,10 +18,10 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-zinc-900 mb-4">Product</h4>
                         <ul className="space-y-3 text-sm text-zinc-600">
-                            <li><Link href="/features#retail" className="hover:text-zinc-900 transition-colors">Retail Workspace</Link></li>
-                            <li><Link href="/features#service" className="hover:text-zinc-900 transition-colors">Service Workspace</Link></li>
-                            <li><Link href="/accountants" className="hover:text-zinc-900 transition-colors">Accountant Workspace</Link></li>
-                            <li><Link href="/#pricing" className="hover:text-zinc-900 transition-colors">Pricing</Link></li>
+                            <li><Link href="/features" className="hover:text-zinc-900 transition-colors">Features</Link></li>
+                            <li><Link href="/pricing" className="hover:text-zinc-900 transition-colors">Pricing</Link></li>
+                            <li className="flex items-center gap-2"><span className="text-zinc-400">Retail Workspace</span> <span className="text-[10px] uppercase font-bold text-zinc-400 bg-zinc-100 px-1.5 py-0.5 rounded">Soon</span></li>
+                            <li className="flex items-center gap-2"><span className="text-zinc-400">Accountant Workspace</span> <span className="text-[10px] uppercase font-bold text-zinc-400 bg-zinc-100 px-1.5 py-0.5 rounded">Soon</span></li>
                         </ul>
                     </div>
 

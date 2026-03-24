@@ -12,7 +12,6 @@ export function Navbar() {
     const navLinks = [
         { href: "/features", label: "Features" },
         { href: "/pricing", label: "Pricing" },
-        { href: "/accountants", label: "For Accountants" },
         { href: "/blog", label: "Blog" },
     ];
 
