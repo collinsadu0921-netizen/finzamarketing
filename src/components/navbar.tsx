@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/container";
 import { cn } from "@/lib/utils";
@@ -19,8 +20,15 @@ export function Navbar() {
         <nav className="sticky top-0 z-50 w-full bg-white border-b border-zinc-100">
             <Container className="flex h-[72px] items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-xl font-semibold tracking-tight text-zinc-900">
-                    Finza
+                <Link href="/" className="flex items-center">
+                    <Image 
+                        src="/logo.png" 
+                        alt="Finza" 
+                        width={120} 
+                        height={36} 
+                        className="h-8 w-auto" 
+                        priority 
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

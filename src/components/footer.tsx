@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/container";
 
 export function Footer() {
@@ -8,7 +9,9 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Column 1 */}
                     <div className="space-y-4">
-                        <h3 className="text-lg font-bold text-zinc-900">Finza</h3>
+                        <Link href="/" className="inline-block">
+                            <Image src="/logo.png" alt="Finza" width={100} height={30} className="h-7 w-auto" />
+                        </Link>
                         <p className="text-sm text-zinc-600 leading-relaxed">
                             Ledger-first accounting for modern African businesses.
                         </p>
