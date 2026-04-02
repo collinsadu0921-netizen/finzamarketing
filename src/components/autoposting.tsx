@@ -1,4 +1,4 @@
-import { CheckCircle2, FileJson, Lock, PieChart, RefreshCw, Scale, FileText, Server } from "lucide-react";
+import { CheckCircle2, FileJson, Lock, RefreshCw, Scale, FileText, Server } from "lucide-react";
 
 export function Autoposting() {
     return (

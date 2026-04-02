@@ -208,7 +208,7 @@ export function PricingTiers() {
                     
                     <div className="max-w-3xl text-center">
                         <p className="text-[14px] leading-relaxed text-zinc-500">
-                            <strong className="font-semibold text-zinc-700">Billing cycle:</strong> Prices update when you switch Monthly, Quarterly, or Annual. If you pay after switching, you are charged the full amount for that cycle and a <strong className="font-semibold text-zinc-700">new period begins immediately</strong> from the payment date. There is no credit for unused time and no prorated adjustment. "Save %" compares paying a longer cycle upfront to paying month by month — it is not a refund from a previous subscription.
+                            <strong className="font-semibold text-zinc-700">Billing cycle:</strong> Prices update when you switch Monthly, Quarterly, or Annual. If you pay after switching, you are charged the full amount for that cycle and a <strong className="font-semibold text-zinc-700">new period begins immediately</strong> from the payment date. There is no credit for unused time and no prorated adjustment. &quot;Save %&quot; compares paying a longer cycle upfront to paying month by month — it is not a refund from a previous subscription.
                         </p>
                     </div>
                 </div>

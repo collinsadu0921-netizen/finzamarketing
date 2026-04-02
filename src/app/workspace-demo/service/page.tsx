@@ -22,10 +22,8 @@ export default function ServiceDemoPage() {
     const [businessName, setBusinessName] = useState("Service Business");
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            const stored = localStorage.getItem("finza_demo_business");
-            if (stored) setBusinessName(stored);
-        }
+        const stored = localStorage.getItem("finza_demo_business");
+        if (stored) queueMicrotask(() => setBusinessName(stored));
     }, []);
 
     return (

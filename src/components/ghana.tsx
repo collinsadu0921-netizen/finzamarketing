@@ -1,4 +1,4 @@
-import { Store, Calculator, Briefcase, Smartphone } from "lucide-react";
+import { Store, Calculator, Smartphone } from "lucide-react";
 
 export function Ghana() {
     return (
@@ -33,7 +33,7 @@ export function Ghana() {
                         </div>
                         <h3 className="text-lg font-bold text-primary mb-3">VAT Logic</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Pre-programmed with Ghana's VAT Structure (Standard, Flat Rate) ensuring automatic and accurate tax calculations.
+                            Pre-programmed with Ghana&apos;s VAT Structure (Standard, Flat Rate) ensuring automatic and accurate tax calculations.
                         </p>
                     </div>
 

@@ -8,10 +8,8 @@ export default function RetailDemoPage() {
     const [businessName, setBusinessName] = useState("Retail Store");
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            const stored = localStorage.getItem("finza_demo_business");
-            if (stored) setBusinessName(stored);
-        }
+        const stored = localStorage.getItem("finza_demo_business");
+        if (stored) queueMicrotask(() => setBusinessName(stored));
     }, []);
 
     return (

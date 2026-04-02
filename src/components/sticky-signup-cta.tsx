@@ -13,20 +13,22 @@ const SIGNUP =
 /** Fixed bottom bar after scroll — keeps signup visible (excludes admin). */
 export function StickySignupCta() {
   const pathname = usePathname();
-  const [show, setShow] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const hidden = !pathname || HIDDEN_PREFIXES.some((p) => pathname.startsWith(p));
+  const show = !hidden && scrollY > 380;
 
   useEffect(() => {
-    if (!pathname || HIDDEN_PREFIXES.some((p) => pathname.startsWith(p))) {
-      setShow(false);
-      return;
-    }
-    const onScroll = () => setShow(window.scrollY > 380);
-    onScroll();
+    if (hidden) return;
+    const onScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [pathname]);
+    const t = setTimeout(onScroll, 0);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [hidden]);
 
-  if (!pathname || HIDDEN_PREFIXES.some((p) => pathname.startsWith(p)) || !show) {
+  if (!show) {
     return null;
   }
 
