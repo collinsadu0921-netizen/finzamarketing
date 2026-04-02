@@ -12,7 +12,12 @@ export const organizationAndWebsiteGraph = {
         "@type": "ImageObject",
         url: `${BASE}/og-image.png`,
       },
-      sameAs: ["https://twitter.com/finzagh"],
+      sameAs: [
+        "https://twitter.com/finzagh",
+        "https://www.linkedin.com/company/finzaafrica",
+        "https://www.instagram.com/finzaafrica/",
+        "https://www.tiktok.com/@finzaafrica",
+      ],
     },
     {
       "@type": "WebSite",

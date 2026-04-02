@@ -190,6 +190,8 @@ export interface SiteSettingsMap {
   footer_text: string;
   social_twitter: string;
   social_linkedin: string;
+  social_instagram: string;
+  social_tiktok: string;
   [key: string]: unknown;
 }
 

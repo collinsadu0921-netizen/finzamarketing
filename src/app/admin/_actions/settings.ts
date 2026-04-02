@@ -17,6 +17,8 @@ export async function upsertSettings(
     "footer_text",
     "social_twitter",
     "social_linkedin",
+    "social_instagram",
+    "social_tiktok",
   ];
 
   const upserts = keys.map((key) => ({

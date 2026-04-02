@@ -105,6 +105,24 @@ export function SettingsForm({ settings }: SettingsFormProps) {
             placeholder="https://linkedin.com/company/finzaafrica"
           />
         </Field>
+        <Field label="Instagram URL">
+          <input
+            name="social_instagram"
+            type="url"
+            defaultValue={String(settings.social_instagram ?? "")}
+            className={inputClass}
+            placeholder="https://www.instagram.com/finzaafrica/"
+          />
+        </Field>
+        <Field label="TikTok URL">
+          <input
+            name="social_tiktok"
+            type="url"
+            defaultValue={String(settings.social_tiktok ?? "")}
+            className={inputClass}
+            placeholder="https://www.tiktok.com/@finzaafrica"
+          />
+        </Field>
       </Section>
 
       <div className="flex justify-end">
