@@ -4,12 +4,13 @@ import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { JsonLd } from "@/components/json-ld";
+import { MidPageCtaBand, VatSerpClusterStrip, WhyBusinessesTrustFinza } from "@/components/seo-marketing-blocks";
 import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "VAT Software in Ghana | Finza",
+  title: "VAT Software in Ghana — VAT, NHIL & GETFund Aligned to Your Sales | Finza",
   description:
-    "Finza is VAT software built for Ghana — calculating VAT, NHIL, and GETFund at the point of every transaction and posting each levy to a separate ledger account. GRA-ready reports included.",
+    "Stop blending levies into one mystery tax line. See VAT, NHIL, and GETFund where applicable, tied to real sales in GHS—before filing deadlines. Try Finza free; built for Ghana businesses.",
   alternates: {
     canonical: "https://www.finza.africa/vat-software-ghana",
   },
@@ -38,26 +39,32 @@ export default function VatSoftwareGhanaPage() {
               Finza calculates Ghana VAT, NHIL, and GETFund at the point of every transaction — posting each levy to a separate ledger account automatically. GRA-ready VAT reports are always available.
             </p>
             <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
-              VAT is one slice of the full books — see the wider{" "}
+              VAT is one slice of the full books—see the wider{" "}
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                accounting software story for Ghana
-              </Link>
-              , then check{" "}
+                Finza accounting software Ghana
+              </Link>{" "}
+              hub, then check{" "}
               <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
                 pricing in GHS
-              </Link>{" "}
-              or{" "}
-              <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
-                contact us
+              </Link>
+              . Deep dives:{" "}
+              <Link href="/blog" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT cluster on the blog
               </Link>
               .
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/pricing" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Start your 14-day free trial
+              <a
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
+              >
+                Try Finza free
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
-                View demo
+                See how it works
+              </Link>
+              <Link href="/pricing" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
+                View pricing in GHS
               </Link>
             </div>
           </div>
@@ -225,17 +232,25 @@ export default function VatSoftwareGhanaPage() {
         </Container>
       </section>
 
+      <MidPageCtaBand title="Separate levies at entry—not on the eve of filing." className="bg-zinc-50 py-10" />
+
+      <VatSerpClusterStrip className="bg-white" />
+
+      <WhyBusinessesTrustFinza className="bg-zinc-50" />
+
       {/* LINKS + CTA */}
       <section className="py-16 bg-white border-b border-zinc-100">
         <Container>
           <div className="max-w-4xl mx-auto">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">Related</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 { label: "Ghana VAT guide", desc: "VAT, NHIL, GETFund explained", href: "/ghana-vat-nhil-getfund" },
-                { label: "Invoice software", desc: "Invoicing with automatic VAT", href: "/invoice-software-ghana" },
-                { label: "Features", desc: "Full accounting system", href: "/features" },
-                { label: "Pricing", desc: "Workspace plans", href: "/pricing" },
+                { label: "Invoicing software", desc: "Finza invoicing software Ghana", href: "/invoicing-software-ghana" },
+                { label: "Accounting hub", desc: "Full books in GHS", href: "/accounting-software-ghana" },
+                { label: "Expense tracking", desc: "Log spending as you go", href: "/expense-tracking-software-ghana" },
+                { label: "Finza blog", desc: "VAT & tax articles", href: "/blog" },
+                { label: "Pricing", desc: "Workspace plans in GHS", href: "/pricing" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50 hover:border-zinc-400 transition-colors">
                   <p className="text-sm font-bold text-zinc-900">{l.label}</p>
@@ -257,11 +272,17 @@ export default function VatSoftwareGhanaPage() {
               VAT, NHIL, and GETFund separated automatically. GRA-ready reports always available.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a href="/pricing" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
-                Get started free
+              <a
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
+              >
+                Try Finza free
               </a>
-              <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
-                View demo →
+              <Link href="/demo" className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center">
+                See how it works
+              </Link>
+              <Link href="/pricing" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
+                View pricing in GHS →
               </Link>
             </div>
             <p className="text-xs text-zinc-500 pt-1">No card required · First month free</p>

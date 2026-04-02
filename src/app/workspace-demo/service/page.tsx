@@ -248,7 +248,7 @@ export default function ServiceDemoPage() {
                                     label: "Service accounting guide",
                                     desc: "Invoices & AR",
                                 },
-                                { href: "/invoice-software-ghana", label: "Invoice software", desc: "Ghana billing" },
+                                { href: "/invoicing-software-ghana", label: "Invoicing software", desc: "Ghana billing" },
                             ]}
                         />
                     </div>

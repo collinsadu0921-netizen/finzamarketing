@@ -88,7 +88,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
             desc: "Invoices & AR",
           },
           {
-            href: "/invoice-software-ghana",
+            href: "/invoicing-software-ghana",
             label: "Invoice software Ghana",
             desc: "Billing-focused angle",
           },

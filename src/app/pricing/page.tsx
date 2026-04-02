@@ -9,13 +9,14 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { HowFinzaHelpsDayToDay, WhyBusinessesChooseFinza } from "@/components/seo-marketing-blocks";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema, pricingPageFaqForSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Pricing — Accounting Software for Ghanaian Businesses | Finza",
+    title: "Pricing — Finza Plans in Ghana Cedis (GHS) | Small Business & Accountants",
     description:
-        "Finza software pricing: Essentials at GHS 149/mo, Professional at GHS 449/mo, Business at GHS 949/mo. First month free, no card required. Cancel anytime.",
+        "Finza Service workspace pricing in GHS: Essentials GHS 149/mo, Professional GHS 449/mo, Business GHS 949/mo. For small businesses and accountants in Ghana. 14-day free trial, no card to start.",
     alternates: {
         canonical: "https://www.finza.africa/pricing",
     },
@@ -41,13 +42,13 @@ export default function PricingPage() {
                 <Container>
                     <div className="max-w-2xl space-y-4">
                         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-                            Service Workspace Pricing
+                            Pricing in Ghana cedis (GHS)
                         </h1>
                         <p className="text-lg text-zinc-600 leading-relaxed font-medium">
-                            Built for service businesses managing clients, invoices, and financial operations.
+                            Clear plans for <strong className="text-zinc-900">small businesses and accountants in Ghana</strong>—one Service workspace, three tiers (Essentials, Professional, Business). All prices in <strong className="text-zinc-900">GHS</strong>.
                         </p>
                         <p className="text-lg text-zinc-600 leading-relaxed">
-                            Choose the plan that matches the level of control your business needs.
+                            Pick the tier that matches how much control and depth you need. Manage invoices, quotes, expenses, and reports in one place.
                         </p>
                         <div className="flex flex-wrap items-center gap-3 pt-2">
                             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
@@ -118,22 +119,22 @@ export default function PricingPage() {
                                 Core system — robust foundation.
                             </h2>
                             <p className="text-sm text-zinc-600">
-                                Every Finza plan ships with a complete double-entry accounting engine handling the hard work in the background.
+                                Every Finza plan includes a full financial engine behind the scenes—so what you record matches what you see in reports, without manual assembly.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             {[
                                 {
-                                    title: "Double-entry engine",
-                                    desc: "All transactions post to a balanced ledger automatically behind the scenes. No manual debits or credits required.",
+                                    title: "Reliable totals",
+                                    desc: "Activity stays structured behind the scenes so profit, balances, and tax-related views stay consistent with what you entered.",
                                 },
                                 {
                                     title: "Real-time reports",
                                     desc: "Income statement and balance sheet — always current, never assembled by hand.",
                                 },
                                 {
-                                    title: "Ghana tax handling",
-                                    desc: "VAT (15%), NHIL (2.5%), and GETFund (2.5%) calculated and separated at transaction level.",
+                                    title: "Ghana tax lines",
+                                    desc: "Support for VAT, NHIL, and GETFund presentation where applicable—confirm what applies with your accountant.",
                                 },
                                 {
                                     title: "Audit-ready records",
@@ -205,6 +206,10 @@ export default function PricingPage() {
                 </Container>
             </section>
 
+            <WhyBusinessesChooseFinza className="bg-white" />
+
+            <HowFinzaHelpsDayToDay className="bg-zinc-50" />
+
             {/* ── FINAL CTA ── */}
             <section className="py-24 bg-[#0F172A] text-center">
                 <Container>
@@ -213,14 +218,14 @@ export default function PricingPage() {
                             Start your 14-day free trial.
                         </h2>
                         <p className="text-base text-zinc-400 leading-relaxed">
-                            No card required. Real-time bookkeeping, Ghana VAT handling, and financial reports from day one.
+                            No card required to start. Invoices, quotes, and expense tracking in GHS—Ghana tax lines where applicable—with reports your accountant can use.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                             <a
                                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
                             >
-                                Get started free
+                                Try Finza free
                             </a>
                             <Link
                                 href="/demo"
@@ -235,12 +240,12 @@ export default function PricingPage() {
 
             <RelatedClusterLinks
                 related={[
+                    { href: "/features", label: "Features", desc: "Invoices, quotes, reports" },
                     {
-                        href: "/best-accounting-software-ghana",
-                        label: "Choose accounting software",
-                        desc: "Buyer framework",
+                        href: "/invoicing-software-ghana",
+                        label: "Invoicing software Ghana",
+                        desc: "Send invoices online",
                     },
-                    { href: "/demo", label: "Try the demo", desc: "Workspace preview" },
                 ]}
             />
             <Footer />

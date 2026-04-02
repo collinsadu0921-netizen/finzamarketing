@@ -199,7 +199,7 @@ export default function ServiceBusinessAccountingGhanaPage() {
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">Related</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "Invoice software Ghana", desc: "Invoicing with AR posting", href: "/invoice-software-ghana" },
+                { label: "Invoicing software Ghana", desc: "Send invoices online", href: "/invoicing-software-ghana" },
                 { label: "Features", desc: "Full accounting system", href: "/features" },
                 { label: "Pricing", desc: "View flexible plans", href: "/pricing" },
                 { label: "VAT software Ghana", desc: "VAT, NHIL & GETFund", href: "/vat-software-ghana" },
@@ -243,7 +243,7 @@ export default function ServiceBusinessAccountingGhanaPage() {
             label: "Service accounting guide",
             desc: "Invoices & AR",
           },
-          { href: "/invoice-software-ghana", label: "Invoice software", desc: "Ghana billing" },
+          { href: "/invoicing-software-ghana", label: "Invoicing software", desc: "Ghana billing" },
         ]}
       />
       <Footer />

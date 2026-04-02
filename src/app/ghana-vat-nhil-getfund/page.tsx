@@ -245,7 +245,7 @@ export default function GhanaVatNhilGetfundPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: "VAT software Ghana", desc: "VAT software for Ghanaian businesses", href: "/vat-software-ghana" },
-                { label: "Invoice software", desc: "Invoicing with automatic VAT", href: "/invoice-software-ghana" },
+                { label: "Invoicing software", desc: "Send invoices online in Ghana", href: "/invoicing-software-ghana" },
                 { label: "Accounting software Ghana", desc: "Full accounting system", href: "/accounting-software-ghana" },
                 { label: "For accountants", desc: "Professional workspace", href: "/accountants" },
               ].map((l) => (

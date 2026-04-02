@@ -3,13 +3,14 @@ import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { HowFinzaHelpsDayToDay, WhyBusinessesChooseFinza } from "@/components/seo-marketing-blocks";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Features — Accounting Software for Ghanaian Businesses | Finza",
+  title: "Features — Invoices, Quotes, Expenses & Reports in Ghana (GHS) | Finza",
   description:
-    "Finza handles VAT, NHIL, and GETFund for Ghanaian businesses under the revised framework effective 1 January 2026. Ledger-first. Real-time posting. Input tax deduction treatment for NHIL and GETFund included.",
+    "Send invoices online, create quotes, track expenses, and see reports in Ghana cedis. Ghana tax lines (VAT, NHIL, GETFund) where applicable. For small businesses and accountants in Ghana.",
   alternates: {
     canonical: "https://www.finza.africa/features",
   },
@@ -30,22 +31,34 @@ export default function FeaturesPage() {
         <Container>
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wide uppercase">
-              Accounting software for Ghana
+              Finza · Ghana
             </span>
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Every feature starts with the ledger.
+              Run invoices, quotes, expenses, and reports in one place—in GHS
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
-              Most accounting tools record transactions and reassemble reports later. Finza starts with the general ledger. Invoicing, POS, VAT, and reports all flow directly into one continuously balanced system.
+              Finza helps <strong className="text-zinc-900">service businesses and accountants in Ghana</strong> manage day-to-day money work: send invoices online, turn quotes into bills, record spending, and open reports without rebuilding spreadsheets.
             </p>
             <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
-              For the positioning page on Ghana tax and workspaces, see{" "}
+              See{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                pricing in GHS
+              </Link>
+              , dive into{" "}
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 accounting software for Ghana
               </Link>
-              ; numbers live on{" "}
-              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
-                pricing
+              , or compare{" "}
+              <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                invoicing
+              </Link>
+              ,{" "}
+              <Link href="/quotation-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                quotations
+              </Link>
+              , and{" "}
+              <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                bookkeeping
               </Link>
               .
             </p>
@@ -66,20 +79,20 @@ export default function FeaturesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
                 {
-                  headline: "It replaces your spreadsheet",
-                  body: "Every sale, invoice, and expense you record goes into a structured ledger — not a cell in a sheet. Your books are always current, always balanced.",
+                  headline: "Invoices and quotes in Ghana cedis",
+                  body: "Send invoices online, track unpaid amounts in GHS, and move from approved quotes to invoices without retyping.",
                 },
                 {
-                  headline: "It handles Ghana VAT automatically",
-                  body: "VAT (15%), NHIL (2.5%), and GETFund (2.5%) are calculated and separated at the point of every transaction. You don't calculate tax at month end — it's already done.",
+                  headline: "Expenses you can categorize",
+                  body: "Record what the business spent, when, and why—so week-to-week bookkeeping stays honest.",
                 },
                 {
-                  headline: "It produces your financial reports",
-                  body: "Your income statement, balance sheet, and trial balance are generated directly from the ledger — at any time, for any period. No waiting for an accountant to assemble them.",
+                  headline: "Reports when you need them",
+                  body: "Open profit and position views without waiting for someone to merge files. Built for owners who want clarity and accountants who need organized clients.",
                 },
                 {
-                  headline: "It keeps your records audit-ready",
-                  body: "Posted entries are permanent. Corrections go through reversals. Your audit trail is complete and traceable. Nothing is silently overwritten.",
+                  headline: "Ghana tax lines where applicable",
+                  body: "VAT, NHIL, and GETFund can be shown separately on activity and documents when your business requires them. What applies depends on registration and supply type—confirm with your accountant or GRA.",
                 },
               ].map((item) => (
                 <div key={item.headline} className="flex gap-4 p-6 bg-white rounded-xl border border-zinc-200 shadow-sm">
@@ -107,14 +120,14 @@ export default function FeaturesPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                "Real-time visibility into profit and loss",
-                "Ghana VAT, NHIL, and GETFund handled correctly",
-                "Invoicing that feeds directly into accounts receivable",
-                "A balance sheet that is always current — not monthly",
-                "POS and inventory with automatic COGS accounting",
-                "A clean ledger for their accountant to review and close",
-                "Financial records that can survive an audit",
-                "A bookkeeping system they don't need to rebuild every month",
+                "Service companies in Ghana that invoice clients every week",
+                "Small businesses that want to track unpaid invoices in GHS",
+                "Teams that quote first, then bill—without two versions of the truth",
+                "Owners who want expense tracking without a second app",
+                "Shops that need POS-style sales with stock (Retail workspace)",
+                "Accountants managing Ghanaian clients who need cleaner files",
+                "Anyone who wants tax summaries aligned with real activity—where applicable",
+                "Businesses tired of rebuilding the same spreadsheet each month",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 rounded-lg border border-zinc-200 bg-zinc-50">
                   <svg className="h-4 w-4 text-zinc-900 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -276,15 +289,15 @@ export default function FeaturesPage() {
             <div className="space-y-3">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Ghana VAT and tax</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                VAT, NHIL, and GETFund — handled at every transaction.
+                Ghana tax handling—VAT, NHIL, and GETFund where applicable
               </h2>
               <p className="text-sm text-zinc-600 max-w-xl">
-                Ghana&apos;s tax system applies multiple levies at point of transaction. Finza calculates and separates each one — the moment the transaction is confirmed, not at month end.
+                Many Ghanaian businesses show <strong className="text-zinc-900">VAT, NHIL, and GETFund</strong> on invoices and activity. Finza supports common tax line presentation when your registration and supply type require it. Always confirm what applies with your accountant or GRA.
               </p>
               <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 max-w-xl">
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Framework in effect</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Note</p>
                 <p className="text-xs text-zinc-600 leading-relaxed">
-                  Effective 1 January 2026, Finza follows Ghana&apos;s revised VAT framework: VAT remains 15%, NHIL remains 2.5%, and GETFund remains 2.5%. Under this framework, NHIL and GETFund are treated as input tax deductions.
+                  Tax rules change. Finza is updated to reflect Ghana frameworks as described on our tax guides; your business may have exemptions or different treatment—professional advice is essential.
                 </p>
               </div>
             </div>
@@ -455,7 +468,7 @@ export default function FeaturesPage() {
                   {[
                     {
                       label: "Invoicing with automatic AR posting",
-                      desc: "Raising an invoice creates a receivable in accounts receivable and records revenue — without any separate journal step.",
+                      desc: "When you issue or send an invoice (not while it stays draft), it posts receivables and revenue to the ledger—no separate journal step.",
                     },
                     {
                       label: "Accounts receivable tracking",
@@ -545,6 +558,10 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
+      <WhyBusinessesChooseFinza />
+
+      <HowFinzaHelpsDayToDay className="bg-zinc-50" />
+
       {/* ── FINAL CTA ── */}
       <section className="py-24 bg-[#0F172A] text-center">
         <Container>
@@ -575,11 +592,11 @@ export default function FeaturesPage() {
 
       <RelatedClusterLinks
         related={[
-          { href: "/blog", label: "Finza blog", desc: "Accounting & VAT" },
+          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
           {
-            href: "/accounting-vs-excel-ghana",
-            label: "Accounting vs Excel",
-            desc: "Spreadsheet limits",
+            href: "/quotation-software-ghana",
+            label: "Quotation software Ghana",
+            desc: "Quote to invoice",
           },
         ]}
       />

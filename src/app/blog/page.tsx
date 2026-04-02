@@ -30,10 +30,22 @@ export default function BlogIndexPage() {
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
               Ideas for better books in Ghana
             </h1>
-            <p className="text-lg text-zinc-600">
-              Practical notes on ledgers, tax structure, and operations — not generic filler. For the product story, see{" "}
+            <p className="text-lg leading-relaxed text-zinc-600">
+              Practical notes on ledgers, tax, invoicing, and operations—plain language you can share with a client or accountant. For Finza itself, start with{" "}
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 accounting software for Ghana
+              </Link>
+              ,{" "}
+              <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                invoicing software in Ghana
+              </Link>
+              , and{" "}
+              <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                bookkeeping software Ghana
+              </Link>
+              . Compare plans on{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                pricing
               </Link>
               .
             </p>
@@ -69,9 +81,9 @@ export default function BlogIndexPage() {
           {
             href: "/best-accounting-software-ghana",
             label: "Choosing software",
-            desc: "Evaluation framework",
+            desc: "Neutral comparison",
           },
-          { href: "/how-vat-works-ghana", label: "How VAT works", desc: "Ghana guide" },
+          { href: "/quotation-software-ghana", label: "Quotations Ghana", desc: "Quote before you bill" },
         ]}
       />
       <Footer />
