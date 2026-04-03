@@ -229,7 +229,13 @@ export default function ServiceDemoPage() {
                         <div className="rounded-xl border border-zinc-200 bg-white p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div>
                                 <p className="text-sm font-semibold text-zinc-900">Ready to use Finza with your real data?</p>
-                                <p className="text-xs text-zinc-500 mt-0.5">200 GHS / month. First month free. No setup fees.</p>
+                                <p className="text-xs text-zinc-500 mt-0.5">
+                                    Demo only — billed plans are on{" "}
+                                    <a href="/pricing" className="font-semibold text-zinc-700 underline underline-offset-2">
+                                        Pricing
+                                    </a>{" "}
+                                    (Essentials from GHS 149/month).
+                                </p>
                             </div>
                             <a
                                 href="/pricing"

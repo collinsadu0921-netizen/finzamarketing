@@ -50,17 +50,15 @@ export async function Footer() {
                   Pricing
                 </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <span className="text-zinc-400">Retail Workspace</span>{" "}
-                <span className="rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] font-bold uppercase text-zinc-400">
-                  Soon
-                </span>
+              <li>
+                <Link href="/invoicing-software-ghana" className="transition-colors hover:text-zinc-900">
+                  Invoicing in GHS
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <span className="text-zinc-400">Accountant Workspace</span>{" "}
-                <span className="rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] font-bold uppercase text-zinc-400">
-                  Soon
-                </span>
+              <li>
+                <Link href="/accountants" className="transition-colors hover:text-zinc-900">
+                  Accountants
+                </Link>
               </li>
             </ul>
           </div>

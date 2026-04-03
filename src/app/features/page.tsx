@@ -124,7 +124,7 @@ export default function FeaturesPage() {
                 "Small businesses that want to track unpaid invoices in GHS",
                 "Teams that quote first, then bill—without two versions of the truth",
                 "Owners who want expense tracking without a second app",
-                "Shops that need POS-style sales with stock (Retail workspace)",
+                "Shops planning for POS and stock — retail flows are on our roadmap",
                 "Accountants managing Ghanaian clients who need cleaner files",
                 "Anyone who wants tax summaries aligned with real activity—where applicable",
                 "Businesses tired of rebuilding the same spreadsheet each month",
@@ -413,55 +413,24 @@ export default function FeaturesPage() {
                 Choose the workspace that fits your business.
               </h2>
               <p className="text-sm text-zinc-600 max-w-xl">
-                Two operating modes designed for different business models — both running on the same ledger engine.
+                Service businesses can use Finza today on published plans. Retail POS and inventory are on the roadmap — same ledger engine when they ship.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Retail */}
+              {/* Live: invoicing & services */}
               <div className="rounded-xl border border-zinc-200 bg-white overflow-hidden">
                 <div className="px-7 pt-7 pb-5 border-b border-zinc-200">
-                  <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Retail Workspace — GHS 250/month</p>
-                  <p className="text-base font-bold text-zinc-900 mb-1">For shops, pharmacies, and inventory-based businesses</p>
-                  <p className="text-sm text-zinc-600 leading-relaxed">
-                    POS, stock management, and accounting work as one system. Every sale automatically posts revenue, COGS, and tax to the ledger.
+                  <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">
+                    Invoicing &amp; services — available now
                   </p>
-                </div>
-                <div className="px-7 py-6 space-y-5">
-                  {[
-                    {
-                      label: "Point of Sale (POS)",
-                      desc: "Each sale posts revenue, cash, VAT output, inventory reduction, and COGS to the ledger in one step.",
-                    },
-                    {
-                      label: "Inventory tracking",
-                      desc: "Stock levels update in real time with every sale and purchase. Inventory value is reflected in the balance sheet.",
-                    },
-                    {
-                      label: "Cost of Goods Sold (COGS)",
-                      desc: "COGS is posted automatically when a sale is made — no manual calculation at month end.",
-                    },
-                  ].map((item) => (
-                    <div key={item.label} className="flex gap-3">
-                      <svg className="h-4 w-4 text-zinc-900 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-semibold text-zinc-900">{item.label}</p>
-                        <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Service */}
-              <div className="rounded-xl border border-zinc-200 bg-white overflow-hidden">
-                <div className="px-7 pt-7 pb-5 border-b border-zinc-200">
-                  <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Service Workspace — GHS 200/month</p>
-                  <p className="text-base font-bold text-zinc-900 mb-1">For agencies, consultants, and service providers</p>
+                  <p className="text-base font-bold text-zinc-900 mb-1">Plans from GHS 149/month</p>
                   <p className="text-sm text-zinc-600 leading-relaxed">
-                    Invoicing and accounts receivable feed the ledger directly. Know what you&apos;re owed, what you&apos;ve earned, where you stand.
+                    For agencies, consultancies, contractors, and anyone who quotes and invoices clients. AR, payments, and reports read from the same ledger — see{" "}
+                    <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                      Pricing
+                    </Link>{" "}
+                    for Essentials, Professional, and Business.
                   </p>
                 </div>
                 <div className="px-7 py-6 space-y-5">
@@ -491,11 +460,58 @@ export default function FeaturesPage() {
                   ))}
                 </div>
               </div>
+
+              {/* Roadmap: retail */}
+              <div className="rounded-xl border border-dashed border-zinc-300 bg-zinc-50/80 overflow-hidden">
+                <div className="px-7 pt-7 pb-5 border-b border-zinc-200">
+                  <p className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">
+                    Retail &amp; POS — on the roadmap
+                  </p>
+                  <p className="text-base font-bold text-zinc-900 mb-1">Shops, pharmacies, and stock-led businesses</p>
+                  <p className="text-sm text-zinc-600 leading-relaxed">
+                    We&apos;re building POS, inventory, and COGS on the same general ledger. Not live in app yet — no pricing advertised until launch.
+                  </p>
+                </div>
+                <div className="px-7 py-6 space-y-5">
+                  {[
+                    {
+                      label: "Point of Sale (POS)",
+                      desc: "Planned: each sale posts revenue, cash, VAT, stock movement, and COGS in one flow.",
+                    },
+                    {
+                      label: "Inventory tracking",
+                      desc: "Planned: stock levels and balance-sheet inventory tied to real sales and purchases.",
+                    },
+                    {
+                      label: "Cost of Goods Sold (COGS)",
+                      desc: "Planned: COGS posted when goods sell — not a manual month-end rebuild.",
+                    },
+                  ].map((item) => (
+                    <div key={item.label} className="flex gap-3">
+                      <svg className="h-4 w-4 text-zinc-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <p className="text-sm font-semibold text-zinc-800">{item.label}</p>
+                        <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="px-7 pb-7">
+                  <Link
+                    href="/contact"
+                    className="text-sm font-semibold text-zinc-900 underline underline-offset-2 hover:text-zinc-600"
+                  >
+                    Contact us about retail needs →
+                  </Link>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link href="/demo" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Try a workspace demo
+                Try the interactive demo
               </Link>
               <Link href="/pricing" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
                 View pricing

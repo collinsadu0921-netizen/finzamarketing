@@ -7,7 +7,7 @@ import { RelatedClusterLinks } from "@/components/related-cluster-links";
 export const metadata: Metadata = {
   title: "Accounting Software for Retailers in Ghana | Finza",
   description:
-    "Finza is accounting software for retailers in Ghana. POS sales post to the ledger automatically — with inventory tracking, COGS accounting, and Ghana VAT separated at every transaction.",
+    "Retail accounting direction for Ghana: planned POS, inventory, and COGS on one ledger with Ghana VAT. Live today: invoicing, expenses, and reporting — plans from GHS 149/month.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-retailers-ghana",
   },
@@ -27,14 +27,18 @@ export default function RetailAccountingGhanaPage() {
               Accounting software for retailers in Ghana.
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
-              Finza&apos;s Retail Workspace connects your point-of-sale, inventory, and accounting into one system. Every sale posts to the general ledger automatically — with inventory adjustments, COGS entries, and Ghana VAT separated at the moment of the transaction.
+              We&apos;re building a retail workspace that connects point-of-sale, inventory, and the general ledger — so every sale can post revenue, cash, Ghana VAT, stock movement, and COGS together. That flow isn&apos;t live in the product yet; today Finza is strongest on invoicing, expenses, and reporting on{" "}
+              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                published plans
+              </Link>
+              .
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="/pricing" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Start your 14-day free trial
+                View plans from GHS 149/month
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
-                Preview the retail workspace
+                Try the interactive demo
               </Link>
             </div>
           </div>
@@ -194,7 +198,7 @@ export default function RetailAccountingGhanaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: "Features", desc: "Full system overview", href: "/features" },
-                { label: "Pricing", desc: "Retail Workspace — GHS 250/mo", href: "/pricing" },
+                { label: "Pricing", desc: "Live plans from GHS 149/month", href: "/pricing" },
                 { label: "Accounting for Ghana", desc: "Ghana software overview", href: "/accounting-software-ghana" },
                 { label: "VAT software", desc: "How Ghana VAT works", href: "/vat-software-ghana" },
               ].map((l) => (
@@ -222,10 +226,12 @@ export default function RetailAccountingGhanaPage() {
                 Get started free
               </a>
               <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
-                Preview the retail workspace →
+                Interactive demo (service flows) →
               </Link>
             </div>
-            <p className="text-xs text-zinc-500 pt-1">Retail Workspace · GHS 250/month · First month free</p>
+            <p className="text-xs text-zinc-500 pt-1">
+              Retail POS is on the roadmap — no retail workspace pricing until launch. Live subscriptions: see Pricing (from GHS 149/month).
+            </p>
           </div>
         </Container>
       </section>

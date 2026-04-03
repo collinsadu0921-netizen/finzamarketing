@@ -29,18 +29,20 @@ export default function DemoPage() {
     const workspaces = [
         {
             id: "retail",
-            title: "Retail Workspace",
-            desc: "POS, inventory & sales.",
+            title: "Retail & POS",
+            desc: "On the roadmap — not in the demo yet.",
+            comingSoon: true,
             preview: [
-                "See how a POS sale posts to the ledger automatically",
-                "View inventory tracking and COGS accounting in action",
-                "Check VAT, NHIL, and GETFund separated per transaction",
+                "Planned: POS sales post revenue, cash, VAT, stock, and COGS in one step",
+                "Planned: inventory and balance-sheet stock tied to real transactions",
+                "Contact us if you want to shape the retail build",
             ],
         },
         {
             id: "service",
-            title: "Service Workspace",
-            desc: "Invoicing, AR & billing.",
+            title: "Service business",
+            desc: "Invoicing, AR & billing (live product).",
+            comingSoon: false,
             preview: [
                 "Raise an invoice and watch it post to accounts receivable",
                 "Record a payment and see the receivable clear instantly",
@@ -49,8 +51,9 @@ export default function DemoPage() {
         },
         {
             id: "accountant",
-            title: "Accountant Workspace",
+            title: "Accountant workspace",
             desc: "Client ledger management.",
+            comingSoon: false,
             preview: [
                 "Navigate client workspaces from one professional login",
                 "Post a manual journal entry with full audit trail",
@@ -58,6 +61,8 @@ export default function DemoPage() {
             ],
         },
     ];
+
+    const selectableWorkspaces = workspaces.filter((w) => !w.comingSoon);
 
     const selectedWorkspaceData = workspaces.find((w) => w.id === selectedWorkspace);
 
@@ -83,6 +88,12 @@ export default function DemoPage() {
         const messageInterval = setInterval(() => {
             setLoadingStep((prev) => (prev + 1) % loadingMessages.length);
         }, 800);
+
+        if (selectedWorkspace === "retail") {
+            setIsSubmitting(false);
+            clearInterval(messageInterval);
+            return;
+        }
 
         try {
             await fetch("/api/demo-submit", {
@@ -164,13 +175,21 @@ export default function DemoPage() {
                             <div
                                 key={ws.id}
                                 className={cn(
-                                    "rounded-lg border p-4 transition-all",
-                                    selectedWorkspace === ws.id
+                                    "rounded-lg border p-4 transition-all relative",
+                                    ws.comingSoon && "opacity-80 bg-zinc-50/80",
+                                    selectedWorkspace === ws.id && !ws.comingSoon
                                         ? "border-zinc-900 bg-zinc-50"
                                         : "border-zinc-200 bg-white"
                                 )}
                             >
-                                <p className="text-xs font-bold text-zinc-900 mb-2">{ws.title}</p>
+                                <div className="flex items-start justify-between gap-2 mb-2">
+                                    <p className="text-xs font-bold text-zinc-900">{ws.title}</p>
+                                    {ws.comingSoon && (
+                                        <span className="shrink-0 rounded bg-zinc-200 px-1.5 py-0.5 text-[10px] font-bold uppercase text-zinc-600">
+                                            Soon
+                                        </span>
+                                    )}
+                                </div>
                                 <ul className="space-y-1.5">
                                     {ws.preview.map((point) => (
                                         <li key={point} className="flex items-start gap-2 text-xs text-zinc-600">
@@ -197,8 +216,8 @@ export default function DemoPage() {
                                 Each workspace has a different operating model — all running on the same ledger engine.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {workspaces.map((ws) => (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-xl mx-auto md:max-w-none">
+                            {selectableWorkspaces.map((ws) => (
                                 <button
                                     key={ws.id}
                                     type="button"
@@ -215,6 +234,13 @@ export default function DemoPage() {
                                 </button>
                             ))}
                         </div>
+                        <p className="text-xs text-zinc-500 text-center md:text-left">
+                            Retail &amp; POS preview is not available yet —{" "}
+                            <Link href="/contact" className="font-semibold text-zinc-700 underline underline-offset-2">
+                                contact us
+                            </Link>{" "}
+                            if you want to talk shop workflows.
+                        </p>
                         {selectedWorkspaceData && (
                             <div className="rounded-md bg-zinc-50 border border-zinc-200 px-4 py-3">
                                 <p className="text-xs font-semibold text-zinc-700 mb-1">In this preview you will see:</p>

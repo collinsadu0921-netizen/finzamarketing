@@ -159,7 +159,7 @@ export default function AccountantsPage() {
                 {
                   step: "Step 1",
                   title: "Your clients use Finza to run their business",
-                  desc: "Each client operates a Retail or Service Workspace. Their transactions are posted to the ledger automatically as they work — invoices, POS sales, expenses, payments.",
+                  desc: "Each client runs their day-to-day in Finza — invoicing, expenses, payments — posted to the ledger as they work. Dedicated retail POS is on the roadmap alongside the same ledger engine.",
                 },
                 {
                   step: "Step 2",

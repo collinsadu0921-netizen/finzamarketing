@@ -147,21 +147,27 @@ export default function SmallBusinessAccountingGhanaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  tag: "Retail Workspace — GHS 250/month",
+                  id: "retail",
+                  tag: "Retail & POS — on the roadmap",
                   for: "Shops, pharmacies, supermarkets, hardware stores — any business that sells physical goods and manages inventory.",
-                  bullets: ["POS sales post to the ledger automatically", "Inventory tracked with COGS accounting", "VAT collected and separated per transaction"],
+                  bullets: [
+                    "Planned: POS sales post revenue, cash, VAT, stock, and COGS together",
+                    "Planned: inventory and COGS without manual month-end rebuilds",
+                    "Not live in app yet — see the retailer page for the product direction",
+                  ],
                   link: "/accounting-software-for-retailers-ghana",
-                  linkLabel: "Retail accounting →",
+                  linkLabel: "Retail direction →",
                 },
                 {
-                  tag: "Service Workspace — GHS 200/month",
+                  id: "service",
+                  tag: "Invoicing & services — live (from GHS 149/mo)",
                   for: "Agencies, consultancies, clinics, contractors — any business that bills clients for services.",
                   bullets: ["Invoices create AR entries automatically", "Track outstanding balances and overdue accounts", "Record expenses with immediate ledger posting"],
                   link: "/accounting-software-for-service-businesses-ghana",
                   linkLabel: "Service business accounting →",
                 },
               ].map((ws) => (
-                <div key={ws.tag} className="flex flex-col p-7 rounded-xl border border-zinc-200 bg-white shadow-sm">
+                <div key={ws.id} className="flex flex-col p-7 rounded-xl border border-zinc-200 bg-white shadow-sm">
                   <div className="inline-block rounded-md bg-zinc-50 border border-zinc-200 px-3 py-1 text-xs font-bold text-zinc-700 mb-4 self-start">
                     {ws.tag}
                   </div>
