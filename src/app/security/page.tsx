@@ -67,6 +67,15 @@ export default function SecurityPage() {
               <li>Export critical period-end reports and store them with your engagement file.</li>
             </ul>
 
+            <h2>Finza Assist (in-app help)</h2>
+            <p>
+              Finza includes an optional in-app assistant (Finza Assist) for educational questions about Ghana-oriented VAT, WHT, PAYE, and bookkeeping. Assist uses read-only tools against your workspace where designed to do so; it does not post journal entries or change ledger records automatically. Receipt images may be read to produce suggestions in the conversation—you still review and save any expense or bill. Suggested links may open forms with fields pre-filled; you confirm before saving. This support is not tax or legal advice. A separate onboarding assistant helps with setup steps and does not query live ledger data in the same way. For product detail, see{" "}
+              <Link href="/features#finza-assist" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Features — Finza Assist
+              </Link>
+              .
+            </p>
+
             <h2>Questions</h2>
             <p>
               For privacy requests, use{" "}

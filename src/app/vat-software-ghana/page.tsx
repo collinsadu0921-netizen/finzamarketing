@@ -47,7 +47,11 @@ export default function VatSoftwareGhanaPage() {
               <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
                 pricing in GHS
               </Link>
-              . Deep dives:{" "}
+              . For plain-language questions on Ghana VAT, WHT, and how lines show in Finza,{" "}
+              <Link href="/features#finza-assist" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Finza Assist
+              </Link>{" "}
+              uses read-only workspace data and server-verified lookups—educational only, not filing advice. Deep dives:{" "}
               <Link href="/blog" className="font-semibold text-zinc-900 underline underline-offset-2">
                 VAT cluster on the blog
               </Link>

@@ -106,6 +106,13 @@ export default function PayrollSoftwareGhanaPage() {
               Finza focuses on payroll calculation, records, approval, payslip delivery, and how payroll connects to your
               books—not a full HR system and not global payroll.
             </p>
+            <p className="max-w-2xl text-sm leading-relaxed text-zinc-500">
+              Questions on PAYE bands, taxable pay, or how payroll fits your books?{" "}
+              <Link href="/features#finza-assist" className="font-semibold text-zinc-700 underline underline-offset-2">
+                Finza Assist
+              </Link>{" "}
+              explains Ghana-oriented PAYE and related topics using read-only workspace data—educational support, not tax or legal advice; it does not post payroll for you.
+            </p>
             <div className="flex flex-col flex-wrap gap-3 sm:flex-row">
               <a
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"

@@ -113,6 +113,11 @@ export const homePageFaqForSchema = [
     acceptedAnswerText:
       "See the Features page for capabilities and the Pricing page for Service workspace plans in GHS (Essentials, Professional, Business).",
   },
+  {
+    questionName: "What is Finza Assist?",
+    acceptedAnswerText:
+      "Finza Assist is an in-app, Ghana-aware copilot inside Finza. It explains Ghana-oriented VAT, withholding tax (WHT), PAYE, and bookkeeping using read-only workspace data and server-verified lookups when you need authoritative numbers—for example this month’s payments vs expenses, invoice and bill search, customers, open receivables (including overdue), invoice detail on the screen you are viewing, your tax profile, payroll run summaries, expense totals by category, and—where you have access and accounting is initialized—profit and loss and balance sheet summaries. It helps you understand and act without posting entries or changing records automatically: assistant tools are read-only, receipt OCR adds suggested text to the conversation only until you save an expense or bill yourself, and suggested links may open create forms with fields pre-filled for you to review and save. This is educational support—not tax or legal advice. During onboarding, a separate assistant gives short structured help from your business profile and step—without live ledger tools.",
+  },
 ];
 
 /** Must match /accounting-software-ghana FAQ accordion exactly. */
@@ -247,6 +252,78 @@ export const payrollSoftwareGhanaFaqForSchema = [
     questionName: "Can different team members have different payroll permissions?",
     acceptedAnswerText:
       "Yes. Role-based payroll permissions let you separate who can view payroll, create runs, approve or lock payroll, and generate payslips—so owners can delegate work without giving everyone approval control.",
+  },
+];
+
+/** Must match /accounting-software-accra FAQ accordion exactly. */
+export const accountingSoftwareAccraFaqForSchema = [
+  {
+    questionName: "Is Finza suitable for businesses in Accra?",
+    acceptedAnswerText:
+      "Yes. Finza is built for Ghana businesses operating from Accra and anywhere else in the country—cloud software with plans in GHS. It fits growing companies and professional service firms that invoice often, record expenses, and need reports and tax summaries without spreadsheet chaos.",
+  },
+  {
+    questionName: "Can Finza handle accounting in Ghana cedis?",
+    acceptedAnswerText:
+      "Yes. Amounts, customer balances, and reports are in Ghana cedis (GHS). Tax-related summaries can reflect VAT, NHIL, and GETFund where applicable to your setup—confirm final treatment with your accountant or GRA.",
+  },
+  {
+    questionName: "Does Finza support invoices and reports together?",
+    acceptedAnswerText:
+      "Yes. Invoicing, payments, and expenses feed the same workspace as profit and position views—so you are not reconciling a billing tool against a separate report file each month.",
+  },
+  {
+    questionName: "Can accountants use Finza with business owners?",
+    acceptedAnswerText:
+      "Yes. Owners and operators can record day-to-day activity; accountants can review organized records, tax summaries, and reports instead of rebuilding from PDFs and chat threads.",
+  },
+];
+
+/** Must match /invoicing-software-kumasi FAQ accordion exactly. */
+export const invoicingSoftwareKumasiFaqForSchema = [
+  {
+    questionName: "Can I send invoices in GHS with Finza?",
+    acceptedAnswerText:
+      "Yes. You create and send professional invoices in Ghana cedis (GHS), with tax lines shown separately where applicable for your business—not one blended tax column by default.",
+  },
+  {
+    questionName: "Can Finza help track unpaid invoices?",
+    acceptedAnswerText:
+      "Yes. You see outstanding balances by customer, which invoices are unpaid or overdue, and when payments are recorded—so collections are not a separate spreadsheet.",
+  },
+  {
+    questionName: "Is Finza suitable for service businesses in Kumasi?",
+    acceptedAnswerText:
+      "Yes. Service companies, contractors, and growing SMEs in Kumasi that bill clients regularly are a strong fit—especially when quotes become invoices without retyping.",
+  },
+  {
+    questionName: "Can quotes and invoices work together?",
+    acceptedAnswerText:
+      "Yes. After a quotation is approved, you can move to invoicing in the same system so line items and agreed totals in GHS stay consistent.",
+  },
+];
+
+/** Must match /payroll-software-tema FAQ accordion exactly. */
+export const payrollSoftwareTemaFaqForSchema = [
+  {
+    questionName: "Does Finza support payroll for employers in Tema?",
+    acceptedAnswerText:
+      "Yes. Employers in Tema use the same Ghana payroll product as businesses elsewhere: monthly runs, PAYE and SSNIT based on your setup, approval before payroll is official, and payslips by email or WhatsApp.",
+  },
+  {
+    questionName: "Can Finza calculate PAYE and SSNIT?",
+    acceptedAnswerText:
+      "Yes. PAYE follows Ghana progressive bands on taxable income where applicable; SSNIT uses employee and employer contributions from basic salary according to payroll inputs. Confirm final positions with your accountant or the relevant authorities.",
+  },
+  {
+    questionName: "Can I send payslips to employees?",
+    acceptedAnswerText:
+      "Yes. After you approve payroll, you can generate payslips and send them by email or WhatsApp so staff see gross pay, deductions, and net pay clearly.",
+  },
+  {
+    questionName: "Does payroll connect to accounting records?",
+    acceptedAnswerText:
+      "After approval, payroll records are official in Finza and approved payroll can post into accounting so staff costs align with your books—subject to your plan and configuration.",
   },
 ];
 

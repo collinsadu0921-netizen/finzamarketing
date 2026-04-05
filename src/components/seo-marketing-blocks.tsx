@@ -5,6 +5,7 @@ const whyPoints = [
   "Built for Ghana—not adapted later",
   "Clear tax line handling (VAT, NHIL, GETFund where applicable)",
   "Designed for service businesses and accountants",
+  "Finza Assist—in-app copilot for Ghana VAT, WHT, PAYE & books; read-only data, server-verified numbers, no auto-posting",
   "Simple to use without accounting knowledge",
 ];
 

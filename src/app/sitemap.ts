@@ -120,6 +120,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.82,
         },
         {
+            url: "https://www.finza.africa/accounting-software-accra",
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.76,
+        },
+        {
+            url: "https://www.finza.africa/invoicing-software-kumasi",
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.76,
+        },
+        {
+            url: "https://www.finza.africa/payroll-software-tema",
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.76,
+        },
+        {
             url: "https://www.finza.africa/expense-tracking-software-ghana",
             lastModified: now,
             changeFrequency: "monthly",

@@ -8,9 +8,9 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Features — Invoices, Quotes, Expenses & Reports in Ghana (GHS) | Finza",
+  title: "Features — Invoices, Reports & Finza Assist (Ghana VAT, WHT, PAYE) | Finza",
   description:
-    "Send invoices online, create quotes, track expenses, and see reports in Ghana cedis. Ghana tax lines (VAT, NHIL, GETFund) where applicable. For small businesses and accountants in Ghana.",
+    "Invoices, quotes, expenses, and reports in Ghana cedis. Finza Assist: in-app Ghana-aware copilot for VAT, WHT, PAYE, and bookkeeping—read-only workspace data and server-verified numbers; does not post or change your ledger automatically. Separate onboarding assistant.",
   alternates: {
     canonical: "https://www.finza.africa/features",
   },
@@ -34,7 +34,7 @@ export default function FeaturesPage() {
               Finza · Ghana
             </span>
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Run invoices, quotes, expenses, and reports in one place—in GHS
+              Run invoices, quotes, expenses, and reports in one place—in GHS—with Finza Assist
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
               Finza helps <strong className="text-zinc-900">service businesses and accountants in Ghana</strong> manage day-to-day money work: send invoices online, turn quotes into bills, record spending, and open reports without rebuilding spreadsheets.
@@ -102,6 +102,10 @@ export default function FeaturesPage() {
                   headline: "Monthly payroll — PAYE, SSNIT, payslips",
                   body: "Run approved monthly payroll with Ghana PAYE and SSNIT logic, handle bonus and overtime where your setup requires it, and send payslips by email or WhatsApp. Records can align with the rest of your accounting.",
                 },
+                {
+                  headline: "Finza Assist",
+                  body: "In-app Ghana-aware copilot for VAT, WHT, PAYE, and bookkeeping—read-only workspace data and server-verified numbers. Helps you understand and act without posting entries or changing records automatically. Full detail in the Finza Assist section below.",
+                },
               ].map((item) => (
                 <div key={item.headline} className="flex gap-4 p-6 bg-white rounded-xl border border-zinc-200 shadow-sm">
                   <div className="flex-shrink-0 w-1 rounded-full bg-[#0F172A] self-stretch" />
@@ -111,6 +115,112 @@ export default function FeaturesPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ── FINZA ASSIST & ONBOARDING ── */}
+      <section id="finza-assist" className="scroll-mt-28 border-b border-zinc-100 bg-white py-20">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-12">
+            <div className="space-y-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Finza Assist</p>
+              <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Ghana-aware copilot—read-only data, you stay in control</h2>
+              <p className="max-w-3xl text-base leading-relaxed text-zinc-600">
+                <strong className="text-zinc-900">Finza Assist</strong> is an in-app, Ghana-aware copilot: it explains{" "}
+                <strong className="text-zinc-900">VAT, withholding tax (WHT), PAYE, and bookkeeping</strong> using{" "}
+                <strong className="text-zinc-900">read-only workspace data</strong> and <strong className="text-zinc-900">server-verified</strong> lookups when numbers must be right. It helps you understand and choose your next step{" "}
+                <strong className="text-zinc-900">without posting entries or changing records automatically</strong>. It sees{" "}
+                <strong className="text-zinc-900">where you are in the app</strong> and a client snapshot (invoices, bills, customers, suppliers, accounts, jobs, high-level totals)—when figures matter, tools on the server are authoritative. It can <strong className="text-zinc-900">navigate</strong> using routes Finza defines for the assistant. This is <strong className="text-zinc-900">educational support—not tax or legal advice</strong>.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+              <div className="space-y-4 rounded-xl border border-zinc-200 bg-zinc-50/80 p-8">
+                <h3 className="text-lg font-bold text-zinc-900">What Assist can look up for you</h3>
+                <p className="text-sm text-zinc-600">
+                  Typical read-only lookups (exact availability follows your permissions and plan):
+                </p>
+                <ul className="space-y-2.5 text-sm leading-relaxed text-zinc-700">
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Dashboard-style summary</strong>—this month’s payments vs expenses, invoice status counts, overdue receivables (approximate), unpaid supplier bills (approximate).{" "}
+                      <em className="text-zinc-500">Not a substitute for full payroll detail in that summary.</em>
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Search</strong> invoices (number and/or customer), bills (number, supplier, notes), and customers (name or email).
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Open receivables</strong>, optionally overdue only; <strong className="text-zinc-900">full detail</strong> for an invoice when you are on that invoice screen.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Tax profile</strong>—VAT scheme, CIT code, TIN, currency, trading and legal name.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Payroll runs</strong>—summaries and optional per-staff lines.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Expense totals by category</strong> for a month.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-[#0F172A]">·</span>
+                    <span>
+                      <strong className="text-zinc-900">Profit &amp; loss</strong> and <strong className="text-zinc-900">balance sheet</strong> summaries from the ledger when accounting is initialized and you have report access.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-6">
+                <div className="rounded-xl border border-zinc-200 bg-white p-8 shadow-sm">
+                  <h3 className="text-lg font-bold text-zinc-900">What Assist does not do</h3>
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-zinc-600">
+                    <li className="flex gap-2">
+                      <span className="text-red-600">✕</span>
+                      It does <strong className="text-zinc-900">not</strong> create, edit, or post transactions. Tools are read-only except that you can still attach a receipt in the UI.
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-red-600">✕</span>
+                      <span>
+                        <strong className="text-zinc-900">Receipt OCR</strong> reads the image and may add <strong className="text-zinc-900">suggested text</strong> to the chat—nothing is booked until you save an expense or bill yourself.
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-red-600">✕</span>
+                      <span>
+                        <strong className="text-zinc-900">Draft handoff</strong>: the model may suggest links that <strong className="text-zinc-900">open create screens with fields pre-filled</strong>. You review every line and hit save—there is no auto-save from Assist.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-dashed border-zinc-300 bg-zinc-50 p-8">
+                  <h3 className="text-lg font-bold text-zinc-900">Onboarding assistant (separate)</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                    While you set up Finza, a <strong className="text-zinc-900">different assistant</strong> uses your business profile (name, industry, country, currency) and current onboarding step to give short, structured guidance—what it means, what to click, and common mistakes. It does <strong className="text-zinc-900">not</strong> use Finza Assist’s ledger tools or live accounting queries.
+                  </p>
+                </div>
+                <p className="text-xs leading-relaxed text-zinc-500">
+                  Client-side context can be briefly out of date; Assist is designed to prefer verified tools when you need numbers you can rely on. Fair use limits apply to assistant and tool rounds per minute.
+                </p>
+              </div>
             </div>
           </div>
         </Container>
@@ -137,6 +247,7 @@ export default function FeaturesPage() {
                 "Anyone who wants tax summaries aligned with real activity—where applicable",
                 "Businesses tired of rebuilding the same spreadsheet each month",
                 "Employers who need monthly payroll with clear PAYE and SSNIT—not another generic HR suite",
+                "Teams that want Finza Assist—Ghana tax and books Q&A plus live lookups, without giving up control of the ledger",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 rounded-lg border border-zinc-200 bg-zinc-50">
                   <svg className="h-4 w-4 text-zinc-900 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">

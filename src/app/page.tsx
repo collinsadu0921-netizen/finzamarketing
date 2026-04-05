@@ -16,7 +16,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Accounting and Invoicing Software for Businesses in Ghana | Finza",
   description:
-    "Run your Ghana business with clearer numbers in GHS. Send invoices online, track payments, quotes, and bookkeeping—tax lines for VAT, NHIL, and GETFund where applicable. Built for SMEs, operators, and accounting firms.",
+    "Run your Ghana business with clearer numbers in GHS. Finza Assist is an in-app Ghana-aware copilot for VAT, WHT, PAYE, and bookkeeping—read-only workspace data and server-verified numbers; it does not post entries or change records automatically. Invoices, quotes, tax lines where applicable.",
   alternates: {
     canonical: "https://www.finza.africa",
   },
@@ -38,7 +38,8 @@ export default function Home() {
               Run your business with clearer numbers in GHS. If you do not know your real profit after bills and tax lines, or your accountant keeps asking for data you do not have ready, one connected system fixes the scramble.
             </p>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-zinc-500">
-              Built for the Ghana market—SMEs, operators, and accounting firms manage invoices, bookkeeping, and taxes in one place.
+              Built for the Ghana market—SMEs, operators, and accounting firms manage invoices, bookkeeping, and taxes in one place.{" "}
+              <strong className="font-semibold text-zinc-700">Finza Assist</strong> is built in: a Ghana-aware copilot that explains VAT, WHT, PAYE, and bookkeeping using read-only workspace data and server-verified numbers—<strong className="font-semibold text-zinc-700">without posting entries or changing records automatically</strong>. Educational support, not tax or legal advice.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
               <a
@@ -137,6 +138,12 @@ export default function Home() {
                 <span className="font-bold text-[#0F172A]">✓</span>
                 Built for accountants managing Ghanaian clients who need cleaner handovers.
               </li>
+              <li className="flex gap-3">
+                <span className="font-bold text-[#0F172A]">✓</span>
+                <span>
+                  <strong className="text-zinc-900">Finza Assist</strong>—in-app copilot for Ghana tax and books using read-only workspace lookups (invoices, bills, dashboard summaries, reports where you have access). Suggestions and OCR never replace your save step; the ledger does not update from Assist alone.
+                </span>
+              </li>
             </ul>
             <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-6 text-left">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">What happens automatically</p>
@@ -220,9 +227,9 @@ export default function Home() {
           <div className="mx-auto max-w-3xl space-y-8 text-center">
             <h2 className="text-3xl font-bold text-zinc-900">Explore what Finza includes</h2>
             <p className="text-zinc-600">
-              Invoices, quotes, expenses, reports, and Ghana tax handling—see the full list on{" "}
-              <Link href="/features" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Features
+              Invoices, quotes, expenses, reports, Finza Assist, and Ghana tax handling—see the full list on{" "}
+              <Link href="/features#finza-assist" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Features (Finza Assist)
               </Link>
               . Compare plans in{" "}
               <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
@@ -318,6 +325,12 @@ export default function Home() {
                 <AccordionTrigger>Where can I see full features and plans?</AccordionTrigger>
                 <AccordionContent>
                   See the Features page for capabilities and the Pricing page for Service workspace plans in GHS (Essentials, Professional, Business).
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="finza-assist">
+                <AccordionTrigger>What is Finza Assist?</AccordionTrigger>
+                <AccordionContent>
+                  Finza Assist is an in-app, Ghana-aware copilot inside Finza. It explains Ghana-oriented VAT, withholding tax (WHT), PAYE, and bookkeeping using read-only workspace data and server-verified lookups when you need authoritative numbers—for example this month’s payments vs expenses, invoice and bill search, customers, open receivables (including overdue), invoice detail on the screen you are viewing, your tax profile, payroll run summaries, expense totals by category, and—where you have access and accounting is initialized—profit and loss and balance sheet summaries. It helps you understand and act without posting entries or changing records automatically: assistant tools are read-only, receipt OCR adds suggested text to the conversation only until you save an expense or bill yourself, and suggested links may open create forms with fields pre-filled for you to review and save. This is educational support—not tax or legal advice. During onboarding, a separate assistant gives short structured help from your business profile and step—without live ledger tools.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
