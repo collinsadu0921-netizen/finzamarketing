@@ -48,7 +48,11 @@ export default function PricingPage() {
                             Clear plans for <strong className="text-zinc-900">small businesses and accountants in Ghana</strong>—one Service workspace, three tiers (Essentials, Professional, Business). All prices in <strong className="text-zinc-900">GHS</strong>.
                         </p>
                         <p className="text-lg text-zinc-600 leading-relaxed">
-                            Pick the tier that matches how much control and depth you need. Manage invoices, quotes, expenses, and reports in one place.
+                            Pick the tier that matches how much control and depth you need. Manage invoices, quotes, expenses, and reports in one place. Professional and Business plans are built for teams that also run monthly payroll—PAYE, SSNIT, approvals, and payslips—so staff costs stay consistent with your books. Read how it works on our{" "}
+                            <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                                Ghana payroll software
+                            </Link>{" "}
+                            page.
                         </p>
                         <div className="flex flex-wrap items-center gap-3 pt-2">
                             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">

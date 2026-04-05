@@ -70,7 +70,11 @@ export default function AccountingSoftwareGhanaPage() {
               <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-700 underline underline-offset-2">
                 send invoices in Ghana
               </Link>{" "}
-              in the same system, receivables and summaries stay aligned.
+              in the same system, receivables and summaries stay aligned. If you pay staff monthly, see{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-700 underline underline-offset-2">
+                PAYE and SSNIT payroll
+              </Link>{" "}
+              in Finza—approvals, payslips, and records that tie back to your books.
             </p>
             <p className="max-w-2xl text-sm font-medium text-zinc-600">
               Built around how Ghana businesses bill, collect, and hand over to their accountants.

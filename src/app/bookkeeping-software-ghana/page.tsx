@@ -62,12 +62,16 @@ export default function BookkeepingSoftwareGhanaPage() {
               Finza bookkeeping ties into{" "}
               <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 invoicing
-              </Link>{" "}
-              and{" "}
+              </Link>
+              ,{" "}
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 accounting software Ghana
+              </Link>
+              , and{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Ghana payroll software
               </Link>{" "}
-              so you do not maintain three parallel lists.
+              when you run monthly payroll—so you do not maintain parallel lists for money in, money out, and staff pay.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a

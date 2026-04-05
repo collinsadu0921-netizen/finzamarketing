@@ -56,6 +56,11 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/payroll-software-ghana" className="transition-colors hover:text-zinc-900">
+                  Payroll · Ghana
+                </Link>
+              </li>
+              <li>
                 <Link href="/accountants" className="transition-colors hover:text-zinc-900">
                   Accountants
                 </Link>

@@ -58,7 +58,11 @@ export default function BestAccountingSoftwareGhanaPage() {
               <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
                 pricing
               </Link>
-              .
+              . Employers comparing options should also review{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Payroll software Ghana
+              </Link>{" "}
+              for PAYE, SSNIT, and payslip delivery in the same stack.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

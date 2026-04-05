@@ -56,9 +56,13 @@ export default function FeaturesPage() {
               <Link href="/quotation-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 quotations
               </Link>
-              , and{" "}
+              ,{" "}
               <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 bookkeeping
+              </Link>
+              , and{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                payroll for Ghana teams
               </Link>
               .
             </p>
@@ -94,6 +98,10 @@ export default function FeaturesPage() {
                   headline: "Ghana tax lines where applicable",
                   body: "VAT, NHIL, and GETFund can be shown separately on activity and documents when your business requires them. What applies depends on registration and supply type—confirm with your accountant or GRA.",
                 },
+                {
+                  headline: "Monthly payroll — PAYE, SSNIT, payslips",
+                  body: "Run approved monthly payroll with Ghana PAYE and SSNIT logic, handle bonus and overtime where your setup requires it, and send payslips by email or WhatsApp. Records can align with the rest of your accounting.",
+                },
               ].map((item) => (
                 <div key={item.headline} className="flex gap-4 p-6 bg-white rounded-xl border border-zinc-200 shadow-sm">
                   <div className="flex-shrink-0 w-1 rounded-full bg-[#0F172A] self-stretch" />
@@ -128,6 +136,7 @@ export default function FeaturesPage() {
                 "Accountants managing Ghanaian clients who need cleaner files",
                 "Anyone who wants tax summaries aligned with real activity—where applicable",
                 "Businesses tired of rebuilding the same spreadsheet each month",
+                "Employers who need monthly payroll with clear PAYE and SSNIT—not another generic HR suite",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 rounded-lg border border-zinc-200 bg-zinc-50">
                   <svg className="h-4 w-4 text-zinc-900 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -182,6 +191,7 @@ export default function FeaturesPage() {
                 {[
                   { label: "Sales / POS" },
                   { label: "Invoices / Accounts Receivable" },
+                  { label: "Payroll" },
                   { label: "Expenses" },
                   { label: "Stock Adjustments" },
                 ].map((row) => (
@@ -399,6 +409,52 @@ export default function FeaturesPage() {
             <p className="text-sm text-zinc-500">
               Additional reports: Aged Receivables, VAT Control, Account Statements. All sourced from the same ledger.
             </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* ── SECTION 4B: PAYROLL ── */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-10">
+            <div className="space-y-3">
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Payroll</p>
+              <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Monthly payroll built for Ghana</h2>
+              <p className="max-w-2xl text-sm leading-relaxed text-zinc-600">
+                Finza is not a global payroll platform or a full HR system. It is for Ghana businesses that need correct monthly payroll: staff profiles, PAYE and SSNIT based on your setup, approval before payroll is official, and payslips your people can open on the channels they already use.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              {[
+                "One monthly run with draft review before you approve",
+                "PAYE using Ghana progressive bands where applicable to taxable income",
+                "Employee and employer SSNIT from basic salary, based on payroll inputs",
+                "Bonus and overtime handled separately when the payroll case calls for it",
+                "Payslips after approval—by email or WhatsApp",
+                "Salary advances and repayments visible in the same workflow",
+              ].map((line) => (
+                <div key={line} className="flex gap-3 rounded-xl border border-zinc-200 bg-white p-5 shadow-sm">
+                  <svg className="mt-0.5 h-5 w-5 shrink-0 text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p className="text-sm text-zinc-700 leading-relaxed">{line}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href="/payroll-software-ghana"
+                className="inline-flex w-fit rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
+              >
+                Payroll software Ghana
+              </Link>
+              <Link
+                href="/pricing"
+                className="text-sm font-semibold text-zinc-700 underline underline-offset-2 hover:text-zinc-900"
+              >
+                View plans in GHS
+              </Link>
+            </div>
           </div>
         </Container>
       </section>

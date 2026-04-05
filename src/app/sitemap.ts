@@ -114,6 +114,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.78,
         },
         {
+            url: "https://www.finza.africa/payroll-software-ghana",
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.82,
+        },
+        {
             url: "https://www.finza.africa/expense-tracking-software-ghana",
             lastModified: now,
             changeFrequency: "monthly",

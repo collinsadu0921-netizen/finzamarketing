@@ -211,6 +211,45 @@ export const bookkeepingSoftwareGhanaFaqForSchema = [
   },
 ];
 
+/** Must match /payroll-software-ghana FAQ accordion exactly. */
+export const payrollSoftwareGhanaFaqForSchema = [
+  {
+    questionName: "Does Finza support payroll for businesses in Ghana?",
+    acceptedAnswerText:
+      "Yes. Finza is built for Ghana payroll: monthly payroll runs, PAYE and SSNIT calculations based on your payroll setup, approval before payroll becomes official, and payslips you can share by email or WhatsApp—without positioning the product as a full HR suite or global payroll.",
+  },
+  {
+    questionName: "Does Finza calculate PAYE and SSNIT?",
+    acceptedAnswerText:
+      "Yes. PAYE follows Ghana progressive tax bands on taxable income from gross pay and applicable deductions, where applicable. SSNIT uses employee and employer contributions based on basic salary, according to the payroll inputs and staff type. Calculations use the payroll month as the effective date. Confirm final positions with your accountant or the relevant authorities.",
+  },
+  {
+    questionName: "Can Finza handle bonus and overtime in payroll?",
+    acceptedAnswerText:
+      "Yes. Bonus and overtime can be included in the payroll run, with tax treatment that can differ depending on the payroll case and how items are entered. Your setup and inputs determine how they flow—work with your accountant where you are unsure.",
+  },
+  {
+    questionName: "Can I send payslips to employees?",
+    acceptedAnswerText:
+      "Yes. After payroll is approved, you can generate payslips and send them through channels your team already uses—email or WhatsApp—so staff receive a clear breakdown without manual document prep for every person.",
+  },
+  {
+    questionName: "Does payroll update accounting records?",
+    acceptedAnswerText:
+      "After you approve payroll, records become official in Finza and totals are calculated from the approved run. Approved payroll can post into accounting so staff costs stay aligned with your books—subject to your plan and configuration.",
+  },
+  {
+    questionName: "Can I track salary advances?",
+    acceptedAnswerText:
+      "Yes. Salary advances can be recorded and repayment tracked against approved or locked payroll so advances are visible in the system instead of handled off-book.",
+  },
+  {
+    questionName: "Can different team members have different payroll permissions?",
+    acceptedAnswerText:
+      "Yes. Role-based payroll permissions let you separate who can view payroll, create runs, approve or lock payroll, and generate payslips—so owners can delegate work without giving everyone approval control.",
+  },
+];
+
 /** PAA-style questions — must match on-page accordion on accounting / invoicing / bookkeeping hubs. */
 export const accountingSoftwareGhanaPaaFaqForSchema = [
   {
