@@ -678,7 +678,7 @@ export default function FeaturesPage() {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link href="/demo" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Try the interactive demo
+                View the demo
               </Link>
               <Link href="/pricing" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
                 View pricing
@@ -760,7 +760,7 @@ export default function FeaturesPage() {
                 href="/demo"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
-                Try the demo
+                View demo
               </Link>
               <a
                 href="/pricing"

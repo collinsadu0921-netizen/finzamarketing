@@ -235,7 +235,7 @@ export default function PricingPage() {
                                 href="/demo"
                                 className="text-base font-semibold text-zinc-400 hover:text-white transition-colors"
                             >
-                                Try the interactive demo →
+                                View the demo →
                             </Link>
                         </div>
                     </div>

@@ -61,7 +61,7 @@ export function Navbar() {
                             href="/demo"
                             className="rounded-md bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
                         >
-                            Try Demo
+                            View Demo
                         </Link>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ export function Navbar() {
                                 className="rounded-md bg-[#0F172A] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 text-center"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Try Demo
+                                View Demo
                             </Link>
                         </div>
                     </Container>

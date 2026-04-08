@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 export function CTA() {
     return (
         <section className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden flex flex-col items-center text-center">
@@ -13,8 +13,10 @@ export function CTA() {
                     Experience the future of automated accounting in Ghana today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <Button size="lg" variant="secondary" className="h-16 px-12 text-lg font-bold shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto text-primary bg-white hover:bg-white/90">
-                        Book a Demo
+                    <Button size="lg" variant="secondary" className="h-16 px-12 text-lg font-bold shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto text-primary bg-white hover:bg-white/90" asChild>
+                        <Link href="/demo">
+                            View Demo
+                        </Link>
                     </Button>
                 </div>
             </div>
