@@ -106,7 +106,7 @@ export const homePageFaqForSchema = [
   {
     questionName: "Do I need to pay before trying Finza?",
     acceptedAnswerText:
-      "No. Start with a free trial from pricing—no card required to begin. You choose a paid plan in GHS when you are ready.",
+      "No. Finza offers a 14-day free trial from pricing, with no card required to start. You choose a paid plan in GHS when you are ready.",
   },
   {
     questionName: "Where can I see full features and plans?",
@@ -355,7 +355,7 @@ export const invoicingSoftwareGhanaPaaFaqForSchema = [
   {
     questionName: "What is the best invoicing software in Ghana?",
     acceptedAnswerText:
-      "Look for GHS-first invoices, clear unpaid balances, optional quotation-to-invoice flow, and tax lines where applicable. The best tool is the one your team actually uses—start with a free trial and real customer data.",
+      "Look for GHS-first invoices, clear unpaid balances, optional quotation-to-invoice flow, and tax lines where applicable. The best tool is the one your team actually uses—start with a 14-day free trial and real customer data.",
   },
   {
     questionName: "Can small businesses send invoices online in Ghana?",
@@ -400,29 +400,34 @@ export const bookkeepingSoftwareGhanaPaaFaqForSchema = [
 /** Must match pricing page FAQ accordion exactly (visible text only). */
 export const pricingPageFaqForSchema = [
   {
-    questionName: "How does the 14-day free trial work?",
+    questionName: "Is there a free trial?",
     acceptedAnswerText:
-      "Your first 14 days on any Service plan are free with no card required. At the end of that period, you'll be prompted to subscribe to continue. There is no automatic charge — you choose when to activate billing. If you don't subscribe, your workspace moves to read-only and your data remains intact.",
+      "Yes. Finza offers a 14-day free trial. No card is required to start.",
   },
   {
-    questionName: "When am I billed?",
+    questionName: "Can I change plans later?",
     acceptedAnswerText:
-      "Subscriptions are billed monthly on the same date you activated. Payments are processed via Paystack. You can cancel at any time before the next billing date and retain access until the period ends. No partial refunds — you keep access through the end of the month you paid for. You can also save 17% by paying annually.",
+      "Yes. You can change plans as your business needs change. Plan changes take effect from the next billing period unless otherwise shown during checkout. Finza does not apply prorated adjustments or credits for unused time.",
   },
   {
-    questionName: "Can I upgrade or downgrade my tier?",
+    questionName: "Can I cancel?",
     acceptedAnswerText:
-      "Yes. You can move between Essentials, Professional, and Business tiers at any time. When upgrading, changes apply immediately and your billing is prorated. When downgrading, the new tier takes effect at the start of your next billing cycle.",
+      "Yes. You can cancel before your next billing date to avoid renewal. If you cancel, access continues until the end of the paid billing period.",
   },
   {
-    questionName: "Who owns my data?",
+    questionName: "Do the prices include payment processing fees?",
     acceptedAnswerText:
-      "You do. Your financial records belong to your business. You can export all transaction data and reports to CSV at any time. If you cancel, your data remains exportable for 90 days after your last billing period — after which it is deleted in accordance with our retention policy.",
+      "The plan price covers your Finza subscription. Any payment processing fees, provider charges, or taxes that apply are shown separately where relevant.",
   },
   {
-    questionName: "What happens when I cancel?",
+    questionName: "Which plan should I start with?",
     acceptedAnswerText:
-      "You retain full access until the end of your current billing period. After that, your workspace moves to read-only mode — you can view and export everything, but you cannot post new transactions. Your data is not deleted immediately. You can reactivate at any time by renewing a subscription.",
+      "Start with Essentials if you mainly need proposals, quotes, invoices, payments, expenses, and basic reports. Choose Professional if you need supplier bills, incoming documents, payroll, WHT, VAT support, and team access. Choose Business if you need deeper accounting controls such as ledger records, journals, trial balance, bank reconciliation, period locking, audit logs, and exports.",
+  },
+  {
+    questionName: "Does Finza replace my accountant?",
+    acceptedAnswerText:
+      "No. Finza helps organize your business records and reports. Your accountant or tax adviser should confirm the correct treatment for your business.",
   },
 ];
 

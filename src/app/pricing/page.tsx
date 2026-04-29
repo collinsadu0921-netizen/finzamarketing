@@ -9,14 +9,13 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
-import { HowFinzaHelpsDayToDay, WhyBusinessesChooseFinza } from "@/components/seo-marketing-blocks";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema, pricingPageFaqForSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Pricing — Finza Plans in Ghana Cedis (GHS) | Small Business & Accountants",
+    title: "Pricing | Finza Plans for Ghanaian Service Businesses",
     description:
-        "Finza Service workspace pricing in GHS: Essentials GHS 149/mo, Professional GHS 449/mo, Business GHS 949/mo. For small businesses and accountants in Ghana. 14-day free trial, no card to start.",
+        "Choose a Finza plan for your Ghanaian service business. Start with a 14-day free trial, then manage proposals, invoices, payments, expenses, payroll, documents, reports, and accountant-ready records in GHS.",
     alternates: {
         canonical: "https://www.finza.africa/pricing",
     },
@@ -37,34 +36,31 @@ export default function PricingPage() {
                 ]}
             />
 
-            {/* ── HEADER ── */}
+            {/* HERO */}
             <section className="pt-28 pb-16 border-b border-zinc-100">
                 <Container>
-                    <div className="max-w-2xl space-y-4">
+                    <div className="max-w-4xl space-y-4">
                         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-                            Pricing in Ghana cedis (GHS)
+                            Simple pricing for Ghanaian service businesses
                         </h1>
                         <p className="text-lg text-zinc-600 leading-relaxed font-medium">
-                            Clear plans for <strong className="text-zinc-900">small businesses and accountants in Ghana</strong>—one Service workspace, three tiers (Essentials, Professional, Business). All prices in <strong className="text-zinc-900">GHS</strong>.
+                            Start with the tools your business needs today, then move to deeper controls as your operations grow. Finza helps you manage proposals, invoices, payments, expenses, payroll, documents, reports, and accountant-ready records in GHS.
                         </p>
-                        <p className="text-lg text-zinc-600 leading-relaxed">
-                            Pick the tier that matches how much control and depth you need. Manage invoices, quotes, expenses, and reports in one place. Professional and Business plans are built for teams that also run monthly payroll—PAYE, SSNIT, approvals, and payslips—so staff costs stay consistent with your books. Read how it works on our{" "}
-                            <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                                Ghana payroll software
-                            </Link>{" "}
-                            page.
-                        </p>
-                        <div className="flex flex-wrap items-center gap-3 pt-2">
-                            <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
-                                ✓ 14-day free trial
-                            </span>
-                            <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
-                                ✓ No card required to start
-                            </span>
-                            <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600">
-                                ✓ Cancel anytime
-                            </span>
+                        <div className="flex flex-col items-start gap-3 pt-2 sm:flex-row sm:items-center">
+                            <a
+                                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                                className="inline-block rounded-md bg-[#0F172A] px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
+                            >
+                                Start 14-day free trial
+                            </a>
+                            <Link
+                                href="/demo"
+                                className="inline-block rounded-md border border-zinc-300 bg-white px-8 py-3 text-base font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
+                            >
+                                See how Finza works
+                            </Link>
                         </div>
+                        <p className="text-sm text-zinc-500">No card required to start. Choose monthly, quarterly, or annual billing.</p>
                     </div>
                 </Container>
             </section>
@@ -72,92 +68,71 @@ export default function PricingPage() {
             {/* ── PRICING TIERS ── */}
             <PricingTiers />
 
-            {/* ── WHICH PLAN SHOULD I CHOOSE ── */}
-            <section className="py-14 bg-zinc-50 border-b border-zinc-100">
+            {/* PRICING NOTES */}
+            <section className="py-14 bg-white border-b border-zinc-100">
                 <Container>
-                    <div className="max-w-4xl mx-auto space-y-8">
-                        <div className="space-y-2">
-                            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Choosing a plan</p>
-                            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                                Which plan should I choose?
-                            </h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                            {[
-                                {
-                                    plan: "Essentials",
-                                    price: "GHS 149/mo",
-                                    for: "You run a simple service business or consultancy. You need to send professional quotes, invoice clients, track what you are owed, and monitor basic expenses.",
-                                },
-                                {
-                                    plan: "Professional",
-                                    price: "GHS 449/mo",
-                                    for: "Your business is growing. You manage teams, need to track projects, handle fixed assets, run payroll, and automatically generate precise VAT & WHT statutory returns.",
-                                },
-                                {
-                                    plan: "Business",
-                                    price: "GHS 949/mo",
-                                    for: "You need complete accounting control. You want a full general ledger, trial balances, bank reconciliations, and tight period locking with comprehensive audit logs.",
-                                },
-                            ].map((block) => (
-                                <div key={block.plan} className="p-6 rounded-xl border border-zinc-200 bg-white shadow-sm">
-                                    <div className="flex items-baseline justify-between mb-3">
-                                        <p className="text-sm font-bold text-zinc-900">{block.plan}</p>
-                                        <span className="text-xs font-semibold text-zinc-500">{block.price}</span>
-                                    </div>
-                                    <p className="text-sm text-zinc-600 leading-relaxed">{block.for}</p>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="max-w-4xl mx-auto space-y-6">
+                        <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                            What happens after the trial?
+                        </h2>
+                        <p className="text-base leading-relaxed text-zinc-600">
+                            Your 14-day trial gives you time to explore Finza before choosing a paid plan. No card is required to start.
+                        </p>
+                        <p className="text-base leading-relaxed text-zinc-600">
+                            When the trial ends, you can choose the plan and billing cycle that fits your business. If a paid subscription is not activated, access may move to a limited or read-only state depending on your account status.
+                        </p>
                     </div>
                 </Container>
             </section>
 
-            {/* ── WHAT'S INCLUDED IN EVERY WORKSPACE ── */}
+            {/* BILLING RULES */}
+            <section className="py-14 bg-zinc-50 border-b border-zinc-100">
+                <Container>
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="space-y-2">
+                            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                                Billing rules
+                            </h2>
+                        </div>
+                        <p className="text-base leading-relaxed text-zinc-600">
+                            Plans can be billed monthly, quarterly, or annually. Quarterly and annual billing give you the displayed savings compared with monthly billing.
+                        </p>
+                        <p className="text-base leading-relaxed text-zinc-600">
+                            Plan changes take effect from the next billing period unless otherwise shown during checkout. Finza does not apply prorated adjustments or credits for unused time.
+                        </p>
+                        <p className="text-base leading-relaxed text-zinc-600">
+                            You can cancel before your next billing date to avoid renewal. After cancellation, access continues until the end of the paid billing period.
+                        </p>
+                    </div>
+                </Container>
+            </section>
+
+            {/* INTERNAL LINKS */}
             <section className="py-20 bg-white border-b border-zinc-100">
                 <Container>
-                    <div className="max-w-4xl mx-auto space-y-10">
-                        <div className="space-y-2">
-                            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Every plan includes</p>
-                            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                                Core system — robust foundation.
-                            </h2>
-                            <p className="text-sm text-zinc-600">
-                                Every Finza plan includes a full financial engine behind the scenes—so what you record matches what you see in reports, without manual assembly.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            {[
-                                {
-                                    title: "Reliable totals",
-                                    desc: "Activity stays structured behind the scenes so profit, balances, and tax-related views stay consistent with what you entered.",
-                                },
-                                {
-                                    title: "Real-time reports",
-                                    desc: "Income statement and balance sheet — always current, never assembled by hand.",
-                                },
-                                {
-                                    title: "Ghana tax lines",
-                                    desc: "Support for VAT, NHIL, and GETFund presentation where applicable—confirm what applies with your accountant.",
-                                },
-                                {
-                                    title: "Audit-ready records",
-                                    desc: "Append-only entries. Corrections are reversals, not deletions. Audit trail is always intact.",
-                                },
-                                {
-                                    title: "Role-based access",
-                                    desc: "Control what team members can see and do depending on their responsibilities.",
-                                },
-                                {
-                                    title: "Data export",
-                                    desc: "Export transaction history and reports to CSV at any time. Your data is always yours.",
-                                },
-                            ].map((item) => (
-                                <div key={item.title} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50">
-                                    <p className="text-sm font-bold text-zinc-900 mb-1">{item.title}</p>
-                                    <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
-                                </div>
-                            ))}
+                    <div className="mx-auto max-w-5xl">
+                        <div className="flex flex-wrap gap-3">
+                            <Link href="/features" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Features
+                            </Link>
+                            <Link href="/demo" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Demo
+                            </Link>
+                            <Link href="/contact" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Contact
+                            </Link>
+                            <Link href="/security" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Security
+                            </Link>
+                            <Link href="/accountants" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Accountants
+                            </Link>
+                            <Link href="/invoicing-software-ghana" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Invoicing software Ghana
+                            </Link>
+                            <Link href="/accounting-software-ghana" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                                Accounting software Ghana
+                            </Link>
                         </div>
                     </div>
                 </Container>
@@ -176,33 +151,39 @@ export default function PricingPage() {
 
                         <Accordion type="single" collapsible className="w-full">
                             <AccordionItem value="free-trial">
-                                <AccordionTrigger>How does the 14-day free trial work?</AccordionTrigger>
+                                <AccordionTrigger>Is there a free trial?</AccordionTrigger>
                                 <AccordionContent>
-                                    Your first 14 days on any Service plan are free with no card required. At the end of that period, you&apos;ll be prompted to subscribe to continue. There is no automatic charge — you choose when to activate billing. If you don&apos;t subscribe, your workspace moves to read-only and your data remains intact.
+                                    Yes. Finza offers a 14-day free trial. No card is required to start.
                                 </AccordionContent>
                             </AccordionItem>
-                            <AccordionItem value="billing-cycle">
-                                <AccordionTrigger>When am I billed?</AccordionTrigger>
+                            <AccordionItem value="change-plan">
+                                <AccordionTrigger>Can I change plans later?</AccordionTrigger>
                                 <AccordionContent>
-                                    Subscriptions are billed monthly on the same date you activated. Payments are processed via Paystack. You can cancel at any time before the next billing date and retain access until the period ends. No partial refunds — you keep access through the end of the month you paid for. You can also save 17% by paying annually.
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="upgrade">
-                                <AccordionTrigger>Can I upgrade or downgrade my tier?</AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. You can move between Essentials, Professional, and Business tiers at any time. When upgrading, changes apply immediately and your billing is prorated. When downgrading, the new tier takes effect at the start of your next billing cycle.
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="data-ownership">
-                                <AccordionTrigger>Who owns my data?</AccordionTrigger>
-                                <AccordionContent>
-                                    You do. Your financial records belong to your business. You can export all transaction data and reports to CSV at any time. If you cancel, your data remains exportable for 90 days after your last billing period — after which it is deleted in accordance with our retention policy.
+                                    Yes. You can change plans as your business needs change. Plan changes take effect from the next billing period unless otherwise shown during checkout. Finza does not apply prorated adjustments or credits for unused time.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="cancel">
-                                <AccordionTrigger>What happens when I cancel?</AccordionTrigger>
+                                <AccordionTrigger>Can I cancel?</AccordionTrigger>
                                 <AccordionContent>
-                                    You retain full access until the end of your current billing period. After that, your workspace moves to read-only mode — you can view and export everything, but you cannot post new transactions. Your data is not deleted immediately. You can reactivate at any time by renewing a subscription.
+                                    Yes. You can cancel before your next billing date to avoid renewal. If you cancel, access continues until the end of the paid billing period.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="fees">
+                                <AccordionTrigger>Do the prices include payment processing fees?</AccordionTrigger>
+                                <AccordionContent>
+                                    The plan price covers your Finza subscription. Any payment processing fees, provider charges, or taxes that apply are shown separately where relevant.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="which-plan">
+                                <AccordionTrigger>Which plan should I start with?</AccordionTrigger>
+                                <AccordionContent>
+                                    Start with Essentials if you mainly need proposals, quotes, invoices, payments, expenses, and basic reports. Choose Professional if you need supplier bills, incoming documents, payroll, WHT, VAT support, and team access. Choose Business if you need deeper accounting controls such as ledger records, journals, trial balance, bank reconciliation, period locking, audit logs, and exports.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="accountant">
+                                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                                <AccordionContent>
+                                    No. Finza helps organize your business records and reports. Your accountant or tax adviser should confirm the correct treatment for your business.
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
@@ -210,32 +191,28 @@ export default function PricingPage() {
                 </Container>
             </section>
 
-            <WhyBusinessesChooseFinza className="bg-white" />
-
-            <HowFinzaHelpsDayToDay className="bg-zinc-50" />
-
-            {/* ── FINAL CTA ── */}
+            {/* FINAL CTA */}
             <section className="py-24 bg-[#0F172A] text-center">
                 <Container>
                     <div className="max-w-xl mx-auto space-y-6">
                         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                            Start your 14-day free trial.
+                            Start with the plan that fits your business today
                         </h2>
                         <p className="text-base text-zinc-400 leading-relaxed">
-                            No card required to start. Invoices, quotes, and expense tracking in GHS—Ghana tax lines where applicable—with reports your accountant can use.
+                            Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                             <a
                                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
                             >
-                                Try Finza free
+                                Start 14-day free trial
                             </a>
                             <Link
                                 href="/demo"
-                                className="text-base font-semibold text-zinc-400 hover:text-white transition-colors"
+                                className="text-base font-semibold text-zinc-300 hover:text-white transition-colors"
                             >
-                                View the demo →
+                                See how Finza works
                             </Link>
                         </div>
                     </div>

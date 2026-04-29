@@ -10,7 +10,7 @@ export function Ghana() {
                 <div className="text-center max-w-3xl mx-auto mb-20 relative z-10">
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-6">Built for Ghana</h2>
                     <p className="text-xl text-muted-foreground leading-relaxed">
-                        Standardized for the local market. Compliant, fast, and reliable.
+                        Built for Ghanaian service businesses with practical workflows for daily operations.
                     </p>
                 </div>
 
@@ -33,18 +33,18 @@ export function Ghana() {
                         </div>
                         <h3 className="text-lg font-bold text-primary mb-3">VAT Logic</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Pre-programmed with Ghana&apos;s VAT Structure (Standard, Flat Rate) ensuring automatic and accurate tax calculations.
+                            Structured for Ghana VAT presentation so service-business records stay clearer for review.
                         </p>
                     </div>
 
-                    {/* Service & Retail */}
+                    {/* Service operations */}
                     <div className="bg-background p-8 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
                         <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
                             <Store className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-bold text-primary mb-3">Service & Retail</h3>
+                        <h3 className="text-lg font-bold text-primary mb-3">Service Operations</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Flexible tools adapted for both inventory-based retail shops and professional service providers.
+                            Designed for contractors, consultants, agencies, cleaning teams, and other service providers.
                         </p>
                     </div>
 
@@ -55,7 +55,7 @@ export function Ghana() {
                         </div>
                         <h3 className="text-lg font-bold text-primary mb-3">Mobile Ready</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Fully optimized for mobile devices, allowing you to manage your business from anywhere in the country.
+                            Fully optimized for mobile devices so teams can handle invoices, expenses, and records from anywhere in Ghana.
                         </p>
                     </div>
                 </div>

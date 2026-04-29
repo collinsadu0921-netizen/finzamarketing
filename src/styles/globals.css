@@ -6,3 +6,65 @@
     @apply h-full bg-white text-zinc-950 antialiased;
   }
 }
+
+@keyframes heroCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(99, 102, 241, 0);
+  }
+}
+
+.hero-card {
+  animation:
+    heroCardIn 620ms ease-out both,
+    heroCardFloat 5.6s ease-in-out infinite;
+}
+
+.hero-glow {
+  animation: heroGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-float {
+  animation: heroFloat 6s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-card,
+  .hero-glow,
+  .hero-float {
+    animation: none !important;
+  }
+}

@@ -81,7 +81,7 @@ export default function NhilGetfundExplainedPage() {
                 <strong>NHIL</strong> funds health insurance infrastructure; it is a dedicated levy, not a line inside the VAT percentage.
               </li>
               <li>
-                <strong>GETFund</strong> supports education-related investment; again, a separate levy with its own reporting logic in compliant books.
+                <strong>GETFund</strong> supports education-related investment; again, a separate levy with its own reporting logic in books your accountant can review.
               </li>
             </ul>
 
@@ -99,7 +99,7 @@ export default function NhilGetfundExplainedPage() {
               <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
                 workspace pricing
               </Link>{" "}
-              when you are ready to trial.
+              when you are ready to start a 14-day free trial.
             </p>
 
             <h2>Where to go next</h2>

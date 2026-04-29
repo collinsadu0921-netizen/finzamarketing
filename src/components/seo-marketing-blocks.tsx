@@ -36,7 +36,7 @@ const trustPoints = [
 /** Mid-scroll CTA — pair with hero + footer CTAs for conversion coverage. */
 export function MidPageCtaBand({
   title,
-  subtitle = "Free trial · No card to start · Plans in Ghana cedis",
+  subtitle = "14-day free trial. No card required to start.",
   className = "bg-zinc-100 py-12",
 }: {
   title: string;
@@ -56,7 +56,7 @@ export function MidPageCtaBand({
               href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
               className="rounded-md bg-white px-6 py-3 text-center text-sm font-bold text-zinc-900 shadow-sm hover:bg-zinc-100"
             >
-              Try Finza free
+              Start 14-day free trial
             </a>
             <Link
               href="/pricing"

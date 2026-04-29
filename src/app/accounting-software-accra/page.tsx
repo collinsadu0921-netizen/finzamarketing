@@ -56,7 +56,7 @@ export default function AccountingSoftwareAccraPage() {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
                 See how it works
@@ -73,7 +73,7 @@ export default function AccountingSoftwareAccraPage() {
         <Container>
           <div className="mx-auto max-w-3xl space-y-6">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Who we often see in Accra</p>
-            <h2 className="text-2xl font-bold text-zinc-900">Professional services and growing companies—not only retail</h2>
+            <h2 className="text-2xl font-bold text-zinc-900">Professional service businesses and growing companies</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               Categories we hear about often include <strong className="text-zinc-900">creative and marketing agencies</strong>,{" "}
               <strong className="text-zinc-900">management and IT consultancies</strong>, <strong className="text-zinc-900">clinics and outpatient practices</strong>,{" "}
@@ -196,7 +196,7 @@ export default function AccountingSoftwareAccraPage() {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
                 View pricing in GHS

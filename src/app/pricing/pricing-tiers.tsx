@@ -9,155 +9,75 @@ const plansData = [
     {
         id: "essentials",
         name: "Essentials",
-        subtitle: "Core financial operations for running your business",
+        subtitle: "For service businesses that need professional documents, payment tracking, expenses, and clear business records.",
         price: 149,
         highlight: false,
         cta: "Start 14-day free trial",
         planParam: "starter",
-        groups: [
-            {
-                name: "Financial Operations",
-                items: [
-                    "Real-time business overview and performance tracking",
-                    "Customer management and activity history",
-                    "Quote creation and conversion to invoices",
-                    "Service-based workflow management"
-                ]
-            },
-            {
-                name: "Billing & Cash Management",
-                items: [
-                    "Proforma invoice generation",
-                    "Invoice creation and tracking",
-                    "Payment recording and status tracking",
-                    "Credit notes and adjustments",
-                    "Expense tracking and categorisation"
-                ]
-            },
-            {
-                name: "Financial Reporting",
-                items: [
-                    "Profit & Loss (real-time view)",
-                    "Balance Sheet (automatically generated)"
-                ]
-            },
-            {
-                name: "Tax & Compliance",
-                items: [
-                    "VAT tracking and reporting"
-                ]
-            },
-            {
-                name: "Business Configuration",
-                items: [
-                    "Business profile management",
-                    "Invoice configuration (numbering, structure)",
-                    "Payment setup and preferences",
-                    "WhatsApp communication integration"
-                ]
-            }
-        ]
+        groupTitle: "Included in Essentials",
+        items: [
+            "Proposals",
+            "Quotes and proformas",
+            "Invoices and receipts",
+            "Customers",
+            "Products and services",
+            "Payment recording",
+            "Partial payment tracking",
+            "Expense tracking",
+            "Basic reports",
+            "PDF exports",
+            "Email sending",
+            "Public document links",
+            "WhatsApp sharing links",
+            "Ghana tax lines where applicable",
+        ],
     },
     {
         id: "professional",
         name: "Professional",
-        subtitle: "Operational control and structured financial management",
+        subtitle: "For growing service teams that need better control over bills, documents, payroll, tax records, and team access.",
         price: 449,
         highlight: true,
         cta: "Start 14-day free trial",
         planParam: "professional",
-        addedText: "Everything in Essentials, plus:",
-        groups: [
-            {
-                name: "Operations & Resource Management",
-                items: [
-                    "Project tracking and management",
-                    "Material usage tracking",
-                    "Supplier bill management"
-                ]
-            },
-            {
-                name: "Workforce & Internal Management",
-                items: [
-                    "Payroll processing",
-                    "Salary advances management",
-                    "Team member access control",
-                    "Staff management"
-                ]
-            },
-            {
-                name: "Financial Management & Reporting",
-                items: [
-                    "Fixed asset tracking",
-                    "Cash flow statement",
-                    "Statement of changes in equity"
-                ]
-            },
-            {
-                name: "Tax & Regulatory Reporting",
-                items: [
-                    "VAT return preparation",
-                    "Withholding tax (WHT) tracking and returns"
-                ]
-            },
-            {
-                name: "Collaboration & Oversight",
-                items: [
-                    "Accountant collaboration requests",
-                    "Accounting activity log"
-                ]
-            }
-        ]
+        groupTitle: "Everything in Essentials, plus",
+        items: [
+            "Supplier bills",
+            "Incoming documents",
+            "Document upload and review workflow",
+            "Payroll",
+            "WHT receivable tracking where applicable",
+            "VAT, NHIL, and GETFund support where applicable",
+            "Customer statements",
+            "Team access",
+            "Roles and permissions",
+            "More detailed reports",
+            "Accountant-ready records",
+        ],
     },
     {
         id: "business",
         name: "Business",
-        subtitle: "Full financial control with accounting-grade infrastructure",
+        subtitle: "For companies that need deeper accounting control, review workflows, exports, and governance.",
         price: 949,
         highlight: false,
         cta: "Start 14-day free trial",
         planParam: "business",
-        addedText: "Everything in Professional, plus:",
-        groups: [
-            {
-                name: "Core Accounting Infrastructure",
-                items: [
-                    "General Ledger (system-generated and continuously updated)",
-                    "Chart of Accounts management",
-                    "Trial Balance (automatically maintained)"
-                ]
-            },
-            {
-                name: "Reconciliation & Accuracy Control",
-                items: [
-                    "Transaction reconciliation",
-                    "Bank reconciliation"
-                ]
-            },
-            {
-                name: "Financial Governance",
-                items: [
-                    "Accounting period management",
-                    "Period closing controls"
-                ]
-            },
-            {
-                name: "Capital & Financial Structuring",
-                items: [
-                    "Loan tracking and management",
-                    "Equity tracking and structuring",
-                    "Corporate Income Tax (CIT) provisions"
-                ]
-            },
-            {
-                name: "Audit & System Integrity",
-                items: [
-                    "Full system audit log",
-                    "End-to-end financial traceability"
-                ]
-            }
-        ]
-    }
+        groupTitle: "Everything in Professional, plus",
+        items: [
+            "Ledger records",
+            "Journal entries",
+            "Chart of accounts",
+            "Trial balance",
+            "Bank reconciliation",
+            "Period close and reopen controls",
+            "Audit logs",
+            "Accounting reports",
+            "Report exports",
+            "Accounting workspace access",
+            "Advanced accountant review support",
+        ],
+    },
 ];
 
 export function PricingTiers() {
@@ -191,24 +111,18 @@ export function PricingTiers() {
                                         : "text-zinc-500 hover:text-zinc-900"
                                 }`}
                             >
-                                <span className="capitalize whitespace-nowrap">{c}</span>
-                                {c === "quarterly" && (
-                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap ${cycle === c ? "bg-emerald-400/20 text-emerald-300" : "bg-emerald-100 text-emerald-700"}`}>
-                                        Save 5%
-                                    </span>
-                                )}
-                                {c === "annual" && (
-                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap ${cycle === c ? "bg-emerald-400/20 text-emerald-300" : "bg-emerald-100 text-emerald-700"}`}>
-                                        Save 17%
-                                    </span>
-                                )}
+                                <span className="whitespace-nowrap">
+                                    {c === "monthly" && "Monthly"}
+                                    {c === "quarterly" && "Quarterly — save 5%"}
+                                    {c === "annual" && "Annual — save 17%"}
+                                </span>
                             </button>
                         ))}
                     </div>
                     
                     <div className="max-w-3xl text-center">
                         <p className="text-[14px] leading-relaxed text-zinc-500">
-                            <strong className="font-semibold text-zinc-700">Billing cycle:</strong> Prices update when you switch Monthly, Quarterly, or Annual. If you pay after switching, you are charged the full amount for that cycle and a <strong className="font-semibold text-zinc-700">new period begins immediately</strong> from the payment date. There is no credit for unused time and no prorated adjustment. &quot;Save %&quot; compares paying a longer cycle upfront to paying month by month — it is not a refund from a previous subscription.
+                            Quarterly and annual prices are calculated from the monthly plan price with the displayed billing-cycle discount.
                         </p>
                     </div>
                 </div>
@@ -250,12 +164,12 @@ export function PricingTiers() {
                                     <div className="min-h-[20px] mb-5">
                                         {cycle !== "monthly" && (
                                             <p className={`text-xs ${plan.highlight ? "text-emerald-600 font-semibold" : "text-zinc-500 font-medium"}`}>
-                                                Monthly equivalent: GHS {plan.price}
+                                                GHS {plan.price} / month
                                             </p>
                                         )}
                                     </div>
-                                    <p className="text-xs font-semibold text-emerald-600 mb-6">
-                                        14-day free trial on the {plan.name} plan
+                                    <p className="text-sm font-semibold text-zinc-700 mb-4">
+                                        GHS {plan.price} / month
                                     </p>
 
                                     <a
@@ -271,54 +185,31 @@ export function PricingTiers() {
                                 </div>
 
                                 <div className="flex-1">
-                                    {plan.addedText && (
-                                        <p className="text-sm font-bold text-zinc-900 mt-4 mb-6 pb-2 border-b border-zinc-200">
-                                            {plan.addedText}
-                                        </p>
-                                    )}
-
-                                    <div className={`space-y-8 ${!plan.addedText ? 'mt-4' : ''}`}>
-                                        {plan.groups.map((group) => (
-                                            <div key={group.name}>
-                                                <p className="text-sm font-bold text-zinc-900 mb-3 block">
-                                                    {group.name}
-                                                </p>
-                                                <ul className="space-y-2.5">
-                                                    {group.items.map((item) => (
-                                                        <li key={item} className="flex items-start gap-3 text-sm text-zinc-700">
-                                                            <svg
-                                                                className="h-4 w-4 text-zinc-400 mt-0.5 flex-shrink-0"
-                                                                fill="none"
-                                                                viewBox="0 0 24 24"
-                                                                stroke="currentColor"
-                                                                strokeWidth="2.5"
-                                                            >
-                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                                            </svg>
-                                                            <span className="leading-snug">{item}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
+                                    <p className="text-sm font-bold text-zinc-900 mt-4 mb-4 pb-2 border-b border-zinc-200">
+                                        {plan.groupTitle}
+                                    </p>
+                                    <ul className="space-y-2.5">
+                                        {plan.items.map((item) => (
+                                            <li key={item} className="flex items-start gap-3 text-sm text-zinc-700">
+                                                <svg
+                                                    className="h-4 w-4 text-zinc-400 mt-0.5 flex-shrink-0"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2.5"
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span className="leading-snug">{item}</span>
+                                            </li>
                                         ))}
-                                    </div>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-16 text-center max-w-2xl mx-auto space-y-4">
-                    <div className="bg-zinc-50 rounded-xl p-6 border border-zinc-200">
-                        <h3 className="text-lg font-bold text-zinc-900 mb-2">Built for structured businesses</h3>
-                        <p className="text-sm text-zinc-600 leading-relaxed">
-                            Finza is designed for businesses that need accurate numbers, consistent records, and financial visibility as they operate.
-                        </p>
-                    </div>
-                    <p className="text-sm text-zinc-500 pt-4">
-                        Note: Trial applies to the selected Service plan. You can subscribe at any time before the trial ends.
-                    </p>
-                </div>
             </Container>
         </section>
     );

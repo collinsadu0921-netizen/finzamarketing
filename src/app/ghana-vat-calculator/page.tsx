@@ -8,7 +8,7 @@ import { RelatedClusterLinks } from "@/components/related-cluster-links";
 export const metadata: Metadata = {
   title: "Ghana VAT Calculator — VAT, NHIL & GETFund (Illustrative) | Finza",
   description:
-    "Estimate VAT (15%), NHIL (2.5%), and GETFund (2.5%) on a net amount. Illustrative tool for planning; use Finza for ledger-accurate posting and GRA-ready reports.",
+    "Estimate VAT (15%), NHIL (2.5%), and GETFund (2.5%) on a net amount. Illustrative tool for planning; use Finza for ledger-accurate posting and reports your accountant can review.",
   alternates: {
     canonical: "https://www.finza.africa/ghana-vat-calculator",
   },
@@ -31,7 +31,7 @@ export default function GhanaVatCalculatorPage() {
                 This page helps you <strong className="text-zinc-900">visualise</strong> how standard headline rates compound on a <strong className="text-zinc-900">net</strong> amount. It is not legal or tax advice; supply type, registration, and exemptions change real outcomes.
               </p>
               <p className="text-sm text-zinc-500">
-                For software that posts every component to the ledger automatically, see{" "}
+                For software that posts every component to the ledger in one workflow, see{" "}
                 <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                   accounting software for Ghana
                 </Link>{" "}

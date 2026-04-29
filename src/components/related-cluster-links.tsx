@@ -19,13 +19,13 @@ type RelatedClusterLinksProps =
   | {
       /** Default: primary hub + two related pages */
       mode?: "with-primary";
-      related: [RelatedLink, RelatedLink];
+      related: RelatedLink[];
       heading?: string;
     }
   | {
       /** Use on `/accounting-software-ghana` to avoid self-link; supply three related pages */
       mode: "no-primary";
-      related: [RelatedLink, RelatedLink, RelatedLink];
+      related: RelatedLink[];
       heading?: string;
     };
 

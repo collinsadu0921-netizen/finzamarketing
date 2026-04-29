@@ -106,7 +106,7 @@ export default function HowVatWorksGhanaPage() {
           {
             href: "/vat-software-ghana",
             label: "VAT software for Ghana",
-            desc: "GRA-ready reports from the ledger",
+            desc: "Reports your accountant can review",
           },
           {
             href: "/ghana-vat-calculator",

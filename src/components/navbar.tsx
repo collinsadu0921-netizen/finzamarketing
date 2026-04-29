@@ -12,20 +12,21 @@ export function Navbar() {
     const navLinks = [
         { href: "/features", label: "Features" },
         { href: "/pricing", label: "Pricing" },
+        { href: "/invoice-calculator-ghana", label: "Invoice calculator" },
         { href: "/blog", label: "Blog" },
     ];
 
     return (
         <nav className="sticky top-0 z-50 w-full bg-white border-b border-zinc-100">
-            <Container className="flex h-[72px] items-center justify-between">
+            <Container className="flex h-[68px] items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
                     <Image 
                         src="/logo.png" 
                         alt="Finza" 
-                        width={120} 
-                        height={36} 
-                        className="h-8 w-auto" 
+                        width={108} 
+                        height={32} 
+                        className="h-7 w-auto" 
                         priority 
                     />
                 </Link>
@@ -77,7 +78,7 @@ export function Navbar() {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden border-t border-zinc-100 bg-white absolute w-full left-0 top-[72px] shadow-lg">
+                <div className="md:hidden border-t border-zinc-100 bg-white absolute w-full left-0 top-[68px] shadow-lg">
                     <Container className="py-4 flex flex-col gap-4">
                         {navLinks.map((link) => (
                             <Link

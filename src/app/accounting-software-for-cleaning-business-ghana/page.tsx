@@ -10,7 +10,7 @@ import { breadcrumbListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting Software for Cleaning Businesses in Ghana (2026) | Finza",
   description:
-    "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicable—without spreadsheet chaos. Try Finza free.",
+    "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicable—without spreadsheet chaos. Start a 14-day free trial.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-cleaning-business-ghana",
   },
@@ -46,7 +46,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/invoicing-software-ghana" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
                 Invoicing in GHS
@@ -79,7 +79,10 @@ export default function AccountingSoftwareCleaningGhanaPage() {
         </Container>
       </section>
 
-      <MidPageCtaBand title="Put this month's contracts in one receivables view—then chase with confidence." />
+      <MidPageCtaBand
+        title="Put this month's contracts in one receivables view—then chase with confidence."
+        subtitle="14-day free trial. No card required to start."
+      />
 
       <section className="border-b border-zinc-100 py-16">
         <Container>

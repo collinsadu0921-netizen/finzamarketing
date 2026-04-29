@@ -56,7 +56,7 @@ export default function InvoicingSoftwareKumasiPage() {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
                 See how it works
@@ -187,7 +187,7 @@ export default function InvoicingSoftwareKumasiPage() {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/quotation-software-ghana" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
                 Quotations in Ghana

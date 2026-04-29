@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+
+export const metadata: Metadata = {
+    title: "Workspace Demo | Finza",
+    description: "Internal preview route for Finza workspace demonstrations.",
+    robots: { index: false, follow: false },
+};
 
 export default function WorkspaceDemoPage() {
     return (

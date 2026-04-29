@@ -10,7 +10,7 @@ import { breadcrumbListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Invoice Software for Contractors in Ghana — GHS, Milestones & Quotes | Finza",
   description:
-    "Bill construction and project work in Ghana cedis: approved scopes, progress invoices, and unpaid tracking—without losing the thread in WhatsApp. Try Finza free.",
+    "Bill construction and project work in Ghana cedis: approved scopes, progress invoices, and unpaid tracking—without losing the thread in WhatsApp. Start a 14-day free trial.",
   alternates: {
     canonical: "https://www.finza.africa/invoice-software-for-contractors-ghana",
   },
@@ -46,7 +46,7 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/quotation-software-ghana" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
                 Quotation software
@@ -77,7 +77,11 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
         </Container>
       </section>
 
-      <MidPageCtaBand title="Send the next progress invoice from the same approved scope—no silent retyping." className="bg-white py-10" />
+      <MidPageCtaBand
+        title="Send the next progress invoice from the same approved scope—no silent retyping."
+        subtitle="14-day free trial. No card required to start."
+        className="bg-white py-10"
+      />
 
       <section className="border-b border-zinc-100 py-16">
         <Container>

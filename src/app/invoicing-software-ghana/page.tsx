@@ -4,30 +4,18 @@ import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import {
-  HowFinzaHelpsDayToDay,
-  InvoicingSerpClusterStrip,
-  MidPageCtaBand,
-  WhyBusinessesChooseFinza,
-  WhyBusinessesTrustFinza,
-} from "@/components/seo-marketing-blocks";
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
-import {
-  breadcrumbListSchema,
-  faqPageSchema,
-  invoicingSoftwareGhanaFaqForSchema,
-  invoicingSoftwareGhanaPaaFaqForSchema,
-} from "@/lib/schema";
+import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Invoicing Software in Ghana — Send Invoices & Track Payments in GHS | Finza",
+  title: "Invoicing Software in Ghana for Service Businesses | Finza",
   description:
-    "Send invoices in GHS, see who paid and who did not, and stop chasing balances in spreadsheets. Built for Ghana businesses—start free, compare pricing in cedis today.",
+    "Create and send invoices in GHS with Finza. Manage quotes, proformas, payments, receipts, customer balances, Ghana tax lines, and accountant-ready records for your service business.",
   alternates: {
     canonical: "https://www.finza.africa/invoicing-software-ghana",
   },
@@ -42,255 +30,304 @@ export default function InvoicingSoftwareGhanaPage() {
             { name: "Home", path: "/" },
             { name: "Invoicing software for Ghana", path: "/invoicing-software-ghana" },
           ]),
-          faqPageSchema([...invoicingSoftwareGhanaFaqForSchema, ...invoicingSoftwareGhanaPaaFaqForSchema]),
+          faqPageSchema([
+            {
+              questionName: "Is Finza invoicing software for Ghanaian businesses?",
+              acceptedAnswerText:
+                "Yes. Finza helps Ghanaian businesses create invoices in GHS, share them with clients, record payments, issue receipts, and keep invoice records connected to reports.",
+            },
+            {
+              questionName: "Can I send invoices by WhatsApp?",
+              acceptedAnswerText:
+                "Finza supports invoice sharing by public link and WhatsApp link, so you can send invoice links through channels your clients already use.",
+            },
+            {
+              questionName: "Does Finza support partial payments?",
+              acceptedAnswerText:
+                "Yes. Finza supports recording full and partial payments against the correct invoice and customer.",
+            },
+            {
+              questionName: "Does Finza show VAT, NHIL, GETFund, and WHT?",
+              acceptedAnswerText:
+                "Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and accountant or GRA guidance.",
+            },
+            {
+              questionName: "Can I try Finza before paying?",
+              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+            },
+          ]),
         ]}
       />
 
+      {/* HERO */}
       <section className="border-b border-zinc-100 pt-28 pb-20">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-zinc-600">
-              Invoicing software · Ghana
-            </span>
+          <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Invoicing software in Ghana—send invoices online and track unpaid amounts in GHS
+              Invoicing software in Ghana for service businesses
             </h1>
-            <p className="max-w-2xl text-lg leading-relaxed text-zinc-600">
-              If you are still using spreadsheets for invoices, <strong className="text-zinc-900">send invoices online in Ghana</strong> with professional layout and clear totals in{" "}
-              <strong className="text-zinc-900">Ghana cedis (GHS)</strong>. <strong className="text-zinc-900">Track unpaid invoices in GHS</strong> by customer, see who is overdue, and record payments as money arrives—without maintaining a parallel spreadsheet.
-            </p>
-            <p className="max-w-2xl text-sm leading-relaxed text-zinc-500">
-              <strong className="text-zinc-700">Finza invoicing software Ghana</strong> operators use to look professional, follow up faster, and keep tax lines clear where applicable. For P&amp;L, tax summaries, and period closing, pair billing with{" "}
-              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-700 underline underline-offset-2">
-                accounting software in Ghana
-              </Link>
-              .
+            <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
+              Finza helps Ghanaian service businesses create professional invoices, send them by email, PDF, public link, or WhatsApp link, track payments, issue receipts, and keep cleaner records for accountant review.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                See how it works
-              </Link>
-              <Link href="/pricing" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                View pricing in GHS
-              </Link>
-              <Link href="/features" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                Features
+                See how Finza works
               </Link>
             </div>
+            <p className="text-sm text-zinc-500">No card required to start. Work in GHS with Ghana tax lines where applicable.</p>
           </div>
         </Container>
       </section>
 
+      {/* SECTION 1 */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The problem</p>
-            <h2 className="text-3xl font-bold text-zinc-900">Invoices live in email and WhatsApp—balances live nowhere</h2>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Invoicing should not be separated from the rest of your business</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Service companies in Ghana often invoice from templates that do not connect to a single list of what is still owed. Follow-up is guesswork. When VAT, NHIL, or GETFund should appear, they get lumped into one line—or left off—until someone fixes it later.
+              An invoice is usually not the first step. Before the invoice, there may be a proposal, quote, proforma, site visit, scope of work, or client approval.
+            </p>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Finza helps keep that workflow connected so your team can move from client request to invoice, payment, receipt, and reports without rebuilding the same records again.
             </p>
           </div>
         </Container>
       </section>
 
-      <MidPageCtaBand title="Send today's invoices from one place—know who still owes you." className="bg-zinc-50 py-10" />
-
-      <InvoicingSerpClusterStrip className="bg-white" />
-
+      {/* SECTION 2 */}
       <section className="border-b border-zinc-100 py-24">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The solution</p>
-            <h2 className="text-3xl font-bold text-zinc-900">Online invoicing tied to customer balances in GHS</h2>
-            <p className="text-lg font-semibold leading-relaxed text-zinc-900">
-              Once an invoice is sent, it becomes the official version—and balances, status, and reports update from that thread.
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Create invoices that are clear for clients and useful for your records</h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Finza helps you prepare invoices with customer details, line items, due dates, totals, notes, and Ghana tax lines where applicable.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              Build an invoice with <strong className="text-zinc-900">Ghana tax lines split the way your registration expects</strong>—not one blended percentage. Share by email, PDF, link, or the channels you already use (many teams still coordinate on WhatsApp). When you <strong className="text-zinc-900">issue</strong> the invoice, it feeds the same receivables list your whole team sees.
+              Your invoices are not just documents for the client. They also become part of your payment tracking, customer balance, reports, and accountant-ready records.
             </p>
-            <p className="text-sm leading-relaxed text-zinc-500">
-              While an invoice stays in <strong className="text-zinc-700">draft</strong>, Finza does <strong className="text-zinc-700">not</strong> auto-post it to the ledger—no posted receivables or revenue from that document until you issue or send it. You can still see line totals as you work.
-            </p>
-            <p className="text-sm leading-relaxed text-zinc-500">
-              <strong className="text-zinc-700">Finza blocks recording payments on drafts</strong>—issue the invoice first, matching the main payment flow and ledger rules.
-            </p>
-            <p className="text-sm font-medium text-zinc-600">
-              Designed for how businesses actually operate in Ghana—email, PDF, MoMo, and the follow-ups you already run.
-            </p>
-            <p className="text-sm leading-relaxed text-zinc-500">
-              Many teams start with an approved scope—see{" "}
-              <Link href="/quotation-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                quotation software in Ghana
-              </Link>{" "}
-              so quotes become invoices without retyping.
-            </p>
-            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-6">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">How it works in practice</p>
-              <ol className="mt-4 list-inside list-decimal space-y-2 text-sm leading-relaxed text-zinc-600">
-                <li>Set up the customer and tax profile once—new invoices inherit the right Ghana treatment for the invoice date.</li>
-                <li>Issue and send the invoice; that version is what updates balances and history.</li>
-                <li>Record partial or full payment when MoMo, bank, or cash clears—status and balance move together.</li>
-                <li>Open unpaid before you follow up—no second spreadsheet for “who still owes.”</li>
-              </ol>
-              <p className="mt-4 text-xs leading-relaxed text-zinc-500">
-                Payments apply to issued invoices only—balance and status update together, with no second list to reconcile.
-              </p>
-            </div>
-            <div className="grid gap-6 border-t border-zinc-200 pt-8 md:grid-cols-2">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">What updates when you send an invoice</p>
-                <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-zinc-600">
-                  <li>Sent invoices post to posted receivables; overdue-style lists exclude drafts</li>
-                  <li>Balances refresh when you record a payment on an issued invoice</li>
-                  <li>Reports stay tied to the same posted invoice activity</li>
-                </ul>
-              </div>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">What Finza helps you avoid</p>
-                <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-zinc-600">
-                  <li>Silent drift between WhatsApp quotes and official totals</li>
-                  <li>Guessing who owes what at month-end</li>
-                  <li>One “tax” column that hides NHIL and GETFund</li>
-                </ul>
-              </div>
+            <div className="grid gap-4 text-left sm:grid-cols-2">
+              {[
+                {
+                  t: "Professional invoices",
+                  d: "Create invoices that are easy for clients to read and easier for your team to track.",
+                },
+                {
+                  t: "GHS records",
+                  d: "Keep invoice amounts, totals, and reports in Ghana cedis.",
+                },
+                {
+                  t: "PDF and public links",
+                  d: "Share invoices as PDFs or secure public document links.",
+                },
+                {
+                  t: "Email and WhatsApp sharing",
+                  d: "Send invoice links in the channels your clients already use.",
+                },
+              ].map((x) => (
+                <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+                  <p className="font-bold text-zinc-900">{x.t}</p>
+                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
       </section>
 
+      {/* SECTION 3 */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Track unpaid invoices clearly</p>
-            <h2 className="text-3xl font-bold text-zinc-900">See who owes what—always in Ghana cedis</h2>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Track what has been sent, paid, and left outstanding</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Open a view of <strong className="text-zinc-900">outstanding invoices</strong>, filter by customer, and spot overdue amounts in <strong className="text-zinc-900">GHS</strong>. When a client pays, record it once—the unpaid picture updates for everyone who needs it.
+              Finza helps you follow invoice status after the document is sent. Record payments against the right customer and invoice, track partial payments, and see what remains unpaid or overdue.
             </p>
-            <ul className="space-y-3 text-zinc-600">
-              <li className="flex gap-2">
-                <span className="text-[#0F172A]">✓</span>
-                Customer balances without manual reconciliation each week
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[#0F172A]">✓</span>
-                Clear invoice history for service businesses that bill often
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[#0F172A]">✓</span>
-                Ghana tax lines on documents where applicable for your registration
-              </li>
+            <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-3">
+              {[
+                "Payment recording",
+                "Partial payments",
+                "Overdue invoices",
+                "Customer balances",
+                "Payment history",
+                "Receipts after payment",
+              ].map((item) => (
+                <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
+                  {item}
+                </li>
+              ))}
             </ul>
-            <p className="text-sm text-zinc-500">
-              Behind the scenes, Finza keeps invoice activity aligned with your books so reports stay consistent—without you posting manual journal lines.
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 4 */}
+      <section className="border-b border-zinc-100 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Show Ghana tax lines where they apply</h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Finza helps show Ghana tax lines such as VAT, NHIL, GETFund, and WHT clearly where applicable. This makes invoices easier to review and helps your accountant understand how the invoice was prepared.
+            </p>
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Tax treatment depends on your business registration, supply type, and accountant or GRA guidance.
+            </p>
+            <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2">
+              {[
+                "VAT, NHIL, and GETFund support where applicable",
+                "WHT receivable tracking where applicable",
+                "Tax breakdowns on supported documents",
+                "Clear totals in GHS",
+              ].map((item) => (
+                <li key={item} className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 5 */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">From quote or proforma to invoice</h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Some clients need a quote before approval. Others need a proforma before payment. Finza supports those earlier document stages so your invoice does not start from scratch.
+            </p>
+            <p className="text-base leading-relaxed text-zinc-600">
+              You can prepare the client offer, confirm the details, and continue the workflow into the invoice stage.
+            </p>
+            <div className="grid gap-4 text-left sm:grid-cols-2">
+              {[
+                {
+                  t: "Quotes",
+                  d: "Send pricing before the client approves the work.",
+                },
+                {
+                  t: "Proformas",
+                  d: "Issue a formal payment request before the final invoice where needed.",
+                },
+                {
+                  t: "Invoices",
+                  d: "Bill the customer when the work, agreement, or payment stage requires it.",
+                },
+                {
+                  t: "Receipts",
+                  d: "Give proof of payment after money is recorded.",
+                },
+              ].map((x) => (
+                <div key={x.t} className="rounded-xl border border-zinc-200 bg-white p-5">
+                  <p className="font-bold text-zinc-900">{x.t}</p>
+                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 6 */}
+      <section className="border-b border-zinc-100 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Cleaner invoice records for your accountant</h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Invoices become more useful when they connect to the rest of your business records. Finza keeps invoices closer to payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accounting workflows.
+            </p>
+            <p className="text-base leading-relaxed text-zinc-600">
+              This helps reduce the end-of-month search through PDFs, screenshots, WhatsApp messages, and spreadsheets.
+            </p>
+            <Link href="/accounting-software-ghana" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
+              Explore accounting features
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 7 */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Who this invoicing software is for</h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Finza is built for Ghanaian service businesses that send client invoices and need better control over payment tracking and business records.
+            </p>
+            <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-4">
+              {[
+                "Cleaning companies",
+                "Contractors",
+                "Consultants",
+                "Agencies",
+                "Maintenance teams",
+                "Field-service businesses",
+                "Professional service providers",
+                "Growing SMEs working with an accountant",
+              ].map((item) => (
+                <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 8 */}
+      <section className="border-b border-zinc-100 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold text-zinc-900">Invoice support, not a replacement for professional advice</h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Finza helps organize invoices, payments, documents, and reports. It does not guarantee tax compliance, replace your accountant, or remove the need to review important financial information.
+            </p>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Your accountant or tax adviser should confirm the correct treatment for your business.
             </p>
           </div>
         </Container>
       </section>
 
-      <section className="border-b border-zinc-100 py-16">
-        <Container>
-          <div className="mx-auto max-w-2xl space-y-4 text-sm text-zinc-600">
-            <p className="font-bold text-zinc-900">Related</p>
-            <p>
-              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline">
-                Accounting software Ghana
-              </Link>
-              {" · "}
-              <Link href="/invoice-tracking-software-ghana" className="font-semibold text-zinc-900 underline">
-                Invoice tracking Ghana
-              </Link>
-              {" · "}
-              <Link href="/quotation-software-ghana" className="font-semibold text-zinc-900 underline">
-                Quotation software Ghana
-              </Link>
-              {" · "}
-              <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline">
-                Bookkeeping (track expenses)
-              </Link>
-              {" · "}
-              <Link href="/blog" className="font-semibold text-zinc-900 underline">
-                Blog guides
-              </Link>
-            </p>
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-b border-zinc-100 bg-white py-16">
-        <Container>
-          <div className="mx-auto max-w-2xl">
-            <h2 className="text-xl font-bold text-zinc-900">Common questions about invoicing software in Ghana</h2>
-            <Accordion type="single" collapsible className="mt-6 w-full">
-              <AccordionItem value="paa-best-inv">
-                <AccordionTrigger>What is the best invoicing software in Ghana?</AccordionTrigger>
-                <AccordionContent>
-                  Look for GHS-first invoices, clear unpaid balances, optional quotation-to-invoice flow, and tax lines where applicable. Trial with your real customers—not a blank demo.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="paa-small-inv">
-                <AccordionTrigger>Can small businesses send invoices online in Ghana?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. Online invoicing helps small businesses look professional and track who paid without version chaos in email or WhatsApp.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="paa-unpaid-how">
-                <AccordionTrigger>How do I track unpaid invoices in GHS?</AccordionTrigger>
-                <AccordionContent>
-                  Use one system that lists open invoices by customer and updates when payments arrive. See our{" "}
-                  <Link href="/invoice-tracking-software-ghana" className="font-semibold text-zinc-900 underline">
-                    invoice tracking
-                  </Link>{" "}
-                  page for the focused view.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="paa-one-sys">
-                <AccordionTrigger>Can invoicing and accounting work in one system?</AccordionTrigger>
-                <AccordionContent>
-                  Yes—when billing and reports read from the same activity, you stop reconciling two files. Explore{" "}
-                  <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline">
-                    accounting software for Ghana
-                  </Link>
-                  .
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </Container>
-      </section>
-
+      {/* FAQ */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-16">
         <Container>
-          <div className="mx-auto max-w-2xl">
-            <h2 className="text-xl font-bold text-zinc-900">More questions about Finza</h2>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold text-zinc-900">Common questions about invoicing software in Ghana</h2>
             <Accordion type="single" collapsible className="mt-6 w-full">
-              <AccordionItem value="online">
-                <AccordionTrigger>Can I send invoices online in Ghana?</AccordionTrigger>
+              <AccordionItem value="q1">
+                <AccordionTrigger>Is Finza invoicing software for Ghanaian businesses?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. You can create and send professional invoices online in Ghana cedis (GHS), with clear totals and tax lines where applicable for your business.
+                  Yes. Finza helps Ghanaian businesses create invoices in GHS, share them with clients, record payments, issue receipts, and keep invoice records connected to reports.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="unpaid">
-                <AccordionTrigger>Can I track unpaid invoices in GHS?</AccordionTrigger>
+              <AccordionItem value="q2">
+                <AccordionTrigger>Can I send invoices by WhatsApp?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. You see outstanding balances per customer, which invoices are unpaid or overdue, and when payments arrive—so collections are not a manual list.
+                  Finza supports invoice sharing by public link and WhatsApp link, so you can send invoice links through channels your clients already use.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="tax">
-                <AccordionTrigger>Do invoices show VAT, NHIL, and GETFund separately?</AccordionTrigger>
+              <AccordionItem value="q3">
+                <AccordionTrigger>Does Finza support partial payments?</AccordionTrigger>
                 <AccordionContent>
-                  Where applicable, Finza can show Ghana tax lines separately on invoices so customers see a clear breakdown. Exact treatment depends on your registration and supply type.
+                  Yes. Finza supports recording full and partial payments against the correct invoice and customer.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="size">
-                <AccordionTrigger>Is invoicing only for big companies?</AccordionTrigger>
+              <AccordionItem value="q4">
+                <AccordionTrigger>Does Finza show VAT, NHIL, GETFund, and WHT?</AccordionTrigger>
                 <AccordionContent>
-                  No. Small businesses and service companies in Ghana use online invoicing to look professional and stay on top of who owes what.
+                  Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and accountant or GRA guidance.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q5">
+                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Finza offers a 14-day free trial. No card is required to start.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -298,24 +335,18 @@ export default function InvoicingSoftwareGhanaPage() {
         </Container>
       </section>
 
-      <WhyBusinessesTrustFinza className="bg-white" />
-
-      <WhyBusinessesChooseFinza />
-
-      <HowFinzaHelpsDayToDay className="bg-zinc-50" />
-
+      {/* FINAL CTA */}
       <section className="bg-[#0F172A] py-20 text-center">
         <Container>
-          <div className="mx-auto max-w-xl space-y-4">
-            <h2 className="text-3xl font-extrabold text-white">Send your next invoice in GHS with confidence</h2>
-            <p className="text-sm text-zinc-400">Designed for real workflows in Ghana</p>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mx-auto max-w-2xl space-y-6">
+            <h2 className="text-3xl font-extrabold text-white">Create clearer invoices and track payments in GHS</h2>
+            <p className="text-zinc-300">
+              Use Finza to send invoices, record payments, issue receipts, track customer balances, and keep cleaner records for accountant review.
+            </p>
+            <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <a href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
-                Try Finza free
+                Start 14-day free trial
               </a>
-              <Link href="/demo" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">
-                See how it works
-              </Link>
               <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">
                 View pricing in GHS
               </Link>
@@ -328,6 +359,13 @@ export default function InvoicingSoftwareGhanaPage() {
         related={[
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Quote to invoice" },
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports & summaries" },
+          { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Track expenses" },
+          { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
+          { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll workflow" },
+          { href: "/features", label: "Features", desc: "Explore capabilities" },
+          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
+          { href: "/demo", label: "Demo", desc: "See how it works" },
         ]}
       />
       <Footer />

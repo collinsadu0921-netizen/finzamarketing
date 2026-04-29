@@ -200,11 +200,11 @@ export default function RetailDemoPage() {
                         <RelatedClusterLinks
                             related={[
                                 {
-                                    href: "/accounting-for-retail-ghana",
-                                    label: "Retail accounting guide",
-                                    desc: "Inventory & VAT",
+                                    href: "/accounting-software-ghana",
+                                    label: "Accounting software Ghana",
+                                    desc: "Service-business overview",
                                 },
-                                { href: "/pricing", label: "Pricing", desc: "Retail workspace" },
+                                { href: "/invoicing-software-ghana", label: "Invoicing software", desc: "Current public product scope" },
                             ]}
                         />
                     </div>

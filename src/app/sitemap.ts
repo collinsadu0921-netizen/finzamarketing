@@ -192,12 +192,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.75,
         },
         {
-            url: "https://www.finza.africa/accounting-software-for-retailers-ghana",
-            lastModified: now,
-            changeFrequency: "monthly",
-            priority: 0.8,
-        },
-        {
             url: "https://www.finza.africa/accounting-software-for-service-businesses-ghana",
             lastModified: now,
             changeFrequency: "monthly",
@@ -224,13 +218,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         },
         {
-            url: "https://www.finza.africa/accounting-for-small-business-ghana",
+            url: "https://www.finza.africa/invoice-calculator-ghana",
             lastModified: now,
             changeFrequency: "monthly",
-            priority: 0.72,
+            priority: 0.7,
         },
         {
-            url: "https://www.finza.africa/accounting-for-retail-ghana",
+            url: "https://www.finza.africa/accounting-for-small-business-ghana",
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.72,
@@ -252,32 +246,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.72,
-        },
-
-        // ── Demo workspace shells ────────────────────────────────────────────
-        {
-            url: "https://www.finza.africa/workspace-demo",
-            lastModified: now,
-            changeFrequency: "yearly",
-            priority: 0.35,
-        },
-        {
-            url: "https://www.finza.africa/workspace-demo/retail",
-            lastModified: now,
-            changeFrequency: "yearly",
-            priority: 0.35,
-        },
-        {
-            url: "https://www.finza.africa/workspace-demo/service",
-            lastModified: now,
-            changeFrequency: "yearly",
-            priority: 0.35,
-        },
-        {
-            url: "https://www.finza.africa/workspace-demo/accountant",
-            lastModified: now,
-            changeFrequency: "yearly",
-            priority: 0.35,
         },
 
         ...blogEntries,

@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="font-semibold text-zinc-900 underline underline-offset-2"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
                 View pricing in GHS

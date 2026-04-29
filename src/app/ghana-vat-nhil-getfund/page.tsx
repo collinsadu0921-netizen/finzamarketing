@@ -7,7 +7,7 @@ import { RelatedClusterLinks } from "@/components/related-cluster-links";
 export const metadata: Metadata = {
   title: "Ghana VAT, NHIL and GETFund — How They Work | Finza",
   description:
-    "A complete guide to Ghana's indirect tax structure effective 1 January 2026 — VAT (15%), NHIL (2.5%), and GETFund (2.5%) with input tax deduction treatment for NHIL and GETFund — and how Finza handles all three automatically.",
+    "A complete guide to Ghana's indirect tax structure effective 1 January 2026 — VAT (15%), NHIL (2.5%), and GETFund (2.5%) with input tax deduction treatment for NHIL and GETFund — and how Finza structures records for all three.",
   alternates: {
     canonical: "https://www.finza.africa/ghana-vat-nhil-getfund",
   },
@@ -27,7 +27,7 @@ export default function GhanaVatNhilGetfundPage() {
               Ghana VAT, NHIL and GETFund — explained.
             </h1>
             <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
-              Ghana does not apply a single VAT rate. It applies three separate indirect levies on applicable transactions. Understanding how they work — and how they must be tracked — matters for every registered business. This page explains the structure and how Finza handles all three automatically.
+              Ghana does not apply a single VAT rate. It applies three separate indirect levies on applicable transactions. Understanding how they work — and how they must be tracked — matters for every registered business. This page explains the structure and how Finza structures records across all three.
             </p>
             <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-5 py-4 max-w-2xl">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-1">Framework in effect</p>
@@ -153,7 +153,7 @@ export default function GhanaVatNhilGetfundPage() {
               </h2>
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              When a taxable invoice is raised, the correct double-entry journal entry has five lines — not two or three. Each levy must be credited to its own account. This is what Finza posts automatically:
+              When a taxable invoice is raised, the correct double-entry journal entry has five lines — not two or three. Each levy must be credited to its own account. This is how Finza structures the entry in the workflow:
             </p>
             <div className="rounded-xl border border-zinc-200 bg-white overflow-hidden">
               <div className="px-6 py-4 border-b border-zinc-100">
@@ -188,7 +188,7 @@ export default function GhanaVatNhilGetfundPage() {
                 </div>
               </div>
               <div className="px-6 py-3 border-t border-zinc-200 bg-zinc-50">
-                <p className="text-xs text-zinc-500">Finza posts this entry automatically when you raise the invoice. No manual accounting step required.</p>
+                <p className="text-xs text-zinc-500">Finza keeps this entry connected to the transaction so your accountant can review the records before filing.</p>
               </div>
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function GhanaVatNhilGetfundPage() {
             <div className="space-y-3">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">How Finza handles Ghana tax</p>
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                All three levies — handled correctly at every transaction.
+                Clear levy lines for each transaction.
               </h2>
             </div>
             <div className="space-y-4">
@@ -216,8 +216,8 @@ export default function GhanaVatNhilGetfundPage() {
                   body: "Each levy is posted to its own liability account. VAT Output, NHIL Payable, and GETFund Payable are three distinct accounts in the general ledger. They are never combined or bundled.",
                 },
                 {
-                  title: "GRA-ready VAT report always current",
-                  body: "Your VAT control account shows every output VAT entry and every input VAT entry — from the first transaction to the most recent. The report is available for any period, at any time. At filing time, the report is ready. There is no manual assembly step.",
+                  title: "Reports your accountant can review before filing",
+                  body: "Your VAT control account shows output VAT and input VAT entries linked to transaction records across periods. Finza helps reduce manual assembly by keeping transaction records connected.",
                 },
                 {
                   title: "Input tax tracked on purchases",
@@ -263,10 +263,10 @@ export default function GhanaVatNhilGetfundPage() {
         <Container>
           <div className="max-w-xl mx-auto space-y-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Ghana VAT handled correctly — automatically.
+              Ghana VAT, NHIL and GETFund shown clearly in the workflow.
             </h2>
             <p className="text-base text-zinc-400 leading-relaxed">
-              VAT, NHIL, and GETFund calculated and separated at every transaction. GRA-ready reports always available.
+              VAT, NHIL, and GETFund calculated and separated at each transaction with records your accountant can review.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <a href="/pricing" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
@@ -276,7 +276,17 @@ export default function GhanaVatNhilGetfundPage() {
                 View demo →
               </Link>
             </div>
-            <p className="text-xs text-zinc-500 pt-1">No card required · First month free</p>
+            <p className="text-xs text-zinc-500 pt-1">14-day free trial. No card required to start.</p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-10 bg-white border-b border-zinc-100">
+        <Container>
+          <div className="max-w-3xl mx-auto rounded-lg border border-zinc-200 bg-zinc-50 px-5 py-4">
+            <p className="text-sm text-zinc-700 leading-relaxed">
+              Finza helps structure business records and tax lines, but it is not tax or legal advice. Your accountant or tax adviser should review your filings and treatment before submission.
+            </p>
           </div>
         </Container>
       </section>

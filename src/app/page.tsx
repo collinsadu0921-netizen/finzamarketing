@@ -1,22 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
+import {
+  BadgeCheck,
+  CreditCard,
+  FileCheck2,
+  Receipt,
+  WalletCards,
+} from "lucide-react";
 import { Container } from "@/components/container";
 import { Footer } from "@/components/footer";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
-import { HowFinzaHelpsDayToDay, WhoUsesFinza, WhyBusinessesChooseFinza } from "@/components/seo-marketing-blocks";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
 import { faqPageSchema, homePageFaqForSchema } from "@/lib/schema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accounting and Invoicing Software for Businesses in Ghana | Finza",
+  title: "Business Software for Service Businesses in Ghana | Finza",
   description:
-    "Run your Ghana business with clearer numbers in GHS. Finza Assist is an in-app Ghana-aware copilot for VAT, WHT, PAYE, and bookkeeping—read-only workspace data and server-verified numbers; it does not post entries or change records automatically. Invoices, quotes, tax lines where applicable.",
+    "Finza helps Ghanaian service businesses create proposals, quotes and invoices, track payments, capture expenses and incoming documents, manage payroll, and keep accountant-ready records in GHS.",
   alternates: {
     canonical: "https://www.finza.africa",
   },
@@ -28,42 +29,107 @@ export default function Home() {
       <JsonLd data={faqPageSchema(homePageFaqForSchema)} />
 
       {/* HERO */}
-      <section className="border-b border-zinc-100 bg-white pt-24 pb-20">
+      <section className="relative overflow-hidden bg-[#050b18] pt-20 pb-20 text-white">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-28 left-[-10%] h-[340px] w-[340px] rounded-full bg-sky-500/20 blur-[100px]" />
+          <div className="absolute right-[-8%] top-[20%] h-[360px] w-[360px] rounded-full bg-emerald-400/15 blur-[120px]" />
+          <div className="absolute bottom-[-18%] left-1/2 h-[300px] w-[460px] -translate-x-1/2 rounded-full bg-indigo-500/15 blur-[120px]" />
+        </div>
         <Container>
-          <div className="mx-auto max-w-4xl space-y-8 text-center">
-            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
-              Accounting and invoicing software for businesses in Ghana
-            </h1>
-            <p className="mx-auto max-w-2xl text-xl font-medium leading-relaxed text-zinc-600">
-              Run your business with clearer numbers in GHS. If you do not know your real profit after bills and tax lines, or your accountant keeps asking for data you do not have ready, one connected system fixes the scramble.
-            </p>
-            <p className="mx-auto max-w-2xl text-base leading-relaxed text-zinc-500">
-              Built for the Ghana market—SMEs, operators, and accounting firms manage invoices, bookkeeping, and taxes in one place.{" "}
-              <strong className="font-semibold text-zinc-700">Finza Assist</strong> is built in: a Ghana-aware copilot that explains VAT, WHT, PAYE, and bookkeeping using read-only workspace data and server-verified numbers—<strong className="font-semibold text-zinc-700">without posting entries or changing records automatically</strong>. Educational support, not tax or legal advice.
-            </p>
-            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
-                className="inline-block rounded-md bg-[#0F172A] px-10 py-4 text-center text-lg font-bold text-white shadow-lg transition hover:bg-[#0F172A]/90"
-              >
-                Try Finza free
-              </a>
-              <Link
-                href="/demo"
-                className="inline-block rounded-md border border-zinc-300 bg-white px-10 py-4 text-center text-lg font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50"
-              >
-                See how it works
-              </Link>
-              <Link
-                href="/pricing"
-                className="inline-block rounded-md border border-zinc-300 bg-white px-10 py-4 text-center text-lg font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50"
-              >
-                View pricing in GHS
-              </Link>
+          <div className="relative z-10 grid gap-10 lg:grid-cols-[45%_55%] lg:items-center">
+            <div className="space-y-7">
+              <h1 className="text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Run your service business in Ghana from{" "}
+                <span className="bg-gradient-to-r from-sky-300 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+                  proposal to payment
+                </span>
+              </h1>
+              <p className="max-w-2xl text-lg leading-relaxed text-zinc-200">
+                Create quotes, send invoices, track payments, record expenses and keep accountant-ready records in one clean GHS workspace.
+              </p>
+              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
+                <a
+                  href="https://app.finza.africa/signup?plan=professional&trial=1"
+                  className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-lg transition hover:bg-zinc-100"
+                >
+                  Start 14-day free trial
+                </a>
+                <Link
+                  href="/demo"
+                  className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur transition hover:bg-white/20"
+                >
+                  View demo
+                </Link>
+              </div>
+              <p className="text-sm text-zinc-300">14-day free trial. No card required to start.</p>
             </div>
-            <p className="text-sm text-zinc-400">
-              Documents and balances stay on the same thread—so you are not fixing last month while this month keeps moving.
-            </p>
+
+            <div className="relative mx-auto w-full max-w-[1280px] px-2 sm:px-4 lg:px-0">
+              <div className="rounded-[2rem] border border-white/10 bg-white/95 p-2 shadow-2xl shadow-slate-950/35">
+                <div className="overflow-hidden rounded-[1.5rem] bg-slate-50">
+                  <Image
+                    src="/images/finza-dashboard-hero.png"
+                    alt="Finza dashboard for a Ghanaian service business showing invoices, expenses, payments, reports and tax summary"
+                    width={2400}
+                    height={1350}
+                    priority
+                    quality={100}
+                    sizes="(max-width: 640px) 96vw, (max-width: 1024px) 92vw, 1200px"
+                    className="block h-auto w-full"
+                  />
+                </div>
+              </div>
+
+              <div className="hero-float motion-reduce:animate-none absolute left-4 top-6 z-20 hidden rounded-2xl border border-zinc-200 bg-white/90 px-3 py-2 shadow-xl md:block">
+                <div className="flex items-start gap-2">
+                  <span className="mt-0.5 rounded-full bg-sky-100 p-1 text-sky-600"><FileCheck2 className="h-3.5 w-3.5" /></span>
+                  <div>
+                    <p className="text-xs font-semibold text-zinc-900">Invoice sent</p>
+                    <p className="text-[11px] text-zinc-600">INV-00425 sent to client</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-float motion-reduce:animate-none absolute right-4 top-10 z-20 hidden rounded-2xl border border-zinc-200 bg-white/90 px-3 py-2 shadow-xl md:block [animation-delay:0.6s]">
+                <div className="flex items-start gap-2">
+                  <span className="mt-0.5 rounded-full bg-emerald-100 p-1 text-emerald-600"><BadgeCheck className="h-3.5 w-3.5" /></span>
+                  <div>
+                    <p className="text-xs font-semibold text-zinc-900">Quote approved</p>
+                    <p className="text-[11px] text-zinc-600">Client approved quote</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-float motion-reduce:animate-none absolute left-7 bottom-24 z-20 hidden rounded-2xl border border-zinc-200 bg-white/90 px-3 py-2 shadow-xl lg:block [animation-delay:1.2s]">
+                <div className="flex items-start gap-2">
+                  <span className="mt-0.5 rounded-full bg-violet-100 p-1 text-violet-600"><WalletCards className="h-3.5 w-3.5" /></span>
+                  <div>
+                    <p className="text-xs font-semibold text-zinc-900">Payment received</p>
+                    <p className="text-[11px] text-zinc-600">GHS 2,500 recorded</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-float motion-reduce:animate-none absolute right-7 bottom-24 z-20 hidden rounded-2xl border border-zinc-200 bg-white/90 px-3 py-2 shadow-xl lg:block [animation-delay:1.8s]">
+                <div className="flex items-start gap-2">
+                  <span className="mt-0.5 rounded-full bg-amber-100 p-1 text-amber-600"><Receipt className="h-3.5 w-3.5" /></span>
+                  <div>
+                    <p className="text-xs font-semibold text-zinc-900">Expense recorded</p>
+                    <p className="text-[11px] text-zinc-600">Office expense saved</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-float motion-reduce:animate-none absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 rounded-2xl border border-zinc-200 bg-white/90 px-3 py-2 shadow-xl md:block [animation-delay:2.4s]">
+                <div className="flex items-start gap-2">
+                  <span className="mt-0.5 rounded-full bg-pink-100 p-1 text-pink-600"><CreditCard className="h-3.5 w-3.5" /></span>
+                  <div>
+                    <p className="text-xs font-semibold text-zinc-900">Payroll run</p>
+                    <p className="text-[11px] text-zinc-600">Monthly payroll completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -73,17 +139,28 @@ export default function Home() {
         <Container>
           <div className="mx-auto max-w-3xl space-y-10 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Spreadsheet chaos, unclear tax, late invoices
+              Your business should not run on scattered records
             </h2>
             <p className="text-lg leading-relaxed text-zinc-600">
-              If you are still using spreadsheets for invoices and payment follow-ups, you know the drill: Teams lose time hunting the &quot;right&quot; version of an invoice. Tax lines for{" "}
-              <strong className="text-zinc-900">VAT, NHIL, and GETFund</strong> get merged into one guess. Payments arrive but nobody updates the same list—so nobody trusts the receivables number.
+              One proposal is in WhatsApp. One invoice is saved as a PDF. Receipts are on someone&apos;s phone. Payments are marked manually. Your accountant asks for records at month-end, and the team starts searching.
+            </p>
+            <p className="text-lg leading-relaxed text-zinc-600">
+              Finza brings your client work, documents, payments, expenses, payroll, and reports into one place so your business is easier to manage.
             </p>
             <div className="grid gap-4 text-left sm:grid-cols-3">
               {[
-                { t: "Late or missing invoices", d: "Cash flow suffers when billing is informal." },
-                { t: "Unclear tax in GHS", d: "What applies depends on your business—without structure, every month is a scramble." },
-                { t: "Accountant waits on you", d: "Clean records arrive late—or never in one place." },
+                {
+                  t: "Client work is scattered",
+                  d: "Proposals, quotes, invoices, and payment updates often sit in different apps and folders.",
+                },
+                {
+                  t: "Money is hard to track",
+                  d: "Paid, unpaid, partial, and overdue invoices become difficult to follow when records are manual.",
+                },
+                {
+                  t: "Accounting comes too late",
+                  d: "Your accountant should not have to rebuild your business from screenshots, spreadsheets, and missing receipts.",
+                },
               ].map((x) => (
                 <div key={x.t} className="rounded-xl border border-zinc-200 bg-white p-5">
                   <p className="font-bold text-zinc-900">{x.t}</p>
@@ -95,189 +172,261 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* SOLUTION */}
+      {/* INVOICE CALCULATOR */}
+      <section className="border-b border-zinc-100 bg-white py-20">
+        <Container>
+          <div className="mx-auto max-w-4xl rounded-2xl border border-zinc-200 bg-zinc-50 p-8 text-center space-y-5">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Try the Ghana invoice calculator</h2>
+            <p className="mx-auto max-w-3xl text-base leading-relaxed text-zinc-600">
+              Enter service items, discounts, Ghana tax example lines, withholding tax, and payments to preview how an invoice total can look before you create the real document in Finza.
+            </p>
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/invoice-calculator-ghana"
+                className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
+              >
+                Open invoice calculator
+              </Link>
+              <Link
+                href="/invoicing-software-ghana"
+                className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
+              >
+                Create real invoices in Finza
+              </Link>
+            </div>
+            <p className="text-sm text-zinc-500">
+              Illustrative only. Final invoice, tax, and withholding treatment should be reviewed before sending.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* WORKFLOW */}
       <section className="border-b border-zinc-100 bg-white py-24">
         <Container>
           <div className="mx-auto max-w-3xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              One system for invoices, payments, and reporting
+              One workflow from first proposal to final payment
             </h2>
-            <p className="text-lg font-semibold leading-relaxed text-zinc-900">
-              Finza keeps your invoices, payments, and reports in sync—so your numbers reflect what actually happened.
-            </p>
             <p className="text-lg leading-relaxed text-zinc-600">
-              Finza helps you <strong className="text-zinc-900">send invoices online</strong>, record payments, and see customer balances in{" "}
-              <strong className="text-zinc-900">Ghana cedis (GHS)</strong>. Quotes can become invoices without starting over. Your accountant works from the same organized file—not a pile of exports.
+              Finza follows the way service businesses actually work. Start with the client request, prepare the offer, send the invoice, record the payment, and keep the supporting records connected.
             </p>
-            <p className="text-sm leading-relaxed text-zinc-500">
-              Compare depth on{" "}
-              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                accounting software in Ghana
-              </Link>{" "}
-              and the billing path to{" "}
-              <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                send invoices in Ghana
-              </Link>{" "}
-              from one connected workspace.
-            </p>
-            <ul className="space-y-3 text-zinc-600">
-              <li className="flex gap-3">
-                <span className="font-bold text-[#0F172A]">✓</span>
-                Manage business finances in one place instead of five tabs.
-              </li>
-              <li className="flex gap-3">
-                <span className="font-bold text-[#0F172A]">✓</span>
-                <span>
-                  <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                    Track unpaid invoices
-                  </Link>{" "}
-                  and see who owes what in GHS.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-bold text-[#0F172A]">✓</span>
-                Built for accountants managing Ghanaian clients who need cleaner handovers.
-              </li>
-              <li className="flex gap-3">
-                <span className="font-bold text-[#0F172A]">✓</span>
-                <span>
-                  <strong className="text-zinc-900">Finza Assist</strong>—in-app copilot for Ghana tax and books using read-only workspace lookups (invoices, bills, dashboard summaries, reports where you have access). Suggestions and OCR never replace your save step; the ledger does not update from Assist alone.
-                </span>
-              </li>
-            </ul>
-            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-6 text-left">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">What happens automatically</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-600">
-                <li className="flex gap-2">
-                  <span className="text-[#0F172A]">→</span>
-                  Sending or issuing an invoice updates customer balances—no duplicate list in Excel.
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-[#0F172A]">→</span>
-                  Recording a payment updates invoice status and what is still owed in GHS.
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-[#0F172A]">→</span>
-                  Reports read from the same entries your team already captured.
-                </li>
-              </ul>
+            <div className="grid gap-4 text-left sm:grid-cols-2">
+              {[
+                { t: "1. Create the proposal", d: "Prepare a professional proposal with scope, pricing, terms, and client-ready presentation." },
+                { t: "2. Send a quote or proforma", d: "Turn approved work into a quote or proforma without rebuilding the same customer details." },
+                { t: "3. Issue the invoice", d: "Send invoices with clear totals, due dates, customer details, and Ghana tax lines where applicable." },
+                { t: "4. Record the payment", d: "Track full, partial, overdue, cash, bank, or online payments against the correct customer." },
+                { t: "5. Capture the documents", d: "Upload receipts, supplier bills, PDFs, and incoming documents so supporting records do not disappear." },
+                { t: "6. Review the numbers", d: "See income, expenses, unpaid invoices, payroll, tax positions, and accountant-ready reports from the same workspace." },
+              ].map((x) => (
+                <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+                  <p className="font-bold text-zinc-900">{x.t}</p>
+                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
+                </div>
+              ))}
             </div>
-            <div className="rounded-xl border border-amber-200/80 bg-amber-50/60 p-6 text-left">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">What Finza helps you avoid</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-700">
-                <li>Recording payments against invoices the client never received</li>
-                <li>Losing sight of what is still unpaid</li>
-                <li>Blending VAT, NHIL, and GETFund into one guessed column</li>
-                <li>Rebuilding management reports from scratch every month-end</li>
-              </ul>
-            </div>
-            <p className="text-xs leading-relaxed text-zinc-500">
-              Complete your business and tax setup before you go live—so Ghana lines and dates calculate the way your accountant expects. Draft invoices do not post to receivables on the ledger until you issue or send them, and Finza blocks recording payments on drafts until then.
-            </p>
           </div>
         </Container>
       </section>
 
-      <WhoUsesFinza />
-
-      {/* GHANA TAX — soft */}
+      {/* PROPOSALS */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-3xl space-y-6">
-            <h2 className="text-2xl font-bold text-zinc-900">Ghana tax lines—shown clearly where they apply</h2>
+            <h2 className="text-2xl font-bold text-zinc-900">Win the job before you send the invoice</h2>
             <p className="leading-relaxed text-zinc-600">
-              Many tools default to <strong className="text-zinc-900">one tax percentage</strong>. Ghana often needs <strong className="text-zinc-900">separate lines</strong> for VAT, NHIL, and GETFund on the same invoice—so filings and reviews stay legible. Finza applies Ghana tax logic from your setup and each invoice&apos;s date—so levies stay visible instead of one blended number where your registration requires the split.
+              Finza helps service businesses prepare professional proposals with scope, pricing, sections, attachments, and client-ready presentation.
             </p>
-            <p className="text-sm leading-relaxed text-zinc-500">
-              What you must charge or claim still depends on your registration and supply type—confirm with your accountant or GRA.
+            <p className="leading-relaxed text-zinc-600">
+              When the client is ready, your team can continue the same workflow into quotes, proformas, invoices, payment tracking, and reports.
             </p>
-            <p className="text-sm font-medium text-zinc-700">
-              Designed for how businesses actually operate in Ghana.
+            <p className="leading-relaxed text-zinc-600">
+              No separate proposal folder. No retyping client details. No losing the original agreement when billing starts.
             </p>
+            <Link href="/features" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50">
+              Explore features
+            </Link>
           </div>
         </Container>
       </section>
 
-      {/* WHO */}
+      {/* QUOTES INVOICES TAX */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
-          <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
-            <div className="rounded-2xl border border-zinc-200 p-8">
-              <h2 className="text-xl font-bold text-zinc-900">Ghana-based companies on quotes &amp; invoices</h2>
-              <p className="mt-3 leading-relaxed text-zinc-600">
-                For operators that live on <strong className="text-zinc-900">quotes and invoices</strong>—consultancies, agencies, professional services, logistics, and more. Send invoices online, stay on top of collections, and see performance in GHS. Used by businesses across Ghana who want one source of truth.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-zinc-200 p-8">
-              <h2 className="text-xl font-bold text-zinc-900">Accountants managing Ghanaian clients</h2>
-              <p className="mt-3 leading-relaxed text-zinc-600">
-                Spend less time fixing files. Clients record activity in Finza; you review, adjust, and close with clearer period discipline.
-              </p>
-              <Link href="/accountants" className="mt-4 inline-block text-sm font-semibold text-zinc-900 underline underline-offset-4">
-                Accountant workspace →
-              </Link>
-            </div>
+          <div className="mx-auto max-w-3xl space-y-8">
+            <h2 className="text-2xl font-bold text-zinc-900">Send clear quotes and invoices in GHS</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Create quotes, proformas, and invoices that look professional and are easy for clients to understand. Send documents by email, public link, PDF, or WhatsApp link, then track what has been sent, accepted, paid, or left outstanding.
+            </p>
+            <p className="leading-relaxed text-zinc-600">
+              Where applicable, Finza helps show Ghana tax lines such as VAT, NHIL, GETFund, and WHT clearly instead of hiding everything inside one tax number.
+            </p>
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Tax treatment depends on your business registration, supply type, and accountant or GRA guidance.
+            </p>
+            <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2">
+              {[
+                "Quotes and proformas",
+                "Invoices and receipts",
+                "PDF exports",
+                "Email sending",
+                "Public document links",
+                "WhatsApp sharing links",
+                "VAT, NHIL, GETFund, and WHT support where applicable",
+              ].map((item) => (
+                <li key={item} className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
 
-      {/* FEATURES PREVIEW */}
+      {/* PAYMENTS */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-8 text-center">
-            <h2 className="text-3xl font-bold text-zinc-900">Explore what Finza includes</h2>
-            <p className="text-zinc-600">
-              Invoices, quotes, expenses, reports, Finza Assist, and Ghana tax handling—see the full list on{" "}
-              <Link href="/features#finza-assist" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Features (Finza Assist)
-              </Link>
-              . Compare plans in{" "}
-              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
-                GHS on Pricing
-              </Link>
-              .
+          <div className="mx-auto max-w-3xl space-y-8">
+            <h2 className="text-2xl font-bold text-zinc-900">Know who has paid and who still owes you</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Finza helps you track payments against the correct invoice and customer. Record full payments, partial payments, outstanding balances, and overdue invoices so your team can follow up with better information.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/accounting-software-ghana"
-                className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400"
-              >
-                Accounting software Ghana
-              </Link>
-              <Link
-                href="/invoicing-software-ghana"
-                className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400"
-              >
-                Invoicing software Ghana
-              </Link>
-              <Link
-                href="/bookkeeping-software-ghana"
-                className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400"
-              >
-                Bookkeeping software Ghana
-              </Link>
-              <Link
-                href="/quotation-software-ghana"
-                className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400"
-              >
-                Quotation software Ghana
-              </Link>
+            <p className="leading-relaxed text-zinc-600">
+              You can see customer balances, invoice status, and payment history without checking multiple spreadsheets.
+            </p>
+            <div className="grid gap-4 text-left sm:grid-cols-3">
+              {[
+                { t: "Paid, unpaid, partial, overdue", d: "Track invoice status clearly." },
+                { t: "Customer balances", d: "See what each customer owes." },
+                { t: "Receipts", d: "Give customers proof of payment when money is recorded." },
+              ].map((x) => (
+                <div key={x.t} className="rounded-xl border border-zinc-200 bg-white p-5">
+                  <p className="font-bold text-zinc-900">{x.t}</p>
+                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
       </section>
 
-      <WhyBusinessesChooseFinza className="bg-white" />
-
-      <HowFinzaHelpsDayToDay className="bg-zinc-50" />
-
-      {/* TRUST */}
-      <section className="border-b border-zinc-100 bg-white py-16">
+      {/* INCOMING DOCUMENTS */}
+      <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold text-zinc-900">Trust and security</h2>
-            <p className="mt-3 text-zinc-600">
-              Your business data matters. Read how we approach{" "}
+          <div className="mx-auto max-w-3xl space-y-6">
+            <h2 className="text-2xl font-bold text-zinc-900">Capture receipts, bills, and incoming documents before they get lost</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Business records often start as photos, PDFs, supplier bills, and email attachments. Finza helps you bring those documents into the workspace, review the details, and keep supporting records connected to expenses and supplier bills.
+            </p>
+            <p className="leading-relaxed text-zinc-600">
+              This gives your accountant a cleaner file and reduces the end-of-month document chase.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* EXPENSES BILLS PAYROLL */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-20">
+        <Container>
+          <div className="mx-auto max-w-3xl space-y-6">
+            <h2 className="text-2xl font-bold text-zinc-900">Keep business costs and payroll connected</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Track expenses, supplier bills, and payroll from the same business workspace. Finza helps you keep salary runs, supplier obligations, costs, and reports closer to the records your business already creates.
+            </p>
+            <p className="leading-relaxed text-zinc-600">
+              That means fewer disconnected files and clearer month-end review.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* ACCOUNTANT READY */}
+      <section className="border-b border-zinc-100 bg-white py-20">
+        <Container>
+          <div className="mx-auto max-w-3xl space-y-6">
+            <h2 className="text-2xl font-bold text-zinc-900">Give your accountant records they can actually work with</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Finza is built so daily business activity creates cleaner records as you operate. Proposals, invoices, payments, receipts, expenses, supplier bills, documents, payroll, and reports stay connected.
+            </p>
+            <p className="leading-relaxed text-zinc-600">
+              Behind the scenes, Finza supports accounting-grade workflows such as ledger records, journals, chart of accounts, trial balance, audit logs, period locking, and report exports.
+            </p>
+            <p className="leading-relaxed text-zinc-600">
+              Your accountant should not have to rebuild your business from screenshots and spreadsheets.
+            </p>
+            <Link href="/accountants" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50">
+              For accountants
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* FINZA ASSIST */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-20">
+        <Container>
+          <div className="mx-auto max-w-3xl space-y-6">
+            <h2 className="text-2xl font-bold text-zinc-900">Ask better questions about your business records</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Finza Assist helps you understand information already inside your workspace. Ask about invoices, customers, expenses, documents, payments, and reports without digging through every screen manually.
+            </p>
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Finza Assist is designed to support review and understanding. It should not replace professional accounting or tax advice.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* PRICING PREVIEW */}
+      <section className="border-b border-zinc-100 bg-white py-20">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-2xl font-bold text-zinc-900">Choose the plan that fits your business</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Start with the tools your business needs today, then move to deeper controls when your operations grow.
+            </p>
+            <div className="grid gap-4 text-left md:grid-cols-3">
+              {[
+                {
+                  t: "Essentials",
+                  d: "For service businesses that need proposals, quotes, invoices, expenses, payment tracking, and basic reports.",
+                },
+                {
+                  t: "Professional",
+                  d: "For growing teams that need supplier bills, incoming documents, payroll, WHT, VAT support, projects, and team access.",
+                },
+                {
+                  t: "Business",
+                  d: "For companies that need full accounting control, including ledger, journals, trial balance, bank reconciliation, period locking, audit logs, and report exports.",
+                },
+              ].map((x) => (
+                <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+                  <p className="font-bold text-zinc-900">{x.t}</p>
+                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm leading-relaxed text-zinc-500">Start with a 14-day free trial. No card required to start.</p>
+            <Link href="/pricing" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50">
+              View pricing in GHS
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* TRUST AND SECURITY */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-20">
+        <Container>
+          <div className="mx-auto max-w-3xl space-y-6">
+            <h2 className="text-2xl font-bold text-zinc-900">Built for business records that need control</h2>
+            <p className="leading-relaxed text-zinc-600">
+              Finza separates business workspaces, supports role-based access, and includes audit logs and period-locking controls in the accounting workflow.
+            </p>
+            <p className="leading-relaxed text-zinc-600">
+              Your team can work with the records they need while keeping sensitive business information more organized and controlled.
+            </p>
+            <p className="text-sm text-zinc-500">
+              Read more on{" "}
               <Link href="/security" className="font-semibold text-zinc-900 underline underline-offset-2">
                 security
               </Link>{" "}
@@ -291,68 +440,46 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* FAQ */}
-      <section className="border-b border-zinc-100 bg-zinc-50 py-20">
+      {/* SEO INTERNAL LINKS */}
+      <section className="border-b border-zinc-100 bg-white py-16">
         <Container>
-          <div className="mx-auto max-w-2xl space-y-8">
-            <h2 className="text-2xl font-bold text-zinc-900">Common questions</h2>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="small-biz">
-                <AccordionTrigger>Is Finza for small businesses in Ghana?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. Finza is for small businesses and service companies in Ghana that want to send invoices online, track payments in GHS, and manage bookkeeping without spreadsheet chaos. Accountants managing Ghanaian clients can also use Finza for cleaner client files.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="tax">
-                <AccordionTrigger>How does Finza handle Ghana tax lines?</AccordionTrigger>
-                <AccordionContent>
-                  Finza shows VAT, NHIL, and GETFund as separate lines on invoices and in summaries where your setup and the invoice date require that presentation—not one blended “tax” column by default. What you must charge or claim still depends on your business and registration; confirm with your accountant or GRA.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="accountant">
-                <AccordionTrigger>Can my accountant work with my Finza data?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. Finza is built so accountants can review organized records, tax summaries, and reports instead of rebuilding from PDFs and scattered sheets.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="pay">
-                <AccordionTrigger>Do I need to pay before trying Finza?</AccordionTrigger>
-                <AccordionContent>
-                  No. Start with a free trial from pricing—no card required to begin. You choose a paid plan in GHS when you are ready.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="features">
-                <AccordionTrigger>Where can I see full features and plans?</AccordionTrigger>
-                <AccordionContent>
-                  See the Features page for capabilities and the Pricing page for Service workspace plans in GHS (Essentials, Professional, Business).
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="finza-assist">
-                <AccordionTrigger>What is Finza Assist?</AccordionTrigger>
-                <AccordionContent>
-                  Finza Assist is an in-app, Ghana-aware copilot inside Finza. It explains Ghana-oriented VAT, withholding tax (WHT), PAYE, and bookkeeping using read-only workspace data and server-verified lookups when you need authoritative numbers—for example this month’s payments vs expenses, invoice and bill search, customers, open receivables (including overdue), invoice detail on the screen you are viewing, your tax profile, payroll run summaries, expense totals by category, and—where you have access and accounting is initialized—profit and loss and balance sheet summaries. It helps you understand and act without posting entries or changing records automatically: assistant tools are read-only, receipt OCR adds suggested text to the conversation only until you save an expense or bill yourself, and suggested links may open create forms with fields pre-filled for you to review and save. This is educational support—not tax or legal advice. During onboarding, a separate assistant gives short structured help from your business profile and step—without live ledger tools.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+          <div className="mx-auto max-w-3xl space-y-4 text-center">
+            <h2 className="text-xl font-bold text-zinc-900">Explore more for Ghana businesses</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/accounting-software-ghana" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                Accounting software Ghana
+              </Link>
+              <Link href="/invoicing-software-ghana" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                Invoicing software Ghana
+              </Link>
+              <Link href="/bookkeeping-software-ghana" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                Bookkeeping software Ghana
+              </Link>
+              <Link href="/quotation-software-ghana" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+                Quotation software Ghana
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* CTA */}
+      {/* FINAL CTA */}
       <section className="bg-[#0F172A] py-20 text-center">
         <Container>
           <div className="mx-auto max-w-xl space-y-6">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">Start with clearer numbers in GHS</h2>
-            <p className="text-zinc-400">Free trial · No card to start · Plans in Ghana cedis</p>
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">Start with clearer business records in GHS</h2>
+            <p className="text-zinc-300">
+              Create proposals, send invoices, track payments, capture documents, and keep accountant-ready records from one connected workspace.
+            </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
                 className="inline-block w-full rounded-md bg-white px-8 py-3 text-center text-base font-bold text-zinc-900 shadow sm:w-auto"
               >
-                Try Finza free
+                Start 14-day free trial
               </a>
               <Link href="/pricing" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">
-                View pricing in GHS →
+                View pricing in GHS
               </Link>
             </div>
           </div>

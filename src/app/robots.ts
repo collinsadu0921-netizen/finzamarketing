@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: "*",
                 allow: "/",
-                disallow: ["/private/", "/workspace-demo/", "/admin/"],
+                disallow: ["/private/", "/workspace-demo", "/workspace-demo/", "/admin/"],
             },
         ],
         sitemap: "https://www.finza.africa/sitemap.xml",

@@ -3,11 +3,19 @@ import { Footer } from "@/components/footer";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Small Business Accounting with Finza — Ghana SME Software | Finza",
+  title: "Small Business Accounting Software in Ghana | Finza",
   description:
-    "The Finza SME landing page: real-time P&L, Ghana VAT/NHIL/GETFund in the ledger, and accountant-ready books. Distinct from our free operational guide — start here to evaluate the product.",
+    "Finza helps Ghanaian small service businesses manage proposals, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines, and accountant-ready records.",
   alternates: {
     canonical: "https://www.finza.africa/small-business-accounting-ghana",
   },
@@ -16,72 +24,122 @@ export const metadata: Metadata = {
 export default function SmallBusinessAccountingGhanaPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
+      <JsonLd
+        data={[
+          breadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Small business accounting Ghana", path: "/small-business-accounting-ghana" },
+          ]),
+          faqPageSchema([
+            {
+              questionName: "What is small business accounting software?",
+              acceptedAnswerText:
+                "Small business accounting software helps businesses organize invoices, payments, expenses, documents, payroll records, reports, and records for accountant review.",
+            },
+            {
+              questionName: "Is Finza built for small businesses in Ghana?",
+              acceptedAnswerText:
+                "Yes. Finza is built for Ghanaian small service businesses that need to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.",
+            },
+            {
+              questionName: "Can Finza help with invoices and payments?",
+              acceptedAnswerText:
+                "Yes. Finza supports invoices, receipts, payment recording, partial payments, and customer balance tracking.",
+            },
+            {
+              questionName: "Does Finza support Ghana tax lines?",
+              acceptedAnswerText:
+                "Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. Your accountant or tax adviser should confirm the correct treatment for your business.",
+            },
+            {
+              questionName: "Can I try Finza before paying?",
+              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+            },
+          ]),
+        ]}
+      />
 
+      {/* HERO */}
       <section className="pt-28 pb-20 border-b border-zinc-100">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wide uppercase">
-              SME product page · Ghana
-            </span>
+          <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Small business accounting on a live Ghana ledger.
+              Small business accounting software in Ghana for clearer records
             </h1>
-            <p className="text-lg text-zinc-600 max-w-2xl leading-relaxed">
-              This page is for owners evaluating <strong className="text-zinc-900">Finza as software</strong> — workspaces, pricing, and what posts automatically. For day-in-the-life scenarios and “what to stop doing,” read the separate{" "}
-              <Link href="/accounting-for-small-business-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                practical SME accounting guide
-              </Link>
-              .
+            <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
+              Finza helps Ghanaian small service businesses manage the daily records behind accounting - proposals, quotes, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in GHS.
             </p>
-            <p className="text-base text-zinc-600 max-w-2xl leading-relaxed">
-              Still want the big-picture product story first? Start with{" "}
-              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                accounting software for Ghana
-              </Link>
-              {" "}or jump to{" "}
-              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                VAT software
-              </Link>{" "}
-              if levies are your main pain.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/pricing" className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center">
-                Start your 14-day free trial
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
+              >
+                Start 14-day free trial
               </a>
-              <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
-                View demo
+              <Link
+                href="/demo"
+                className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
+              >
+                See how Finza works
               </Link>
             </div>
+            <p className="text-sm text-zinc-500">
+              No card required to start. Built for small businesses that want better control before month-end.
+            </p>
           </div>
         </Container>
       </section>
 
-      {/* THE PROBLEM */}
-      <section className="py-24 bg-zinc-50 border-b border-zinc-100">
+      {/* SECTION 1 */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="space-y-3">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The problem</p>
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                Most small business owners in Ghana do not know their real numbers.
-              </h2>
-            </div>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Small business accounting starts before the reports</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              This is not because they are not capable. It is because the tools they are using — spreadsheets, paper records, or basic apps — are not designed to give them that information automatically.
+              For many small businesses, accounting problems do not start at month-end. They start when quotes, invoices, receipts, payment notes, expenses, payroll records, and supplier bills are scattered across different places.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
-              When a business owner needs to know their profit for the month, they have to wait for someone to compile it. When they need to know their VAT liability, they estimate. When the accountant closes the books at year end, there are usually surprises — tax that was not collected, expenses that were not categorised, income that was not tracked.
+              Finza helps bring those daily records closer together so the business owner and accountant have better information to review.
             </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 2 */}
+      <section className="border-b border-zinc-100 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What small businesses need to manage</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
-                { label: "No real-time profit visibility", desc: "The income statement only exists after the accountant assembles it — which could be weeks or months after the period closes." },
-                { label: "Ghana VAT is a guessing game", desc: "Business owners who are VAT-registered often do not know their net VAT liability until the accountant calculates it — often incorrectly." },
-                { label: "Cash ≠ profit (and no one told you)", desc: "Healthy bank balance does not mean a healthy business. Without a P&L and balance sheet, it is impossible to know the difference between cash and profit." },
-                { label: "Year-end is full of surprises", desc: "If the books are not being maintained properly during the year, the year-end process reveals errors, missing transactions, and unexpected tax liabilities." },
-              ].map((item) => (
-                <div key={item.label} className="p-5 rounded-xl border border-zinc-200 bg-white">
-                  <p className="text-sm font-bold text-zinc-900 mb-2">{item.label}</p>
-                  <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
+                {
+                  t: "Client documents",
+                  d: "Create proposals, quotes, proformas, invoices, and receipts.",
+                },
+                {
+                  t: "Payments",
+                  d: "Record full and partial payments and review outstanding customer balances.",
+                },
+                {
+                  t: "Expenses and bills",
+                  d: "Track business costs, supplier bills, and supporting documents.",
+                },
+                {
+                  t: "Incoming documents",
+                  d: "Keep uploaded receipts, PDFs, bills, and other records organized.",
+                },
+                {
+                  t: "Payroll records",
+                  d: "Keep payroll activity closer to the wider business records.",
+                },
+                {
+                  t: "Reports and review",
+                  d: "Use reports, exports, audit logs, and period controls where applicable.",
+                },
+              ].map((x) => (
+                <div key={x.t} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50">
+                  <p className="text-sm font-bold text-zinc-900 mb-2">{x.t}</p>
+                  <p className="text-sm text-zinc-600 leading-relaxed">{x.d}</p>
                 </div>
               ))}
             </div>
@@ -89,44 +147,30 @@ export default function SmallBusinessAccountingGhanaPage() {
         </Container>
       </section>
 
-      {/* HOW FINZA SOLVES IT */}
-      <section className="py-24 bg-white border-b border-zinc-100">
+      {/* SECTION 3 */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="space-y-3">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">What Finza gives you</p>
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                Know exactly where your business stands — at any time.
-              </h2>
-            </div>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Built for Ghanaian small service businesses</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza gives Ghanaian small business owners the same financial clarity that large businesses have — through a properly structured accounting system that works automatically as you run your business.
+              Finza is especially useful for small service businesses that work with clients, send documents, track payments, manage expenses, and prepare records for accountant review.
             </p>
-            <div className="space-y-4">
+            <p className="text-base text-zinc-600 leading-relaxed">
+              It is designed for businesses that need more than a simple invoice template but are not ready for disconnected spreadsheets and manual record chasing.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 text-sm text-zinc-700">
               {[
-                {
-                  title: "Real-time income statement",
-                  body: "Every sale, every expense, every payment updates your income statement immediately. You can open Finza right now and see what your business made today, this week, and this month — without asking anyone, without waiting.",
-                },
-                {
-                  title: "Balance sheet always current",
-                  body: "Your assets, liabilities, and equity are always current because the ledger underneath them is always current. You can see your accounts receivable balance, your cash and bank position, and your tax liabilities at any point in time.",
-                },
-                {
-                  title: "Ghana VAT tracked automatically",
-                  body: "If you are VAT-registered, Finza calculates VAT, NHIL, and GETFund at the point of every applicable transaction. Your net VAT liability is always visible. There is no quarterly guessing step.",
-                },
-                {
-                  title: "A clean ledger for your accountant",
-                  body: "Your accountant does not need to rebuild your books from scratch at year end. They receive a structured general ledger with all transactions already posted and balanced. Their job becomes review, adjustment, and closure — not reconstruction.",
-                },
+                "Cleaning companies",
+                "Contractors",
+                "Consultants",
+                "Maintenance teams",
+                "Agencies",
+                "Professional service providers",
+                "Field-service businesses",
+                "Growing SMEs",
               ].map((item) => (
-                <div key={item.title} className="flex gap-5 p-6 bg-zinc-50 rounded-xl border border-zinc-200">
-                  <div className="flex-shrink-0 w-1 rounded-full bg-[#0F172A] self-stretch" />
-                  <div>
-                    <p className="text-sm font-bold text-zinc-900 mb-1.5">{item.title}</p>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{item.body}</p>
-                  </div>
+                <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
+                  {item}
                 </div>
               ))}
             </div>
@@ -134,117 +178,197 @@ export default function SmallBusinessAccountingGhanaPage() {
         </Container>
       </section>
 
-      {/* WORKSPACE CHOICE */}
-      <section className="py-24 bg-zinc-50 border-b border-zinc-100">
+      {/* SECTION 4 */}
+      <section className="border-b border-zinc-100 py-24">
         <Container>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="space-y-3">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Choose your workspace</p>
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-                Designed for how your business operates.
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  id: "retail",
-                  tag: "Retail & POS — on the roadmap",
-                  for: "Shops, pharmacies, supermarkets, hardware stores — any business that sells physical goods and manages inventory.",
-                  bullets: [
-                    "Planned: POS sales post revenue, cash, VAT, stock, and COGS together",
-                    "Planned: inventory and COGS without manual month-end rebuilds",
-                    "Not live in app yet — see the retailer page for the product direction",
-                  ],
-                  link: "/accounting-software-for-retailers-ghana",
-                  linkLabel: "Retail direction →",
-                },
-                {
-                  id: "service",
-                  tag: "Invoicing & services — live (from GHS 149/mo)",
-                  for: "Agencies, consultancies, clinics, contractors — any business that bills clients for services.",
-                  bullets: ["Invoices create AR entries automatically", "Track outstanding balances and overdue accounts", "Record expenses with immediate ledger posting"],
-                  link: "/accounting-software-for-service-businesses-ghana",
-                  linkLabel: "Service business accounting →",
-                },
-              ].map((ws) => (
-                <div key={ws.id} className="flex flex-col p-7 rounded-xl border border-zinc-200 bg-white shadow-sm">
-                  <div className="inline-block rounded-md bg-zinc-50 border border-zinc-200 px-3 py-1 text-xs font-bold text-zinc-700 mb-4 self-start">
-                    {ws.tag}
-                  </div>
-                  <p className="text-sm text-zinc-600 mb-5 leading-relaxed">{ws.for}</p>
-                  <ul className="space-y-2 flex-1">
-                    {ws.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-3 text-sm text-zinc-700">
-                        <svg className="h-4 w-4 text-zinc-900 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={ws.link} className="mt-6 text-sm font-semibold text-zinc-900 underline underline-offset-4 hover:text-zinc-600 transition-colors">
-                    {ws.linkLabel}
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-zinc-500">First month free on either workspace. No card required to start.</p>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">From client work to accountant-ready records</h2>
+            <p className="text-base text-zinc-600 leading-relaxed">
+              Finza connects the work that happens before accounting review. A job can start with a proposal or quote, move into an invoice, continue through payment and receipt, and then support better reporting and review.
+            </p>
+            <ol className="list-decimal pl-5 space-y-2 text-base leading-relaxed text-zinc-600">
+              <li>Prepare a proposal, quote, or proforma</li>
+              <li>Create and send an invoice</li>
+              <li>Record full or partial payment</li>
+              <li>Issue a receipt</li>
+              <li>Capture expenses, bills, and incoming documents</li>
+              <li>Review reports, exports, and accountant-ready records</li>
+            </ol>
           </div>
         </Container>
       </section>
 
-      {/* LINKS + CTA */}
-      <section className="py-16 bg-white border-b border-zinc-100">
+      {/* SECTION 5 */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">Explore Finza</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Ghana records and tax lines where applicable</h2>
+            <p className="text-base text-zinc-600 leading-relaxed">
+              Finza supports GHS-based records and Ghana tax lines where applicable, including VAT, NHIL, GETFund, and WHT.
+            </p>
+            <p className="text-sm text-zinc-500 leading-relaxed">
+              The correct treatment depends on your business registration, supply type, and accountant or GRA guidance.
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-zinc-700">
               {[
-                { label: "Features", desc: "Full accounting system", href: "/features" },
-                { label: "Pricing", desc: "Workspace plans", href: "/pricing" },
-                { label: "Ghana VAT", desc: "VAT & levy handling", href: "/vat-software-ghana" },
-                { label: "Demo", desc: "Preview before you start", href: "/demo" },
-              ].map((l) => (
-                <Link key={l.href} href={l.href} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50 hover:border-zinc-400 transition-colors">
-                  <p className="text-sm font-bold text-zinc-900">{l.label}</p>
-                  <p className="text-xs text-zinc-500 mt-1">{l.desc}</p>
-                </Link>
+                "GHS invoices and business records",
+                "VAT, NHIL, and GETFund support where applicable",
+                "WHT receivable tracking where applicable",
+                "Clearer document records for review",
+                "Reports and exports for accountant support",
+              ].map((item) => (
+                <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </Container>
       </section>
 
+      {/* SECTION 6 */}
+      <section className="border-b border-zinc-100 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Why not only use spreadsheets?</h2>
+            <p className="text-base text-zinc-600 leading-relaxed">
+              Spreadsheets can work when the business is very small. But as more clients, invoices, payments, expenses, documents, and payroll records appear, manual tracking becomes harder to maintain.
+            </p>
+            <p className="text-base text-zinc-600 leading-relaxed">
+              Finza helps reduce scattered record-keeping by keeping key business activity closer together in one workspace.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 7 */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What Finza helps you review</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-zinc-700">
+              {[
+                "Customer invoices",
+                "Quotes and proformas",
+                "Receipts",
+                "Payment records",
+                "Partial payments",
+                "Customer balances",
+                "Expenses",
+                "Supplier bills",
+                "Incoming documents",
+                "Payroll records",
+                "Ghana tax lines where applicable",
+                "Reports",
+                "Exports",
+                "Audit logs",
+                "Period controls",
+                "Accountant-ready records",
+              ].map((item) => (
+                <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 8 */}
+      <section className="border-b border-zinc-100 py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Software support, not professional advice</h2>
+            <p className="text-base text-zinc-600 leading-relaxed">
+              Finza helps organize business records, documents, payments, reports, tax lines where applicable, and accountant-ready information. It does not guarantee tax compliance, automatically file statutory returns, or replace accountant, tax, payroll, legal, or GRA guidance.
+            </p>
+            <p className="text-base text-zinc-600 leading-relaxed">
+              Your accountant or adviser should confirm the correct treatment for your business.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-b border-zinc-100 bg-zinc-50 py-16">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold text-zinc-900">Common questions</h2>
+            <Accordion type="single" collapsible className="mt-6 w-full">
+              <AccordionItem value="q1">
+                <AccordionTrigger>What is small business accounting software?</AccordionTrigger>
+                <AccordionContent>
+                  Small business accounting software helps businesses organize invoices, payments, expenses, documents, payroll records, reports, and records for accountant review.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q2">
+                <AccordionTrigger>Is Finza built for small businesses in Ghana?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Finza is built for Ghanaian small service businesses that need to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q3">
+                <AccordionTrigger>Can Finza help with invoices and payments?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Finza supports invoices, receipts, payment recording, partial payments, and customer balance tracking.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q4">
+                <AccordionTrigger>Does Finza support Ghana tax lines?</AccordionTrigger>
+                <AccordionContent>
+                  Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. Your accountant or tax adviser should confirm the correct treatment for your business.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q5">
+                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </Container>
+      </section>
+
+      {/* FINAL CTA */}
       <section className="py-24 bg-[#0F172A] text-center">
         <Container>
-          <div className="max-w-xl mx-auto space-y-6">
+          <div className="max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Know your numbers. Run a better business.
+              Start organizing your small business records
             </h2>
-            <p className="text-base text-zinc-400 leading-relaxed">
-              Accounting software for Ghanaian small businesses. Real-time. Balanced. Ghana VAT included.
+            <p className="text-base text-zinc-300 leading-relaxed">
+              Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a href="/pricing" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
-                Get started free
+              <a
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
+              >
+                Start 14-day free trial
               </a>
-              <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
-                View demo →
+              <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center">
+                View pricing in GHS
               </Link>
             </div>
-            <p className="text-xs text-zinc-500 pt-1">No card required · First month free</p>
           </div>
         </Container>
       </section>
 
       <RelatedClusterLinks
         related={[
-          {
-            href: "/accounting-for-small-business-ghana",
-            label: "Small business guide",
-            desc: "Scenarios & tips",
-          },
-          { href: "/best-accounting-software-ghana", label: "Choose software", desc: "Buyer framework" },
+          { href: "/features", label: "Features", desc: "Product capabilities" },
+          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
+          { href: "/demo", label: "Demo", desc: "See how Finza works" },
+          { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
+          { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
+          { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
+          { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
+          { href: "/vat-software-ghana", label: "VAT software", desc: "Tax line clarity" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
+          { href: "/accountants", label: "For accountants", desc: "Accountant-ready records" },
+          { href: "/security", label: "Security", desc: "Trust and controls" },
+          { href: "/contact", label: "Contact", desc: "Talk to the team" },
         ]}
       />
       <Footer />

@@ -229,7 +229,7 @@ Registration, exemptions, and supply type decide **whether** and **how** levies 
 
 ## Deeper reading
 
-For more detail see our [VAT, NHIL & GETFund](/vat-nhil-getfund-explained-ghana) article. To run day-to-day billing with clear lines, use [invoicing software in Ghana](/invoicing-software-ghana), [accounting software for Ghana](/accounting-software-ghana), and check [pricing](/pricing).`,
+For more detail see our [VAT, NHIL & GETFund](/ghana-vat-nhil-getfund) article. To run day-to-day billing with clear lines, use [invoicing software in Ghana](/invoicing-software-ghana), [accounting software for Ghana](/accounting-software-ghana), and check [pricing](/pricing).`,
   },
   {
     slug: "how-to-track-expenses-small-business-ghana",
