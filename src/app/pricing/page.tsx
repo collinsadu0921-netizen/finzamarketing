@@ -48,7 +48,7 @@ export default function PricingPage() {
                         </p>
                         <div className="flex flex-col items-start gap-3 pt-2 sm:flex-row sm:items-center">
                             <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                                 className="inline-block rounded-md bg-[#0F172A] px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
                             >
                                 Start 14-day free trial
@@ -65,7 +65,7 @@ export default function PricingPage() {
                 </Container>
             </section>
 
-            {/* ── PRICING TIERS ── */}
+            {/* â”€â”€ PRICING TIERS â”€â”€ */}
             <PricingTiers />
 
             {/* PRICING NOTES */}
@@ -138,7 +138,7 @@ export default function PricingPage() {
                 </Container>
             </section>
 
-            {/* ── FAQ ── */}
+            {/* â”€â”€ FAQ â”€â”€ */}
             <section className="py-20 bg-zinc-50 border-b border-zinc-100">
                 <Container>
                     <div className="max-w-2xl mx-auto space-y-8">
@@ -203,7 +203,7 @@ export default function PricingPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                             <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
                             >
                                 Start 14-day free trial

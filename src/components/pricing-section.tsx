@@ -79,7 +79,7 @@ export function PricingSection() {
                         </div>
                         <p className="text-muted-foreground mb-8 text-sm leading-relaxed">Core tools to manage operations and billing.</p>
                         <Button variant="outline" className="w-full mb-8 font-semibold" asChild>
-                            <a href={`https://app.finza.africa/signup?workspace=service&plan=starter&cycle=${cycle}&trial=1`}>Start 14-day free trial</a>
+                            <a href={`https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=${cycle}&trial=1`}>Start 14-day free trial</a>
                         </Button>
                         <ul className="space-y-4 text-sm text-muted-foreground flex-1">
                             <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Dashboard, Customers, Quotes</li>
@@ -110,7 +110,7 @@ export function PricingSection() {
                         </div>
                         <p className="text-muted-foreground mb-8 text-sm leading-relaxed">For growing teams and active businesses.</p>
                         <Button className="w-full mb-8 font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
-                            <a href={`https://app.finza.africa/signup?workspace=service&plan=professional&cycle=${cycle}&trial=1`}>Start 14-day free trial</a>
+                            <a href={`https://app.finza.africa/signup?workspace=service&plan=professional&billing_cycle=${cycle}&trial=1`}>Start 14-day free trial</a>
                         </Button>
                         <ul className="space-y-4 text-sm text-foreground/80 flex-1">
                             <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Everything in Essentials</li>
@@ -138,7 +138,7 @@ export function PricingSection() {
                         </div>
                         <p className="text-muted-foreground mb-8 text-sm leading-relaxed">Full-scale accounting and control.</p>
                         <Button variant="outline" className="w-full mb-8 font-semibold" asChild>
-                            <a href={`https://app.finza.africa/signup?workspace=service&plan=business&cycle=${cycle}&trial=1`}>Start 14-day free trial</a>
+                            <a href={`https://app.finza.africa/signup?workspace=service&plan=business&billing_cycle=${cycle}&trial=1`}>Start 14-day free trial</a>
                         </Button>
                         <ul className="space-y-4 text-sm text-muted-foreground flex-1">
                             <li className="flex items-center gap-3"><Check className="w-4 h-4 text-primary" /> Everything in Professional</li>

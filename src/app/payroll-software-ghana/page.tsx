@@ -71,7 +71,7 @@ export default function PayrollSoftwareGhanaPage() {
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
                 Start 14-day free trial
@@ -322,7 +322,7 @@ export default function PayrollSoftwareGhanaPage() {
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900 shadow-sm hover:bg-zinc-100"
               >
                 Start 14-day free trial

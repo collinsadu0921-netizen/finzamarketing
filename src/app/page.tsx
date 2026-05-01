@@ -49,7 +49,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
                 <a
-                  href="https://app.finza.africa/signup?plan=professional&trial=1"
+                  href="https://app.finza.africa/signup?workspace=service&plan=professional&billing_cycle=monthly&trial=1"
                   className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-lg transition hover:bg-zinc-100"
                 >
                   Start 14-day free trial
@@ -473,7 +473,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="inline-block w-full rounded-md bg-white px-8 py-3 text-center text-base font-bold text-zinc-900 shadow sm:w-auto"
               >
                 Start 14-day free trial

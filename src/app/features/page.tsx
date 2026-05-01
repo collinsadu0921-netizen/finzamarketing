@@ -37,7 +37,7 @@ export default function FeaturesPage() {
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="inline-block rounded-md bg-[#0F172A] px-10 py-4 text-center text-lg font-bold text-white shadow-lg transition hover:bg-[#0F172A]/90"
               >
                 Start 14-day free trial
@@ -56,7 +56,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 1 — CLIENT WORK */}
+      {/* SECTION 1 â€” CLIENT WORK */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -95,7 +95,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 2 — INVOICES AND PAYMENTS */}
+      {/* SECTION 2 â€” INVOICES AND PAYMENTS */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -134,7 +134,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 3 — GHANA TAX LINES */}
+      {/* SECTION 3 â€” GHANA TAX LINES */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -166,7 +166,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 4 — EXPENSES, BILLS, AND INCOMING DOCUMENTS */}
+      {/* SECTION 4 â€” EXPENSES, BILLS, AND INCOMING DOCUMENTS */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -205,7 +205,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 5 — PAYROLL AND TEAM RECORDS */}
+      {/* SECTION 5 â€” PAYROLL AND TEAM RECORDS */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -247,7 +247,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 6 — REPORTS AND ACCOUNTANT-READY RECORDS */}
+      {/* SECTION 6 â€” REPORTS AND ACCOUNTANT-READY RECORDS */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -289,7 +289,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 7 — FINZA ASSIST */}
+      {/* SECTION 7 â€” FINZA ASSIST */}
       <section id="finza-assist" className="scroll-mt-28 border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -327,7 +327,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 8 — WHAT FINZA IS NOT */}
+      {/* SECTION 8 â€” WHAT FINZA IS NOT */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -393,7 +393,7 @@ export default function FeaturesPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
                 Start 14-day free trial

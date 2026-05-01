@@ -8,7 +8,7 @@ import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { breadcrumbListSchema } from "@/lib/schema";
 
 const signupUrl =
-  "https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1";
+  "https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1";
 
 export const metadata: Metadata = {
   title: "Ghana Invoice Calculator | Preview Invoice Totals, VAT and Balance Due",

@@ -72,7 +72,7 @@ export default function BestAccountingSoftwareGhanaPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
                 Start 14-day free trial
@@ -95,7 +95,7 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">What “best” should mean for a Ghanaian business</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">What â€œbestâ€ should mean for a Ghanaian business</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               The best accounting software depends on how your business actually works.
             </p>
@@ -342,7 +342,7 @@ export default function BestAccountingSoftwareGhanaPage() {
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
               >
                 Start 14-day free trial

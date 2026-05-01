@@ -27,7 +27,7 @@ export default function DemoPage() {
                         </p>
                         <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
                             <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                                 className="inline-block rounded-md bg-[#0F172A] px-10 py-4 text-center text-lg font-bold text-white shadow-lg transition hover:bg-[#0F172A]/90"
                             >
                                 Start 14-day free trial
@@ -214,7 +214,7 @@ export default function DemoPage() {
                         </p>
                         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                             <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                                 className="inline-block w-full rounded-md bg-white px-8 py-3 text-center text-base font-bold text-zinc-900 shadow sm:w-auto"
                             >
                                 Start 14-day free trial

@@ -1,17 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/container";
 
 const whyPoints = [
-  "Built for Ghana—not adapted later",
+  "Built for Ghanaâ€”not adapted later",
   "Clear tax line handling (VAT, NHIL, GETFund where applicable)",
   "Designed for service businesses and accountants",
-  "Finza Assist—in-app copilot for Ghana VAT, WHT, PAYE & books; read-only data, server-verified numbers, no auto-posting",
+  "Finza Assistâ€”in-app copilot for Ghana VAT, WHT, PAYE & books; read-only data, server-verified numbers, no auto-posting",
   "Simple to use without accounting knowledge",
 ];
 
 const whoItems = [
   { title: "Freelancers", desc: "Simple invoicing, payment tracking, and tax-ready lines without a finance department." },
-  { title: "Small teams", desc: "Shared visibility on quotes, bills, and who has paid—designed for real workflows in Ghana." },
+  { title: "Small teams", desc: "Shared visibility on quotes, bills, and who has paidâ€”designed for real workflows in Ghana." },
   { title: "Growing service companies", desc: "More clients and retainers without losing control of receivables in GHS." },
   { title: "Cleaning businesses", desc: "Recurring jobs, quotes, and steady invoicing in GHS." },
   { title: "Consultants & agencies", desc: "Proposals, milestones, and collections without a second spreadsheet." },
@@ -28,12 +29,12 @@ const dayToDayPoints = [
 
 const trustPoints = [
   "Built specifically for Ghana",
-  "Designed for real workflows—not adapted generic software",
+  "Designed for real workflowsâ€”not adapted generic software",
   "Clear tax structure handling (VAT, NHIL, GETFund where applicable)",
   "Simple interface you can use without accounting training",
 ];
 
-/** Mid-scroll CTA — pair with hero + footer CTAs for conversion coverage. */
+/** Mid-scroll CTA â€” pair with hero + footer CTAs for conversion coverage. */
 export function MidPageCtaBand({
   title,
   subtitle = "14-day free trial. No card required to start.",
@@ -53,7 +54,7 @@ export function MidPageCtaBand({
           </div>
           <div className="flex flex-col gap-2 sm:flex-shrink-0 sm:flex-row">
             <a
-              href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+              href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
               className="rounded-md bg-white px-6 py-3 text-center text-sm font-bold text-zinc-900 shadow-sm hover:bg-zinc-100"
             >
               Start 14-day free trial
@@ -71,7 +72,7 @@ export function MidPageCtaBand({
   );
 }
 
-/** Proof / trust layer — distinct from “Why choose Finza”. */
+/** Proof / trust layer â€” distinct from â€œWhy choose Finzaâ€. */
 export function WhyBusinessesTrustFinza({ className = "bg-white" }: { className?: string }) {
   return (
     <section className={`border-b border-zinc-100 py-14 md:py-16 ${className}`}>
@@ -82,7 +83,7 @@ export function WhyBusinessesTrustFinza({ className = "bg-white" }: { className?
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {trustPoints.map((line) => (
               <li key={line} className="flex gap-3 rounded-xl border border-zinc-200 bg-zinc-50/80 p-4 text-sm leading-relaxed text-zinc-600">
-                <span className="font-bold text-[#0F172A]">✓</span>
+                <span className="font-bold text-[#0F172A]">âœ“</span>
                 <span>{line}</span>
               </li>
             ))}
@@ -104,7 +105,7 @@ export function WhyBusinessesTrustFinza({ className = "bg-white" }: { className?
   );
 }
 
-/** Conversion block — use on core marketing pages (mobile-friendly stack). */
+/** Conversion block â€” use on core marketing pages (mobile-friendly stack). */
 export function WhyBusinessesChooseFinza({ className = "bg-zinc-50" }: { className?: string }) {
   return (
     <section className={`border-b border-zinc-100 py-16 md:py-20 ${className}`}>
@@ -115,7 +116,7 @@ export function WhyBusinessesChooseFinza({ className = "bg-zinc-50" }: { classNa
             {whyPoints.map((line) => (
               <li key={line} className="flex gap-3">
                 <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#0F172A] text-xs font-bold text-white">
-                  ✓
+                  âœ“
                 </span>
                 <span className="leading-relaxed">{line}</span>
               </li>
@@ -142,7 +143,7 @@ export function WhyBusinessesChooseFinza({ className = "bg-zinc-50" }: { classNa
   );
 }
 
-/** Use-case grid — homepage & accounting hub (and optional elsewhere). */
+/** Use-case grid â€” homepage & accounting hub (and optional elsewhere). */
 export function WhoUsesFinza({ className = "bg-white" }: { className?: string }) {
   return (
     <section className={`border-b border-zinc-100 py-16 md:py-20 ${className}`}>
@@ -150,7 +151,7 @@ export function WhoUsesFinza({ className = "bg-white" }: { className?: string })
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">Who uses Finza</h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-zinc-500">
-            Used by businesses across Ghana—from solo operators to growing SMEs. Built for the Ghana market.
+            Used by businesses across Ghanaâ€”from solo operators to growing SMEs. Built for the Ghana market.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {whoItems.map((item) => (
@@ -169,7 +170,7 @@ export function WhoUsesFinza({ className = "bg-white" }: { className?: string })
             <Link href="/best-accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
               how Finza compares
             </Link>
-            ? Start there—then view{" "}
+            ? Start thereâ€”then view{" "}
             <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
               plans
             </Link>
@@ -181,7 +182,7 @@ export function WhoUsesFinza({ className = "bg-white" }: { className?: string })
   );
 }
 
-/** Day-to-day outcomes — after main content, before final CTA (distinct from “Why choose Finza”). */
+/** Day-to-day outcomes â€” after main content, before final CTA (distinct from â€œWhy choose Finzaâ€). */
 export function HowFinzaHelpsDayToDay({
   className = "bg-zinc-50",
   showClusterHint = true,
@@ -198,7 +199,7 @@ export function HowFinzaHelpsDayToDay({
             {dayToDayPoints.map((line) => (
               <li key={line} className="flex gap-3">
                 <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-xs font-bold text-zinc-800">
-                  →
+                  â†’
                 </span>
                 <span className="leading-relaxed">{line}</span>
               </li>
@@ -240,9 +241,9 @@ export function AccountingSerpClusterStrip({ className = "bg-zinc-50" }: { class
   return (
     <section className={`border-b border-zinc-100 py-10 ${className}`}>
       <Container>
-        <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Accounting cluster — more angles</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Accounting cluster â€” more angles</p>
         <p className="mt-2 text-sm text-zinc-600">
-          If you do not know your real profit after tax lines and expenses, read across these pages—each answers a different search, same Finza stack in GHS.
+          If you do not know your real profit after tax lines and expenses, read across these pagesâ€”each answers a different search, same Finza stack in GHS.
         </p>
         <ul className="mt-5 flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
           <li>
@@ -295,9 +296,9 @@ export function InvoicingSerpClusterStrip({ className = "bg-white" }: { classNam
   return (
     <section className={`border-b border-zinc-100 py-10 ${className}`}>
       <Container>
-        <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Invoicing cluster — more angles</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Invoicing cluster â€” more angles</p>
         <p className="mt-2 text-sm text-zinc-600">
-          If you are still using Excel for invoices, these pages cover billing, tracking, and templates—then connect to full books.
+          If you are still using Excel for invoices, these pages cover billing, tracking, and templatesâ€”then connect to full books.
         </p>
         <ul className="mt-5 flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
           <li>
@@ -342,7 +343,7 @@ export function VatSerpClusterStrip({ className = "bg-zinc-50" }: { className?: 
       <Container>
         <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">VAT &amp; levies cluster</p>
         <p className="mt-2 text-sm text-zinc-600">
-          Same topic, different queries—VAT explained, NHIL &amp; GETFund, and registration timing for Ghana.
+          Same topic, different queriesâ€”VAT explained, NHIL &amp; GETFund, and registration timing for Ghana.
         </p>
         <ul className="mt-5 flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
           <li>
@@ -378,5 +379,29 @@ export function VatSerpClusterStrip({ className = "bg-zinc-50" }: { className?: 
         </ul>
       </Container>
     </section>
+  );
+}
+
+export function MarketingScreenshot({
+  src,
+  alt,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60">
+      <Image
+        src={src}
+        alt={alt}
+        width={1800}
+        height={1200}
+        priority={priority}
+        quality={100}
+        className="h-auto w-full object-contain"
+      />
+    </div>
   );
 }

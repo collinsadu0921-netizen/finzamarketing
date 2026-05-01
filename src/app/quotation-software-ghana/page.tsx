@@ -71,7 +71,7 @@ export default function QuotationSoftwareGhanaPage() {
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1"
+                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
                 Start 14-day free trial
@@ -326,7 +326,7 @@ export default function QuotationSoftwareGhanaPage() {
               Use Finza to prepare proposals, quotes, proformas, invoices, payments, receipts, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <a href="https://app.finza.africa/signup?workspace=service&plan=starter&cycle=monthly&trial=1" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
+              <a href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
                 Start 14-day free trial
               </a>
               <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">
