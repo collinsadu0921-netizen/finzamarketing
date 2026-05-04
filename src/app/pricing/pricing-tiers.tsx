@@ -113,8 +113,8 @@ export function PricingTiers() {
                             >
                                 <span className="whitespace-nowrap">
                                     {c === "monthly" && "Monthly"}
-                                    {c === "quarterly" && "Quarterly â€” save 5%"}
-                                    {c === "annual" && "Annual â€” save 17%"}
+                                    {c === "quarterly" && "Quarterly \u2014 save 5%"}
+                                    {c === "annual" && "Annual \u2014 save 17%"}
                                 </span>
                             </button>
                         ))}
