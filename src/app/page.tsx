@@ -377,39 +377,32 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* PRICING PREVIEW */}
+      {/* PRICING / PLAN FIT */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-2xl font-bold text-zinc-900">Choose the plan that fits your business</h2>
+          <div className="mx-auto max-w-3xl space-y-6 text-center">
+            <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">
+              Find the right Finza plan for your business
+            </h2>
             <p className="leading-relaxed text-zinc-600">
-              Start with the tools your business needs today, then move to deeper controls when your operations grow.
+              Answer a few quick questions or book a guided walkthrough — we&apos;ll recommend the plan
+              that fits how you invoice, run payroll, and report in Ghana.
             </p>
-            <div className="grid gap-4 text-left md:grid-cols-3">
-              {[
-                {
-                  t: "Essentials",
-                  d: "For service businesses that need proposals, quotes, invoices, expenses, payment tracking, and basic reports.",
-                },
-                {
-                  t: "Professional",
-                  d: "For growing teams that need supplier bills, incoming documents, payroll, WHT, VAT support, projects, and team access.",
-                },
-                {
-                  t: "Business",
-                  d: "For companies that need full accounting control, including ledger, journals, trial balance, bank reconciliation, period locking, audit logs, and report exports.",
-                },
-              ].map((x) => (
-                <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
-                  <p className="font-bold text-zinc-900">{x.t}</p>
-                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
-                </div>
-              ))}
+            <p className="text-sm font-semibold text-zinc-700">Plans start from GH₵149/month.</p>
+            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
+              <Link
+                href="/contact"
+                className="inline-block rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
+              >
+                Book a walkthrough
+              </Link>
+              <Link
+                href="/pricing#find-plan"
+                className="inline-block rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
+              >
+                Find my plan
+              </Link>
             </div>
-            <p className="text-sm leading-relaxed text-zinc-500">Start with a 14-day free trial. No card required to start.</p>
-            <Link href="/pricing" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50">
-              View pricing in GHS
-            </Link>
           </div>
         </Container>
       </section>

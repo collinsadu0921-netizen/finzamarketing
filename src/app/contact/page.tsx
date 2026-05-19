@@ -78,10 +78,10 @@ export default function ContactPage() {
                 Start 14-day free trial
               </a>
               <Link
-                href="/pricing"
+                href="/pricing#find-plan"
                 className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors text-center"
               >
-                View pricing in GHS
+                Find my plan
               </Link>
             </div>
             <p className="text-sm text-zinc-500">

@@ -11,17 +11,18 @@ import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema, pricingPageFaqForSchema } from "@/lib/schema";
+import { PlanFitQuestionnaire } from "@/components/plan-fit-questionnaire";
+import { PlanTierSummaries } from "@/components/plan-tier-summaries";
+import { PLANS_STARTING_PRICE_GHS } from "@/lib/pricing-plans";
 
 export const metadata: Metadata = {
-    title: "Pricing | Finza Plans for Ghanaian Service Businesses",
+    title: "Pricing | Find the Right Finza Plan",
     description:
-        "Choose a Finza plan for your Ghanaian service business. Start with a 14-day free trial, then manage proposals, invoices, payments, expenses, payroll, documents, reports, and accountant-ready records in GHS.",
+        "Find the right Finza plan for your Ghanaian service business. Book a guided walkthrough or answer a few questions — plans start from GH₵149/month.",
     alternates: {
         canonical: "https://www.finza.africa/pricing",
     },
 };
-
-import { PricingTiers } from "./pricing-tiers";
 
 export default function PricingPage() {
     return (
@@ -36,39 +37,45 @@ export default function PricingPage() {
                 ]}
             />
 
-            {/* HERO */}
             <section className="pt-28 pb-16 border-b border-zinc-100">
                 <Container>
-                    <div className="max-w-4xl space-y-4">
+                    <div className="max-w-4xl space-y-6">
                         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-                            Simple pricing for Ghanaian service businesses
+                            Find the right Finza plan for your business
                         </h1>
                         <p className="text-lg text-zinc-600 leading-relaxed font-medium">
-                            Start with the tools your business needs today, then move to deeper controls as your operations grow. Finza helps you manage proposals, invoices, payments, expenses, payroll, documents, reports, and accountant-ready records in GHS.
+                            Finza supports different businesses in different ways. Answer a few quick
+                            questions or book a guided walkthrough so we can recommend the plan that
+                            fits your operations.
+                        </p>
+                        <p className="text-sm font-semibold text-zinc-700">
+                            Plans start from GH₵{PLANS_STARTING_PRICE_GHS.toLocaleString()}/month.
                         </p>
                         <div className="flex flex-col items-start gap-3 pt-2 sm:flex-row sm:items-center">
-                            <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+                            <Link
+                                href="/contact"
                                 className="inline-block rounded-md bg-[#0F172A] px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
                             >
-                                Start 14-day free trial
-                            </a>
+                                Book a walkthrough
+                            </Link>
                             <Link
-                                href="/demo"
+                                href="#find-plan"
                                 className="inline-block rounded-md border border-zinc-300 bg-white px-8 py-3 text-base font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
                             >
-                                See how Finza works
+                                Find my plan
                             </Link>
                         </div>
-                        <p className="text-sm text-zinc-500">No card required to start. Choose monthly, quarterly, or annual billing.</p>
+                        <p className="text-sm text-zinc-500">
+                            Built for service businesses — invoices, quotes, proformas, receipts,
+                            customer statements, payments, payroll, and Ghana tax readiness.
+                        </p>
                     </div>
                 </Container>
             </section>
 
-            {/* â”€â”€ PRICING TIERS â”€â”€ */}
-            <PricingTiers />
+            <PlanFitQuestionnaire />
+            <PlanTierSummaries />
 
-            {/* PRICING NOTES */}
             <section className="py-14 bg-white border-b border-zinc-100">
                 <Container>
                     <div className="max-w-4xl mx-auto space-y-6">
@@ -76,38 +83,41 @@ export default function PricingPage() {
                             What happens after the trial?
                         </h2>
                         <p className="text-base leading-relaxed text-zinc-600">
-                            Your 14-day trial gives you time to explore Finza before choosing a paid plan. No card is required to start.
+                            Your 14-day trial gives you time to explore Finza before choosing a paid
+                            plan. No card is required to start.
                         </p>
                         <p className="text-base leading-relaxed text-zinc-600">
-                            When the trial ends, you can choose the plan and billing cycle that fits your business. If a paid subscription is not activated, access may move to a limited or read-only state depending on your account status.
+                            When the trial ends, you can choose the plan and billing cycle that fits
+                            your business. If a paid subscription is not activated, access may move to
+                            a limited or read-only state depending on your account status.
                         </p>
                     </div>
                 </Container>
             </section>
 
-            {/* BILLING RULES */}
             <section className="py-14 bg-zinc-50 border-b border-zinc-100">
                 <Container>
                     <div className="max-w-4xl mx-auto space-y-8">
-                        <div className="space-y-2">
-                            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                                Billing rules
-                            </h2>
-                        </div>
+                        <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                            Billing rules
+                        </h2>
                         <p className="text-base leading-relaxed text-zinc-600">
-                            Plans can be billed monthly, quarterly, or annually. Quarterly and annual billing give you the displayed savings compared with monthly billing.
+                            Plans can be billed monthly, quarterly, or annually. Quarterly and annual
+                            billing include savings compared with monthly billing when you subscribe.
                         </p>
                         <p className="text-base leading-relaxed text-zinc-600">
-                            Plan changes take effect from the next billing period unless otherwise shown during checkout. Finza does not apply prorated adjustments or credits for unused time.
+                            Plan changes take effect from the next billing period unless otherwise shown
+                            during checkout. Finza does not apply prorated adjustments or credits for
+                            unused time.
                         </p>
                         <p className="text-base leading-relaxed text-zinc-600">
-                            You can cancel before your next billing date to avoid renewal. After cancellation, access continues until the end of the paid billing period.
+                            You can cancel before your next billing date to avoid renewal. After
+                            cancellation, access continues until the end of the paid billing period.
                         </p>
                     </div>
                 </Container>
             </section>
 
-            {/* INTERNAL LINKS */}
             <section className="py-20 bg-white border-b border-zinc-100">
                 <Container>
                     <div className="mx-auto max-w-5xl">
@@ -138,7 +148,6 @@ export default function PricingPage() {
                 </Container>
             </section>
 
-            {/* â”€â”€ FAQ â”€â”€ */}
             <section className="py-20 bg-zinc-50 border-b border-zinc-100">
                 <Container>
                     <div className="max-w-2xl mx-auto space-y-8">
@@ -159,7 +168,7 @@ export default function PricingPage() {
                             <AccordionItem value="change-plan">
                                 <AccordionTrigger>Can I change plans later?</AccordionTrigger>
                                 <AccordionContent>
-                                    Yes. You can change plans as your business needs change. Plan changes take effect from the next billing period unless otherwise shown during checkout. Finza does not apply prorated adjustments or credits for unused time.
+                                    Yes. You can change plans as your business needs change. Plan changes take effect from the next billing period unless otherwise shown during checkout.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="cancel">
@@ -168,16 +177,10 @@ export default function PricingPage() {
                                     Yes. You can cancel before your next billing date to avoid renewal. If you cancel, access continues until the end of the paid billing period.
                                 </AccordionContent>
                             </AccordionItem>
-                            <AccordionItem value="fees">
-                                <AccordionTrigger>Do the prices include payment processing fees?</AccordionTrigger>
-                                <AccordionContent>
-                                    The plan price covers your Finza subscription. Any payment processing fees, provider charges, or taxes that apply are shown separately where relevant.
-                                </AccordionContent>
-                            </AccordionItem>
                             <AccordionItem value="which-plan">
                                 <AccordionTrigger>Which plan should I start with?</AccordionTrigger>
                                 <AccordionContent>
-                                    Start with Essentials if you mainly need proposals, quotes, invoices, payments, expenses, and basic reports. Choose Professional if you need supplier bills, incoming documents, payroll, WHT, VAT support, and team access. Choose Business if you need deeper accounting controls such as ledger records, journals, trial balance, bank reconciliation, period locking, audit logs, and exports.
+                                    Use Find my plan above, or book a walkthrough. Essentials suits clean invoices, quotes, receipts, and payment details. Professional adds stronger documents, customer statements, payroll, and reports. Business adds advanced setup, reporting, Ghana tax readiness, and guided onboarding.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="accountant">
@@ -191,28 +194,28 @@ export default function PricingPage() {
                 </Container>
             </section>
 
-            {/* FINAL CTA */}
             <section className="py-24 bg-[#0F172A] text-center">
                 <Container>
                     <div className="max-w-xl mx-auto space-y-6">
                         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                            Start with the plan that fits your business today
+                            Not sure yet? We&apos;ll help you choose
                         </h2>
                         <p className="text-base text-zinc-400 leading-relaxed">
-                            Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
+                            Book a walkthrough or complete the plan-fit questions — we&apos;ll align Finza
+                            with how you invoice, pay staff, and report in GHS.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                            <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+                            <Link
+                                href="/contact"
                                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
                             >
-                                Start 14-day free trial
-                            </a>
+                                Book a walkthrough
+                            </Link>
                             <Link
-                                href="/demo"
+                                href="#find-plan"
                                 className="text-base font-semibold text-zinc-300 hover:text-white transition-colors"
                             >
-                                See how Finza works
+                                Find my plan
                             </Link>
                         </div>
                     </div>

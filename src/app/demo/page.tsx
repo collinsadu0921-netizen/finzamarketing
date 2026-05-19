@@ -26,21 +26,21 @@ export default function DemoPage() {
                             Watch how a Ghanaian service business can use Finza to prepare client documents, send invoices, track payments, capture expenses and incoming documents, manage payroll, and keep cleaner records for accountant review.
                         </p>
                         <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
-                            <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+                            <Link
+                                href="/contact"
                                 className="inline-block rounded-md bg-[#0F172A] px-10 py-4 text-center text-lg font-bold text-white shadow-lg transition hover:bg-[#0F172A]/90"
                             >
-                                Start 14-day free trial
-                            </a>
+                                Book a walkthrough
+                            </Link>
                             <Link
-                                href="/pricing"
+                                href="/pricing#find-plan"
                                 className="inline-block rounded-md border border-zinc-300 bg-white px-10 py-4 text-center text-lg font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50"
                             >
-                                View pricing
+                                Find my plan
                             </Link>
                         </div>
                         <p className="text-sm text-zinc-500">
-                            No card required to start. Built for businesses working in GHS.
+                            Plans start from GH₵149/month. Built for service businesses in GHS.
                         </p>
                     </div>
                 </Container>
@@ -213,14 +213,14 @@ export default function DemoPage() {
                             Start with proposals, invoices, payments, expenses, documents, payroll, and reports in one connected workspace.
                         </p>
                         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-                            <a
-                                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+                            <Link
+                                href="/contact"
                                 className="inline-block w-full rounded-md bg-white px-8 py-3 text-center text-base font-bold text-zinc-900 shadow sm:w-auto"
                             >
-                                Start 14-day free trial
-                            </a>
-                            <Link href="/pricing" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">
-                                View pricing in GHS
+                                Book a walkthrough
+                            </Link>
+                            <Link href="/pricing#find-plan" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">
+                                Find my plan
                             </Link>
                         </div>
                         <p className="text-sm text-zinc-400">
