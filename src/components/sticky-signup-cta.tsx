@@ -10,7 +10,7 @@ const HIDDEN_PREFIXES = ["/admin"];
 const SIGNUP =
   "https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1";
 
-/** Fixed bottom bar after scroll â€” keeps signup visible (excludes admin). */
+/** Fixed bottom bar after scroll — keeps signup visible (excludes admin). */
 export function StickySignupCta() {
   const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
@@ -41,7 +41,7 @@ export function StickySignupCta() {
       <div className="mx-auto flex max-w-5xl flex-col items-stretch gap-2 px-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <p className="text-center text-sm text-zinc-600 sm:text-left">
           <span className="font-bold text-zinc-900">Start managing your business properly</span>
-          <span className="text-zinc-500"> â€” in Ghana cedis with Finza.</span>
+          <span className="text-zinc-500">{" \u2014 in Ghana cedis with Finza."}</span>
         </p>
         <div className="flex flex-shrink-0 justify-center gap-2 sm:justify-end">
           <a
