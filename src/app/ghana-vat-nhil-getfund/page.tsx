@@ -209,7 +209,7 @@ export default function GhanaVatNhilGetfundPage() {
               {[
                 {
                   title: "Calculated at the point of transaction",
-                  body: "When you raise an invoice or record a POS sale in Finza, VAT, NHIL, and GETFund are calculated on the taxable amount immediately. You do not calculate tax at period end — it is already done.",
+                  body: "When you raise an invoice or record a taxable sale in Finza, VAT, NHIL, and GETFund are calculated on the taxable amount immediately. You do not calculate tax at period end - it is already done.",
                 },
                 {
                   title: "Posted to separate ledger accounts",
@@ -269,11 +269,11 @@ export default function GhanaVatNhilGetfundPage() {
               VAT, NHIL, and GETFund calculated and separated at each transaction with records your accountant can review.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a href="/pricing" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
-                Get started free
-              </a>
-              <Link href="/demo" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
-                View demo →
+              <Link href="/contact" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
+                Book a walkthrough
+              </Link>
+              <Link href="/pricing#find-plan" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
+                Find my plan
               </Link>
             </div>
             <p className="text-xs text-zinc-500 pt-1">14-day free trial. No card required to start.</p>

@@ -4,15 +4,13 @@ import { useState } from "react";
 import type { PlanTierId } from "@/lib/pricing-plans";
 import { getPlanMonthlyPriceGhs, PLAN_FIT_SUMMARIES } from "@/lib/pricing-plans";
 import type { PlanFitAnswers } from "@/lib/plan-fit-scoring";
+import { homePrimaryBtn, siteFormInput } from "@/components/home/home-ui";
 
 type Props = {
   recommendedPlan: PlanTierId;
   answers: PlanFitAnswers;
   onSuccess: () => void;
 };
-
-const inputClass =
-  "mt-1.5 w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500";
 
 export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) {
   const [status, setStatus] = useState<"idle" | "sending" | "err">("idle");
@@ -65,7 +63,7 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
   return (
     <form onSubmit={onSubmit} className="space-y-4 text-left">
       {error && (
-        <p className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+        <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
           {error}
         </p>
       )}
@@ -73,7 +71,7 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
         <label htmlFor="plan-fit-name" className="block text-sm font-medium text-zinc-700">
           Full name <span className="text-red-500">*</span>
         </label>
-        <input id="plan-fit-name" name="name" type="text" required autoComplete="name" className={inputClass} />
+        <input id="plan-fit-name" name="name" type="text" required autoComplete="name" className={siteFormInput} />
       </div>
       <div>
         <label htmlFor="plan-fit-company" className="block text-sm font-medium text-zinc-700">
@@ -85,7 +83,7 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
           type="text"
           required
           autoComplete="organization"
-          className={inputClass}
+          className={siteFormInput}
         />
       </div>
       <div>
@@ -98,7 +96,7 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
           type="tel"
           required
           autoComplete="tel"
-          className={inputClass}
+          className={siteFormInput}
         />
       </div>
       <div>
@@ -111,7 +109,7 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
           type="email"
           required
           autoComplete="email"
-          className={inputClass}
+          className={siteFormInput}
         />
       </div>
       <div>
@@ -122,14 +120,14 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
           id="plan-fit-message"
           name="message"
           rows={3}
-          placeholder="Anything else we should know before the walkthrough?"
-          className={inputClass}
+          placeholder="Anything you want us to cover?"
+          className={siteFormInput}
         />
       </div>
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#0F172A]/90 disabled:opacity-60"
+        className={`${homePrimaryBtn} w-full disabled:cursor-not-allowed disabled:opacity-60`}
       >
         {status === "sending" ? "Sending…" : "Request walkthrough"}
       </button>

@@ -22,7 +22,7 @@ export function Trust() {
                         </div>
                         <h3 className="text-lg font-bold mb-3">Secure Cloud Hosting</h3>
                         <p className="text-sm opacity-70 leading-relaxed">
-                            Data stored in redundant, high-availability data centers with 99.9% uptime.
+                            Data stored in redundant, high-availability data centers designed for reliability.
                         </p>
                     </div>
 

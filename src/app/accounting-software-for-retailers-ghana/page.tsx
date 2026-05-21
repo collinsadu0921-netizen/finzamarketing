@@ -29,7 +29,7 @@ export default function RetailAccountingGhanaPage() {
               <Link href="/features" className="rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">
                 Features
               </Link>
-              <Link href="/pricing" className="rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">
                 Pricing
               </Link>
               <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">

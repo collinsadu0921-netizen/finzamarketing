@@ -68,3 +68,52 @@
     animation: none !important;
   }
 }
+
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 70% 55% at 50% 40%, black 20%, transparent 75%);
+}
+
+.home-card-lift {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.home-card-lift:hover {
+  transform: translateY(-3px);
+  border-color: rgb(212 212 216);
+  box-shadow:
+    0 12px 28px -8px rgb(15 23 42 / 0.12),
+    0 4px 12px -4px rgb(15 23 42 / 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-card-lift:hover {
+    transform: none;
+  }
+}
+
+.home-section-surface {
+  background: linear-gradient(180deg, #fafafa 0%, #f6f5f3 100%);
+}
+
+.home-pricing-glow {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgb(14 165 233 / 0.08), transparent 65%);
+}
+
+.site-hero-glow {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% -20%, rgb(14 165 233 / 0.08), transparent 58%),
+    radial-gradient(ellipse 50% 40% at 88% 5%, rgb(180 130 50 / 0.07), transparent 55%);
+}
+
+.site-hero-warm-glow {
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 80%, rgb(16 185 129 / 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 45% at 85% 20%, rgb(217 169 56 / 0.1), transparent 50%);
+}

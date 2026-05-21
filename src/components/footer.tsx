@@ -32,7 +32,7 @@ export async function Footer() {
               <Image src="/logo.png" alt="Finza" width={100} height={30} className="h-7 w-auto" />
             </Link>
             <p className="text-sm leading-relaxed text-zinc-600">
-              Ledger-first accounting for modern African businesses.
+              Run quotes, invoices, payments, payroll, and records in one place.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="transition-colors hover:text-zinc-900">
+                <Link href="/pricing#find-plan" className="transition-colors hover:text-zinc-900">
                   Pricing
                 </Link>
               </li>

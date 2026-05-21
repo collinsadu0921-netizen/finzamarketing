@@ -96,7 +96,7 @@ export default function NhilGetfundExplainedPage() {
                 accounting software for Ghana
               </Link>
               ; compare{" "}
-              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
                 workspace pricing
               </Link>{" "}
               when you are ready to start a 14-day free trial.

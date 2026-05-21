@@ -49,11 +49,11 @@ export const PLAN_FIT_QUESTIONS: PlanFitQuestion[] = [
   },
   {
     id: "accountingReports",
-    label: "Do you need accounting reports?",
+    label: "What level of reporting do you need?",
     options: [
       { value: "basic", label: "Basic income and expense visibility" },
       { value: "detailed", label: "Detailed management reports" },
-      { value: "full", label: "Full accounting and ledger control" },
+      { value: "full", label: "Full accounting reports and controls" },
     ],
   },
   {
@@ -66,7 +66,7 @@ export const PLAN_FIT_QUESTIONS: PlanFitQuestion[] = [
   },
   {
     id: "ghanaTax",
-    label: "Do you need Ghana VAT / levy support?",
+    label: "Do you need Ghana VAT or levy support?",
     options: [
       { value: "yes", label: "Yes" },
       { value: "not-yet", label: "Not yet" },
@@ -76,10 +76,10 @@ export const PLAN_FIT_QUESTIONS: PlanFitQuestion[] = [
   {
     id: "setupHelp",
     label:
-      "Do you want help setting up your business profile, taxes, documents, and payment details?",
+      "Do you want help setting up business details, tax lines, documents, and payment details?",
     options: [
-      { value: "guided", label: "Yes — guided onboarding" },
-      { value: "self", label: "I'll set up myself" },
+      { value: "guided", label: "Yes — walk me through it" },
+      { value: "self", label: "I can set it up myself" },
     ],
   },
 ];

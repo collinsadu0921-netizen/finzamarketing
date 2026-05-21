@@ -36,17 +36,16 @@ export default function FeaturesPage() {
               Finza connects the daily work of a service business - proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records - in one workspace.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="inline-block rounded-md bg-[#0F172A] px-10 py-4 text-center text-lg font-bold text-white shadow-lg transition hover:bg-[#0F172A]/90"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
-                href="/pricing"
+                href="/pricing#find-plan"
                 className="inline-block rounded-md border border-zinc-300 bg-white px-10 py-4 text-center text-lg font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50"
               >
-                View pricing
+                Find my plan
               </Link>
             </div>
             <p className="text-sm text-zinc-500">
@@ -56,7 +55,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 1 â€” CLIENT WORK */}
+      {/* SECTION 1 - CLIENT WORK */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -95,7 +94,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 2 â€” INVOICES AND PAYMENTS */}
+      {/* SECTION 2 - INVOICES AND PAYMENTS */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -134,7 +133,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 3 â€” GHANA TAX LINES */}
+      {/* SECTION 3 - GHANA TAX LINES */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -166,7 +165,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 4 â€” EXPENSES, BILLS, AND INCOMING DOCUMENTS */}
+      {/* SECTION 4 - EXPENSES, BILLS, AND INCOMING DOCUMENTS */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -205,7 +204,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 5 â€” PAYROLL AND TEAM RECORDS */}
+      {/* SECTION 5 - PAYROLL AND TEAM RECORDS */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -247,7 +246,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 6 â€” REPORTS AND ACCOUNTANT-READY RECORDS */}
+      {/* SECTION 6 - REPORTS AND ACCOUNTANT-READY RECORDS */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -289,7 +288,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 7 â€” FINZA ASSIST */}
+      {/* SECTION 7 - FINZA ASSIST */}
       <section id="finza-assist" className="scroll-mt-28 border-b border-zinc-100 bg-zinc-50 py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -327,7 +326,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* SECTION 8 â€” WHAT FINZA IS NOT */}
+      {/* SECTION 8 - WHAT FINZA IS NOT */}
       <section className="border-b border-zinc-100 bg-white py-20">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
@@ -349,7 +348,7 @@ export default function FeaturesPage() {
         <Container>
           <div className="mx-auto max-w-5xl">
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/pricing" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
+              <Link href="/pricing#find-plan" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
                 Pricing
               </Link>
               <Link href="/demo" className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:border-zinc-400">
@@ -392,17 +391,16 @@ export default function FeaturesPage() {
               Start with proposals, quotes, invoices, payments, expenses, documents, payroll, and reports - then keep cleaner records for your accountant as the business grows.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
-                href="/pricing"
+                href="/pricing#find-plan"
                 className="text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white transition-colors"
               >
-                View pricing in GHS
+                Find my plan
               </Link>
             </div>
           </div>

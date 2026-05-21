@@ -70,18 +70,12 @@ export default function SmallBusinessAccountingGhanaPage() {
               Finza helps Ghanaian small service businesses manage the daily records behind accounting - proposals, quotes, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Start 14-day free trial
-              </a>
-              <Link
-                href="/demo"
-                className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
-              >
-                See how Finza works
+                Book a walkthrough
               </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">
               No card required to start. Built for small businesses that want better control before month-end.
@@ -341,14 +335,13 @@ export default function SmallBusinessAccountingGhanaPage() {
               Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
-                Start 14-day free trial
-              </a>
-              <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center">
-                View pricing in GHS
+                Book a walkthrough
+              </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center">
+                Find my plan
               </Link>
             </div>
           </div>

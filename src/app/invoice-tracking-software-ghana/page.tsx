@@ -71,17 +71,16 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
               Sending an invoice is only one part of the job. A Ghanaian service business also needs to know which invoices have been sent, which clients have paid, which payments are partial, which balances remain outstanding, and which invoices need follow-up. Finza helps keep invoice tracking connected to quotes, payments, receipts, customer records, and reports.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
-                href="/pricing"
+                href="/pricing#find-plan"
                 className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
               >
-                View pricing in GHS
+                Find my plan
               </Link>
             </div>
             <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
@@ -346,12 +345,11 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
               Use Finza to keep invoices, payments, balances, receipts, and customer records connected in one workspace for Ghanaian service businesses.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="w-full rounded-md bg-white px-8 py-3.5 text-center text-base font-bold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-100 sm:w-auto"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
                 href="/demo"
                 className="w-full rounded-md border border-zinc-500 px-8 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"

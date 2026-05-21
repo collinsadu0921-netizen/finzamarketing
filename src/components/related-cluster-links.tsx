@@ -6,7 +6,7 @@ import { Container } from "@/components/container";
 const PRIMARY = {
   href: "/accounting-software-ghana",
   label: "Accounting software for Ghana",
-  desc: "Ledger-first product overview",
+  desc: "See how Finza helps service businesses stay in control",
 };
 
 export interface RelatedLink {

@@ -93,14 +93,13 @@ export default async function BlogPostPage({ params }: Props) {
               <li>Shows tax lines separately where Ghana rules applyÔÇönot one mystery percentage</li>
             </ul>
             <p className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="font-semibold text-zinc-900 underline underline-offset-2"
               >
-                Start 14-day free trial
-              </a>
-              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
-                View pricing in GHS
+                Book a walkthrough
+              </Link>
+              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Find my plan
               </Link>
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 Accounting software Ghana

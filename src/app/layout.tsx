@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Finza — Accounting & Invoicing Software for Ghana (GHS)",
     description:
-      "Run invoices, quotes, and money work in one place—in Ghana cedis.",
+      "Run quotes, invoices, payments, payroll, and business records in one place, in Ghana cedis.",
     images: ["/og-image.png"],
     creator: "@finzagh",
   },
@@ -83,15 +83,12 @@ export default function RootLayout({
         {/* ── Announcement Bar ── */}
         <div className="w-full bg-[#0F172A] text-white text-center py-2.5 px-4 text-sm font-medium">
           <span className="mr-2">🎉</span>
-          <span>
-            <strong>Early Access:</strong> Start your{" "}
-            <strong>14-day free trial</strong> — no card required.
-          </span>
+          <span>Not sure which plan fits your service business in Ghana?</span>
           <a
-            href="/pricing"
+            href="/pricing#find-plan"
             className="ml-3 underline underline-offset-2 font-semibold hover:text-zinc-300 transition-colors"
           >
-            Claim your spot →
+            Find your plan →
           </a>
         </div>
         <Navbar />

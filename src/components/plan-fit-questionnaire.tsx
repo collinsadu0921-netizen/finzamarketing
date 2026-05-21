@@ -10,6 +10,18 @@ import {
   PLANS_STARTING_PRICE_GHS,
 } from "@/lib/pricing-plans";
 import { recommendPlan, type PlanFitAnswers } from "@/lib/plan-fit-scoring";
+import { GhanaProofChips, PRICING_PROOF_CHIPS } from "@/components/site/ghana-proof-chips";
+import {
+  homeCard,
+  homeHeroPrimaryBtn,
+  homePrimaryBtn,
+  sectionLead,
+  sectionTitle,
+  siteChipDefault,
+  siteChipSelected,
+  siteFormCard,
+  siteGhsBadge,
+} from "@/components/home/home-ui";
 
 const INITIAL: PlanFitAnswers = {
   businessType: "",
@@ -46,25 +58,24 @@ export function PlanFitQuestionnaire() {
   }
 
   return (
-    <section id="find-plan" className="scroll-mt-28 border-b border-zinc-100 bg-zinc-50 py-20">
+    <section id="find-plan" className="home-section-surface scroll-mt-28 border-b border-zinc-200/80 py-16 md:py-20">
       <Container>
-        <div className="mx-auto max-w-4xl space-y-10">
-          <div className="space-y-3 text-center">
+        <div className="relative mx-auto max-w-4xl space-y-10">
+          <div className="pointer-events-none absolute inset-0 site-hero-glow" />
+          <div className="relative space-y-3 text-center">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Plan fit</p>
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Answer a few quick questions
-            </h2>
-            <p className="text-base leading-relaxed text-zinc-600">
-              We&apos;ll suggest a Finza plan based on how you invoice, report, and run your team in
-              Ghana.
+            <h2 className={sectionTitle}>Answer a few quick questions</h2>
+            <p className={sectionLead}>
+              Tell us what your business needs. We&apos;ll suggest a plan and show the price in GHS.
             </p>
-            <p className="text-sm font-semibold text-zinc-700">
-              Plans start from GH₵{PLANS_STARTING_PRICE_GHS.toLocaleString()}/month.
+            <p className={siteGhsBadge}>
+              Plans start from GH₵{PLANS_STARTING_PRICE_GHS.toLocaleString()}/month
             </p>
+            <GhanaProofChips chips={PRICING_PROOF_CHIPS} size="xs" className="justify-center" />
           </div>
 
           {!leadSubmitted && (
-            <div className="space-y-8 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className={`${homeCard} relative space-y-8 p-6 sm:p-8`}>
               {PLAN_FIT_QUESTIONS.map((q) => (
                 <fieldset key={q.id} className="space-y-3">
                   <legend className="text-sm font-bold text-zinc-900">{q.label}</legend>
@@ -80,10 +91,8 @@ export function PlanFitQuestionnaire() {
                             setSubmitted(false);
                             setLeadSubmitted(false);
                           }}
-                          className={`rounded-lg border px-3 py-2 text-left text-sm font-medium transition-colors ${
-                            selected
-                              ? "border-[#0F172A] bg-[#0F172A] text-white"
-                              : "border-zinc-200 bg-zinc-50 text-zinc-700 hover:border-zinc-300 hover:bg-white"
+                          className={`home-card-lift rounded-lg border px-3 py-2 text-left text-sm font-medium transition-colors ${
+                            selected ? siteChipSelected : siteChipDefault
                           }`}
                         >
                           {opt.label}
@@ -98,7 +107,7 @@ export function PlanFitQuestionnaire() {
                 type="button"
                 disabled={!allAnswered}
                 onClick={() => setSubmitted(true)}
-                className="w-full rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#0F172A]/90 disabled:cursor-not-allowed disabled:opacity-50"
+                className={`${homePrimaryBtn} w-full disabled:cursor-not-allowed disabled:opacity-50`}
               >
                 See my recommendation
               </button>
@@ -106,7 +115,7 @@ export function PlanFitQuestionnaire() {
           )}
 
           {leadSubmitted && (
-            <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center shadow-sm">
+            <div className="rounded-2xl border border-emerald-200/90 bg-gradient-to-b from-emerald-50 to-white p-8 text-center shadow-sm shadow-emerald-900/5">
               <p className="text-lg font-bold text-emerald-900">
                 Thank you. We have received your request and will contact you for a walkthrough.
               </p>
@@ -115,41 +124,38 @@ export function PlanFitQuestionnaire() {
 
           {result && recommendation && !leadSubmitted && submitted && (
             <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-              <div className="rounded-2xl border border-zinc-800 bg-[#0F172A] p-8 text-white shadow-lg">
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">
+              <div className="relative overflow-hidden rounded-2xl border border-zinc-800/20 bg-gradient-to-br from-[#0F172A] via-[#0f172a] to-[#1e293b] p-8 text-white shadow-xl shadow-slate-900/25">
+                <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-sky-500/20 blur-3xl" />
+                <p className="relative text-xs font-bold uppercase tracking-widest text-zinc-400">
                   Recommended plan
                 </p>
-                <h3 className="mt-2 text-2xl font-extrabold">{result.name}</h3>
+                <h3 className="relative mt-2 text-2xl font-extrabold">{result.name}</h3>
                 {monthlyPrice != null && (
-                  <p className="mt-4 text-3xl font-extrabold tracking-tight">
+                  <p className="relative mt-4 text-3xl font-extrabold tracking-tight">
                     GH₵{monthlyPrice.toLocaleString()}
                     <span className="text-lg font-semibold text-zinc-400">/month</span>
                   </p>
                 )}
-                <p className="mt-4 text-base leading-relaxed text-zinc-300">{result.description}</p>
-                <p className="mt-6 text-sm font-medium text-zinc-300">
+                <p className="relative mt-4 text-base leading-relaxed text-zinc-300">{result.description}</p>
+                <p className="relative mt-6 text-sm font-medium text-zinc-300">
                   Recommended based on your answers.
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-400">
-                  Book a walkthrough so we can help you choose the right setup for your business.
+                <p className="relative mt-4 text-sm leading-relaxed text-zinc-400">
+                  Book a walkthrough and we&apos;ll help you choose the right plan.
                 </p>
                 <button
                   type="button"
                   onClick={scrollToWalkthroughForm}
-                  className="mt-8 w-full rounded-md bg-white px-6 py-3 text-sm font-bold text-[#0F172A] shadow-sm transition hover:bg-zinc-100 lg:hidden"
+                  className={`${homeHeroPrimaryBtn} relative mt-8 w-full lg:hidden`}
                 >
                   Request walkthrough
                 </button>
               </div>
 
-              <div
-                id="plan-fit-walkthrough"
-                className="scroll-mt-28 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8"
-              >
+              <div id="plan-fit-walkthrough" className={`${siteFormCard} scroll-mt-28`}>
                 <h3 className="text-lg font-bold text-zinc-900">Request a walkthrough</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-                  Share your details and we&apos;ll follow up to walk through Finza for your
-                  workflow in Ghana.
+                  Send your details and we&apos;ll show how Finza fits your business.
                 </p>
                 <div className="mt-6">
                   <PlanFitLeadForm

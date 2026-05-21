@@ -52,7 +52,7 @@ export default function GhanaVatCalculatorPage() {
           <article className="prose prose-zinc mx-auto max-w-3xl prose-headings:font-bold prose-p:text-zinc-600">
             <h2>How to read the numbers</h2>
             <p>
-              The calculator applies <strong>15%</strong> to the net base for VAT, and <strong>2.5% + 2.5%</strong> for NHIL and GETFund on the same illustrative base. Your contracts, POS, or invoicing may use different composition depending on how prices are quoted — always align with your accountant and your GRA registration.
+              The calculator applies <strong>15%</strong> to the net base for VAT, and <strong>2.5% + 2.5%</strong> for NHIL and GETFund on the same illustrative base. Your contracts or invoicing may use different composition depending on how prices are quoted - always align with your accountant and your GRA registration.
             </p>
             <h3>Quick reference (GHS 5,000 net)</h3>
             <p>
@@ -61,7 +61,7 @@ export default function GhanaVatCalculatorPage() {
             <h2>2026 framework note</h2>
             <p>
               Effective <strong>1 January 2026</strong>, NHIL and GETFund are treated as <strong>input tax deductions</strong> under Ghana&apos;s revised VAT framework. A calculator shows outputs on sales; your books must still track <strong>inputs</strong> on purchases correctly. When you outgrow illustrative math,{" "}
-              <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
                 compare workspace pricing
               </Link>{" "}
               or ask a question through{" "}

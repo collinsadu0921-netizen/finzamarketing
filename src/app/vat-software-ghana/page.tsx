@@ -70,15 +70,12 @@ export default function VatSoftwareGhanaPage() {
               Finza helps Ghanaian service businesses prepare clearer records with VAT, NHIL, GETFund, WHT, and other applicable Ghana tax lines shown where they belong - on supported documents, payment records, reports, and accountant-ready exports.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
               >
-                Start 14-day free trial
-              </a>
-              <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">
-                See how Finza works
+                Book a walkthrough
               </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">No card required to start. Work in GHS with Ghana tax lines where applicable.</p>
           </div>
@@ -289,14 +286,13 @@ export default function VatSoftwareGhanaPage() {
               Use Finza to manage invoices, payments, WHT deductions, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="inline-block w-full rounded-md bg-white px-8 py-3 text-center text-base font-bold text-zinc-900 shadow sm:w-auto"
               >
-                Start 14-day free trial
-              </a>
-              <Link href="/pricing" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">
-                View pricing in GHS
+                Book a walkthrough
+              </Link>
+              <Link href="/pricing#find-plan" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">
+                Find my plan
               </Link>
             </div>
           </div>

@@ -17,7 +17,7 @@ export function Navbar() {
     ];
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-white border-b border-zinc-100">
+        <nav className="sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-white/90 shadow-sm shadow-zinc-900/[0.03] backdrop-blur-md">
             <Container className="flex h-[68px] items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
@@ -38,7 +38,7 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="hover:text-zinc-900 transition-colors"
+                                className="transition-colors hover:text-zinc-900"
                             >
                                 {link.label}
                             </Link>
@@ -47,22 +47,22 @@ export function Navbar() {
 
                     <div className="flex items-center gap-3">
                         <a
-                            href="https://app.finza.africa"
+                            href="https://app.finza.africa/login"
                             className="text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors"
                         >
                             Login
                         </a>
                         <Link
-                            href="/pricing"
-                            className="rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors"
+                            href="/pricing#find-plan"
+                            className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm transition-all duration-200 hover:border-zinc-400 hover:bg-zinc-50"
                         >
-                            Sign Up
+                            Find my plan
                         </Link>
                         <Link
-                            href="/demo"
-                            className="rounded-md bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
+                            href="/contact"
+                            className="rounded-lg bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-slate-900/20 transition-all duration-200 hover:bg-[#1e293b] hover:shadow-lg"
                         >
-                            View Demo
+                            Book a walkthrough
                         </Link>
                     </div>
                 </div>
@@ -93,25 +93,25 @@ export function Navbar() {
                         <hr className="border-zinc-100" />
                         <div className="flex flex-col gap-3 pt-2">
                             <a
-                                href="https://app.finza.africa"
+                                href="https://app.finza.africa/login"
                                 className="text-sm font-medium text-zinc-500 hover:text-zinc-900 py-2"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Login
                             </a>
                             <Link
-                                href="/pricing"
+                                href="/pricing#find-plan"
                                 className="rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 text-center"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Sign Up
+                                Find my plan
                             </Link>
                             <Link
-                                href="/demo"
+                                href="/contact"
                                 className="rounded-md bg-[#0F172A] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 text-center"
                                 onClick={() => setIsOpen(false)}
                             >
-                                View Demo
+                                Book a walkthrough
                             </Link>
                         </div>
                     </Container>

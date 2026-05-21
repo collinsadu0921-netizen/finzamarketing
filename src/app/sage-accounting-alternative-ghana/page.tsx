@@ -99,17 +99,16 @@ export default function SageAccountingAlternativeGhanaPage() {
               If you are comparing Sage with software built around Ghanaian service-business workflows, focus on how your records are created every day. Finza helps connect proposals, quotes, invoices, payments, expenses, supporting documents, payroll records, and accountant review in one Ghana-focused workspace.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
-                href="/pricing"
+                href="/pricing#find-plan"
                 className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
               >
-                View pricing in GHS
+                Find my plan
               </Link>
             </div>
             <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
@@ -155,7 +154,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               <Link href="/accounting-vs-excel-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 accounting vs Excel Ghana
               </Link>
-              {" "}while you weigh optionsâ€”and{" "}
+              {" "}while you weigh options, and{" "}
               <Link href="/quickbooks-alternative-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 QuickBooks alternative Ghana
               </Link>{" "}
@@ -398,15 +397,14 @@ export default function SageAccountingAlternativeGhanaPage() {
               Compare Finza with your current workflow
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use the free trial to see whether Finzaâ€™s proposal-to-payment workflow fits your Ghanaian service business better than spreadsheet-only records or a system that does not match your daily process.
+              Use the free trial to see whether Finza's proposal-to-payment workflow fits your Ghanaian service business better than spreadsheet-only records or a system that does not match your daily process.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="w-full rounded-md bg-white px-8 py-3.5 text-center text-base font-bold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-100 sm:w-auto"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
                 href="/demo"
                 className="w-full rounded-md border border-zinc-500 px-8 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"

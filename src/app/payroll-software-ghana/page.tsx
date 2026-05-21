@@ -70,18 +70,12 @@ export default function PayrollSoftwareGhanaPage() {
               Finza helps Ghanaian service businesses manage payroll records alongside invoices, payments, expenses, supplier bills, incoming documents, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Start 14-day free trial
-              </a>
-              <Link
-                href="/demo"
-                className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
-              >
-                See how Finza works
+                Book a walkthrough
               </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">
               No card required to start. Work in GHS with records built around Ghanaian business needs.
@@ -321,14 +315,13 @@ export default function PayrollSoftwareGhanaPage() {
               Use Finza to manage payroll records, expenses, payments, documents, reports, and accountant-ready information in one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900 shadow-sm hover:bg-zinc-100"
               >
-                Start 14-day free trial
-              </a>
-              <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
-                View pricing in GHS
+                Book a walkthrough
+              </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
+                Find my plan
               </Link>
             </div>
           </div>

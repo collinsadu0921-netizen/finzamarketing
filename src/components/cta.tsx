@@ -8,16 +8,23 @@ export function CTA() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/20 rounded-full blur-[120px] pointer-events-none mix-blend-overlay" />
 
             <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
-                <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight leading-[1.1]">Ready to Stop Manual Posting?</h2>
+                <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight leading-[1.1]">Ready for clearer records?</h2>
                 <p className="text-xl md:text-2xl mb-12 opacity-80 leading-relaxed max-w-2xl mx-auto">
-                    Experience the future of automated accounting in Ghana today.
+                    See how Finza helps Ghanaian service businesses run quotes, invoices, payments, and records in GHS.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                     <Button size="lg" variant="secondary" className="h-16 px-12 text-lg font-bold shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto text-primary bg-white hover:bg-white/90" asChild>
-                        <Link href="/demo">
-                            View Demo
+                        <Link href="/contact">
+                            Book a walkthrough
                         </Link>
                     </Button>
+                    <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-semibold border-2 border-white/40 text-white hover:bg-white/10 w-full sm:w-auto" asChild>
+                        <Link href="/pricing#find-plan">
+                            Find my plan
+                        </Link>
+                    </Button>
+                    </div>
                 </div>
             </div>
         </section>

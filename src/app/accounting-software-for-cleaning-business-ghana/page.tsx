@@ -10,7 +10,7 @@ import { breadcrumbListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting Software for Cleaning Businesses in Ghana (2026) | Finza",
   description:
-    "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicableâ€”without spreadsheet chaos. Start a 14-day free trial.",
+    "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicable, without spreadsheet chaos. Start a 14-day free trial.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-cleaning-business-ghana",
   },
@@ -30,7 +30,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-zinc-600">
-              Use case Â· Ghana
+              Use case · Ghana
             </span>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
               Accounting software for cleaning businesses in Ghana
@@ -42,16 +42,15 @@ export default function AccountingSoftwareCleaningGhanaPage() {
               <strong className="text-zinc-700">Finza</strong> fits teams that bill often and need one place for receivables, expenses, and reports your accountant can review.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link href="/invoicing-software-ghana" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
                 Invoicing in GHS
               </Link>
-              <Link href="/pricing" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
                 Pricing
               </Link>
             </div>
@@ -64,12 +63,12 @@ export default function AccountingSoftwareCleaningGhanaPage() {
           <div className="mx-auto max-w-3xl space-y-6 text-zinc-600">
             <h2 className="text-2xl font-bold text-zinc-900">What cleaning operators need in software</h2>
             <ul className="list-inside list-disc space-y-2">
-              <li>Clear quotes that become invoices without retypingâ€”see our hub for quotation-to-bill flows.</li>
+              <li>Clear quotes that become invoices without retyping - see our hub for quotation-to-bill flows.</li>
               <li>Customer balances in Ghana cedis: residential vs commercial contracts, deposits, and top-ups.</li>
-              <li>Expense visibility for supplies and transportâ€”pair with bookkeeping habits and full accounting views.</li>
+              <li>Expense visibility for supplies and transport - pair with bookkeeping habits and full accounting views.</li>
             </ul>
             <p>
-              Use the short â€œnext stepsâ€ list below for hubsâ€”then layer the{" "}
+              Use the short "next steps" list below for hubs, then layer the{" "}
               <Link href="/blog/bookkeeping-checklist-ghana" className="font-semibold text-zinc-900 underline">
                 weekly bookkeeping checklist
               </Link>{" "}
@@ -80,7 +79,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
       </section>
 
       <MidPageCtaBand
-        title="Put this month's contracts in one receivables viewâ€”then chase with confidence."
+        title="Put this month's contracts in one receivables view - then chase with confidence."
         subtitle="14-day free trial. No card required to start."
       />
 
@@ -91,7 +90,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Example week</p>
               <h3 className="mt-2 text-lg font-bold text-zinc-900">Three sites, two overdue, one deposit</h3>
               <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-                Monday you quote a new office block; Tuesdayâ€“Thursday crews run scheduled visits; Friday you invoice retainer clients and see two commercial accounts past terms. Supplies and fuel hit the same week. In one GHS workspace, receivables, expenses, and tax lines where applicable stay tied to the same customersâ€”so your accountant is not rebuilding the story from chat screenshots.
+                Monday you quote a new office block; Tuesday"Thursday crews run scheduled visits; Friday you invoice retainer clients and see two commercial accounts past terms. Supplies and fuel hit the same week. In one GHS workspace, receivables, expenses, and tax lines where applicable stay tied to the same customers"so your accountant is not rebuilding the story from chat screenshots.
               </p>
             </div>
             <div>
@@ -99,7 +98,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
               <ol className="mt-4 list-inside list-decimal space-y-2 text-sm leading-relaxed text-zinc-600">
                 <li>Add each contract as a customer with clear billing terms.</li>
                 <li>Turn approved quotes into invoices without retyping line items.</li>
-                <li>Record MoMo, bank, or cash when clients payâ€”balances update for the team.</li>
+                <li>Record MoMo, bank, or cash when clients pay - balances update for the team.</li>
                 <li>Log supply runs the same week so margin is visible before month-end.</li>
               </ol>
             </div>
@@ -122,7 +121,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
                     Pricing
                   </Link>
                 </li>

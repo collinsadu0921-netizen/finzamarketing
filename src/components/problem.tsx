@@ -16,12 +16,12 @@ export function Problem() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-                    {/* Card 1: Manual Posting */}
+                    {/* Card 1: Scattered records */}
                     <div className="p-10 bg-background rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border/50 group">
                         <div className="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-8 text-red-600 group-hover:scale-110 transition-transform">
                             <FileWarning className="w-8 h-8" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-4 text-primary">Manual Posting</h3>
+                        <h3 className="text-2xl font-bold mb-4 text-primary">Scattered records</h3>
                         <p className="text-muted-foreground leading-relaxed text-lg">
                             Entering data manually is slow, boring, and prone to costly human errors that compound over time.
                         </p>

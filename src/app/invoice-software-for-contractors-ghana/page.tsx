@@ -8,9 +8,9 @@ import { MidPageCtaBand, WhyBusinessesTrustFinza } from "@/components/seo-market
 import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Invoice Software for Contractors in Ghana â€” GHS, Milestones & Quotes | Finza",
+  title: "Invoice Software for Contractors in Ghana - GHS, Milestones & Quotes | Finza",
   description:
-    "Bill construction and project work in Ghana cedis: approved scopes, progress invoices, and unpaid trackingâ€”without losing the thread in WhatsApp. Start a 14-day free trial.",
+    "Bill construction and project work in Ghana cedis: approved scopes, progress invoices, and unpaid tracking, without losing the thread in WhatsApp. Start a 14-day free trial.",
   alternates: {
     canonical: "https://www.finza.africa/invoice-software-for-contractors-ghana",
   },
@@ -30,24 +30,23 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-zinc-600">
-              Contractors Â· Ghana
+              Contractors · Ghana
             </span>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
               Invoice software for contractors in Ghana
             </h1>
             <p className="text-lg leading-relaxed text-zinc-600">
-              Contractors argue about <strong className="text-zinc-900">scope</strong> and <strong className="text-zinc-900">variation</strong>â€”then about <strong className="text-zinc-900">what was invoiced</strong>. If your accountant keeps asking for a single list of open billings, you need invoice history tied to the same quotes you agreed.
+              Contractors argue about <strong className="text-zinc-900">scope</strong> and <strong className="text-zinc-900">variation</strong>, then about <strong className="text-zinc-900">what was invoiced</strong>. If your accountant keeps asking for a single list of open billings, you need invoice history tied to the same quotes you agreed.
             </p>
             <p className="text-sm text-zinc-500">
               <strong className="text-zinc-700">Finza invoicing software Ghana</strong> works with structured quotes, progress-style billing, and customer balances in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link href="/quotation-software-ghana" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
                 Quotation software
               </Link>
@@ -64,21 +63,21 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
           <div className="mx-auto max-w-3xl space-y-6 text-zinc-600">
             <h2 className="text-2xl font-bold text-zinc-900">Reduce disputes before they become receivables problems</h2>
             <p className="leading-relaxed">
-              Align line items and agreed totals from quotation to invoice. Record payments when retention releases or clients settleâ€”your open balance should match reality.
+              Align line items and agreed totals from quotation to invoice. Record payments when retention releases or clients settle - your open balance should match reality.
             </p>
             <p>
               For document discipline, start with{" "}
               <Link href="/blog/how-to-create-invoice-in-ghana" className="font-semibold text-zinc-900 underline">
                 how to create an invoice in Ghana
               </Link>
-              â€”then wire the same scope through the steps below.
+              -then wire the same scope through the steps below.
             </p>
           </div>
         </Container>
       </section>
 
       <MidPageCtaBand
-        title="Send the next progress invoice from the same approved scopeâ€”no silent retyping."
+        title="Send the next progress invoice from the same approved scope - no silent retyping."
         subtitle="14-day free trial. No card required to start."
         className="bg-white py-10"
       />
@@ -88,7 +87,7 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
           <div className="mx-auto max-w-3xl space-y-10">
             <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-6">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Workflow</p>
-              <h3 className="mt-2 text-lg font-bold text-zinc-900">Site visit to paymentâ€”one thread</h3>
+              <h3 className="mt-2 text-lg font-bold text-zinc-900">Site visit to payment - one thread</h3>
               <p className="mt-2 text-sm leading-relaxed text-zinc-600">
                 Variations get argued on site; finance should still see the same line items the client signed. Progress claims, retention, and final invoices need to reference the original scope so open receivables match what project leads believe is owed.
               </p>
@@ -97,9 +96,9 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">How Finza fits in practice</p>
               <ol className="mt-4 list-inside list-decimal space-y-2 text-sm leading-relaxed text-zinc-600">
                 <li>Lock the approved quotation as the source of billable lines.</li>
-                <li>Raise each progress invoice from that scopeâ€”note retention if your terms use it.</li>
+                <li>Raise each progress invoice from that scope - note retention if your terms use it.</li>
                 <li>Share the PDF or link; when payment lands, record it once in GHS.</li>
-                <li>Review unpaid by customer before the next site meetingâ€”no silent drift.</li>
+                <li>Review unpaid by customer before the next site meeting - no silent drift.</li>
               </ol>
             </div>
             <div className="border-t border-zinc-200 pt-8">
@@ -121,7 +120,7 @@ export default function InvoiceSoftwareContractorsGhanaPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
                     Pricing
                   </Link>
                 </li>

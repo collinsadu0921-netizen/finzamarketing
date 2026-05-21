@@ -71,18 +71,12 @@ export default function BestAccountingSoftwareGhanaPage() {
               The best accounting software for your business is not only about reports at month-end. It should help you manage daily work - proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Start 14-day free trial
-              </a>
-              <Link
-                href="/demo"
-                className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
-              >
-                See how Finza works
+                Book a walkthrough
               </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">
               No card required to start. Built for Ghanaian service businesses that want clearer records before accountant review.
@@ -95,7 +89,7 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">What â€œbestâ€ should mean for a Ghanaian business</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">What "best" should mean for a Ghanaian business</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               The best accounting software depends on how your business actually works.
             </p>
@@ -341,14 +335,13 @@ export default function BestAccountingSoftwareGhanaPage() {
               Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:justify-center">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
               >
-                Start 14-day free trial
-              </a>
-              <Link href="/pricing" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
-                View pricing in GHS
+                Book a walkthrough
+              </Link>
+              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
+                Find my plan
               </Link>
             </div>
           </div>

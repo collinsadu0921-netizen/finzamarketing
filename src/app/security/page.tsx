@@ -71,17 +71,16 @@ export default function SecurityPage() {
               Finza helps Ghanaian businesses manage invoices, payments, documents, payroll, reports, and accountant-ready records with workspace separation, user permissions, audit logs, period controls, and controlled document-sharing flows.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
-                href="/contact"
+                href="/pricing#find-plan"
                 className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center"
               >
-                Contact us
+                Find my plan
               </Link>
             </div>
             <p className="text-sm text-zinc-500">
@@ -373,12 +372,11 @@ export default function SecurityPage() {
               Use Finza to manage invoices, payments, documents, payroll, reports, access controls, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a
-                href="https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1"
+              <Link href="/contact"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
               >
-                Start 14-day free trial
-              </a>
+                Book a walkthrough
+              </Link>
               <Link
                 href="/contact"
                 className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center"

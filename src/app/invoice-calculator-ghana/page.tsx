@@ -7,9 +7,6 @@ import { JsonLd } from "@/components/json-ld";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { breadcrumbListSchema } from "@/lib/schema";
 
-const signupUrl =
-  "https://app.finza.africa/signup?workspace=service&plan=starter&billing_cycle=monthly&trial=1";
-
 export const metadata: Metadata = {
   title: "Ghana Invoice Calculator | Preview Invoice Totals, VAT and Balance Due",
   description:
@@ -40,16 +37,16 @@ export default function InvoiceCalculatorGhanaPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
-                href={signupUrl}
+                href="/contact"
                 className="inline-flex items-center rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
               >
-                Start 14-day free trial
+                Book a walkthrough
               </Link>
               <Link
-                href="/demo"
+                href="/pricing#find-plan"
                 className="inline-flex items-center rounded-lg border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 hover:bg-zinc-50"
               >
-                See how it works
+                Find my plan
               </Link>
             </div>
             <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
@@ -93,10 +90,10 @@ export default function InvoiceCalculatorGhanaPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
-                href={signupUrl}
+                href="/contact"
                 className="inline-flex items-center rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
               >
-                Start 14-day free trial
+                Book a walkthrough
               </Link>
               <Link
                 href="/invoicing-software-ghana"
