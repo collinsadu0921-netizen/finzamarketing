@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Small Business Accounting Software in Ghana | Finza",
   description:
-    "Finza helps Ghanaian small service businesses manage proposals, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines, and accountant-ready records.",
+    "Finza small business accounting software helps Ghanaian SMEs see invoices, payments, expenses, payroll records, reports, and accountant handoff in GHS.",
   alternates: {
     canonical: "https://www.finza.africa/small-business-accounting-ghana",
   },
@@ -67,7 +67,7 @@ export default function SmallBusinessAccountingGhanaPage() {
               Small business accounting software in Ghana for clearer records
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Finza helps Ghanaian small service businesses manage the daily records behind accounting - proposals, quotes, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in GHS.
+              Finza helps owner-led teams see the money story behind daily work: invoices, payments, expenses, supplier bills, payroll records, reports, Ghana tax lines, and accountant handoff in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -103,32 +103,32 @@ export default function SmallBusinessAccountingGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What small businesses need to manage</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What owners need to see quickly</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
                 {
-                  t: "Client documents",
-                  d: "Create proposals, quotes, proformas, invoices, and receipts.",
+                  t: "Who owes money",
+                  d: "Review customer balances and unpaid invoice context.",
                 },
                 {
-                  t: "Payments",
-                  d: "Record full and partial payments and review outstanding customer balances.",
+                  t: "What the business spent",
+                  d: "Track expenses, supplier bills, and supporting documents.",
                 },
                 {
-                  t: "Expenses and bills",
-                  d: "Track business costs, supplier bills, and supporting documents.",
+                  t: "What payroll changed",
+                  d: "Keep payroll records closer to business review.",
                 },
                 {
-                  t: "Incoming documents",
-                  d: "Keep uploaded receipts, PDFs, bills, and other records organized.",
+                  t: "What needs accountant review",
+                  d: "Prepare reports, exports, and records your accountant can understand.",
                 },
                 {
-                  t: "Payroll records",
-                  d: "Keep payroll activity closer to the wider business records.",
+                  t: "What tax lines apply",
+                  d: "Show VAT, NHIL, GETFund, and WHT where applicable.",
                 },
                 {
-                  t: "Reports and review",
-                  d: "Use reports, exports, audit logs, and period controls where applicable.",
+                  t: "What changed this month",
+                  d: "Use GHS reports to review activity before month-end conversations.",
                 },
               ].map((x) => (
                 <div key={x.t} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50">
@@ -239,25 +239,19 @@ export default function SmallBusinessAccountingGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What Finza helps you review</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Small business review points</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-zinc-700">
               {[
-                "Customer invoices",
-                "Quotes and proformas",
-                "Receipts",
-                "Payment records",
-                "Partial payments",
                 "Customer balances",
-                "Expenses",
+                "Unpaid invoices",
+                "Business expenses",
                 "Supplier bills",
-                "Incoming documents",
+                "Receipt evidence",
                 "Payroll records",
                 "Ghana tax lines where applicable",
-                "Reports",
+                "Reports in GHS",
                 "Exports",
-                "Audit logs",
-                "Period controls",
-                "Accountant-ready records",
+                "Accountant handoff",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -332,7 +326,7 @@ export default function SmallBusinessAccountingGhanaPage() {
               Start organizing your small business records
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
+              Use Finza to review invoices, balances, costs, payroll records, reports, and accountant handoff in one GHS workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <Link href="/contact"
@@ -349,19 +343,11 @@ export default function SmallBusinessAccountingGhanaPage() {
       </section>
 
       <RelatedClusterLinks
+        mode="no-primary"
         related={[
-          { href: "/features", label: "Features", desc: "Product capabilities" },
-          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
-          { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
-          { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
-          { href: "/vat-software-ghana", label: "VAT software", desc: "Tax line clarity" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
-          { href: "/accountants", label: "For accountants", desc: "Accountant-ready records" },
-          { href: "/security", label: "Security", desc: "Trust and controls" },
-          { href: "/contact", label: "Contact", desc: "Talk to the team" },
+          { href: "/accounting-for-small-business-ghana", label: "Small business guide", desc: "Daily records first" },
         ]}
       />
       <Footer />

@@ -10,12 +10,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
+import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Invoice Tracking Software in Ghana | Track Sent, Paid and Overdue Invoices",
   description:
-    "Track invoices in GHS with Finza. See sent, paid, partial, overdue, and outstanding invoices for your Ghanaian service business, with clearer payment records and accountant-ready information.",
+    "Track unpaid invoices, partial payments, overdue balances, customer statements, and payment follow-up in GHS with Finza invoice tracking software.",
   alternates: {
     canonical: "https://www.finza.africa/invoice-tracking-software-ghana",
   },
@@ -68,7 +69,7 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
               Invoice tracking software in Ghana for sent, paid and overdue invoices
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Sending an invoice is only one part of the job. A Ghanaian service business also needs to know which invoices have been sent, which clients have paid, which payments are partial, which balances remain outstanding, and which invoices need follow-up. Finza helps keep invoice tracking connected to quotes, payments, receipts, customer records, and reports.
+              This page is for collections and balances after the invoice is sent. Finza helps you see unpaid invoices, partial payments, overdue balances, payment history, customer statements, and follow-up context in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -159,9 +160,9 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">From quote to invoice to payment</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">From sent invoice to follow-up</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Invoice tracking is stronger when it connects to the work that came before it. In Finza, a service business can move from a quote or proforma to an invoice, then record payment activity against that invoice.
+              Invoice tracking is stronger when follow-up starts from the actual customer balance, not a copied spreadsheet. In Finza, payment activity stays tied to the invoice and customer record.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
               Connect this flow with{" "}
@@ -179,13 +180,12 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
               .
             </p>
             <ol className="list-decimal space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
-              <li>Create a quote or proforma when needed</li>
-              <li>Convert or create the invoice</li>
               <li>Send the invoice to the customer</li>
               <li>Track sent, paid, partial, or overdue status</li>
               <li>Record payments received</li>
+              <li>Review what remains outstanding</li>
+              <li>Use customer statements during follow-up</li>
               <li>Share receipts or payment records</li>
-              <li>Review balances and reports</li>
             </ol>
           </div>
         </Container>
@@ -208,6 +208,13 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
           </div>
         </Container>
       </section>
+
+      <ProductProofSection
+        assetIds={["customer-statement", "receipt-payment"]}
+        eyebrow="Collections view"
+        heading="See what has been paid, what is partial, and what is still outstanding"
+        lead="Invoice tracking is not just creating the invoice. It is knowing which customers still owe money, which invoices are partly paid, and when to follow up with a clearer statement."
+      />
 
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
@@ -362,9 +369,14 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
       </section>
 
       <RelatedClusterLinks
+        primary={{
+          href: "/invoicing-software-ghana",
+          label: "Invoicing software Ghana",
+          desc: "Create and send invoices in GHS",
+        }}
         related={[
-          { href: "/invoicing-software-ghana", label: "Invoicing Ghana", desc: "Send and track in GHS" },
           { href: "/quotation-software-ghana", label: "Quotations Ghana", desc: "Quote to invoice" },
+          { href: "/bookkeeping-software-ghana", label: "Bookkeeping Ghana", desc: "Receipts and expense records" },
           { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
         ]}
       />

@@ -6,8 +6,10 @@ import {
   sectionLead,
   sectionTitle,
 } from "@/components/home/home-ui";
-import { PLANS_STARTING_PRICE_GHS } from "@/lib/pricing-plans";
+import { getPlanSignupHref, pricingPlansData, PLANS_STARTING_PRICE_GHS } from "@/lib/pricing-plans";
 import { Sparkles } from "lucide-react";
+
+const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 /** Compact pricing CTA — full tier table lives in pricing-tiers.tsx for internal reuse */
 export function PricingSection() {
@@ -23,18 +25,17 @@ export function PricingSection() {
               </span>
               <h2 className={sectionTitle}>Find the right Finza plan</h2>
               <p className={sectionLead}>
-                Answer a few questions or book a walkthrough. We&apos;ll help you choose the right plan
-                and show the price in GHS.
+                Compare public monthly prices in GHS. Start a free trial, or use plan fit if you want help choosing.
               </p>
               <p className="rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-sm font-semibold text-zinc-800">
                 Plans start from GH₵{PLANS_STARTING_PRICE_GHS.toLocaleString()}/month.
               </p>
               <div className="flex w-full flex-col items-center justify-center gap-3 pt-2 sm:w-auto sm:flex-row">
-                <Link href="/contact" className={homePrimaryBtn}>
-                  Book a walkthrough
-                </Link>
-                <Link href="/pricing#find-plan" className={homeSecondaryBtn}>
-                  Find my plan
+                <a href={starterSignupHref} className={homePrimaryBtn}>
+                  Start free trial
+                </a>
+                <Link href="/pricing#plans" className={homeSecondaryBtn}>
+                  Compare plans
                 </Link>
               </div>
             </div>

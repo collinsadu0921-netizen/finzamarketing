@@ -5,6 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/container";
+import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+
+const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,12 +55,12 @@ export function Navbar() {
                         >
                             Login
                         </a>
-                        <Link
-                            href="/pricing#find-plan"
+                        <a
+                            href={starterSignupHref}
                             className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm transition-all duration-200 hover:border-zinc-400 hover:bg-zinc-50"
                         >
-                            Find my plan
-                        </Link>
+                            Start free trial
+                        </a>
                         <Link
                             href="/contact"
                             className="rounded-lg bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-slate-900/20 transition-all duration-200 hover:bg-[#1e293b] hover:shadow-lg"
@@ -99,13 +102,13 @@ export function Navbar() {
                             >
                                 Login
                             </a>
-                            <Link
-                                href="/pricing#find-plan"
+                            <a
+                                href={starterSignupHref}
                                 className="rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 text-center"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Find my plan
-                            </Link>
+                                Start free trial
+                            </a>
                             <Link
                                 href="/contact"
                                 className="rounded-md bg-[#0F172A] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0F172A]/90 text-center"

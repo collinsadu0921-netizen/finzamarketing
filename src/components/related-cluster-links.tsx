@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
 
-const PRIMARY = {
+const DEFAULT_PRIMARY = {
   href: "/accounting-software-ghana",
   label: "Accounting software for Ghana",
-  desc: "See how Finza helps service businesses stay in control",
+  desc: "Month-end reports, GHS records, and accountant handoff",
 };
 
 export interface RelatedLink {
@@ -19,6 +19,7 @@ type RelatedClusterLinksProps =
   | {
       /** Default: primary hub + two related pages */
       mode?: "with-primary";
+      primary?: RelatedLink;
       related: RelatedLink[];
       heading?: string;
     }
@@ -30,16 +31,25 @@ type RelatedClusterLinksProps =
     };
 
 /**
- * Site-wide SEO cluster pattern: surface the primary money page
- * plus two contextually related routes (or three related routes on the hub page).
+ * Site-wide SEO cluster pattern: surface a contextually relevant hub
+ * plus related routes (or three related routes on the hub page).
  */
 export function RelatedClusterLinks(props: RelatedClusterLinksProps) {
   const heading = props.heading ?? "Related guides";
+  const primary = props.mode === "no-primary" ? null : props.primary ?? DEFAULT_PRIMARY;
 
-  const items: RelatedLink[] =
+  const rawItems: (RelatedLink | null)[] =
     props.mode === "no-primary"
       ? [...props.related]
-      : [PRIMARY, props.related[0], props.related[1]];
+      : [primary, ...props.related];
+
+  const seen = new Set<string>();
+  const items = rawItems.filter((item): item is RelatedLink => {
+    if (!item) return false;
+    if (seen.has(item.href)) return false;
+    seen.add(item.href);
+    return true;
+  }).slice(0, 3);
 
   return (
     <section className="border-b border-zinc-100 bg-zinc-50 py-16">

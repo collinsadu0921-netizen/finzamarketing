@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { ProductProofSection } from "@/components/product-proof-section";
+import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
 import {
   homeCard,
   homeCardMuted,
@@ -22,6 +24,8 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
+
+const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 function MiniUiBar({ className }: { className?: string }) {
   return (
@@ -62,7 +66,7 @@ export function HomeProblemSection() {
           <h2 className={sectionTitle}>Your business should not run on scattered records</h2>
           <p className={sectionLead}>
             Proposals, invoices, and payments live in different places. Month-end becomes a search
-            exercise. Finza keeps client work, payments, and reports in one GHS workspace.
+            exercise. Finza keeps client work, payments, and reports in one finance workspace.
           </p>
           <div className="grid gap-4 text-left sm:grid-cols-3">
             {items.map((x) => (
@@ -286,6 +290,18 @@ export function HomeOperationsSection() {
   );
 }
 
+export async function HomeProductProofSection() {
+  return (
+    <ProductProofSection
+      assetIds={["dashboard", "customer-statement"]}
+      eyebrow="Product view"
+      heading="Your records should be visible before month end"
+      lead="Finza brings invoices, payments, expenses, payroll, reports, and customer balances into one workspace, so owners can see what is happening before records reach the accountant."
+      variant="default"
+    />
+  );
+}
+
 export function HomeAssistSection() {
   return (
     <section className="relative overflow-hidden border-b border-zinc-100 bg-gradient-to-b from-zinc-50 to-white py-14">
@@ -340,11 +356,11 @@ export function HomeTrustAndCtaSection() {
               Questions before you choose a plan? We&apos;ll show how Finza fits your business.
             </p>
             <div className="relative mt-5 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:justify-center">
-              <Link href="/contact" className={homeHeroPrimaryBtn}>
+              <a href={starterSignupHref} className={homeHeroPrimaryBtn}>
+                Start free trial
+              </a>
+              <Link href="/contact" className={homeHeroSecondaryBtn}>
                 Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className={homeHeroSecondaryBtn}>
-                Find my plan
               </Link>
             </div>
           </div>

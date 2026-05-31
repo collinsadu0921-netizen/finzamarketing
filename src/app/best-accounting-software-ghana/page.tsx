@@ -89,7 +89,7 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">What "best" should mean for a Ghanaian business</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">What &quot;best&quot; should mean for a Ghanaian business</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               The best accounting software depends on how your business actually works.
             </p>

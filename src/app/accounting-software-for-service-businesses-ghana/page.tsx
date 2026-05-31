@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting Software for Service Businesses in Ghana | Finza",
   description:
-    "Finza helps Ghanaian service businesses manage proposals, quotes, invoices, payments, expenses, incoming documents, payroll, reports, Ghana tax lines, and accountant-ready records.",
+    "Finza accounting software helps Ghanaian service businesses run client work, billing, payments, expenses, payroll records, and accountant handoff in one GHS workspace.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-service-businesses-ghana",
   },
@@ -66,10 +66,10 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Accounting software for service businesses in Ghana
+              Accounting software for Ghanaian service businesses
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Finza helps Ghanaian service businesses manage the records behind client work - proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in GHS.
+              Use this page for the commercial service-business software view: client documents, billing, payments, expenses, payroll records, reports, and accountant handoff in one GHS workspace.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -90,10 +90,10 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              Service business accounting starts with the work itself
+              The product workflow for service teams
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              For service businesses, accounting does not begin only when reports are prepared. It begins when a client requests work, a proposal is sent, a quote is approved, an invoice is issued, payment is recorded, and expenses are captured.
+              Service teams need software that follows the work from client request to billing and review. Finza keeps those operating records closer together so the product is not just an end-of-month reporting tool.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
               When these records are scattered across WhatsApp, email, folders, notebooks, and spreadsheets, the accountant receives an incomplete business story.
@@ -248,24 +248,18 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              What Finza helps service businesses manage
+              Product areas included for service businesses
             </h2>
             <ul className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2 lg:grid-cols-3">
               {[
-                "Proposals",
-                "Quotes",
-                "Proformas",
-                "Invoices",
-                "Receipts",
-                "Payment records",
-                "Partial payments",
+                "Client document workflow",
+                "Invoice and receipt records",
                 "Customer balances",
-                "Expenses",
-                "Supplier bills",
-                "Incoming documents",
-                "Payroll records",
+                "Supplier bills and expenses",
+                "Incoming document review",
+                "Payroll record visibility",
                 "Ghana tax lines where applicable",
-                "Reports",
+                "Reports in GHS",
                 "Exports",
                 "Audit logs",
                 "Period controls",
@@ -343,7 +337,7 @@ export default function ServiceBusinessAccountingGhanaPage() {
               Run your service business with clearer records
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
+              Use Finza to keep service delivery, billing, payments, expenses, payroll records, and accountant review closer together.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"
@@ -363,25 +357,11 @@ export default function ServiceBusinessAccountingGhanaPage() {
       </section>
 
       <RelatedClusterLinks
+        mode="no-primary"
         related={[
           { href: "/features", label: "Features", desc: "Product capabilities" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
-          {
-            href: "/accounting-for-service-business-ghana",
-            label: "Accounting for service business",
-            desc: "Guide and workflow",
-          },
-          { href: "/small-business-accounting-ghana", label: "Small business accounting", desc: "SME workflows in Ghana" },
-          { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
-          { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
-          { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
-          { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
-          { href: "/vat-software-ghana", label: "VAT software", desc: "Tax line clarity" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
-          { href: "/accountants", label: "For accountants", desc: "Accountant-ready records" },
-          { href: "/security", label: "Security", desc: "Trust and controls" },
-          { href: "/contact", label: "Contact", desc: "Talk to the team" },
+          { href: "/accounting-for-service-business-ghana", label: "Service accounting guide", desc: "Practical workflow guidance" },
         ]}
       />
       <Footer />

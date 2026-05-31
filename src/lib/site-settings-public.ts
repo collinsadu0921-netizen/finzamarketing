@@ -29,8 +29,8 @@ function settingToString(value: unknown): string {
 const FALLBACK_SOCIAL: Record<SocialLinkKey, string> = {
   social_twitter: "https://twitter.com/finzagh",
   social_linkedin: "https://www.linkedin.com/company/finzaafrica",
-  social_instagram: "https://www.instagram.com/finzaafrica/",
-  social_tiktok: "https://www.tiktok.com/@finzaafrica",
+  social_instagram: "https://www.instagram.com/finza.africa/",
+  social_tiktok: "https://www.tiktok.com/@finza.africa",
 };
 
 /** Public read (RLS) — safe for anonymous visitors. */

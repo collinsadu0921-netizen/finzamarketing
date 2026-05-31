@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { trackFinzaEvent } from "@/lib/analytics";
+import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
 
 const HIDDEN_PREFIXES = ["/admin"];
 const SCROLL_SHOW_THRESHOLD = 380;
-const BOTTOM_HIDE_OFFSET = 140;
+const BOTTOM_HIDE_OFFSET = 300;
+const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 /** Fixed bottom bar after scroll — walkthrough + plan-fit (excludes admin). */
 export function StickySignupCta() {
@@ -44,7 +46,6 @@ export function StickySignupCta() {
 
   useEffect(() => {
     if (hidden || !onContactPage) {
-      setContactFormInView(false);
       return;
     }
 
@@ -65,19 +66,30 @@ export function StickySignupCta() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 border-t border-zinc-200/90 bg-white/90 py-3 shadow-[0_-8px_32px_rgba(15,23,42,0.12)] backdrop-blur-lg"
+      className="fixed bottom-0 left-0 right-0 z-50 border-t border-zinc-200/90 bg-white/90 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-3 shadow-[0_-8px_32px_rgba(15,23,42,0.12)] backdrop-blur-lg"
       role="region"
       aria-label="Get started"
     >
       <div className="mx-auto flex max-w-5xl flex-col items-stretch gap-2 px-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <p className="text-center text-sm text-zinc-600 sm:text-left">
-          <span className="font-bold text-zinc-900">Find the right Finza plan</span>
-          <span className="text-zinc-500">{" \u2014 for your service business in Ghana."}</span>
+          <span className="font-bold text-zinc-900">Start Finza free</span>
+          <span className="text-zinc-500">{" - or book a walkthrough."}</span>
         </p>
         <div className="flex flex-shrink-0 justify-center gap-2 sm:justify-end">
+          <a
+            href={starterSignupHref}
+            className="rounded-lg bg-[#0F172A] px-4 py-2.5 text-center text-sm font-bold text-white shadow-md shadow-slate-900/15 transition-all duration-200 hover:bg-[#1e293b]"
+            onClick={() =>
+              trackFinzaEvent("sticky_cta_trial_click", {
+                cta_label: "start_free_trial",
+              })
+            }
+          >
+            Start free trial
+          </a>
           <Link
             href="/contact"
-            className="rounded-lg bg-[#0F172A] px-4 py-2.5 text-center text-sm font-bold text-white shadow-md shadow-slate-900/15 transition-all duration-200 hover:bg-[#1e293b]"
+            className="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-center text-sm font-semibold text-zinc-900 shadow-sm transition-all duration-200 hover:border-zinc-400 hover:bg-zinc-50"
             onClick={() =>
               trackFinzaEvent("sticky_cta_walkthrough_click", {
                 cta_label: "book_walkthrough",
@@ -85,17 +97,6 @@ export function StickySignupCta() {
             }
           >
             Book a walkthrough
-          </Link>
-          <Link
-            href="/pricing#find-plan"
-            className="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-center text-sm font-semibold text-zinc-900 shadow-sm transition-all duration-200 hover:border-zinc-400 hover:bg-zinc-50"
-            onClick={() =>
-              trackFinzaEvent("sticky_cta_plan_fit_click", {
-                cta_label: "find_my_plan",
-              })
-            }
-          >
-            Find my plan
           </Link>
         </div>
       </div>

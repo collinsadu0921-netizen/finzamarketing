@@ -10,12 +10,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
+import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Bookkeeping Software in Ghana for Service Businesses | Finza",
   description:
-    "Finza helps Ghanaian service businesses keep cleaner bookkeeping records with invoices, payments, expenses, supplier bills, incoming documents, payroll, reports, Ghana tax lines, and accountant-ready exports in GHS.",
+    "Finza bookkeeping software helps Ghanaian service businesses capture receipts, expenses, supplier bills, incoming documents, and weekly records before accountant review.",
   alternates: {
     canonical: "https://www.finza.africa/bookkeeping-software-ghana",
   },
@@ -64,10 +65,10 @@ export default function BookkeepingSoftwareGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Bookkeeping software in Ghana for service businesses
+              Bookkeeping software in Ghana for cleaner weekly records
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps Ghanaian service businesses keep daily records cleaner by connecting invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in one workspace.
+              Finza helps teams capture receipts, expenses, supplier bills, incoming documents, and payment records before they disappear into WhatsApp, email, phone galleries, or spreadsheets.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -103,19 +104,19 @@ export default function BookkeepingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Keep the records behind your business activity</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Keep daily records ready for weekly review</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built around the daily records that matter to a service business. Your team can manage client documents, payments, expenses, supplier bills, payroll, and supporting documents without separating everything into different files.
+              This page is about bookkeeping habits, not the full accounting hub. Use Finza to keep the evidence behind sales, costs, bills, and payments in one place as the week happens.
             </p>
             <div className="grid gap-4 text-left sm:grid-cols-2">
               {[
                 {
-                  t: "Invoices and receipts",
-                  d: "Send invoices, record payments, and keep receipts connected to customer activity.",
+                  t: "Receipts",
+                  d: "Keep proof of spending close to the expense or supplier record.",
                 },
                 {
                   t: "Expenses",
-                  d: "Record business costs so they are easier to review later.",
+                  d: "Record business costs while the details are still fresh.",
                 },
                 {
                   t: "Supplier bills",
@@ -126,12 +127,12 @@ export default function BookkeepingSoftwareGhanaPage() {
                   d: "Upload receipts, PDFs, bills, and supporting documents for review.",
                 },
                 {
-                  t: "Payroll",
-                  d: "Keep payroll records closer to the rest of your business activity.",
+                  t: "Payment notes",
+                  d: "Keep payment records tied to the customer or supplier activity they explain.",
                 },
                 {
-                  t: "Reports",
-                  d: "Review business records and prepare cleaner information for accountant review.",
+                  t: "Accountant review",
+                  d: "Prepare cleaner weekly records before month-end review begins.",
                 },
               ].map((x) => (
                 <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
@@ -143,6 +144,13 @@ export default function BookkeepingSoftwareGhanaPage() {
           </div>
         </Container>
       </section>
+
+      <ProductProofSection
+        assetIds={["expenses", "reports-export"]}
+        eyebrow="Bookkeeping records"
+        heading="Keep daily records ready before accountant review"
+        lead="Finza helps keep expenses, supplier bills, receipts, and reports organised through the month, instead of rebuilding records from messages and spreadsheets later."
+      />
 
       {/* SECTION 3 */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
@@ -231,9 +239,9 @@ export default function BookkeepingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Prepare cleaner records for your accountant</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Hand over cleaner bookkeeping, not a folder dump</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps daily business activity create better records as work happens. Invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, and reports stay connected.
+              Finza helps daily business activity create better records as work happens. Receipts, supplier bills, payments, expenses, and documents stay easier to review.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Behind the scenes, Finza supports accounting-grade workflows such as ledger records, journals, chart of accounts, trial balance, period controls, audit logs, and exports.
@@ -335,7 +343,7 @@ export default function BookkeepingSoftwareGhanaPage() {
           <div className="mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-extrabold text-white">Keep cleaner bookkeeping records in GHS</h2>
             <p className="text-zinc-300">
-              Use Finza to manage invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in one connected workspace.
+              Use Finza to capture receipts, expenses, supplier bills, payment records, incoming documents, and review notes in one GHS workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
@@ -350,10 +358,10 @@ export default function BookkeepingSoftwareGhanaPage() {
       </section>
 
       <RelatedClusterLinks
+        mode="no-primary"
         related={[
-          { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports & tax summaries" },
-          { href: "/features", label: "Features", desc: "What Finza includes" },
-          { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
+          { href: "/bookkeeping-for-small-business-ghana", label: "Small business bookkeeping", desc: "Bookkeeping habits for SMEs" },
+          { href: "/expense-tracking-software-ghana", label: "Expense tracking", desc: "Costs and receipts" },
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals to invoice" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },

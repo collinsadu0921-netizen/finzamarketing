@@ -66,7 +66,7 @@ export const blogClusterLinks: Record<string, BlogClusterLink> = {
   },
   "how-to-manage-cash-flow-ghana": {
     relatedSlugs: ["how-to-create-invoice-in-ghana", "invoice-vs-receipt-ghana", "accounting-mistakes-small-businesses-ghana"],
-    core: { href: "/invoicing-software-ghana", label: "Invoicing software in Ghana" },
+    core: { href: "/invoice-tracking-software-ghana", label: "Invoice tracking software Ghana" },
   },
   "invoice-vs-receipt-ghana": {
     relatedSlugs: ["invoice-template-ghana", "how-to-create-invoice-in-ghana", "how-to-manage-cash-flow-ghana"],

@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Accounting Software in Ghana for Service Businesses | Finza",
   description:
-    "Finza is accounting software for Ghanaian service businesses that need proposals, invoices, payments, expenses, payroll, Ghana tax lines, reports, and accountant-ready records in GHS.",
+    "Finza is accounting software for Ghanaian service businesses that need month-end visibility, GHS reports, receivables, payables, and cleaner accountant handoff.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-ghana",
   },
@@ -69,10 +69,10 @@ export default function AccountingSoftwareGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Accounting software in Ghana for service businesses
+              Accounting software in Ghana for month-end clarity
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps Ghanaian service businesses manage the work that leads to accounting: proposals, quotes, invoices, payments, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records in GHS.
+              Finza helps owners and accountants see receivables, payables, expenses, payroll impact, Ghana tax lines, and reports in one GHS workspace before month-end turns into a spreadsheet chase.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -106,35 +106,35 @@ export default function AccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">From proposal to accountant-ready records</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Reports built from daily activity</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built around the full business workflow, not only the final accounting report. Your team can manage client documents, track money, capture costs, and keep supporting records together.
+              This page is the accounting hub. It focuses on the records owners and accountants need for review: customer balances, supplier obligations, expense context, payroll records, tax-line visibility, and exports.
             </p>
             <div className="grid gap-4 text-left sm:grid-cols-2">
               {[
                 {
-                  t: "Proposals and quotes",
-                  d: "Prepare professional proposals, quotes, and proformas before the invoice stage.",
+                  t: "Receivables",
+                  d: "See customer balances and invoice payment status before follow-up or review.",
                 },
                 {
-                  t: "Invoices and receipts",
-                  d: "Send invoices, record payments, and issue receipts when money is received.",
+                  t: "Payables and costs",
+                  d: "Keep supplier bills, expenses, and supporting records closer to reports.",
                 },
                 {
-                  t: "Expenses and supplier bills",
-                  d: "Track business costs and supplier obligations in the same workspace.",
+                  t: "GHS reporting",
+                  d: "Review business activity and reports in Ghana cedis.",
                 },
                 {
-                  t: "Incoming documents",
-                  d: "Upload receipts, PDFs, bills, and supporting documents for review.",
+                  t: "Accountant handoff",
+                  d: "Give your accountant cleaner records, exports, and period context.",
                 },
                 {
-                  t: "Payroll",
-                  d: "Keep payroll records closer to the rest of your business activity.",
+                  t: "Controls",
+                  d: "Use audit logs, period controls, and accounting workflows where your plan supports them.",
                 },
                 {
-                  t: "Reports and exports",
-                  d: "Use reports and exports to support month-end review and accountant work.",
+                  t: "Tax-line review",
+                  d: "Show VAT, NHIL, GETFund, and WHT where applicable without turning Finza into tax advice.",
                 },
               ].map((x) => (
                 <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
@@ -225,25 +225,15 @@ export default function AccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">What Finza helps you manage</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Accounting controls owners can understand</h2>
             <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-3">
               {[
-                "Proposals",
-                "Quotes",
-                "Proformas",
-                "Invoices",
-                "Receipts",
                 "Customer balances",
-                "Payment recording",
-                "Partial payments",
-                "Overdue invoices",
-                "Expenses",
-                "Supplier bills",
-                "Incoming documents",
-                "Document review",
-                "Payroll",
+                "Supplier obligations",
+                "Expense context",
+                "Payroll record visibility",
                 "Ghana tax lines where applicable",
-                "Reports",
+                "Reports in GHS",
                 "Ledger-supported accounting workflows",
                 "Exports",
                 "Audit logs",
@@ -335,7 +325,7 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-extrabold text-white">Start with cleaner accounting records in GHS</h2>
             <p className="text-zinc-300">
-              Use Finza to manage proposals, invoices, payments, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records from one connected workspace.
+              Use Finza to review balances, costs, payroll records, tax lines, reports, and accountant handoff from one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">

@@ -2,13 +2,16 @@ import Link from "next/link";
 
 import Image from "next/image";
 
-import { FileCheck2, FileText, ScrollText, Smartphone, Sparkles } from "lucide-react";
+import { FileCheck2, FileText, Smartphone, Sparkles } from "lucide-react";
 
 import { Container } from "@/components/container";
 
 import { GhanaProofChips, HERO_MOBILE_PROOF_CHIPS } from "@/components/site/ghana-proof-chips";
 
 import { homeHeroPrimaryBtn, homeHeroSecondaryBtn } from "@/components/home/home-ui";
+import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+
+const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 
 
@@ -16,7 +19,7 @@ const FLOAT_CARDS = [
 
   {
 
-    label: "Invoice sent · GHS",
+    label: "Invoice sent",
 
     icon: FileCheck2,
 
@@ -56,20 +59,6 @@ const FLOAT_CARDS = [
 
   },
 
-  {
-
-    label: "Statement prepared",
-
-    icon: ScrollText,
-
-    tone: "bg-amber-500/15 text-amber-200",
-
-    position: "left-6 bottom-20 md:left-8 md:bottom-24",
-
-    delay: "1s",
-
-  },
-
 ] as const;
 
 
@@ -92,19 +81,19 @@ function HeroProofCard({
 
     <div
 
-      className={`hero-float motion-reduce:animate-none absolute z-20 hidden items-center gap-2 rounded-xl border border-white/20 bg-zinc-900/80 px-3 py-2 shadow-lg shadow-black/30 backdrop-blur-md md:flex ${position}`}
+      className={`hero-float motion-reduce:animate-none absolute z-20 hidden items-center gap-2 rounded-xl border border-white/15 bg-zinc-900/75 px-2.5 py-1.5 shadow-lg shadow-black/30 backdrop-blur-md md:flex ${position}`}
 
       style={{ animationDelay: delay }}
 
     >
 
-      <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${tone}`}>
+      <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg ${tone}`}>
 
-        <Icon className="h-3.5 w-3.5" aria-hidden />
+        <Icon className="h-3 w-3" aria-hidden />
 
       </span>
 
-      <span className="text-xs font-semibold text-white">{label}</span>
+      <span className="text-[11px] font-semibold text-white/90">{label}</span>
 
     </div>
 
@@ -146,7 +135,7 @@ export function HomeHero() {
 
               <FileText className="h-3.5 w-3.5 text-amber-300/90" aria-hidden />
 
-              Built for Ghanaian service businesses
+              Built for service businesses
 
             </div>
 
@@ -158,17 +147,17 @@ export function HomeHero() {
             </h1>
 
             <p className="max-w-xl text-lg leading-relaxed text-zinc-300">
-              Quotes, invoices, payments, expenses, payroll, and reports in one GHS workspace —
+              Quotes, invoices, payments, expenses, payroll, and reports in one place —
               without chasing scattered files.
             </p>
 
             <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
 
-              <Link href="/contact" className={homeHeroPrimaryBtn}>
+              <a href={starterSignupHref} className={homeHeroPrimaryBtn}>
 
-                Book a walkthrough
+                Start free trial
 
-              </Link>
+              </a>
 
               <Link href="/pricing#find-plan" className={homeHeroSecondaryBtn}>
 
@@ -216,7 +205,7 @@ export function HomeHero() {
 
                 <span className="mx-auto truncate text-[11px] font-medium text-zinc-500">
 
-                  app.finza.africa — GHS workspace
+                  app.finza.africa — Business workspace
 
                 </span>
 

@@ -40,7 +40,7 @@ export function ProductScreenshotFrame({
             isDark ? "text-zinc-500" : "text-zinc-400"
           )}
         >
-          app.finza.africa — GHS workspace
+          app.finza.africa — Business workspace
         </span>
       </div>
       <div className={cn("overflow-hidden rounded-b-xl", isDark ? "bg-slate-950/50" : "bg-zinc-50")}>

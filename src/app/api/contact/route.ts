@@ -163,27 +163,35 @@ export async function POST(req: NextRequest) {
     }
 
     const { name, email, message, company, phone } = body;
+    const trimmedName = typeof name === "string" ? name.trim() : "";
+    const trimmedCompany = typeof company === "string" ? company.trim() : "";
+    const trimmedPhone = typeof phone === "string" ? phone.trim() : "";
+    const trimmedEmail = typeof email === "string" ? email.trim() : "";
+    const trimmedMessage = typeof message === "string" ? message.trim() : "";
 
-    if (!email || !message || typeof message !== "string" || message.trim().length < 10) {
+    if (!trimmedName || !trimmedCompany || !trimmedPhone || !trimmedEmail || trimmedMessage.length < 10) {
       return NextResponse.json(
-        { error: "Email and a message (at least 10 characters) are required." },
+        { error: "Full name, business name, phone, email, and a message (at least 10 characters) are required." },
         { status: 400 }
       );
+    }
+    if (!isValidEmail(trimmedEmail)) {
+      return NextResponse.json({ error: "A valid email address is required." }, { status: 400 });
     }
 
     const delivery = await deliverLead({
       source: source || "finza_contact_form",
-      name: typeof name === "string" ? name.trim() : "",
-      company: typeof company === "string" ? company.trim() : "",
-      email: String(email).trim(),
-      phone: typeof phone === "string" ? phone.trim() : "",
-      message: message.trim(),
+      name: trimmedName,
+      company: trimmedCompany,
+      email: trimmedEmail,
+      phone: trimmedPhone,
+      message: trimmedMessage,
       optional_message: "",
       recommended_plan: "",
       recommended_plan_name: "",
       recommended_plan_monthly_price: null,
       questionnaire_answers: {},
-      subject: `Website contact — ${name || email}`,
+      subject: `Website contact — ${trimmedName || trimmedEmail}`,
     });
 
     if (!delivery.configured) {

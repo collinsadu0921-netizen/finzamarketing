@@ -49,7 +49,7 @@ export default function AccountingSoftwareAccraPage() {
               <strong className="text-zinc-900">Ghana cedis (GHS)</strong> for teams based in Accra or working across the country: one place for billing, spending, and reports instead of five half-updated files before month-end.
             </p>
             <p className="max-w-2xl text-sm leading-relaxed text-zinc-500">
-              You do not need a separate "Accra edition" - the same Finza workspace supports businesses operating from the capital and elsewhere. This page is for how those teams tend to work: more clients, more recurring work, and more pressure to hand a clean file to an accountant.
+              You do not need a separate &quot;Accra edition&quot; - the same Finza workspace supports businesses operating from the capital and elsewhere. This page is for how those teams tend to work: more clients, more recurring work, and more pressure to hand a clean file to an accountant.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/contact"
@@ -88,7 +88,7 @@ export default function AccountingSoftwareAccraPage() {
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The problem</p>
             <h2 className="text-3xl font-bold text-zinc-900">Accra pace exposes weak accounting fast</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              When new work lands every week, "we will fix the books later" stops working. Invoices sit in email threads, partial payments do not match line items, and VAT or NHIL treatment drifts until someone has to explain it to a firm or the tax office.{" "}
+              When new work lands every week, &quot;we will fix the books later&quot; stops working. Invoices sit in email threads, partial payments do not match line items, and VAT or NHIL treatment drifts until someone has to explain it to a firm or the tax office.{" "}
               <strong className="text-zinc-900">Accounting software for businesses in Accra</strong> should mean the same numbers in billing, collections, and management reports, not three versions of the truth.
             </p>
           </div>

@@ -36,7 +36,7 @@ export function AnimatedDashboardHero() {
         />
       </div>
 
-      {floatingCards.map((card, index) => (
+      {floatingCards.map((card) => (
         <div
           key={card.label}
           className={`hero-card ${card.position} ${card.visibility} absolute items-center gap-2 rounded-2xl border border-zinc-200 bg-white/95 px-2.5 py-1.5 text-[11px] font-semibold text-zinc-700 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur`}

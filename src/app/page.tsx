@@ -1,6 +1,5 @@
 import { Footer } from "@/components/footer";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
-import { JsonLd } from "@/components/json-ld";
 import { PricingSection } from "@/components/pricing-section";
 import { HomeHero } from "@/components/home/home-hero";
 import {
@@ -8,11 +7,11 @@ import {
   HomeDocumentsSection,
   HomeOperationsSection,
   HomeProblemSection,
+  HomeProductProofSection,
   HomeSeoLinksSection,
   HomeTrustAndCtaSection,
   HomeWorkflowSection,
 } from "@/components/home/home-sections";
-import { faqPageSchema, homePageFaqForSchema } from "@/lib/schema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,11 +26,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="flex flex-col max-md:pb-28">
-      <JsonLd data={faqPageSchema(homePageFaqForSchema)} />
-
       <HomeHero />
       <HomeProblemSection />
       <HomeWorkflowSection />
+      <HomeProductProofSection />
       <HomeDocumentsSection />
       <HomeOperationsSection />
       <HomeAssistSection />

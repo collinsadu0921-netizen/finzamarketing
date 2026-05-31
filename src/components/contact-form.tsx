@@ -63,8 +63,8 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
       {status === "ok" && (
         <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
           {isWalkthrough
-            ? "Thanks. We have received your walkthrough request and will contact you shortly."
-            : "Thanks — we've received your message. We typically reply within two business days."}
+            ? "Thanks. We have received your walkthrough request and will use these details to respond."
+            : "Thanks. We have received your message and will use these details to respond."}
         </p>
       )}
       {(status === "err" || error) && (
@@ -149,6 +149,9 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
       >
         {status === "sending" ? "Sending…" : isWalkthrough ? "Request walkthrough" : "Send message"}
       </button>
+      <p className="text-xs text-zinc-500">
+        We&apos;ll only use these details to respond to your Finza request. No spam.
+      </p>
       <p className="text-xs text-zinc-500">
         You can also email{" "}
         <a href="mailto:hello@finza.africa" className="font-medium text-zinc-900 underline underline-offset-2">

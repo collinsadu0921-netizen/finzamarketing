@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
+import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -100,6 +101,13 @@ export default function AccountantsPage() {
           </div>
         </Container>
       </section>
+
+      <ProductProofSection
+        assetIds={["reports-export", "customer-statement"]}
+        eyebrow="For accountant review"
+        heading="Cleaner records before the accountant starts work"
+        lead="Finza helps business owners keep invoices, payments, expenses, customer balances, and exports in better order before accountant review. It does not replace the accountant; it reduces the cleanup work before review starts."
+      />
 
       {/* SECTION 2 */}
       <section className="py-24 bg-white border-b border-zinc-100">

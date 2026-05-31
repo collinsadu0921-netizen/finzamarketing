@@ -4,6 +4,10 @@ export type PlanTierId = "essentials" | "professional" | "business";
 
 export const PLANS_STARTING_PRICE_GHS = 149;
 
+export function getPlanSignupHref(planParam: string, billingCycle = "monthly") {
+  return `https://app.finza.africa/signup?workspace=service&plan=${planParam}&billing_cycle=${billingCycle}&trial=1`;
+}
+
 export const PLAN_FIT_SUMMARIES: Record<
   PlanTierId,
   { name: string; description: string; planParam: string }

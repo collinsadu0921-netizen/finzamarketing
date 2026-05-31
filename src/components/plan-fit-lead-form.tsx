@@ -131,6 +131,9 @@ export function PlanFitLeadForm({ recommendedPlan, answers, onSuccess }: Props) 
       >
         {status === "sending" ? "Sending…" : "Request walkthrough"}
       </button>
+      <p className="text-xs leading-relaxed text-zinc-500">
+        We&apos;ll only use these details to respond to your Finza request. No spam.
+      </p>
     </form>
   );
 }

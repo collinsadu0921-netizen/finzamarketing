@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
+import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -139,6 +140,14 @@ export default function PayrollSoftwareGhanaPage() {
           </div>
         </Container>
       </section>
+
+      <ProductProofSection
+        assetIds={["payroll"]}
+        eyebrow="Payroll records"
+        heading="Keep payroll connected to the wider business record"
+        lead="Payroll should not sit in a separate spreadsheet without context. Finza keeps payroll records closer to invoices, expenses, and reports so owners have a clearer business picture."
+        columns={1}
+      />
 
       {/* SECTION 3 */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">

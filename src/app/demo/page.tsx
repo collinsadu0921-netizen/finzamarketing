@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { Container } from "@/components/container";
+import { Footer } from "@/components/footer";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { GhanaProofChips, HERO_MOBILE_PROOF_CHIPS } from "@/components/site/ghana-proof-chips";
 import { ProductScreenshotFrame } from "@/components/site/product-screenshot-frame";
@@ -16,6 +17,7 @@ import {
   siteInfoCard,
   sitePageHero,
 } from "@/components/home/home-ui";
+import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -71,6 +73,8 @@ const AUDIENCE_AND_CAPABILITIES: { label: string; tone?: keyof typeof chipToneCl
     { label: "Payroll records", tone: "navy" },
 ];
 
+const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
+
 export default function DemoPage() {
     return (
         <main className="flex min-h-screen flex-col bg-white max-md:pb-28">
@@ -90,9 +94,9 @@ export default function DemoPage() {
                                 <Link href="#watch-tour" className={homePrimaryBtn}>
                                     Watch the tour
                                 </Link>
-                                <Link href="/pricing#find-plan" className={homeSecondaryBtn}>
-                                    Find my plan
-                                </Link>
+                                <a href={starterSignupHref} className={homeSecondaryBtn}>
+                                    Start free trial
+                                </a>
                             </div>
                             <GhanaProofChips
                                 chips={HERO_MOBILE_PROOF_CHIPS.slice(0, 3)}
@@ -204,6 +208,7 @@ export default function DemoPage() {
                     { href: "/pricing#find-plan", label: "Pricing", desc: "Plans in GHS" },
                 ]}
             />
+            <Footer />
         </main>
     );
 }

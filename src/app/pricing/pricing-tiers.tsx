@@ -1,78 +1,39 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 import { Container } from "@/components/container";
-
-type BillingCycle = "monthly" | "quarterly" | "annual";
-
-import { pricingPlansData as plansData } from "@/lib/pricing-plans";
+import { getPlanSignupHref, pricingPlansData as plansData } from "@/lib/pricing-plans";
+import { homePrimaryBtn, homeSecondaryBtn, sectionLead, sectionTitle } from "@/components/home/home-ui";
 
 export function PricingTiers() {
-    const [cycle, setCycle] = useState<BillingCycle>("monthly");
-
-    const getPrice = (monthlyPrice: number) => {
-        if (cycle === "quarterly") return Math.round(monthlyPrice * 3 * 0.95);
-        if (cycle === "annual") return Math.round(monthlyPrice * 12 * 0.83);
-        return monthlyPrice;
-    };
-
-    const formatCycleLabel = () => {
-        if (cycle === "quarterly") return "/qtr";
-        if (cycle === "annual") return "/yr";
-        return "/mo";
-    };
-
     return (
-        <section className="py-20 bg-white border-b border-zinc-100">
+        <section id="plans" className="scroll-mt-28 border-b border-zinc-100 bg-white py-12 md:py-14">
             <Container>
-                {/* Billing Toggle */}
-                <div className="flex flex-col items-center justify-center mb-16 space-y-8">
-                    <div className="flex bg-white border border-zinc-200 p-1.5 rounded-xl shadow-sm relative overflow-x-auto max-w-full">
-                        {(["monthly", "quarterly", "annual"] as BillingCycle[]).map((c) => (
-                            <button
-                                key={c}
-                                onClick={() => setCycle(c)}
-                                className={`relative flex items-center gap-2 px-5 sm:px-6 py-2.5 text-sm font-semibold rounded-lg transition-all ${
-                                    cycle === c
-                                        ? "bg-[#1E293B] text-white shadow border border-transparent"
-                                        : "text-zinc-500 hover:text-zinc-900"
-                                }`}
-                            >
-                                <span className="whitespace-nowrap">
-                                    {c === "monthly" && "Monthly"}
-                                    {c === "quarterly" && "Quarterly \u2014 save 5%"}
-                                    {c === "annual" && "Annual \u2014 save 17%"}
-                                </span>
-                            </button>
-                        ))}
-                    </div>
-                    
-                    <div className="max-w-3xl text-center">
-                        <p className="text-[14px] leading-relaxed text-zinc-500">
-                            Quarterly and annual prices are calculated from the monthly plan price with the displayed billing-cycle discount.
-                        </p>
-                    </div>
+                <div className="mx-auto mb-8 max-w-3xl space-y-3 text-center">
+                    <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Compare plans</p>
+                    <h2 className={sectionTitle}>Start self-serve or get help choosing</h2>
+                    <p className={sectionLead}>
+                        Public monthly prices are shown below. Start a 14-day free trial now, or book a walkthrough if you want help choosing a plan.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 lg:grid-cols-3">
                     {plansData.map((plan) => (
                         <div
                             key={plan.id}
-                            className={`flex flex-col rounded-xl border shadow-sm overflow-hidden ${
+                            className={`flex flex-col overflow-hidden rounded-2xl border shadow-sm ${
                                 plan.highlight
-                                    ? "border-zinc-800 bg-white ring-1 ring-zinc-800 transform lg:scale-[1.02] z-10"
+                                    ? "z-10 border-zinc-800 bg-white ring-1 ring-zinc-800 lg:scale-[1.01]"
                                     : "border-zinc-200 bg-zinc-50/50"
                             }`}
                         >
                             {plan.highlight && (
-                                <div className="bg-[#0F172A] text-white text-center text-xs font-bold py-2 tracking-wide uppercase">
-                                    Most Popular
+                                <div className="bg-[#0F172A] py-2 text-center text-xs font-bold uppercase tracking-wide text-white">
+                                    Often recommended
                                 </div>
                             )}
 
-                            <div className="p-7 flex flex-col flex-1">
-                                <div className="mb-6">
-                                    <div className="mb-4">
+                            <div className="flex flex-1 flex-col p-6">
+                                <div className="mb-6 flex-1">
+                                    <div className="mb-4 flex items-center justify-between gap-3">
                                         <span className={`inline-flex items-center px-3.5 py-1 rounded-full text-sm font-bold ${
                                             plan.id === "essentials" ? "bg-zinc-100 text-zinc-800" :
                                             plan.id === "professional" ? "bg-blue-100 text-blue-700" :
@@ -81,42 +42,19 @@ export function PricingTiers() {
                                             {plan.name}
                                         </span>
                                     </div>
-                                    <p className="text-sm font-medium text-zinc-600 mb-6 min-h-[40px]">
+                                    <p className="mb-6 text-sm font-medium leading-relaxed text-zinc-600">
                                         {plan.subtitle}
                                     </p>
-                                    <div className="text-4xl font-extrabold text-zinc-900 mb-1">
-                                        GHS {getPrice(plan.price).toLocaleString()}
-                                        <span className="text-base font-normal text-zinc-500 ml-1.5">{formatCycleLabel()}</span>
+                                    <div className="mb-1 text-4xl font-extrabold text-zinc-900">
+                                        GH₵{plan.price.toLocaleString()}
+                                        <span className="ml-1.5 text-base font-normal text-zinc-500">/month</span>
                                     </div>
-                                    <div className="min-h-[20px] mb-5">
-                                        {cycle !== "monthly" && (
-                                            <p className={`text-xs ${plan.highlight ? "text-emerald-600 font-semibold" : "text-zinc-500 font-medium"}`}>
-                                                GHS {plan.price} / month
-                                            </p>
-                                        )}
-                                    </div>
-                                    <p className="text-sm font-semibold text-zinc-700 mb-4">
-                                        GHS {plan.price} / month
-                                    </p>
-
-                                    <a
-                                        href={`https://app.finza.africa/signup?workspace=service&plan=${plan.planParam}&billing_cycle=${cycle}&trial=1`}
-                                        className={`block w-full rounded-md px-4 py-3 text-center text-sm font-bold shadow-sm transition-colors ${
-                                            plan.highlight
-                                                ? "bg-[#0F172A] text-white hover:bg-[#0F172A]/90"
-                                                : "bg-white border border-zinc-200 text-zinc-900 hover:bg-zinc-50"
-                                        }`}
-                                    >
-                                        {plan.cta}
-                                    </a>
-                                </div>
-
-                                <div className="flex-1">
-                                    <p className="text-sm font-bold text-zinc-900 mt-4 mb-4 pb-2 border-b border-zinc-200">
+                                    <p className="mb-5 text-xs font-medium text-zinc-500">14-day free trial. No card required.</p>
+                                    <p className="mb-4 border-b border-zinc-200 pb-2 text-sm font-bold text-zinc-900">
                                         {plan.groupTitle}
                                     </p>
                                     <ul className="space-y-2.5">
-                                        {plan.items.map((item) => (
+                                        {plan.items.slice(0, 6).map((item) => (
                                             <li key={item} className="flex items-start gap-3 text-sm text-zinc-700">
                                                 <svg
                                                     className="h-4 w-4 text-zinc-400 mt-0.5 flex-shrink-0"
@@ -132,11 +70,19 @@ export function PricingTiers() {
                                         ))}
                                     </ul>
                                 </div>
+
+                                <div className="mt-7 space-y-3">
+                                    <a href={getPlanSignupHref(plan.planParam)} className={`${homePrimaryBtn} w-full`}>
+                                        {plan.cta}
+                                    </a>
+                                    <Link href="/contact" className={`${homeSecondaryBtn} w-full`}>
+                                        Book a walkthrough
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
-
             </Container>
         </section>
     );

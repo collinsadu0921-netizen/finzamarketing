@@ -14,6 +14,47 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+function getBlogCtaCopy(coreHref?: string) {
+  if (coreHref === "/vat-software-ghana") {
+    return {
+      heading: "Keep tax-related records easier to review",
+      body:
+        "For VAT, NHIL, GETFund, and WHT topics, Finza helps keep document totals, payment records, and Ghana tax lines closer together where they apply.",
+      bullets: ["Review Ghana tax lines where applicable", "Keep invoice and payment records connected", "Confirm final treatment with your accountant or GRA"],
+    };
+  }
+  if (coreHref === "/bookkeeping-software-ghana") {
+    return {
+      heading: "Turn the bookkeeping habit into a system",
+      body:
+        "Finza helps keep receipts, expenses, supplier bills, payment notes, and incoming documents organized before accountant review.",
+      bullets: ["Capture receipts and supporting documents", "Keep expenses and bills easier to review", "Prepare cleaner weekly records in GHS"],
+    };
+  }
+  if (coreHref === "/invoicing-software-ghana") {
+    return {
+      heading: "Create and follow invoices in GHS",
+      body:
+        "Finza helps create quotes, proformas, invoices, and receipts, then keeps payment records and customer balances tied to the same workflow.",
+      bullets: ["Send invoice links by email or WhatsApp", "Record full or partial payments", "Review customer balances in GHS"],
+    };
+  }
+  if (coreHref === "/quotation-software-ghana") {
+    return {
+      heading: "Move from quote to invoice without retyping",
+      body:
+        "Finza helps service businesses prepare client offers, confirm scope, and continue into invoicing when the work is approved.",
+      bullets: ["Prepare quotes and proformas", "Keep scope and pricing clear", "Continue into invoice records in GHS"],
+    };
+  }
+  return {
+    heading: "Keep accounting records easier to review",
+    body:
+      "Finza helps keep invoices, payments, costs, payroll records, reports, and accountant handoff closer together in one GHS workspace.",
+    bullets: ["Review balances and records in GHS", "Prepare cleaner accountant handoff", "Keep tax-line context where applicable"],
+  };
+}
+
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
@@ -37,6 +78,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const cluster = getBlogClusterForSlug(slug);
+  const cta = getBlogCtaCopy(cluster?.core.href);
 
   return (
     <main className="min-h-screen bg-white">
@@ -64,10 +106,10 @@ export default async function BlogPostPage({ params }: Props) {
                 href="/blog"
                 className="text-sm font-medium text-zinc-500 hover:text-zinc-900"
               >
-                ÔåÉ Blog
+                Back to blog
               </Link>
               <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-zinc-400">
-                {post.publishedAt} ┬À {post.author}
+                {post.publishedAt} / {post.author}
               </p>
               <h1 className="mt-3 text-4xl font-extrabold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
                 {post.title}
@@ -82,36 +124,28 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
           <div className="mx-auto max-w-3xl border-t border-zinc-100 px-4 py-10 md:px-0">
             <h2 className="text-lg font-bold leading-snug text-zinc-900">
-              If you&apos;re still managing this manually, Finza handles it automatically:
+              {cta.heading}
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-zinc-600">
-              Finza handles the boring alignment work for you: invoices and records stay tied together, payments update balances and status, and your numbers in GHS reflect what actually happenedÔÇönot a rebuilt spreadsheet at month-end.
+              {cta.body}
             </p>
             <ul className="mt-4 list-inside list-disc space-y-1 text-sm leading-relaxed text-zinc-600">
-              <li>Keeps invoices and books reading from the same activity</li>
-              <li>Blocks payments on draftsÔÇörecord them only after the invoice is issued</li>
-              <li>Shows tax lines separately where Ghana rules applyÔÇönot one mystery percentage</li>
+              {cta.bullets.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
             <p className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              <Link href="/contact"
-                className="font-semibold text-zinc-900 underline underline-offset-2"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Find my plan
-              </Link>
-              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Accounting software Ghana
-              </Link>
-              <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Invoicing in GHS
-              </Link>
               {cluster ? (
                 <Link href={cluster.core.href} className="font-semibold text-zinc-900 underline underline-offset-2">
                   {cluster.core.label}
                 </Link>
               ) : null}
+              <Link href="/pricing#plans" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Compare plans
+              </Link>
+              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Product tour
+              </Link>
             </p>
           </div>
           {cluster ? (
@@ -136,17 +170,17 @@ export default async function BlogPostPage({ params }: Props) {
       </article>
 
       <RelatedClusterLinks
+        mode="no-primary"
         related={[
           {
             href: "/blog",
             label: "All articles",
             desc: "More guides for Ghana businesses",
           },
-          {
-            href: "/invoicing-software-ghana",
-            label: "Invoicing software Ghana",
-            desc: "Send invoices & track in GHS",
-          },
+          cluster
+            ? { href: cluster.core.href, label: cluster.core.label, desc: "Related Finza product page" }
+            : { href: "/accounting-software-ghana", label: "Accounting software Ghana", desc: "GHS records and reports" },
+          { href: "/pricing#plans", label: "Pricing", desc: "Compare plans in GHS" },
         ]}
       />
       <Footer />

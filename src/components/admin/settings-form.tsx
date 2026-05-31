@@ -111,7 +111,7 @@ export function SettingsForm({ settings }: SettingsFormProps) {
             type="url"
             defaultValue={String(settings.social_instagram ?? "")}
             className={inputClass}
-            placeholder="https://www.instagram.com/finzaafrica/"
+            placeholder="https://www.instagram.com/finza.africa/"
           />
         </Field>
         <Field label="TikTok URL">
@@ -120,7 +120,7 @@ export function SettingsForm({ settings }: SettingsFormProps) {
             type="url"
             defaultValue={String(settings.social_tiktok ?? "")}
             className={inputClass}
-            placeholder="https://www.tiktok.com/@finzaafrica"
+            placeholder="https://www.tiktok.com/@finza.africa"
           />
         </Field>
       </Section>

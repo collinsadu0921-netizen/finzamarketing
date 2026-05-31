@@ -15,8 +15,8 @@ export const organizationAndWebsiteGraph = {
       sameAs: [
         "https://twitter.com/finzagh",
         "https://www.linkedin.com/company/finzaafrica",
-        "https://www.instagram.com/finzaafrica/",
-        "https://www.tiktok.com/@finzaafrica",
+        "https://www.instagram.com/finza.africa/",
+        "https://www.tiktok.com/@finza.africa",
       ],
     },
     {

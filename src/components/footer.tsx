@@ -46,18 +46,18 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing#find-plan" className="transition-colors hover:text-zinc-900">
+                <Link href="/pricing#plans" className="transition-colors hover:text-zinc-900">
                   Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/demo" className="transition-colors hover:text-zinc-900">
+                  Product tour
                 </Link>
               </li>
               <li>
                 <Link href="/invoicing-software-ghana" className="transition-colors hover:text-zinc-900">
                   Invoicing in GHS
-                </Link>
-              </li>
-              <li>
-                <Link href="/invoice-calculator-ghana" className="transition-colors hover:text-zinc-900">
-                  Ghana invoice calculator
                 </Link>
               </li>
               <li>
@@ -74,6 +74,43 @@ export async function Footer() {
           </div>
 
           {/* Column 3 */}
+          <div>
+            <h4 className="mb-4 font-semibold text-zinc-900">Ghana guides</h4>
+            <ul className="space-y-3 text-sm text-zinc-600">
+              <li>
+                <Link href="/accounting-software-ghana" className="transition-colors hover:text-zinc-900">
+                  Accounting software Ghana
+                </Link>
+              </li>
+              <li>
+                <Link href="/bookkeeping-software-ghana" className="transition-colors hover:text-zinc-900">
+                  Bookkeeping software Ghana
+                </Link>
+              </li>
+              <li>
+                <Link href="/vat-software-ghana" className="transition-colors hover:text-zinc-900">
+                  VAT software Ghana
+                </Link>
+              </li>
+              <li>
+                <Link href="/quickbooks-alternative-ghana" className="transition-colors hover:text-zinc-900">
+                  QuickBooks alternative Ghana
+                </Link>
+              </li>
+              <li>
+                <Link href="/sage-accounting-alternative-ghana" className="transition-colors hover:text-zinc-900">
+                  Sage alternative Ghana
+                </Link>
+              </li>
+              <li>
+                <Link href="/invoice-calculator-ghana" className="transition-colors hover:text-zinc-900">
+                  Ghana invoice calculator
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 */}
           <div>
             <h4 className="mb-4 font-semibold text-zinc-900">Company</h4>
             <ul className="space-y-3 text-sm text-zinc-600">
@@ -98,25 +135,13 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/privacy" className="transition-colors hover:text-zinc-900">
+                  Privacy
+                </Link>
+              </li>
+              <li>
                 <Link href="/terms" className="transition-colors hover:text-zinc-900">
                   Terms
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4 */}
-          <div>
-            <h4 className="mb-4 font-semibold text-zinc-900">Legal</h4>
-            <ul className="space-y-3 text-sm text-zinc-600">
-              <li>
-                <Link href="/privacy" className="transition-colors hover:text-zinc-900">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="transition-colors hover:text-zinc-900">
-                  Terms of Service
                 </Link>
               </li>
             </ul>

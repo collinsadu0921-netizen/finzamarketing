@@ -68,7 +68,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
               <li>Expense visibility for supplies and transport - pair with bookkeeping habits and full accounting views.</li>
             </ul>
             <p>
-              Use the short "next steps" list below for hubs, then layer the{" "}
+              Use the short &quot;next steps&quot; list below for hubs, then layer the{" "}
               <Link href="/blog/bookkeeping-checklist-ghana" className="font-semibold text-zinc-900 underline">
                 weekly bookkeeping checklist
               </Link>{" "}
@@ -90,7 +90,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Example week</p>
               <h3 className="mt-2 text-lg font-bold text-zinc-900">Three sites, two overdue, one deposit</h3>
               <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-                Monday you quote a new office block; Tuesday"Thursday crews run scheduled visits; Friday you invoice retainer clients and see two commercial accounts past terms. Supplies and fuel hit the same week. In one GHS workspace, receivables, expenses, and tax lines where applicable stay tied to the same customers"so your accountant is not rebuilding the story from chat screenshots.
+                Monday you quote a new office block; Tuesday–Thursday crews run scheduled visits; Friday you invoice retainer clients and see two commercial accounts past terms. Supplies and fuel hit the same week. In one GHS workspace, receivables, expenses, and tax lines where applicable stay tied to the same customers, so your accountant is not rebuilding the story from chat screenshots.
               </p>
             </div>
             <div>

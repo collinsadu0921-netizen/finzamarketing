@@ -85,7 +85,7 @@ export default function InvoicingSoftwareKumasiPage() {
         <Container>
           <div className="mx-auto max-w-3xl space-y-6">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The problem</p>
-            <h2 className="text-3xl font-bold text-zinc-900">"I will send the invoice tonight" should not be your system</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">&quot;I will send the invoice tonight&quot; should not be your system</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               When invoices float between WhatsApp, SMS, and memory, you lose track of retainers, variations, and VAT treatment.{" "}
               <strong className="text-zinc-900">Invoicing software Kumasi</strong> operators adopt when they are tired of arguing over what was agreed. Finza keeps the thread in one place: customer, lines, tax presentation where applicable, status, and payment history.

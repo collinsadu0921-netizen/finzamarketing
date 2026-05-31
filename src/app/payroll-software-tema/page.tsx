@@ -44,8 +44,8 @@ export default function PayrollSoftwareTemaPage() {
               Payroll software in Tema for PAYE, SSNIT, and monthly payslips
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-zinc-600">
-              Tema's economy leans on movement and scale - <strong className="text-zinc-900">logistics and haulage</strong>,{" "}
-              <strong className="text-zinc-900">warehousing and distribution</strong>, <strong className="text-zinc-900">industrial maintenance</strong>, and service firms supporting port-side and corridor traffic. More staff and shift-style work mean payroll mistakes show up fast: wrong SSNIT base, PAYE bands applied loosely, or payslips that never leave HR's inbox. Finza helps{" "}
+              Tema&apos;s economy leans on movement and scale - <strong className="text-zinc-900">logistics and haulage</strong>,{" "}
+              <strong className="text-zinc-900">warehousing and distribution</strong>, <strong className="text-zinc-900">industrial maintenance</strong>, and service firms supporting port-side and corridor traffic. More staff and shift-style work mean payroll mistakes show up fast: wrong SSNIT base, PAYE bands applied loosely, or payslips that never leave HR&apos;s inbox. Finza helps{" "}
               <strong className="text-zinc-900">employers in Tema</strong> run a proper monthly cycle: draft review, approval, then payslips your crew can open on email or WhatsApp.
             </p>
             <p className="max-w-2xl text-sm leading-relaxed text-zinc-500">
@@ -76,7 +76,7 @@ export default function PayrollSoftwareTemaPage() {
             <p className="text-base leading-relaxed text-zinc-600">
               Categories that commonly need tighter payroll include <strong className="text-zinc-900">fleet and transport coordinators</strong>,{" "}
               <strong className="text-zinc-900">third-party logistics</strong>, <strong className="text-zinc-900">cold-chain and distribution</strong>,{" "}
-              <strong className="text-zinc-900">security and facilities contractors</strong>, and <strong className="text-zinc-900">manufacturing support services</strong>. The thread is headcount, overtime, and bonuses that cannot be "eyeballed" on a calculator every month.
+              <strong className="text-zinc-900">security and facilities contractors</strong>, and <strong className="text-zinc-900">manufacturing support services</strong>. The thread is headcount, overtime, and bonuses that cannot be &quot;eyeballed&quot; on a calculator every month.
             </p>
           </div>
         </Container>

@@ -12,9 +12,10 @@ import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema, pricingPageFaqForSchema } from "@/lib/schema";
 import { PlanFitQuestionnaire } from "@/components/plan-fit-questionnaire";
-import { PlanTierSummaries } from "@/components/plan-tier-summaries";
-import { PLANS_STARTING_PRICE_GHS } from "@/lib/pricing-plans";
+import { PricingTiers } from "./pricing-tiers";
+import { getPlanSignupHref, pricingPlansData, PLANS_STARTING_PRICE_GHS } from "@/lib/pricing-plans";
 import { GhanaProofChips, PRICING_PROOF_CHIPS } from "@/components/site/ghana-proof-chips";
+import { ProductProofSection } from "@/components/product-proof-section";
 import {
     homePrimaryBtn,
     homeSecondaryBtn,
@@ -35,6 +36,8 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
+    const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
+
     return (
         <main className="flex min-h-screen flex-col bg-white max-md:pb-28">
             <JsonLd
@@ -56,16 +59,16 @@ export default function PricingPage() {
                             Find the right Finza plan for your business
                         </h1>
                         <p className={`${sectionLead} font-medium`}>
-                            Tell us what your business needs. We&apos;ll help you choose the right Finza
-                            plan and show the price in GHS.
+                            Start with a 14-day free trial, compare public monthly prices in GHS, or use
+                            plan fit if you want help choosing.
                         </p>
                         <p className={siteGhsBadge}>
                             Plans start from GH₵{PLANS_STARTING_PRICE_GHS.toLocaleString()}/month
                         </p>
                         <div className="flex flex-col items-start gap-3 pt-1 sm:flex-row sm:items-center">
-                            <Link href="#find-plan" className={homePrimaryBtn}>
-                                Find my plan
-                            </Link>
+                            <a href={starterSignupHref} className={homePrimaryBtn}>
+                                Start 14-day free trial
+                            </a>
                             <Link href="/contact" className={homeSecondaryBtn}>
                                 Book a walkthrough
                             </Link>
@@ -74,6 +77,15 @@ export default function PricingPage() {
                     </div>
                 </Container>
             </section>
+
+            <PricingTiers />
+
+            <ProductProofSection
+                assetIds={["dashboard", "invoice-sample"]}
+                eyebrow="What the plans support"
+                heading="Choose a plan around the work you actually manage"
+                lead="The right plan depends on how much of the workflow you want to manage in Finza: invoicing, payment tracking, expenses, payroll, reports, and accountant review."
+            />
 
             <PlanFitQuestionnaire />
 
@@ -84,8 +96,8 @@ export default function PricingPage() {
                         <div className="space-y-3">
                             <p className={sectionLead}>
                                 Your 14-day trial gives you time to explore Finza before choosing a paid
-                                plan. No card is required to start. When the trial ends, choose the plan
-                                and billing cycle that fits your business.
+                                plan. No card is required to start. If you want help before starting,
+                                use plan fit or book a walkthrough.
                             </p>
                             <p className={sectionLead}>
                                 Plans can be billed monthly, quarterly, or annually. Plan changes take
@@ -106,42 +118,16 @@ export default function PricingPage() {
                         </div>
 
                         <Accordion type="single" collapsible className="w-full rounded-2xl border border-zinc-200/90 bg-white px-4 shadow-sm shadow-zinc-900/[0.04] sm:px-6">
-                            <AccordionItem value="free-trial">
-                                <AccordionTrigger>Is there a free trial?</AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. Finza offers a 14-day free trial. No card is required to start.
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="change-plan">
-                                <AccordionTrigger>Can I change plans later?</AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. You can change plans as your business needs change. Plan changes take effect from the next billing period unless otherwise shown during checkout.
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="cancel">
-                                <AccordionTrigger>Can I cancel?</AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. You can cancel before your next billing date to avoid renewal. If you cancel, access continues until the end of the paid billing period.
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="which-plan">
-                                <AccordionTrigger>Which plan should I start with?</AccordionTrigger>
-                                <AccordionContent>
-                                    Use Find my plan above, or book a walkthrough. Essentials covers invoices, quotes, receipts, and payment details. Professional adds documents, customer statements, payroll, and reports. Business adds deeper setup support, tax-ready records, and onboarding.
-                                </AccordionContent>
-                            </AccordionItem>
-                            <AccordionItem value="accountant">
-                                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
-                                <AccordionContent>
-                                    No. Finza keeps records easier to review. Your accountant or tax adviser should confirm the correct treatment for your business.
-                                </AccordionContent>
-                            </AccordionItem>
+                            {pricingPageFaqForSchema.map((item) => (
+                                <AccordionItem key={item.questionName} value={item.questionName}>
+                                    <AccordionTrigger>{item.questionName}</AccordionTrigger>
+                                    <AccordionContent>{item.acceptedAnswerText}</AccordionContent>
+                                </AccordionItem>
+                            ))}
                         </Accordion>
                     </div>
                 </Container>
             </section>
-
-            <PlanTierSummaries />
 
             <RelatedClusterLinks
                 related={[

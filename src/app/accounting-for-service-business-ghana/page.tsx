@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting for Service Businesses in Ghana | Finza",
   description:
-    "Learn how Ghanaian service businesses can organize proposals, invoices, payments, expenses, documents, payroll, Ghana tax lines, reports, and accountant-ready records with Finza.",
+    "A practical guide to accounting for Ghanaian service businesses: scopes, invoices, payments, job costs, supporting documents, payroll records, and accountant review.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-for-service-business-ghana",
   },
@@ -67,7 +67,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
               Accounting for service businesses in Ghana should follow the work
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Service business accounting becomes clearer when the records follow the job from proposal to quote, invoice, payment, receipt, expenses, documents, payroll, reports, and accountant review. Finza helps Ghanaian service businesses keep those records organized in GHS.
+              This guide explains the records a service business should keep around each job: scope, quote, invoice, payment, receipt, job costs, supporting documents, payroll context, and accountant review in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -153,7 +153,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
               A cleaner accounting flow for service businesses
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps service businesses organize records around the way work actually happens. The goal is not only to create an invoice, but to keep the records behind that invoice easier to review.
+              Finza supports this workflow, but the principle comes first: every client job should leave a record trail that someone else can review later.
             </p>
             <ol className="list-decimal space-y-2 pl-5 text-base leading-relaxed text-zinc-600">
               <li>Prepare a proposal or quote</li>
@@ -249,28 +249,22 @@ export default function AccountingForServiceBusinessGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              What Finza helps service businesses organize
+              Practical checklist for service-business records
             </h2>
             <ul className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2 lg:grid-cols-3">
               {[
-                "Proposals",
-                "Quotes",
-                "Proformas",
-                "Invoices",
-                "Receipts",
-                "Payment records",
+                "Client scope or approval",
+                "Quote or proforma",
+                "Invoice and receipt",
+                "Payment record",
                 "Partial payments",
                 "Customer balances",
-                "Expenses",
+                "Job costs",
                 "Supplier bills",
-                "Incoming documents",
-                "Payroll records",
+                "Supporting documents",
+                "Payroll context",
                 "Ghana tax lines where applicable",
-                "Reports",
-                "Exports",
-                "Audit logs",
-                "Period controls",
-                "Accountant-ready records",
+                "Accountant review notes",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -344,7 +338,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
               Keep service business accounting records clearer
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to organize proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
+              Use Finza when you want the practical record trail above to live in one workspace instead of chat threads and spreadsheets.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"
@@ -368,8 +362,8 @@ export default function AccountingForServiceBusinessGhanaPage() {
         related={[
           {
             href: "/accounting-software-for-service-businesses-ghana",
-            label: "Accounting software for service businesses",
-            desc: "Compare software workflows for Ghanaian service businesses.",
+            label: "Service business software",
+            desc: "Commercial product workflow",
           },
           {
             href: "/small-business-accounting-ghana",

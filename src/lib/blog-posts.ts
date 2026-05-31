@@ -30,7 +30,7 @@ List what is still open after each week. If you cannot answer "who owes us and h
 
 ## Next step
 
-Use software that keeps invoices and balances together. When you are ready to [send invoices in Ghana](/invoicing-software-ghana) from one system—same PDF trail, same unpaid list—start there for collections. Add [accounting software in Ghana](/accounting-software-ghana) when you need reports and tax summaries, and see [pricing in GHS](/pricing) for plans.`,
+Use software that keeps invoices and balances together. Start with [invoicing software in Ghana](/invoicing-software-ghana) for document creation, then use [invoice tracking](/invoice-tracking-software-ghana) when follow-up and partial payments become the main issue.`,
   },
   {
     slug: "vat-nhil-getfund-explained-ghana",
@@ -51,7 +51,7 @@ Not every business or every line item uses the same treatment. **Registration, e
 
 Good tools show **separate lines** on documents and in summaries so you are not reverse-engineering a single number at month-end. Finza supports common Ghana presentations—see [VAT software for Ghana](/vat-software-ghana) and [how VAT works](/how-vat-works-ghana).
 
-When you are ready to connect documents to the full file, use [accounting software for Ghana](/accounting-software-ghana), keep billing tight with [invoicing software in Ghana](/invoicing-software-ghana), and compare [pricing](/pricing).`,
+When you are ready to connect tax-line documents to daily records, start with [VAT software for Ghana](/vat-software-ghana) and the full [VAT, NHIL & GETFund guide](/ghana-vat-nhil-getfund).`,
   },
   {
     slug: "bookkeeping-tips-small-businesses-ghana",
@@ -76,7 +76,7 @@ Use labels that map to how you file—not "misc" for everything.
 
 Spreadsheets work until they do not. [Bookkeeping software in Ghana](/bookkeeping-software-ghana) keeps activity structured so your accountant reviews instead of rebuilds.
 
-Pair that habit with [invoicing software in Ghana](/invoicing-software-ghana) for what is still open, [accounting software for Ghana](/accounting-software-ghana) for year-end views, and check [pricing](/pricing) when you outgrow manual lists.`,
+Pair that weekly habit with [bookkeeping software Ghana](/bookkeeping-software-ghana) when receipts, expenses, and supplier records outgrow manual lists.`,
   },
   {
     slug: "best-accounting-software-ghana",
@@ -95,7 +95,7 @@ Can I see **customer balances**? Can I **export**? How are **VAT, NHIL, and GETF
 
 ## Finza
 
-We built Finza for **Ghana cedis**, **SMEs and operators**, and **accountants managing clients**. If you are shortlisting tools this month, read [accounting software in Ghana](/accounting-software-ghana) for the full finance view and plan how you will [send invoices in Ghana](/invoicing-software-ghana) from the same balances. Then compare [features](/features) and [pricing](/pricing).`,
+We built Finza for **Ghana cedis**, **SMEs and operators**, and **accountants managing clients**. If you are shortlisting tools this month, read [accounting software in Ghana](/accounting-software-ghana) for the full finance view, then compare [features](/features) and [pricing](/pricing#plans).`,
   },
   {
     slug: "ledger-first-accounting-ghana",
@@ -116,7 +116,7 @@ Invoices, payments, and reports read from the **same activity**. You spend less 
 
 **VAT, NHIL, and GETFund** should appear **where applicable** with clear lines—not one blended "tax" number you unravel later.
 
-Explore [accounting software for Ghana](/accounting-software-ghana), [invoicing software in Ghana](/invoicing-software-ghana), and [pricing](/pricing) when you want one system instead of patched exports.`,
+Explore [accounting software for Ghana](/accounting-software-ghana) when you want one system instead of patched exports.`,
   },
   {
     slug: "vat-nhil-getfund-2026-framework",
@@ -137,7 +137,7 @@ Under Ghana's revised VAT framework effective **1 January 2026**, **NHIL and GET
 
 Use tools that show **output and input** elements distinctly—not one lump sum.
 
-[Full guide: VAT, NHIL, GETFund](/ghana-vat-nhil-getfund) · [How VAT works in Ghana](/how-vat-works-ghana). For software that ties filings to daily work, see [accounting software for Ghana](/accounting-software-ghana), [invoicing software in Ghana](/invoicing-software-ghana), and [pricing](/pricing).`,
+[Full guide: VAT, NHIL, GETFund](/ghana-vat-nhil-getfund) · [How VAT works in Ghana](/how-vat-works-ghana). For software that keeps tax-line records easier to review, see [VAT software for Ghana](/vat-software-ghana).`,
   },
   {
     slug: "spreadsheets-to-ledger-migration",
@@ -158,7 +158,7 @@ Old sheets often mix personal and business spend, round tax wrong, or delete row
 
 A clear opening position, then consistent recording. Corrections should leave a trail—not silent edits.
 
-[Accounting vs Excel in Ghana](/accounting-vs-excel-ghana). From there, adopt [accounting software for Ghana](/accounting-software-ghana), use [invoicing software in Ghana](/invoicing-software-ghana) for receivables discipline, and review [pricing](/pricing).`,
+[Accounting vs Excel in Ghana](/accounting-vs-excel-ghana). From there, adopt [accounting software for Ghana](/accounting-software-ghana) for month-end visibility and accountant handoff.`,
   },
   {
     slug: "invoice-template-ghana",
@@ -183,7 +183,7 @@ State **how to pay** (bank, MoMo where you use it) and **what reference** to use
 
 Copy the checklist above for your team or send it to clients who send weak purchase orders.
 
-When you are ready to issue invoices from one system, use [invoicing software in Ghana](/invoicing-software-ghana), connect to [accounting software for Ghana](/accounting-software-ghana) for reports, and see [pricing](/pricing) in GHS.`,
+When you are ready to issue invoices from one system, use [invoicing software in Ghana](/invoicing-software-ghana) and keep the template details consistent.`,
   },
   {
     slug: "how-to-calculate-vat-ghana",
@@ -206,7 +206,7 @@ When you buy from a VAT-registered supplier, you may see VAT on their invoice. W
 
 ## Records matter more than mental math
 
-Use tools that keep **output and input** visible so you are not rebuilding totals at month-end. Finza fits that workflow—see [accounting software for Ghana](/accounting-software-ghana), [invoicing software in Ghana](/invoicing-software-ghana), and [pricing](/pricing).`,
+Use tools that keep **output and input** visible so you are not rebuilding totals at month-end. For that workflow, see [VAT software for Ghana](/vat-software-ghana).`,
   },
   {
     slug: "nhil-and-getfund-explained-simply",
@@ -229,7 +229,7 @@ Registration, exemptions, and supply type decide **whether** and **how** levies 
 
 ## Deeper reading
 
-For more detail see our [VAT, NHIL & GETFund](/ghana-vat-nhil-getfund) article. To run day-to-day billing with clear lines, use [invoicing software in Ghana](/invoicing-software-ghana), [accounting software for Ghana](/accounting-software-ghana), and check [pricing](/pricing).`,
+For more detail see our [VAT, NHIL & GETFund](/ghana-vat-nhil-getfund) article and [VAT software for Ghana](/vat-software-ghana).`,
   },
   {
     slug: "how-to-track-expenses-small-business-ghana",
@@ -254,7 +254,7 @@ Keep **receipts or PDFs** in one place. Your accountant does not need drama—th
 
 Use names you will still understand in six months—not only "misc."
 
-Software keeps this structured: pair habits with [bookkeeping software Ghana](/bookkeeping-software-ghana), roll up to [accounting software for Ghana](/accounting-software-ghana), stay tight on [invoicing software in Ghana](/invoicing-software-ghana), and compare [pricing](/pricing).`,
+Software keeps this structured: pair the habit with [bookkeeping software Ghana](/bookkeeping-software-ghana) when receipts and expenses need one place.`,
   },
   {
     slug: "bookkeeping-checklist-ghana",
@@ -279,7 +279,7 @@ Reconcile **customer balances**, scan for **duplicate entries**, and note **ques
 
 Send the checklist to your team or a client who is always "catching up" in April.
 
-Automate the list in one place with [bookkeeping software Ghana](/bookkeeping-software-ghana). When the checklist stays green, roll totals into [accounting software in Ghana](/accounting-software-ghana) and [send invoices in Ghana](/invoicing-software-ghana) from the same file so unpaid lists match the books. Review [pricing](/pricing) when spreadsheets pinch.`,
+Automate the list in one place with [bookkeeping software Ghana](/bookkeeping-software-ghana). When the checklist stays green, month-end review becomes less dependent on memory.`,
   },
   {
     slug: "accounting-mistakes-small-businesses-ghana",
@@ -304,7 +304,7 @@ Good systems **leave a trail**. Silent deletes create mistrust at review time.
 
 If you do not know your **real profit** during the year, you cannot fix pricing or cash flow in time.
 
-Move to structured records with [accounting software for Ghana](/accounting-software-ghana), tighten billing with [invoicing software in Ghana](/invoicing-software-ghana), and see [pricing](/pricing).`,
+Move to structured records with [accounting software for Ghana](/accounting-software-ghana) when reports, balances, and accountant handoff need one source.`,
   },
   {
     slug: "how-to-price-services-ghana",
@@ -327,7 +327,7 @@ A clear **quotation in GHS** sets scope; the invoice should match. Use [quotatio
 
 ## Track what actually lands
 
-Pricing is a loop: compare **quoted vs collected** in your system. Finza helps—explore [accounting software for Ghana](/accounting-software-ghana), [invoicing software in Ghana](/invoicing-software-ghana), and [pricing](/pricing).`,
+Pricing is a loop: compare **quoted vs collected** in your system. Finza helps with that flow through [quotation software Ghana](/quotation-software-ghana).`,
   },
   {
     slug: "how-to-manage-cash-flow-ghana",
@@ -348,7 +348,7 @@ Know your **runway** after regular draws. Mixing everything in one personal wall
 
 Update **invoices, payments, and expenses** weekly. If you only look at cash flow when something breaks, you are already late.
 
-Use [invoicing software in Ghana](/invoicing-software-ghana) for collections, [accounting software for Ghana](/accounting-software-ghana) for the full view, and [pricing](/pricing) when you scale.`,
+Use [invoice tracking software in Ghana](/invoice-tracking-software-ghana) for collections and customer balances when cash flow follow-up becomes hard to manage.`,
   },
   {
     slug: "invoice-vs-receipt-ghana",
@@ -373,7 +373,7 @@ You might **invoice now** and **receipt when paid**—your books should link the
 
 Clean **invoice + receipt** trails beat screenshots in chat.
 
-Manage both in one flow with [invoicing software in Ghana](/invoicing-software-ghana), full records in [accounting software for Ghana](/accounting-software-ghana), and [pricing](/pricing) for plans.`,
+Manage both in one flow with [invoicing software in Ghana](/invoicing-software-ghana) so invoice and receipt records stay connected.`,
   },
   {
     slug: "when-to-register-for-vat-ghana",
@@ -394,7 +394,7 @@ Large customers may **expect VAT invoices**. If you are growing fast, ask early 
 
 Your **invoice layout** and **record keeping** must match filing expectations. Separate tax lines matter.
 
-Prepare with clear documents using [invoicing software in Ghana](/invoicing-software-ghana), structured files in [accounting software for Ghana](/accounting-software-ghana), and [pricing](/pricing) for Finza plans.`,
+Prepare with clear documents using [VAT software for Ghana](/vat-software-ghana) and confirm your registration position with your accountant or GRA.`,
   },
   {
     slug: "vat-mistakes-ghana-businesses-avoid",
@@ -419,7 +419,7 @@ Whether you must register—or when voluntary registration helps—is a professi
 
 See [VAT, NHIL & GETFund explained](/blog/vat-nhil-getfund-explained-ghana), [when to register for VAT](/blog/when-to-register-for-vat-ghana), and [how to calculate VAT](/blog/how-to-calculate-vat-ghana).
 
-Use [VAT software for Ghana](/vat-software-ghana) for levy-focused workflows, tie out with [accounting software for Ghana](/accounting-software-ghana), and compare [pricing](/pricing). [Invoicing software in Ghana](/invoicing-software-ghana) keeps what you issued aligned with what you file.`,
+Use [VAT software for Ghana](/vat-software-ghana) for levy-focused workflows and keep what you issued easier to review before filing discussions.`,
   },
   {
     slug: "bookkeeping-issues-smes-ghana",
@@ -444,7 +444,7 @@ Catching up once a quarter trains nobody to trust the numbers. A **weekly habit*
 
 **Finza** keeps sales, purchases, and payments in one structured file so **bookkeeping** feeds **invoicing** and **accounting** without re-keying.
 
-Read [bookkeeping tips](/blog/bookkeeping-tips-small-businesses-ghana), the [checklist](/blog/bookkeeping-checklist-ghana), and [spreadsheet migration](/blog/spreadsheets-to-ledger-migration). Start from [bookkeeping software Ghana](/bookkeeping-software-ghana), add [accounting software for Ghana](/accounting-software-ghana), and see [invoicing software in Ghana](/invoicing-software-ghana) for collections. [Pricing](/pricing) lists plans in cedis.`,
+Read [bookkeeping tips](/blog/bookkeeping-tips-small-businesses-ghana), the [checklist](/blog/bookkeeping-checklist-ghana), and [spreadsheet migration](/blog/spreadsheets-to-ledger-migration). Start from [bookkeeping software Ghana](/bookkeeping-software-ghana) when receipts and weekly records need structure.`,
   },
   {
     slug: "invoice-errors-service-businesses-ghana",
@@ -469,7 +469,7 @@ If you are still using Excel for invoices, you will miss follow-ups. **Finza inv
 
 Review [how to create an invoice](/blog/how-to-create-invoice-in-ghana), [invoice template Ghana](/blog/invoice-template-ghana), and [invoice vs receipt](/blog/invoice-vs-receipt-ghana).
 
-Run billing on [invoicing software in Ghana](/invoicing-software-ghana), connect to [accounting software for Ghana](/accounting-software-ghana), and check [pricing](/pricing). Contractors may also read our [invoice software for contractors](/invoice-software-for-contractors-ghana) page.`,
+Run billing on [invoicing software in Ghana](/invoicing-software-ghana). Contractors may also read our [invoice software for contractors](/invoice-software-for-contractors-ghana) page.`,
   },
 ];
 

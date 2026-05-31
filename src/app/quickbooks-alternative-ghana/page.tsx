@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "QuickBooks Alternative in Ghana | Compare a Ghana-Focused Workflow",
   description:
-    "Comparing QuickBooks with Ghana-focused business software? See how Finza helps service businesses manage proposals, invoices, payments, expenses, tax lines, and accountant-ready records in GHS.",
+    "Comparing QuickBooks alternatives in Ghana? See how Finza supports simpler GHS invoicing, payment tracking, owner visibility, and accountant handoff for SMEs.",
   alternates: {
     canonical: "https://www.finza.africa/quickbooks-alternative-ghana",
   },
@@ -49,10 +49,10 @@ const quickBooksAlternativeFaqForSchema = [
 
 const comparisonRows = [
   {
-    questionName: "Can we manage proposals, quotes, invoices, and payments together?",
+    questionName: "Can owners see billing and balances without extra setup?",
     matters:
-      "Service businesses often lose context when client work and billing are separated.",
-    finza: "Finza connects proposal-to-payment workflows in one workspace.",
+      "Many SMEs need quick visibility before they need a deep accounting configuration.",
+    finza: "Finza keeps invoices, payments, receipts, and customer balances in a simpler GHS workflow.",
   },
   {
     questionName: "Can records be reviewed in GHS?",
@@ -60,9 +60,9 @@ const comparisonRows = [
     finza: "Finza is priced and positioned around Ghana cedi workflows.",
   },
   {
-    questionName: "Can expenses and documents be organized before month-end?",
-    matters: "Missing receipts and supplier records make review harder.",
-    finza: "Finza supports expense, supplier bill, and incoming document workflows.",
+    questionName: "Can client documents move into invoices easily?",
+    matters: "Service businesses often quote first, then bill after approval.",
+    finza: "Finza supports quotes, proformas, invoices, receipts, and sharing links in one workspace.",
   },
   {
     questionName: "Can Ghana tax lines be shown clearly where they apply?",
@@ -93,10 +93,10 @@ export default function QuickbooksAlternativeGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              QuickBooks alternative in Ghana for service businesses comparing local workflows
+              QuickBooks alternative in Ghana for simpler SME workflows
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              If you are comparing QuickBooks with software built around Ghanaian service-business workflows, focus on the daily work: proposals, quotes, invoices, payments, expenses, documents, GHS records, and accountant review. Finza is built to keep those records connected from client work to month-end review.
+              If QuickBooks feels broader than your Ghana SME needs, compare how quickly your team can create GHS invoices, track payments, review customer balances, and hand cleaner records to your accountant.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -123,18 +123,18 @@ export default function QuickbooksAlternativeGhanaPage() {
               What to compare before choosing accounting software
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              A useful comparison should go beyond brand recognition. For many Ghanaian service businesses, the important question is whether the software fits the way records are created every day.
+              A useful QuickBooks comparison should go beyond brand recognition. For many Ghanaian SMEs, the question is whether owners can understand billing, expenses, and balances without building a heavy process first.
             </p>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[
-                "Client proposals",
-                "Quotes and invoices",
-                "GHS payment tracking",
-                "Expense records",
-                "Supporting documents",
+                "GHS invoices",
+                "Customer balances",
+                "Partial payments",
+                "Receipts and payment links",
+                "Expenses and documents",
                 "Ghana tax-line visibility",
-                "Accountant review",
-                "Reports and controls",
+                "Owner review",
+                "Accountant handoff",
               ].map((item) => (
                 <div key={item} className="rounded-xl border border-zinc-200 bg-white p-4 text-sm text-zinc-700">
                   {item}
@@ -165,17 +165,17 @@ export default function QuickbooksAlternativeGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Where Finza is different</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza is positioned around the full service-business workflow, not only end-of-month accounting reports. It helps owners keep client work, billing, payments, expenses, documents, payroll records, and review information closer to one workspace.
+              Finza is positioned around simpler Ghana SME workflows: create the client document, share it, record payment, keep supporting records, and review what happened in GHS.
             </p>
             <ul className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
-                "Create proposals, quotes, proformas, and invoices",
-                "Track sent, paid, and overdue invoices",
-                "Record payments and business expenses",
-                "Keep supplier bills and supporting documents",
+                "Create quotes, proformas, and invoices",
+                "Share invoice links by email or WhatsApp",
+                "Record full and partial payments",
+                "Review customer balances quickly",
+                "Keep expenses and supporting documents",
                 "Show Ghana tax lines where they apply",
-                "Review business activity in GHS",
-                "Prepare cleaner records for accountant review",
+                "Prepare cleaner accountant handoff",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2">
                   {item}
@@ -213,17 +213,17 @@ export default function QuickbooksAlternativeGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              GHS-first records for Ghanaian service businesses
+              Local billing behaviour matters
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Many Ghanaian businesses need records that are easy to read in Ghana cedis and easy to explain to their accountant. Finza keeps the focus on GHS workflows, local document clarity, and business records that are easier to review.
+              Ghana SMEs often need practical invoice links, bank or Mobile Money payment instructions, customer follow-up, and GHS balances. Finza keeps that local operating layer visible before month-end review.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
               <li>Pricing shown in Ghana cedis</li>
               <li>Invoices and records prepared around GHS workflows</li>
+              <li>Payment instructions customers can follow</li>
               <li>Tax-line presentation for Ghana business documents</li>
-              <li>Payment and expense records kept near the original activity</li>
-              <li>Reports designed for owner and accountant review</li>
+              <li>Owner-friendly balances before accountant review</li>
             </ul>
           </div>
         </Container>
@@ -400,7 +400,7 @@ export default function QuickbooksAlternativeGhanaPage() {
               Compare Finza with your current workflow
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use the free trial to see whether Finza's proposal-to-payment workflow fits your Ghanaian service business better than spreadsheet-only records or a system that does not match your daily process.
+              Use the free trial to see whether Finza&apos;s GHS invoicing, payment tracking, and owner visibility fit your Ghanaian SME better than spreadsheet-only records or a broader system you do not need yet.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"
@@ -424,7 +424,7 @@ export default function QuickbooksAlternativeGhanaPage() {
         related={[
           { href: "/sage-accounting-alternative-ghana", label: "Sage alternative Ghana", desc: "Neutral comparison lens" },
           { href: "/accounting-software-ghana", label: "Accounting Ghana", desc: "Finza overview in GHS" },
-          { href: "/best-accounting-software-ghana", label: "Best accounting Ghana", desc: "Shortlist framing" },
+          { href: "/pricing#plans", label: "Pricing", desc: "Compare public GHS plans" },
         ]}
       />
       <Footer />

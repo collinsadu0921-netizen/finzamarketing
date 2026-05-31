@@ -10,12 +10,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/json-ld";
+import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Invoicing Software in Ghana for Service Businesses | Finza",
   description:
-    "Create and send invoices in GHS with Finza. Manage quotes, proformas, payments, receipts, customer balances, Ghana tax lines, and accountant-ready records for your service business.",
+    "Create and send invoices in GHS with Finza. Prepare quotes, proformas, invoices, receipts, payment instructions, and Ghana tax-line documents where applicable.",
   alternates: {
     canonical: "https://www.finza.africa/invoicing-software-ghana",
   },
@@ -64,10 +65,10 @@ export default function InvoicingSoftwareGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Invoicing software in Ghana for service businesses
+              Invoicing software in Ghana for clear client documents
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps Ghanaian service businesses create professional invoices, send them by email, PDF, public link, or WhatsApp link, track payments, issue receipts, and keep cleaner records for accountant review.
+              Finza helps you create quotes, proformas, invoices, and receipts in GHS, then share them by PDF, email, public link, or WhatsApp with payment instructions clients can act on.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -137,21 +138,28 @@ export default function InvoicingSoftwareGhanaPage() {
         </Container>
       </section>
 
+      <ProductProofSection
+        assetIds={["invoice-create", "invoice-sample", "receipt-payment"]}
+        eyebrow="Invoice workflow"
+        heading="From invoice details to customer-ready documents"
+        lead="Create invoices, review the details, and keep the customer's payment record connected to the same workflow."
+      />
+
       {/* SECTION 3 */}
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Track what has been sent, paid, and left outstanding</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Send documents clients can understand</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps you follow invoice status after the document is sent. Record payments against the right customer and invoice, track partial payments, and see what remains unpaid or overdue.
+              This page focuses on invoice creation and sending. When collections become the main problem, use invoice tracking to follow unpaid and overdue balances.
             </p>
             <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-3">
               {[
-                "Payment recording",
-                "Partial payments",
-                "Overdue invoices",
-                "Customer balances",
-                "Payment history",
+                "Invoice PDFs",
+                "Public document links",
+                "Email sending",
+                "WhatsApp sharing links",
+                "Bank and Mobile Money details",
                 "Receipts after payment",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
@@ -338,7 +346,7 @@ export default function InvoicingSoftwareGhanaPage() {
           <div className="mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-extrabold text-white">Create clearer invoices and track payments in GHS</h2>
             <p className="text-zinc-300">
-              Use Finza to send invoices, record payments, issue receipts, track customer balances, and keep cleaner records for accountant review.
+              Use Finza to prepare quotes, proformas, invoices, receipts, payment instructions, and Ghana tax-line documents in one GHS workflow.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
@@ -353,10 +361,11 @@ export default function InvoicingSoftwareGhanaPage() {
       </section>
 
       <RelatedClusterLinks
+        mode="no-primary"
         related={[
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Quote to invoice" },
-          { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports & summaries" },
-          { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Track expenses" },
+          { href: "/invoice-tracking-software-ghana", label: "Invoice tracking", desc: "Unpaid and overdue balances" },
+          { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll workflow" },

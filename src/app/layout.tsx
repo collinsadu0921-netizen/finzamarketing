@@ -82,13 +82,12 @@ export default function RootLayout({
         <JsonLd data={organizationAndWebsiteGraph} />
         {/* ── Announcement Bar ── */}
         <div className="w-full bg-[#0F172A] text-white text-center py-2.5 px-4 text-sm font-medium">
-          <span className="mr-2">🎉</span>
-          <span>Not sure which plan fits your service business in Ghana?</span>
+          <span>Plans from GH₵149/month.</span>
           <a
-            href="/pricing#find-plan"
+            href="/pricing#plans"
             className="ml-3 underline underline-offset-2 font-semibold hover:text-zinc-300 transition-colors"
           >
-            Find your plan →
+            Compare plans
           </a>
         </div>
         <Navbar />
