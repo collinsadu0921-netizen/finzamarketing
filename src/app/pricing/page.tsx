@@ -59,7 +59,7 @@ export default function PricingPage() {
                             Find the right Finza plan for your business
                         </h1>
                         <p className={`${sectionLead} font-medium`}>
-                            Start with a 14-day free trial, compare public monthly prices in GHS, or use
+                            Start with a 14-day free trial, compare public prices in GHS, or use
                             plan fit if you want help choosing.
                         </p>
                         <p className={siteGhsBadge}>
@@ -84,7 +84,7 @@ export default function PricingPage() {
                 assetIds={["dashboard", "invoice-sample"]}
                 eyebrow="What the plans support"
                 heading="Choose a plan around the work you actually manage"
-                lead="The right plan depends on how much of the workflow you want to manage in Finza: invoicing, payment tracking, expenses, payroll, reports, and accountant review."
+                lead="The right plan depends on how much of the workflow you want to manage in Finza: invoicing, payment tracking, expenses, payroll, reports, and professional review."
             />
 
             <PlanFitQuestionnaire />

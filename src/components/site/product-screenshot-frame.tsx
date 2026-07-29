@@ -45,12 +45,11 @@ export function ProductScreenshotFrame({
       </div>
       <div className={cn("overflow-hidden rounded-b-xl", isDark ? "bg-slate-950/50" : "bg-zinc-50")}>
         <Image
-          src="/images/finza-dashboard-hero.png"
+          src="/images/finza/finza-dashboard-hero.webp"
           alt="Finza workspace showing invoices, payments, expenses, and reports"
           width={2400}
           height={1350}
           priority={priority}
-          quality={90}
           sizes="(max-width: 768px) 96vw, 520px"
           className="block h-auto w-full"
         />

@@ -25,7 +25,7 @@ export function AnimatedDashboardHero() {
 
       <div className="relative rounded-2xl border border-zinc-200 bg-white p-1.5 shadow-[0_10px_35px_rgba(15,23,42,0.1)] sm:p-2.5">
         <Image
-          src="/images/Dashboard image for the website.png"
+          src="/images/finza/finza-dashboard-hero.webp"
           alt="Finza dashboard preview with service-business records and invoice workflow"
           width={1600}
           height={1000}

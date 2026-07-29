@@ -256,7 +256,7 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
                 "Agencies and consultants",
                 "Professional service firms",
                 "SMEs with supplier bills and receipts",
-                "Businesses preparing records for accountant review",
+                "Businesses preparing records for professional review",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -270,16 +270,16 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Expense tracking and accountant-ready records</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Expense tracking and records for professional review</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Your accountant should not have to rebuild the full expense story from loose receipts and incomplete notes. Finza helps keep expenses, bills, documents, and business records in a structure that is easier to review.
+              Your professional reviewers should not have to rebuild the full expense story from loose receipts and incomplete notes. Finza helps keep expenses, bills, documents, and business records in a structure that is easier to review.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href="/accountants"
+                href="/features"
                 className="inline-flex rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                For accountants
+                Explore professional review
               </Link>
               <Link
                 href="/contact"

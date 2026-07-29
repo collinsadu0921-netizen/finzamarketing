@@ -360,7 +360,6 @@ export default function BestAccountingSoftwareGhanaPage() {
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax line clarity" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
-          { href: "/accountants", label: "For accountants", desc: "Accountant-ready records" },
           { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />

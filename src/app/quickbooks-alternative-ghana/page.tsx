@@ -316,7 +316,7 @@ export default function QuickbooksAlternativeGhanaPage() {
                 "Agencies and consultants",
                 "Professional service firms",
                 "SMEs moving away from spreadsheet-only records",
-                "Businesses preparing cleaner records for accountants",
+                "Businesses preparing cleaner records for professional review",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -332,9 +332,9 @@ export default function QuickbooksAlternativeGhanaPage() {
               <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
                 contact Finza
               </Link>
-              . Accountants can explore{" "}
-              <Link href="/accountants" className="font-semibold text-zinc-900 underline underline-offset-2">
-                accountant resources
+              . Explore{" "}
+              <Link href="/features" className="font-semibold text-zinc-900 underline underline-offset-2">
+                features for professional review
               </Link>
               .
             </p>

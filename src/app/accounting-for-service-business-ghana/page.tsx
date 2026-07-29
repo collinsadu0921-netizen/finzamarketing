@@ -88,7 +88,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              Service businesses do not account like product-only retailers
+              Service businesses do not account like product-only sellers
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
               A service business usually starts with a client request, a scope of work, a proposal, a quote, or an estimate. The job may involve materials, staff time, supplier costs, transport, partial payments, and follow-up documents.

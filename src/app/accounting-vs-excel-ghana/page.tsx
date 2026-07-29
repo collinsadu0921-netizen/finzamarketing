@@ -319,11 +319,7 @@ export default function AccountingVsExcelGhanaPage() {
               ))}
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              For{" "}
-              <Link href="/accountants" className="font-semibold text-zinc-900 underline underline-offset-2">
-                accountants
-              </Link>{" "}
-              reviewing client files, and for business owners who want to{" "}
+              For professional review of client files, and for business owners who want to{" "}
               <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
                 see how it works
               </Link>
@@ -429,7 +425,6 @@ export default function AccountingVsExcelGhanaPage() {
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
           { href: "/demo", label: "Demo", desc: "See how Finza works" },
           { href: "/contact", label: "Contact", desc: "Talk to the team" },
-          { href: "/accountants", label: "For accountants", desc: "Accountant-ready records" },
         ]}
       />
       <Footer />

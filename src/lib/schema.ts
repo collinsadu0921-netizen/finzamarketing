@@ -43,7 +43,7 @@ export function softwareApplicationSchema() {
       name: "Ghana",
     },
     description:
-      "Accounting software for Ghana: reports and tax summaries in GHS, collaboration with accountants, invoices and quotes in one place. Ghana tax lines (VAT, NHIL, GETFund) supported where applicable.",
+      "Accounting software for Ghana: reports and tax summaries in GHS, collaboration with professional advisers, invoices and quotes in one place. Ghana tax lines (VAT, NHIL, GETFund) supported where applicable.",
     url: `${BASE}/accounting-software-ghana`,
     offers: {
       "@type": "AggregateOffer",
@@ -91,17 +91,17 @@ export const homePageFaqForSchema = [
   {
     questionName: "Is Finza for small businesses in Ghana?",
     acceptedAnswerText:
-      "Yes. Finza is for small businesses and service companies in Ghana that want to send invoices online, track payments in GHS, and manage bookkeeping without spreadsheet chaos. Accountants managing Ghanaian clients can also use Finza for cleaner client files.",
+      "Yes. Finza is for small businesses and service companies in Ghana that want to send invoices online, track payments in GHS, and manage bookkeeping without spreadsheet chaos. Professional advisers managing Ghanaian clients can also use Finza for cleaner client files.",
   },
   {
     questionName: "How does Finza handle Ghana tax lines?",
     acceptedAnswerText:
-      "Finza supports common Ghana tax line presentation on invoices and activity—including VAT, NHIL, and GETFund where applicable. What applies depends on your business and registration; confirm with your accountant or GRA.",
+      "Finza supports common Ghana tax line presentation on invoices and activity—including VAT, NHIL, and GETFund where applicable. What applies depends on your business and registration; confirm with your professional adviser or GRA.",
   },
   {
-    questionName: "Can my accountant work with my Finza data?",
+    questionName: "Can my professional adviser work with my Finza data?",
     acceptedAnswerText:
-      "Yes. Finza is built so accountants can review organized records, tax summaries, and reports instead of rebuilding from PDFs and scattered sheets.",
+      "Yes. Finza is built so professional advisers can review organized records, tax summaries, and reports instead of rebuilding from PDFs and scattered sheets.",
   },
   {
     questionName: "Do I need to pay before trying Finza?",
@@ -125,17 +125,17 @@ export const accountingSoftwareGhanaFaqForSchema = [
   {
     questionName: "What reports do I get with accounting software in Ghana?",
     acceptedAnswerText:
-      "You get profit and position views in Ghana cedis (GHS), plus tax-related summaries that help you and your accountant see VAT, NHIL, and GETFund where applicable—without blending everything into one mystery total.",
+      "You get profit and position views in Ghana cedis (GHS), plus tax-related summaries that help you and your professional adviser see VAT, NHIL, and GETFund where applicable—without blending everything into one mystery total.",
   },
   {
-    questionName: "How does Finza help my accountant?",
+    questionName: "How does Finza help my professional adviser?",
     acceptedAnswerText:
-      "Your accountant gets cleaner records, clearer period work, and less time fixing spreadsheets. They can review, adjust, and support closing the books instead of reconstructing them.",
+      "Your professional adviser gets cleaner records, clearer period work, and less time fixing spreadsheets. They can review, adjust, and support closing the books instead of reconstructing them.",
   },
   {
     questionName: "Is Ghana tax treatment the same for every business?",
     acceptedAnswerText:
-      "No. Tax lines and registration depend on your business and supply type. Finza supports common presentations where applicable; your accountant or GRA confirms what applies to you.",
+      "No. Tax lines and registration depend on your business and supply type. Finza supports common presentations where applicable; your professional adviser or GRA confirms what applies to you.",
   },
   {
     questionName: "Can service businesses in Ghana use Finza?",
@@ -183,7 +183,7 @@ export const quotationSoftwareGhanaFaqForSchema = [
   {
     questionName: "Are tax lines shown on quotations?",
     acceptedAnswerText:
-      "Where applicable, quotations can reflect common Ghana tax line presentation. Final treatment depends on your business and registration—confirm with your accountant.",
+      "Where applicable, quotations can reflect common Ghana tax line presentation. Final treatment depends on your business and registration—confirm with your professional adviser.",
   },
   {
     questionName: "Who is quotation software for in Ghana?",
@@ -207,12 +207,12 @@ export const bookkeepingSoftwareGhanaFaqForSchema = [
   {
     questionName: "Does bookkeeping include tax visibility?",
     acceptedAnswerText:
-      "You can see tax-related amounts on activity where applicable. Filing positions depend on your business—your accountant confirms what applies.",
+      "You can see tax-related amounts on activity where applicable. Filing positions depend on your business—your professional adviser confirms what applies.",
   },
   {
-    questionName: "Can my accountant review my bookkeeping in Finza?",
+    questionName: "Can my professional adviser review my bookkeeping in Finza?",
     acceptedAnswerText:
-      "Yes. Accountants managing clients save time when daily recording already happened in a structured system.",
+      "Yes. Professional advisers managing clients save time when daily recording already happened in a structured system.",
   },
 ];
 
@@ -226,12 +226,12 @@ export const payrollSoftwareGhanaFaqForSchema = [
   {
     questionName: "Does Finza calculate PAYE and SSNIT?",
     acceptedAnswerText:
-      "Yes. PAYE follows Ghana progressive tax bands on taxable income from gross pay and applicable deductions, where applicable. SSNIT uses employee and employer contributions based on basic salary, according to the payroll inputs and staff type. Calculations use the payroll month as the effective date. Confirm final positions with your accountant or the relevant authorities.",
+      "Yes. PAYE follows Ghana progressive tax bands on taxable income from gross pay and applicable deductions, where applicable. SSNIT uses employee and employer contributions based on basic salary, according to the payroll inputs and staff type. Calculations use the payroll month as the effective date. Confirm final positions with your professional adviser or the relevant authorities.",
   },
   {
     questionName: "Can Finza handle bonus and overtime in payroll?",
     acceptedAnswerText:
-      "Yes. Bonus and overtime can be included in the payroll run, with tax treatment that can differ depending on the payroll case and how items are entered. Your setup and inputs determine how they flow—work with your accountant where you are unsure.",
+      "Yes. Bonus and overtime can be included in the payroll run, with tax treatment that can differ depending on the payroll case and how items are entered. Your setup and inputs determine how they flow—work with your professional adviser where you are unsure.",
   },
   {
     questionName: "Can I send payslips to employees?",
@@ -265,7 +265,7 @@ export const accountingSoftwareAccraFaqForSchema = [
   {
     questionName: "Can Finza handle accounting in Ghana cedis?",
     acceptedAnswerText:
-      "Yes. Amounts, customer balances, and reports are in Ghana cedis (GHS). Tax-related summaries can reflect VAT, NHIL, and GETFund where applicable to your setup—confirm final treatment with your accountant or GRA.",
+      "Yes. Amounts, customer balances, and reports are in Ghana cedis (GHS). Tax-related summaries can reflect VAT, NHIL, and GETFund where applicable to your setup—confirm final treatment with your professional adviser or GRA.",
   },
   {
     questionName: "Does Finza support invoices and reports together?",
@@ -273,9 +273,9 @@ export const accountingSoftwareAccraFaqForSchema = [
       "Yes. Invoicing, payments, and expenses feed the same workspace as profit and position views—so you are not reconciling a billing tool against a separate report file each month.",
   },
   {
-    questionName: "Can accountants use Finza with business owners?",
+    questionName: "Can professional advisers use Finza with business owners?",
     acceptedAnswerText:
-      "Yes. Owners and operators can record day-to-day activity; accountants can review organized records, tax summaries, and reports instead of rebuilding from PDFs and chat threads.",
+      "Yes. Owners and operators can record day-to-day activity; professional advisers can review organized records, tax summaries, and reports instead of rebuilding from PDFs and chat threads.",
   },
 ];
 
@@ -313,7 +313,7 @@ export const payrollSoftwareTemaFaqForSchema = [
   {
     questionName: "Can Finza calculate PAYE and SSNIT?",
     acceptedAnswerText:
-      "Yes. PAYE follows Ghana progressive bands on taxable income where applicable; SSNIT uses employee and employer contributions from basic salary according to payroll inputs. Confirm final positions with your accountant or the relevant authorities.",
+      "Yes. PAYE follows Ghana progressive bands on taxable income where applicable; SSNIT uses employee and employer contributions from basic salary according to payroll inputs. Confirm final positions with your professional adviser or the relevant authorities.",
   },
   {
     questionName: "Can I send payslips to employees?",
@@ -332,17 +332,17 @@ export const accountingSoftwareGhanaPaaFaqForSchema = [
   {
     questionName: "What is the best accounting software in Ghana?",
     acceptedAnswerText:
-      "The best fit depends on your business: invoicing frequency, whether you need clear VAT/NHIL/GETFund lines, and how you work with an accountant. Compare options in our buyer guide, then trial software that keeps quotes, invoices, and reports in one place in GHS.",
+      "The best fit depends on your business: invoicing frequency, whether you need clear VAT/NHIL/GETFund lines, and how you work with professional advisers. Compare options in our buyer guide, then trial software that keeps quotes, invoices, and reports in one place in GHS.",
   },
   {
     questionName: "Do I need accounting software for a small business?",
     acceptedAnswerText:
-      "If you invoice clients, track expenses, or work with an accountant, software beats scattered spreadsheets—especially when you need consistent GHS balances and tax-ready summaries. Start small with weekly habits and grow into full reporting.",
+      "If you invoice clients, track expenses, or work with professional advisers, software beats scattered spreadsheets—especially when you need consistent GHS balances and tax-ready summaries. Start small with weekly habits and grow into full reporting.",
   },
   {
     questionName: "How does VAT work in accounting software?",
     acceptedAnswerText:
-      "Good tools show VAT, NHIL, and GETFund as separate lines where applicable, tied to real transactions—not one blended tax number. Your registration and supply type decide what you charge or claim; confirm with your accountant or GRA.",
+      "Good tools show VAT, NHIL, and GETFund as separate lines where applicable, tied to real transactions—not one blended tax number. Your registration and supply type decide what you charge or claim; confirm with your professional adviser or GRA.",
   },
   {
     questionName: "Can I track invoices and expenses together?",
@@ -378,7 +378,7 @@ export const bookkeepingSoftwareGhanaPaaFaqForSchema = [
   {
     questionName: "What does bookkeeping software do for a small business?",
     acceptedAnswerText:
-      "It captures sales, expenses, and payments as they happen in GHS, keeps categories consistent, and gives your accountant organized activity instead of year-end panic.",
+      "It captures sales, expenses, and payments as they happen in GHS, keeps categories consistent, and gives your professional adviser organized activity instead of year-end panic.",
   },
   {
     questionName: "How often should I update my books in Ghana?",
@@ -388,7 +388,7 @@ export const bookkeepingSoftwareGhanaPaaFaqForSchema = [
   {
     questionName: "Can I track expenses with bookkeeping software?",
     acceptedAnswerText:
-      "Yes. Record supplier bills, receipts, and outflows with categories your accountant recognizes. That discipline feeds clearer profit and tax conversations later.",
+      "Yes. Record supplier bills, receipts, and outflows with categories your professional adviser recognizes. That discipline feeds clearer profit and tax conversations later.",
   },
   {
     questionName: "Does bookkeeping connect to accounting and invoicing?",
@@ -422,12 +422,12 @@ export const pricingPageFaqForSchema = [
   {
     questionName: "Which plan should I start with?",
     acceptedAnswerText:
-      "Start with Essentials if you mainly need proposals, quotes, invoices, payments, expenses, and basic reports. Choose Professional if you need supplier bills, incoming documents, payroll, WHT, VAT support, and team access. Choose Business if you need deeper accounting controls such as ledger records, journals, trial balance, bank reconciliation, period locking, audit logs, and exports.",
+      "Start with Essentials if you mainly need customers and customer statements, quotes and proforma invoices, invoices (including recurring invoices) and credit notes, receipts and record payments, expenses and incoming documents (upload, OCR, review, and convert to expenses), plus your VAT report, Profit and Loss, Balance Sheet, Finza Assist, and Ghana tax lines where applicable. Choose Professional if you need supplier bills and convert supported supplier documents into supplier bills, plus materials and billable material lines, jobs and projects, payroll and salary advances, VAT filings, WHT, fixed assets, Cash Flow report, Changes in Equity, team permissions, and the accounting audit log. Choose Business if you need general ledger controls, journals, accounting periods, period locking, CIT, the system audit log, and advanced accounting controls inside the Service workspace.",
   },
   {
-    questionName: "Does Finza replace my accountant?",
+    questionName: "Does Finza replace professional advice?",
     acceptedAnswerText:
-      "No. Finza helps organize your business records and reports. Your accountant or tax adviser should confirm the correct treatment for your business.",
+      "No. Finza helps organize your business records and reports. Your professional advisers should confirm the correct treatment for your business.",
   },
 ];
 

@@ -1,6 +1,7 @@
 /** Marketing plan metadata — used by plan-fit UI; full tier table kept in pricing-tiers.tsx */
 
 export type PlanTierId = "essentials" | "professional" | "business";
+export type BillingCycleId = "monthly" | "quarterly" | "annual";
 
 export const PLANS_STARTING_PRICE_GHS = 149;
 
@@ -37,31 +38,47 @@ export function getPlanMonthlyPriceGhs(planId: PlanTierId): number {
   return plan?.price ?? PLANS_STARTING_PRICE_GHS;
 }
 
+export function getPlanTotalPriceGhs(planId: PlanTierId, billingCycle: BillingCycleId): number {
+  const plan = pricingPlansData.find((p) => p.id === planId);
+  if (!plan) return PLANS_STARTING_PRICE_GHS;
+  switch (billingCycle) {
+    case "monthly":
+      return plan.price;
+    case "quarterly":
+      return plan.quarterlyPrice;
+    case "annual":
+      return plan.annualPrice;
+  }
+}
+
 export const pricingPlansData = [
   {
     id: "essentials" as const,
     name: "Essentials",
     subtitle:
-      "For service businesses that need professional documents, payment tracking, expenses, and clear business records.",
+      "For service businesses that need clean invoices, payment tracking, expenses, and core business records.",
     price: 149,
+    quarterlyPrice: 425,
+    annualPrice: 1490,
     highlight: false,
     cta: "Start 14-day free trial",
     planParam: "starter",
     groupTitle: "Included in Essentials",
     items: [
-      "Proposals",
-      "Quotes and proformas",
-      "Invoices and receipts",
       "Customers",
-      "Products and services",
-      "Payment recording",
-      "Partial payment tracking",
-      "Expense tracking",
-      "Basic reports",
-      "PDF exports",
-      "Email sending",
-      "Public document links",
-      "WhatsApp sharing links",
+      "Customer statements",
+      "Quotes and proforma invoices",
+      "Invoices",
+      "Recurring invoices",
+      "Credit notes",
+      "Receipts",
+      "Record payments",
+      "Expenses",
+      "Incoming Documents: upload, OCR, review and convert to expenses",
+      "VAT report",
+      "Profit and Loss",
+      "Balance Sheet",
+      "Finza Assist",
       "Ghana tax lines where applicable",
     ],
   },
@@ -69,48 +86,51 @@ export const pricingPlansData = [
     id: "professional" as const,
     name: "Professional",
     subtitle:
-      "For growing service teams that need better control over bills, documents, payroll, tax records, and team access.",
+      "For growing teams that need supplier bill workflows, materials and jobs, payroll, and stronger reporting.",
     price: 449,
+    quarterlyPrice: 1280,
+    annualPrice: 4490,
     highlight: true,
     cta: "Start 14-day free trial",
     planParam: "professional",
     groupTitle: "Everything in Essentials, plus",
     items: [
       "Supplier bills",
-      "Incoming documents",
-      "Document upload and review workflow",
+      "Convert supported supplier documents into supplier bills",
+      "Materials: keep material records, purchases, and stock quantities",
+      "Billable material lines: add billable materials to invoices",
+      "Jobs and projects: track material usage and costs through supported fulfilment and billing flows",
       "Payroll",
-      "WHT receivable tracking where applicable",
-      "VAT, NHIL, and GETFund support where applicable",
-      "Customer statements",
-      "Team access",
-      "Roles and permissions",
-      "More detailed reports",
-      "Accountant-ready records",
+      "Salary advances",
+      "VAT filings",
+      "WHT",
+      "Fixed assets",
+      "Cash Flow report",
+      "Changes in Equity",
+      "Team permissions",
+      "Accounting audit log",
     ],
   },
   {
     id: "business" as const,
     name: "Business",
     subtitle:
-      "For companies that need deeper accounting control, review workflows, exports, and governance.",
+      "For teams that need advanced accounting controls, period locking, and system audit logs.",
     price: 949,
+    quarterlyPrice: 2708,
+    annualPrice: 9490,
     highlight: false,
     cta: "Start 14-day free trial",
     planParam: "business",
     groupTitle: "Everything in Professional, plus",
     items: [
-      "Ledger records",
-      "Journal entries",
-      "Chart of accounts",
-      "Trial balance",
-      "Bank reconciliation",
-      "Period close and reopen controls",
-      "Audit logs",
-      "Accounting reports",
-      "Report exports",
-      "Accounting workspace access",
-      "Advanced accountant review support",
+      "General ledger controls",
+      "Journals",
+      "Accounting periods",
+      "Period locking",
+      "CIT",
+      "System audit log",
+      "Advanced accounting controls inside the Service workspace",
     ],
   },
 ];

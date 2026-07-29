@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Accounting Software in Ghana for Service Businesses | Finza",
   description:
-    "Finza is accounting software for Ghanaian service businesses that need month-end visibility, GHS reports, receivables, payables, and cleaner accountant handoff.",
+    "Finza is accounting software for Ghanaian service businesses that need month-end visibility, GHS reports, receivables, payables, and cleaner professional review handoff.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-ghana",
   },
@@ -44,17 +44,17 @@ export default function AccountingSoftwareGhanaPage() {
             {
               questionName: "Does Finza support VAT, NHIL, GETFund, and WHT?",
               acceptedAnswerText:
-                "Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and accountant or GRA guidance.",
+                "Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and professional adviser or GRA guidance.",
             },
             {
-              questionName: "Can my accountant use Finza?",
+              questionName: "Can my professional adviser use Finza?",
               acceptedAnswerText:
-                "Finza is designed to support cleaner accountant review with reports, exports, ledger-supported workflows, audit logs, and period controls.",
+                "Finza is designed to support cleaner professional review with reports, exports, ledger-supported workflows, audit logs, and period controls.",
             },
             {
-              questionName: "Does Finza replace my accountant?",
+              questionName: "Does Finza replace professional advice?",
               acceptedAnswerText:
-                "No. Finza helps organize business records and reports. Your accountant or tax adviser should confirm the correct treatment for your business.",
+                "No. Finza helps organize business records and reports. Your professional adviser or tax adviser should confirm the correct treatment for your business.",
             },
             {
               questionName: "Is there a free trial?",
@@ -72,7 +72,7 @@ export default function AccountingSoftwareGhanaPage() {
               Accounting software in Ghana for month-end clarity
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps owners and accountants see receivables, payables, expenses, payroll impact, Ghana tax lines, and reports in one GHS workspace before month-end turns into a spreadsheet chase.
+              Finza helps owners and professional advisers see receivables, payables, expenses, payroll impact, Ghana tax lines, and reports in one GHS workspace before month-end turns into a spreadsheet chase.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -96,7 +96,7 @@ export default function AccountingSoftwareGhanaPage() {
               For many service businesses in Ghana, accounting problems do not start with the final report. They start earlier - when proposals are sent in one place, invoices are created somewhere else, receipts stay on phones, payments are tracked manually, and payroll records are separated from the rest of the business.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps bring those records into one connected workspace so your business and accountant have cleaner information to work with.
+              Finza helps bring those records into one connected workspace so your business and professional adviser have cleaner information to work with.
             </p>
           </div>
         </Container>
@@ -108,7 +108,7 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Reports built from daily activity</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              This page is the accounting hub. It focuses on the records owners and accountants need for review: customer balances, supplier obligations, expense context, payroll records, tax-line visibility, and exports.
+              This page is the accounting hub. It focuses on the records owners and professional advisers need for review: customer balances, supplier obligations, expense context, payroll records, tax-line visibility, and exports.
             </p>
             <div className="grid gap-4 text-left sm:grid-cols-2">
               {[
@@ -125,8 +125,8 @@ export default function AccountingSoftwareGhanaPage() {
                   d: "Review business activity and reports in Ghana cedis.",
                 },
                 {
-                  t: "Accountant handoff",
-                  d: "Give your accountant cleaner records, exports, and period context.",
+                  t: "Professional review handoff",
+                  d: "Give your professional adviser cleaner records, exports, and period context.",
                 },
                 {
                   t: "Controls",
@@ -156,7 +156,7 @@ export default function AccountingSoftwareGhanaPage() {
               Finza supports Ghana-focused records in GHS, including tax breakdowns where applicable. Your documents can show VAT, NHIL, GETFund, and WHT clearly instead of hiding everything inside one general number.
             </p>
             <p className="text-sm leading-relaxed text-zinc-500">
-              Tax treatment depends on your business registration, supply type, and accountant or GRA guidance.
+              Tax treatment depends on your business registration, supply type, and professional adviser or GRA guidance.
             </p>
             <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2">
               {[
@@ -164,7 +164,7 @@ export default function AccountingSoftwareGhanaPage() {
                 "VAT, NHIL, and GETFund support where applicable",
                 "WHT receivable tracking where applicable",
                 "Tax breakdowns on supported documents",
-                "Reports that help with accountant review",
+                "Reports that help with professional review",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -179,15 +179,15 @@ export default function AccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Cleaner records for your accountant</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Cleaner records for professional review</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               Finza helps daily business activity create better records as work happens. Invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, and reports stay connected.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Behind the scenes, Finza supports accounting-grade workflows such as ledger records, journals, chart of accounts, trial balance, period controls, audit logs, and exports.
             </p>
-            <Link href="/accountants" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-              For accountants
+            <Link href="/features" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
+              Explore professional review
             </Link>
           </div>
         </Container>
@@ -210,7 +210,7 @@ export default function AccountingSoftwareGhanaPage() {
                 "Agencies",
                 "Professional service providers",
                 "Field-service businesses",
-                "Growing SMEs working with an accountant",
+                "Growing SMEs preparing for professional review",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -269,10 +269,10 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Accounting support, not a replacement for professional advice</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps organize business records, documents, payments, and reports. It does not guarantee tax compliance, replace your accountant, or remove the need to review important financial information.
+              Finza helps organize business records, documents, payments, and reports. It does not guarantee tax compliance, replace professional advice, or remove the need to review important financial information.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              Your accountant or tax adviser should confirm the correct treatment for your business.
+              Your professional adviser or tax adviser should confirm the correct treatment for your business.
             </p>
           </div>
         </Container>
@@ -293,19 +293,19 @@ export default function AccountingSoftwareGhanaPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Does Finza support VAT, NHIL, GETFund, and WHT?</AccordionTrigger>
                 <AccordionContent>
-                  Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and accountant or GRA guidance.
+                  Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and professional adviser or GRA guidance.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
-                <AccordionTrigger>Can my accountant use Finza?</AccordionTrigger>
+                <AccordionTrigger>Can my professional adviser use Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Finza is designed to support cleaner accountant review with reports, exports, ledger-supported workflows, audit logs, and period controls.
+                  Finza is designed to support cleaner professional review with reports, exports, ledger-supported workflows, audit logs, and period controls.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Does Finza replace professional advice?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize business records and reports. Your accountant or tax adviser should confirm the correct treatment for your business.
+                  No. Finza helps organize business records and reports. Your professional adviser or tax adviser should confirm the correct treatment for your business.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -325,7 +325,7 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-extrabold text-white">Start with cleaner accounting records in GHS</h2>
             <p className="text-zinc-300">
-              Use Finza to review balances, costs, payroll records, tax lines, reports, and accountant handoff from one connected workspace.
+              Use Finza to review balances, costs, payroll records, tax lines, reports, and professional review handoff from one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
@@ -349,7 +349,7 @@ export default function AccountingSoftwareGhanaPage() {
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Track costs" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE & SSNIT" },
-          { href: "/accountants", label: "For accountants", desc: "Professional review" },
+          { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />
       <Footer />

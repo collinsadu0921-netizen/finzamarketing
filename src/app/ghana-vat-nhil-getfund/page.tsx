@@ -60,7 +60,7 @@ export default function GhanaVatNhilGetfundPage() {
                   rate: "15%",
                   full: "Value Added Tax",
                   authority: "Ghana Revenue Authority (GRA)",
-                  body: "The primary consumption tax in Ghana. Collected at the point of sale from the customer and remitted to GRA. Input VAT paid on taxable purchases can be deducted from output VAT collected, leaving only the net amount payable. The standard rate is 15%.",
+                  body: "The primary consumption tax in Ghana. Collected from the customer at the time of the transaction and remitted to GRA. Input VAT paid on taxable purchases can be deducted from output VAT collected, leaving only the net amount payable. The standard rate is 15%.",
                   note: "Input VAT on qualifying purchases is reclaimable.",
                 },
                 {
@@ -247,7 +247,7 @@ export default function GhanaVatNhilGetfundPage() {
                 { label: "VAT software Ghana", desc: "VAT software for Ghanaian businesses", href: "/vat-software-ghana" },
                 { label: "Invoicing software", desc: "Send invoices online in Ghana", href: "/invoicing-software-ghana" },
                 { label: "Accounting software Ghana", desc: "Full accounting system", href: "/accounting-software-ghana" },
-                { label: "For accountants", desc: "Professional workspace", href: "/accountants" },
+                { label: "Features", desc: "Professional review workflows", href: "/features" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="p-5 rounded-xl border border-zinc-200 bg-white hover:border-zinc-400 transition-colors">
                   <p className="text-sm font-bold text-zinc-900">{l.label}</p>

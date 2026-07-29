@@ -5,7 +5,7 @@ import { Container } from "@/components/container";
 const whyPoints = [
   "Built for Ghana, not adapted later",
   "Clear tax line handling (VAT, NHIL, GETFund where applicable)",
-  "Designed for service businesses and accountants",
+  "Designed for Ghanaian service businesses and professional review workflows",
   "Finza Assist - in-app copilot for Ghana VAT, WHT, PAYE & books; read-only data, server-verified numbers, no auto-posting",
   "Simple to use without accounting knowledge",
 ];
@@ -17,14 +17,14 @@ const whoItems = [
   { title: "Cleaning businesses", desc: "Recurring jobs, quotes, and steady invoicing in GHS." },
   { title: "Consultants & agencies", desc: "Proposals, milestones, and collections without a second spreadsheet." },
   { title: "Logistics & transport", desc: "Runs, fees, and customer balances in one place." },
-  { title: "Clinics & service providers", desc: "Professional billing and records your accountant can review." },
+  { title: "Clinics & service providers", desc: "Professional billing and records your professional advisers can review." },
 ];
 
 const dayToDayPoints = [
   "Send invoices and track payments in one place",
   "See what your business actually earned in GHS",
   "Stay ready for tax conversations without last-minute fixes",
-  "Work with your accountant without rebuilding records",
+  "Work with your professional advisers without rebuilding records",
 ];
 
 const trustPoints = [

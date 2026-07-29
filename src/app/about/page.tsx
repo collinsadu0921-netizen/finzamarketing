@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "About Finza | Business Software for Ghanaian Service Businesses",
   description:
-    "Finza is business software for Ghanaian service businesses, helping teams manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records.",
+    "Finza is business software for Ghanaian service businesses, helping teams manage proposals, invoices, payments, expenses, documents, payroll, reports, and records for professional review.",
   alternates: {
     canonical: "https://www.finza.africa/about",
   },
@@ -34,22 +34,22 @@ export default function AboutPage() {
             {
               questionName: "What is Finza?",
               acceptedAnswerText:
-                "Finza is business software for Ghanaian service businesses. It helps manage proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records.",
+                "Finza is business software for Ghanaian service businesses. It helps manage proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and records for professional review.",
             },
             {
               questionName: "Who is Finza built for?",
               acceptedAnswerText:
-                "Finza is built for Ghanaian service businesses such as cleaning companies, contractors, consultants, agencies, maintenance teams, field-service businesses, and growing SMEs working with accountants.",
+                "Finza is built for Ghanaian service businesses such as cleaning companies, contractors, consultants, agencies, maintenance teams, field-service businesses, and growing SMEs working with professional advisers.",
             },
             {
               questionName: "Is Finza only invoicing software?",
               acceptedAnswerText:
-                "No. Finza includes invoicing, but it also supports proposals, quotes, proformas, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records.",
+                "No. Finza includes invoicing, but it also supports proposals, quotes, proformas, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and records for professional review.",
             },
             {
-              questionName: "Does Finza replace accountants?",
+              questionName: "Does Finza replace professional review?",
               acceptedAnswerText:
-                "No. Finza helps organize records for review. Accountants, tax advisers, payroll advisers, and legal advisers should still confirm the correct treatment for the business.",
+                "No. Finza helps organize records for review. Tax advisers, payroll advisers, and legal advisers should still confirm the correct treatment for the business.",
             },
             {
               questionName: "Can I try Finza before paying?",
@@ -67,7 +67,7 @@ export default function AboutPage() {
               Business software built around how Ghanaian service businesses work
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps service businesses in Ghana manage the work that happens before, during, and after getting paid - proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records.
+              Finza helps service businesses in Ghana manage the work that happens before, during, and after getting paid - proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and records for professional review.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link href="/contact"
@@ -78,7 +78,7 @@ export default function AboutPage() {
               <Link href="/pricing#find-plan" className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors text-center">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">
-              Built for business owners who want clearer records in GHS and better information for accountant review.
+              Built for business owners who want clearer records in GHS and better information for professional review.
             </p>
           </div>
         </Container>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               Many growing businesses do not fail because they lack effort. They struggle because their records are scattered.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              A client request starts on WhatsApp. A quote is created in one file. An invoice is sent as a PDF. A receipt is saved on a phone. A supplier bill arrives by email. Payments are tracked manually. At month-end, the accountant has to rebuild the business story from incomplete information.
+              A client request starts on WhatsApp. A quote is created in one file. An invoice is sent as a PDF. A receipt is saved on a phone. A supplier bill arrives by email. Payments are tracked manually. At month-end, the reviewer has to rebuild the business story from incomplete information.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Finza exists to make that daily business flow easier to organize.
@@ -111,7 +111,7 @@ export default function AboutPage() {
               Finza is designed for service businesses that need more than a simple invoice template. The goal is to keep client work, billing, payments, expenses, documents, payroll, and reports closer together.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              That gives business owners a clearer view of operations and gives accountants better records to review.
+              That gives business owners a clearer view of operations and gives professional reviewers better records to review.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
@@ -133,7 +133,7 @@ export default function AboutPage() {
                 },
                 {
                   t: "Reports",
-                  d: "Review business performance and accountant-ready records.",
+                  d: "Review business performance and records for professional review.",
                 },
                 {
                   t: "Accounting support",
@@ -159,7 +159,7 @@ export default function AboutPage() {
               Finza focuses on Ghanaian service businesses that work in GHS, send client documents, manage payments, and need clearer records for review.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza supports Ghana tax lines where applicable, including VAT, NHIL, GETFund, and WHT. The correct treatment depends on the business registration, supply type, and accountant or GRA guidance.
+              Finza supports Ghana tax lines where applicable, including VAT, NHIL, GETFund, and WHT. The correct treatment depends on the business registration, supply type, and professional adviser or GRA guidance.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-zinc-700">
               {[
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 "Client documents for service businesses",
                 "Payment and customer balance tracking",
                 "Incoming document and record organization",
-                "Reports and exports for accountant review",
+                "Reports and exports for professional review",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -183,15 +183,15 @@ export default function AboutPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">For business owners and accountants</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">For business owners and professional reviewers</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built for the business owner who needs control before the accountant receives the records.
+              Finza is built for the business owner who needs control before professional review receives the records.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              The business can manage daily activity in one workspace, while the accountant can review cleaner information with better context. Finza does not replace professional judgment. It helps organize the records that professional review depends on.
+              The business can manage daily activity in one workspace, while professional reviewers can review cleaner information with better context. Finza does not replace professional judgment. It helps organize the records that professional review depends on.
             </p>
-            <Link href="/accountants" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-              For accountants
+            <Link href="/features" className="inline-block rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
+              Explore professional review features
             </Link>
           </div>
         </Container>
@@ -203,7 +203,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Who Finza is for</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is especially useful for Ghanaian service businesses that prepare prices, send client documents, track payments, manage expenses, and work with an accountant.
+              Finza is especially useful for Ghanaian service businesses that prepare prices, send client documents, track payments, manage expenses, and work with a professional adviser.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-zinc-700">
               {[
@@ -242,8 +242,8 @@ export default function AboutPage() {
                   d: "Ghanaian businesses need records in GHS, practical document flows, and tax-line support where applicable.",
                 },
                 {
-                  t: "Accountants need better starting information",
-                  d: "Cleaner records help accountants review faster and with better context.",
+                  t: "Professional reviewers need better starting information",
+                  d: "Cleaner records help professional reviewers review faster and with better context.",
                 },
                 {
                   t: "Business tools should reduce scattered work",
@@ -266,7 +266,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What Finza is not</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is not a replacement for your accountant, tax adviser, payroll adviser, lawyer, or professional review.
+              Finza is not a replacement for your tax adviser, payroll adviser, lawyer, or professional review.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Finza does not guarantee tax compliance, automatically file statutory returns, or remove the need to check business records carefully. It helps organize the information your business and advisers need to review.
@@ -284,25 +284,25 @@ export default function AboutPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>What is Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Finza is business software for Ghanaian service businesses. It helps manage proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records.
+                  Finza is business software for Ghanaian service businesses. It helps manage proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and records for professional review.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">
                 <AccordionTrigger>Who is Finza built for?</AccordionTrigger>
                 <AccordionContent>
-                  Finza is built for Ghanaian service businesses such as cleaning companies, contractors, consultants, agencies, maintenance teams, field-service businesses, and growing SMEs working with accountants.
+                  Finza is built for Ghanaian service businesses such as cleaning companies, contractors, consultants, agencies, maintenance teams, field-service businesses, and growing SMEs working with professional advisers.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
                 <AccordionTrigger>Is Finza only invoicing software?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza includes invoicing, but it also supports proposals, quotes, proformas, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records.
+                  No. Finza includes invoicing, but it also supports proposals, quotes, proformas, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and records for professional review.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace accountants?</AccordionTrigger>
+                <AccordionTrigger>Does Finza replace professional review?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records for review. Accountants, tax advisers, payroll advisers, and legal advisers should still confirm the correct treatment for the business.
+                  No. Finza helps organize records for review. Tax advisers, payroll advisers, and legal advisers should still confirm the correct treatment for the business.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -324,7 +324,7 @@ export default function AboutPage() {
               Build cleaner business records from daily work
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
+              Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and records for professional review in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <Link href="/contact"
@@ -343,7 +343,7 @@ export default function AboutPage() {
       <RelatedClusterLinks
         related={[
           { href: "/features", label: "Features", desc: "Product capabilities" },
-          { href: "/accountants", label: "For accountants", desc: "Accountant-ready records" },
+          { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />
       <Footer />

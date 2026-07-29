@@ -54,7 +54,7 @@ export default function SecurityPage() {
             {
               questionName: "Does Finza guarantee compliance?",
               acceptedAnswerText:
-                "No. Finza helps organize records and access controls. It does not guarantee tax compliance or replace accountant, tax, legal, or security advice.",
+                "No. Finza helps organize records and access controls. It does not guarantee tax compliance or replace professional tax, legal, or security advice.",
             },
           ]),
         ]}
@@ -68,7 +68,7 @@ export default function SecurityPage() {
               Security and trust for business records in Ghana
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps Ghanaian businesses manage invoices, payments, documents, payroll, reports, and accountant-ready records with workspace separation, user permissions, audit logs, period controls, and controlled document-sharing flows.
+              Finza helps Ghanaian businesses manage invoices, payments, documents, payroll, reports, and records for professional review with workspace separation, user permissions, audit logs, period controls, and controlled document-sharing flows.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -131,8 +131,8 @@ export default function SecurityPage() {
                   d: "Team members can be managed with role and permission logic.",
                 },
                 {
-                  t: "Accountant access",
-                  d: "Accounting access can be controlled separately from daily operational work.",
+                  t: "Review access",
+                  d: "Review workflows can be controlled separately from daily operational work.",
                 },
               ].map((x) => (
                 <div key={x.t} className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
@@ -154,7 +154,7 @@ export default function SecurityPage() {
               Not every user should see or change the same information. Finza supports team and permission workflows so a business can manage who has access to important records and actions.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              This is especially important when a business has owners, staff, accountants, and operational users working around the same records.
+              This is especially important when a business has owners, staff, and professional reviewers working around the same records.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-zinc-700">
               {[
@@ -210,7 +210,7 @@ export default function SecurityPage() {
               Finza includes audit log surfaces and period-control workflows that support review of important activity and accounting periods.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              These controls help businesses and accountants understand what happened, when records were changed, and how period review is being managed.
+              These controls help businesses and professional reviewers understand what happened, when records were changed, and how period review is being managed.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
@@ -223,8 +223,8 @@ export default function SecurityPage() {
                   d: "Support period close and reopen workflows where applicable.",
                 },
                 {
-                  t: "Accounting review",
-                  d: "Give accountants better context during month-end and period review.",
+                  t: "Review context",
+                  d: "Give professional reviewers better context during month-end and period review.",
                 },
                 {
                   t: "Record visibility",
@@ -258,6 +258,7 @@ export default function SecurityPage() {
                 "Specific secret-handling logic for payment-provider credentials",
                 "Admin-level care required for provider setup",
                 "Provider availability depends on the configured payment flow",
+                "Hubtel invoice payments (optional): Accept online invoice payments through Hubtel using your connected merchant account. Hubtel approval and credentials are required.",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2">
                   {item}
@@ -279,7 +280,7 @@ export default function SecurityPage() {
             <ul className="space-y-2 text-sm text-zinc-700">
               {[
                 "Finza does not guarantee tax compliance.",
-                "Finza does not replace accountant review.",
+                "Finza does not replace professional review.",
                 "Finza does not remove the need for strong passwords and careful user management.",
                 "Finza should not be described as having verified backup and restore workflows unless those workflows are confirmed.",
                 "Finza should not be described as encrypting all data unless that scope is technically verified.",
@@ -309,7 +310,7 @@ export default function SecurityPage() {
                 "Use strong passwords and secure devices",
                 "Avoid sharing public document links carelessly",
                 "Keep payment-provider credentials restricted",
-                "Review records regularly with your accountant or adviser",
+                "Review records regularly with your professional adviser",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2">
                   {item}
@@ -353,7 +354,7 @@ export default function SecurityPage() {
               <AccordionItem value="q5">
                 <AccordionTrigger>Does Finza guarantee compliance?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records and access controls. It does not guarantee tax compliance or replace accountant, tax, legal, or security advice.
+                  No. Finza helps organize records and access controls. It does not guarantee tax compliance or replace professional tax, legal, or security advice.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -369,7 +370,7 @@ export default function SecurityPage() {
               Keep business records better organized and easier to review
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to manage invoices, payments, documents, payroll, reports, access controls, and accountant-ready records in one connected workspace.
+              Use Finza to manage invoices, payments, documents, payroll, reports, access controls, and records for professional review in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <Link href="/contact"
@@ -395,7 +396,6 @@ export default function SecurityPage() {
           { href: "/demo", label: "Demo", desc: "See how Finza works" },
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
-          { href: "/accountants", label: "For accountants", desc: "Review workflows" },
           { href: "/privacy", label: "Privacy", desc: "Data and rights" },
           { href: "/terms", label: "Terms", desc: "Platform terms" },
           { href: "/contact", label: "Contact", desc: "Talk to the team" },

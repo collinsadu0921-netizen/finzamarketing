@@ -17,7 +17,7 @@ export type FinzaProductProofPageKey =
   | "payroll"
   | "vat-tax"
   | "security"
-  | "accountants";
+  ;
 
 export type FinzaProductProofPlacement = {
   page: FinzaProductProofPageKey;
@@ -35,7 +35,7 @@ export const FINZA_PRODUCT_PROOF_PLACEMENTS: FinzaProductProofPlacement[] = [
     file: "src/app/page.tsx",
     sectionHint: "After HomeWorkflowSection or before HomeTrustAndCtaSection",
     assetIds: ["dashboard", "customer-statement"],
-    notes: "Hero already uses legacy dashboard image; consider ProductProofStrip for a second proof block below workflow.",
+    notes: "Hero and product proof use finza-dashboard-hero.webp.",
   },
   {
     page: "pricing",
@@ -92,14 +92,6 @@ export const FINZA_PRODUCT_PROOF_PLACEMENTS: FinzaProductProofPlacement[] = [
     sectionHint: "Near roles/permissions content",
     assetIds: ["user-roles-security"],
     notes: "About page can reuse same asset if a dedicated about proof section is added later.",
-  },
-  {
-    page: "accountants",
-    route: "/accountants",
-    file: "src/app/accountants/page.tsx",
-    sectionHint: "Before accountant review CTA",
-    assetIds: ["reports-export", "customer-statement"],
-    notes: "Handoff + statement proof for firms reviewing client files.",
   },
 ];
 

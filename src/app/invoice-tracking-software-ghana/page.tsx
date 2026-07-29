@@ -269,16 +269,16 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Invoice tracking and accountant-ready records</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Invoice tracking and records for professional review</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              At month-end, your accountant should not have to guess which invoices were paid, which were partial, and which clients still owe money. Finza helps keep invoice and payment records in a cleaner structure for review.
+              At month-end, your professional reviewers should not have to guess which invoices were paid, which were partial, and which clients still owe money. Finza helps keep invoice and payment records in a cleaner structure for review.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href="/accountants"
+                href="/features"
                 className="inline-flex rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                For accountants
+                Explore professional review
               </Link>
               <Link
                 href="/contact"

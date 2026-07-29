@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { StickySignupCta } from "@/components/sticky-signup-cta";
 import { JsonLd } from "@/components/json-ld";
 import { organizationAndWebsiteGraph } from "@/lib/schema";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Finza",
   },
   description:
-    "Accounting and invoicing software for businesses in Ghana. Send invoices online, track payments in GHS, quotes, expenses, and reports—Ghana tax lines (VAT, NHIL, GETFund) where applicable. For service businesses and accountants.",
+    "Accounting and invoicing software for businesses in Ghana. Send invoices online, track payments in GHS, quotes, expenses, and reports—Ghana tax lines (VAT, NHIL, GETFund) where applicable. Built for Ghanaian service businesses.",
   keywords: [
     "Ghana accounting software",
     "VAT Ghana",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Finza",
     title: "Finza — Accounting & Invoicing Software for Ghana (GHS)",
     description:
-      "Invoices, quotes, and reports in Ghana cedis. Built for service businesses and accountants in Ghana.",
+      "Invoices, quotes, and reports in Ghana cedis. Built for Ghanaian service businesses.",
     images: [
       {
         url: "/og-image.png",
@@ -80,15 +81,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased h-full`}>
         <JsonLd data={organizationAndWebsiteGraph} />
-        {/* ── Announcement Bar ── */}
-        <div className="w-full bg-[#0F172A] text-white text-center py-2.5 px-4 text-sm font-medium">
-          <span>Plans from GH₵149/month.</span>
-          <a
-            href="/pricing#plans"
-            className="ml-3 underline underline-offset-2 font-semibold hover:text-zinc-300 transition-colors"
+        <div className="w-full border-b border-zinc-200/80 bg-zinc-50 px-4 py-2 text-center text-sm text-zinc-700">
+          <Link
+            href="/pricing"
+            className="inline-flex flex-wrap items-center justify-center gap-x-1.5 font-medium transition-colors hover:text-zinc-900"
           >
-            Compare plans
-          </a>
+            <span>Plans from GH₵149/month · Start with a 14-day free trial — no card required.</span>
+            <span className="font-semibold text-[#0F172A] underline underline-offset-2">
+              Compare plans
+            </span>
+          </Link>
         </div>
         <Navbar />
         {children}

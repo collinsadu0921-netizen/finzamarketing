@@ -40,12 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.85,
         },
         {
-            url: "https://www.finza.africa/accountants",
-            lastModified: now,
-            changeFrequency: "monthly",
-            priority: 0.85,
-        },
-        {
             url: "https://www.finza.africa/demo",
             lastModified: now,
             changeFrequency: "yearly",

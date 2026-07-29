@@ -29,7 +29,6 @@ export type FinzaProductAssetUsage =
   | "vat-tax"
   | "security"
   | "about"
-  | "accountants"
   | "demo";
 
 export type FinzaProductAsset = {
@@ -51,8 +50,8 @@ export type FinzaProductAsset = {
 const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
   dashboard: {
     id: "dashboard",
-    src: `${FINZA_PRODUCT_IMAGE_DIR}/dashboard.png`,
-    filename: "dashboard.png",
+    src: `${FINZA_PRODUCT_IMAGE_DIR}/finza-dashboard-hero.webp`,
+    filename: "finza-dashboard-hero.webp",
     alt: "Finza dashboard showing business records, invoices, payments, and reports",
     title: "A working view of your business records",
     description:
@@ -70,7 +69,7 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
     alt: "Finza invoice creation screen for preparing a customer invoice",
     title: "Create invoices from the same place you manage records",
     description:
-      "Prepare invoices with customer details, line items, payment instructions, and the records your accountant may need later.",
+      "Prepare invoices with customer details, line items, payment instructions, and the records your professional reviewer may need later.",
     caption: "Create and review invoice details before sending them to a customer.",
     width: 2400,
     height: 1350,
@@ -113,7 +112,7 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
     caption: "A clearer view of what each customer has been billed, paid, and still owes.",
     width: 2400,
     height: 1350,
-    intendedUsage: ["homepage", "invoice-tracking", "accountants"],
+    intendedUsage: ["homepage", "invoice-tracking"],
   },
   expenses: {
     id: "expenses",
@@ -123,7 +122,7 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
     title: "Keep expenses and supplier records in order",
     description:
       "Capture expenses, supplier bills, and supporting records so bookkeeping is not left until month end.",
-    caption: "Daily expense records help keep bookkeeping cleaner before accountant review.",
+    caption: "Daily expense records help keep bookkeeping cleaner before professional review.",
     width: 2400,
     height: 1350,
     intendedUsage: ["bookkeeping"],
@@ -145,14 +144,14 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
     id: "reports-export",
     src: `${FINZA_PRODUCT_IMAGE_DIR}/reports-export.png`,
     filename: "reports-export.png",
-    alt: "Finza reports and export screen for accountant-ready business records",
+    alt: "Finza reports and export screen for professional review",
     title: "Reports prepared for review",
     description:
-      "Give owners and accountants a clearer view of records, balances, and exports without rebuilding everything from scattered files.",
-    caption: "Reports and exports help prepare records for owner and accountant review.",
+      "Give owners and professional reviewers a clearer view of records, balances, and exports without rebuilding everything from scattered files.",
+    caption: "Reports and exports help prepare records for owner and professional review.",
     width: 2400,
     height: 1350,
-    intendedUsage: ["bookkeeping", "accountants"],
+    intendedUsage: ["bookkeeping"],
   },
   "tax-settings": {
     id: "tax-settings",

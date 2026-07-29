@@ -26,17 +26,15 @@ export async function Footer() {
     <footer className="border-t border-zinc-200 bg-zinc-50 text-left">
       <Container className="py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Column 1 */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <Image src="/logo.png" alt="Finza" width={100} height={30} className="h-7 w-auto" />
             </Link>
             <p className="text-sm leading-relaxed text-zinc-600">
-              Run quotes, invoices, payments, payroll, and records in one place.
+              Quotes, jobs, invoices, payments and business records in one Ghana-ready workspace.
             </p>
           </div>
 
-          {/* Column 2 */}
           <div>
             <h4 className="mb-4 font-semibold text-zinc-900">Product</h4>
             <ul className="space-y-3 text-sm text-zinc-600">
@@ -51,11 +49,6 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/demo" className="transition-colors hover:text-zinc-900">
-                  Product tour
-                </Link>
-              </li>
-              <li>
                 <Link href="/invoicing-software-ghana" className="transition-colors hover:text-zinc-900">
                   Invoicing in GHS
                 </Link>
@@ -65,15 +58,9 @@ export async function Footer() {
                   Payroll · Ghana
                 </Link>
               </li>
-              <li>
-                <Link href="/accountants" className="transition-colors hover:text-zinc-900">
-                  Accountants
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Column 3 */}
           <div>
             <h4 className="mb-4 font-semibold text-zinc-900">Ghana guides</h4>
             <ul className="space-y-3 text-sm text-zinc-600">
@@ -93,6 +80,11 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/invoice-calculator-ghana" className="transition-colors hover:text-zinc-900">
+                  Ghana invoice calculator
+                </Link>
+              </li>
+              <li>
                 <Link href="/quickbooks-alternative-ghana" className="transition-colors hover:text-zinc-900">
                   QuickBooks alternative Ghana
                 </Link>
@@ -102,15 +94,9 @@ export async function Footer() {
                   Sage alternative Ghana
                 </Link>
               </li>
-              <li>
-                <Link href="/invoice-calculator-ghana" className="transition-colors hover:text-zinc-900">
-                  Ghana invoice calculator
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Column 4 */}
           <div>
             <h4 className="mb-4 font-semibold text-zinc-900">Company</h4>
             <ul className="space-y-3 text-sm text-zinc-600">

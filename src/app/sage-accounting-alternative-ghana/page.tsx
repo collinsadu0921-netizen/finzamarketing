@@ -313,7 +313,7 @@ export default function SageAccountingAlternativeGhanaPage() {
                 "Agencies and consultants",
                 "Professional service firms",
                 "SMEs moving away from spreadsheet-only records",
-                "Businesses preparing cleaner records for accountants",
+                "Businesses preparing cleaner records for professional review",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -329,11 +329,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
                 contact
               </Link>
-              , or share{" "}
-              <Link href="/accountants" className="font-semibold text-zinc-900 underline underline-offset-2">
-                accountant-ready context
-              </Link>{" "}
-              with your firm.
+              , or share records for professional review with your firm.
             </p>
           </div>
         </Container>

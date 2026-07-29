@@ -6,7 +6,7 @@ Place sanitized Finza product images in this folder. The marketing site reads th
 
 | Filename | Registry ID |
 |----------|-------------|
-| `dashboard.png` | `dashboard` |
+| `finza-dashboard-hero.webp` | `dashboard` |
 | `invoice-create.png` | `invoice-create` |
 | `invoice-sample.png` | `invoice-sample` |
 | `receipt-payment.png` | `receipt-payment` |
