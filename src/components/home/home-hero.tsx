@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { MarketingReveal } from "@/components/motion/marketing-reveal";
 import { MarketingScreenshot } from "@/components/site/marketing-screenshot";
 import { homePrimaryBtn, homeSecondaryBtn } from "@/components/home/home-ui";
 import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
@@ -13,8 +14,8 @@ export function HomeHero() {
       <div className="pointer-events-none absolute inset-0 site-hero-warm-glow" />
 
       <Container>
-        <div className="relative z-10 grid items-center gap-8 lg:grid-cols-[42%_58%] lg:gap-10">
-          <div className="space-y-5">
+        <div className="relative z-10 grid items-center gap-8 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:gap-10">
+          <div className="min-w-0 space-y-5">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">
               Business software for Ghanaian service teams
             </p>
@@ -38,17 +39,18 @@ export function HomeHero() {
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[720px] lg:max-w-none">
-            <MarketingScreenshot
-              src="/images/finza/finza-dashboard-hero.webp"
-              alt="Finza dashboard for a Ghanaian service business showing revenue, expenses, invoices, and activity in GHS"
-              width={2400}
-              height={1350}
-              priority
-              float
-              sizes="(max-width: 640px) 96vw, (max-width: 1024px) 90vw, 680px"
-              className="marketing-shot-enter"
-            />
+          <div className="relative mx-auto w-full min-w-0 max-w-[720px] lg:max-w-none">
+            <MarketingReveal variant="hero-settle">
+              <MarketingScreenshot
+                src="/images/finza/finza-dashboard-hero.webp"
+                alt="Finza dashboard for a Ghanaian service business showing revenue, expenses, invoices, and activity in GHS"
+                width={2400}
+                height={1350}
+                priority
+                float
+                sizes="(max-width: 640px) 96vw, (max-width: 1024px) 90vw, 680px"
+              />
+            </MarketingReveal>
           </div>
         </div>
       </Container>

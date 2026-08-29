@@ -10,6 +10,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { Container } from "@/components/container";
+import { MarketingReveal } from "@/components/motion/marketing-reveal";
 import { MarketingScreenshot } from "@/components/site/marketing-screenshot";
 import {
   homeCardMuted,
@@ -110,8 +111,8 @@ export function HomeJobsMaterialsSection() {
   return (
     <section className={`home-section-navy border-b border-zinc-200/70 ${sectionPad}`}>
       <Container>
-        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[2fr_3fr] lg:gap-10">
-          <div className="space-y-5">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-10">
+          <div className="min-w-0 space-y-5">
             <div className="space-y-3">
               <span className="inline-flex rounded-full border border-blue-200/90 bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-800">
                 Professional
@@ -135,16 +136,18 @@ export function HomeJobsMaterialsSection() {
               ))}
             </ul>
           </div>
-          <div className="relative">
+          <div className="relative min-w-0 w-full">
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-sky-500/5 blur-xl" aria-hidden />
-            <MarketingScreenshot
-              src="/images/finza/finza-job-materials-workflow.webp"
-              alt="Finza job materials workflow showing material usage linked to a customer job"
-              width={2400}
-              height={1350}
-              sizes="(max-width: 1024px) 96vw, 60vw"
-              className="marketing-shot-enter relative"
-            />
+            <MarketingReveal variant="clip-scale" className="relative">
+              <MarketingScreenshot
+                src="/images/finza/finza-job-materials-workflow.webp"
+                alt="Finza job materials workflow showing material usage linked to a customer job"
+                width={2400}
+                height={1350}
+                sizes="(max-width: 1024px) 96vw, 60vw"
+                className="relative"
+              />
+            </MarketingReveal>
           </div>
         </div>
       </Container>
@@ -157,19 +160,21 @@ export function HomeDocumentsCostsSection() {
   return (
     <section className={`home-section-amber border-b border-zinc-200/70 ${sectionPad}`}>
       <Container>
-        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[3fr_2fr] lg:gap-10">
-          <div className="order-2 relative lg:order-1">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-10">
+          <div className="relative order-2 min-w-0 w-full lg:order-1">
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-amber-500/5 blur-xl" aria-hidden />
-            <MarketingScreenshot
-              src="/images/finza/finza-incoming-documents.webp"
-              alt="Finza incoming documents screen for uploading, reviewing, and converting business documents"
-              width={2400}
-              height={1350}
-              sizes="(max-width: 1024px) 96vw, 58vw"
-              className="marketing-shot-enter relative"
-            />
+            <MarketingReveal variant="clip-scale" className="relative">
+              <MarketingScreenshot
+                src="/images/finza/finza-incoming-documents.webp"
+                alt="Finza incoming documents screen for uploading, reviewing, and converting business documents"
+                width={2400}
+                height={1350}
+                sizes="(max-width: 1024px) 96vw, 58vw"
+                className="relative"
+              />
+            </MarketingReveal>
           </div>
-          <div className="order-1 space-y-5 lg:order-2">
+          <div className="order-1 min-w-0 space-y-5 lg:order-2">
             <h2 className={sectionTitle}>Keep documents and costs organized</h2>
             <p className={sectionLead}>
               Capture receipts and supplier documents as work happens, then turn supported documents
@@ -211,8 +216,8 @@ export function HomePerformanceSection() {
   return (
     <section className={`home-section-emerald border-b border-zinc-200/70 ${sectionPad}`}>
       <Container>
-        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[2fr_3fr] lg:gap-10">
-          <div className="space-y-5">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-10">
+          <div className="min-w-0 space-y-5">
             <div className="space-y-3">
               <h2 className={sectionTitle}>Understand performance in GHS</h2>
               <p className={sectionLead}>
@@ -231,16 +236,18 @@ export function HomePerformanceSection() {
               ))}
             </div>
           </div>
-          <div className="relative">
+          <div className="relative min-w-0 w-full">
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-emerald-500/5 blur-xl" aria-hidden />
-            <MarketingScreenshot
-              src="/images/finza/customer-statement.png"
-              alt="Finza customer statement showing invoices, payments, and outstanding balances"
-              width={2400}
-              height={1350}
-              sizes="(max-width: 1024px) 96vw, 60vw"
-              className="marketing-shot-enter relative"
-            />
+            <MarketingReveal variant="scale-settle" className="relative">
+              <MarketingScreenshot
+                src="/images/finza/customer-statement.png"
+                alt="Finza customer statement showing invoices, payments, and outstanding balances"
+                width={2400}
+                height={1350}
+                sizes="(max-width: 1024px) 96vw, 60vw"
+                className="relative"
+              />
+            </MarketingReveal>
           </div>
         </div>
         <p className="mx-auto mt-8 max-w-3xl text-center text-sm text-zinc-500">

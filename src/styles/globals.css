@@ -25,17 +25,6 @@
   mask-image: radial-gradient(ellipse 70% 55% at 50% 40%, black 20%, transparent 75%);
 }
 
-@keyframes marketingShotEnter {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes marketingShotFloat {
   0%,
   100% {
@@ -55,10 +44,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.marketing-shot-enter {
-  animation: marketingShotEnter 420ms ease-out both;
 }
 
 .marketing-shot-float {
@@ -187,7 +172,6 @@
 
 /* Reduced motion: content stays visible; loops and delayed entrances off */
 @media (prefers-reduced-motion: reduce) {
-  .marketing-shot-enter,
   .marketing-shot-float,
   .workflow-progress > li,
   .hero-card,
