@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/container";
 import { MarketingReveal } from "@/components/motion/marketing-reveal";
+import { StaggerIn, StaggerInItem } from "@/components/motion/stagger-in";
 import { MarketingScreenshot } from "@/components/site/marketing-screenshot";
 import {
   homeCardMuted,
@@ -76,18 +77,23 @@ export function HomeWorkflowSection() {
           </p>
         </div>
 
-        <ol className="workflow-progress mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-2">
+        <StaggerIn
+          variant="workflow"
+          as="ol"
+          className="workflow-progress mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-2"
+        >
           {WORKFLOW_STEPS.map((step, index) => (
-            <li
+            <StaggerInItem
               key={step.t}
-              className="relative flex flex-col items-center text-center lg:items-stretch lg:text-left"
+              index={index}
+              as="li"
+              className="relative flex min-w-0 flex-col items-center text-center lg:items-stretch lg:text-left"
+              connectorClassName={
+                index < WORKFLOW_STEPS.length - 1
+                  ? `pointer-events-none absolute left-[calc(50%+1.75rem)] top-5 hidden h-0.5 w-[calc(100%-1rem)] origin-left bg-gradient-to-r ${step.line} opacity-80 lg:block`
+                  : undefined
+              }
             >
-              {index < WORKFLOW_STEPS.length - 1 ? (
-                <span
-                  className={`pointer-events-none absolute left-[calc(50%+1.75rem)] top-5 hidden h-0.5 w-[calc(100%-1rem)] bg-gradient-to-r ${step.line} opacity-80 lg:block`}
-                  aria-hidden
-                />
-              ) : null}
               <span
                 className={`relative z-10 mx-auto flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm ${step.accent} lg:mx-0`}
               >
@@ -98,9 +104,9 @@ export function HomeWorkflowSection() {
                 {step.t}
               </p>
               <p className="mt-1.5 text-sm leading-relaxed text-zinc-600">{step.d}</p>
-            </li>
+            </StaggerInItem>
           ))}
-        </ol>
+        </StaggerIn>
       </Container>
     </section>
   );
@@ -298,19 +304,21 @@ export function HomeGhanaSection() {
               and reports in one Service workspace.
             </p>
           </div>
-          <div className="grid gap-4 text-left sm:grid-cols-2">
-            {items.map((item) => (
-              <div key={item.t} className={`${homeCardMuted} flex h-full flex-col p-5`}>
-                <span
-                  className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${item.iconTone}`}
-                >
-                  <item.icon className="h-5 w-5" aria-hidden />
-                </span>
-                <p className="mt-4 font-bold text-zinc-900">{item.t}</p>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600">{item.d}</p>
-              </div>
+          <StaggerIn variant="cards" className="grid gap-4 text-left sm:grid-cols-2">
+            {items.map((item, index) => (
+              <StaggerInItem key={item.t} index={index} className="block min-w-0 w-full">
+                <div className={`${homeCardMuted} flex h-full flex-col p-5`}>
+                  <span
+                    className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${item.iconTone}`}
+                  >
+                    <item.icon className="h-5 w-5" aria-hidden />
+                  </span>
+                  <p className="mt-4 font-bold text-zinc-900">{item.t}</p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600">{item.d}</p>
+                </div>
+              </StaggerInItem>
             ))}
-          </div>
+          </StaggerIn>
           <p className="text-sm text-zinc-500">
             Confirm final tax treatment with your professional adviser or GRA guidance.
           </p>
