@@ -12,6 +12,7 @@ import {
 import { Container } from "@/components/container";
 import { MarketingReveal } from "@/components/motion/marketing-reveal";
 import { StaggerIn, StaggerInItem } from "@/components/motion/stagger-in";
+import { JobsMaterialsDemo } from "@/components/product-demo/jobs-materials-demo";
 import { MarketingScreenshot } from "@/components/site/marketing-screenshot";
 import {
   homeCardMuted,
@@ -145,14 +146,7 @@ export function HomeJobsMaterialsSection() {
           <div className="relative min-w-0 w-full">
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-sky-500/5 blur-xl" aria-hidden />
             <MarketingReveal variant="clip-scale" className="relative">
-              <MarketingScreenshot
-                src="/images/finza/finza-job-materials-workflow.webp"
-                alt="Finza job materials workflow showing material usage linked to a customer job"
-                width={2400}
-                height={1350}
-                sizes="(max-width: 1024px) 96vw, 60vw"
-                className="relative"
-              />
+              <JobsMaterialsDemo />
             </MarketingReveal>
           </div>
         </div>
