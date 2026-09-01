@@ -372,7 +372,7 @@ export function HeroDashboardShell() {
       className="flex w-full min-w-0 select-none bg-[#f8f9fb] text-[9px] text-zinc-900 xl:text-[10px]"
     >
       {/* Sidebar */}
-      <aside className="flex w-7 shrink-0 flex-col items-center gap-1.5 border-r border-zinc-200/80 bg-white py-2 xl:w-8">
+      <aside className="hidden w-7 shrink-0 flex-col items-center gap-1.5 border-r border-zinc-200/80 bg-white py-2 sm:flex xl:w-8">
         {SIDEBAR_ITEMS.map(({ icon: Icon, active }, i) => (
           <span
             key={i}
@@ -425,7 +425,7 @@ export function HeroDashboardShell() {
         </div>
 
         {/* Metric cards */}
-        <div className="mt-2 grid grid-cols-4 gap-1.5">
+        <div className="mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-4">
           {METRICS.map((m) => (
             <div
               key={m.id}
@@ -472,7 +472,7 @@ export function HeroDashboardShell() {
           </div>
 
           {/* Net profit + Revenue/Expenses summary */}
-          <div className="mt-1.5 grid gap-2 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mt-1.5 grid gap-2 sm:grid-cols-[1.1fr_0.9fr]">
             <div className="dashboard-profit-box rounded border border-transparent p-1">
               <div className="flex items-center gap-1">
                 <span className="text-[8px] font-semibold uppercase tracking-wide text-zinc-500 xl:text-[8.5px]">
@@ -507,7 +507,7 @@ export function HeroDashboardShell() {
           </div>
 
           {/* Charts + Breakdown */}
-          <div className="mt-2 grid gap-2 lg:grid-cols-[1fr_auto]">
+          <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto]">
             {/* Charts column — normal flow blocks, no flex shrinking */}
             <div className="space-y-2">
               {/* Revenue vs Expenses */}
