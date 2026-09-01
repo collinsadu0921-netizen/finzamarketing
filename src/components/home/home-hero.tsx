@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { MarketingReveal } from "@/components/motion/marketing-reveal";
@@ -8,13 +7,6 @@ import { homePrimaryBtn, homeSecondaryBtn } from "@/components/home/home-ui";
 import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
 
 const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
-
-const HERO_IMG = {
-  src: "/images/finza/finza-dashboard-hero-2026-09.webp",
-  alt: "Finza dashboard for Golden hands services Ltd showing available cash, unpaid invoices, profit performance, and August revenue in GHS",
-  width: 1024,
-  height: 649,
-} as const;
 
 export function HomeHero() {
   return (
@@ -60,29 +52,9 @@ export function HomeHero() {
           </MarketingReveal>
 
           <div className="relative mx-auto w-full min-w-0 max-w-[720px] lg:max-w-none">
-            {/* Desktop: crisp HTML/SVG dashboard — NO transformed ancestor */}
-            <div className="hidden lg:block">
-              <HeroDashboard>
-                <HeroDashboardShell />
-              </HeroDashboard>
-            </div>
-
-            {/* Tablet + Mobile: static screenshot inside MarketingReveal (safe — raster tolerates settle) */}
-            <div className="lg:hidden">
-              <MarketingReveal variant="hero-settle">
-                <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-lg shadow-zinc-900/[0.07] ring-1 ring-zinc-900/[0.03]">
-                  <Image
-                    src={HERO_IMG.src}
-                    alt={HERO_IMG.alt}
-                    width={HERO_IMG.width}
-                    height={HERO_IMG.height}
-                    priority
-                    sizes="(max-width: 640px) 96vw, 90vw"
-                    className="block h-auto w-full"
-                  />
-                </div>
-              </MarketingReveal>
-            </div>
+            <HeroDashboard>
+              <HeroDashboardShell />
+            </HeroDashboard>
           </div>
         </div>
       </Container>
