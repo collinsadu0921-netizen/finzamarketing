@@ -5,6 +5,7 @@ import {
   HomeFinalCtaSection,
   HomeGhanaSection,
   HomeJobsMaterialsSection,
+  HomePayrollSection,
   HomePerformanceSection,
   HomeRelatedGuidesSection,
   HomeWorkflowSection,
@@ -27,6 +28,7 @@ export default function Home() {
       <HomeWorkflowSection />
       <HomeJobsMaterialsSection />
       <HomeDocumentsCostsSection />
+      <HomePayrollSection />
       <HomePerformanceSection />
       <HomeGhanaSection />
       <HomeFinalCtaSection />

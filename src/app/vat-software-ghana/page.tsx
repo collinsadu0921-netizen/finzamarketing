@@ -309,7 +309,7 @@ export default function VatSoftwareGhanaPage() {
           { href: "/invoice-calculator-ghana", label: "Try the invoice calculator", desc: "Preview invoice totals" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
           { href: "/ghana-vat-nhil-getfund", label: "Ghana VAT, NHIL, GETFund", desc: "Tax breakdown guide" },
           { href: "/how-vat-works-ghana", label: "How VAT works in Ghana", desc: "Plain-language guide" },
           { href: "/ghana-vat-calculator", label: "Ghana VAT calculator", desc: "Illustrative calculator" },

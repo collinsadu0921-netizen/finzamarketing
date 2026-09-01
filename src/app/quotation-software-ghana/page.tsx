@@ -341,7 +341,7 @@ export default function QuotationSoftwareGhanaPage() {
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Accountant-ready records" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Track costs" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll workflows" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
           { href: "/demo", label: "Demo", desc: "See how Finza works" },
         ]}

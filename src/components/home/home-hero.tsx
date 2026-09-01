@@ -34,8 +34,8 @@ export function HomeHero() {
                 </svg>
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-zinc-600">
-                Create quotes, manage jobs and materials, send invoices, track payments, and understand
-                profit in one Ghana-ready workspace.
+                Create quotes, manage jobs and materials, send invoices, track payments, run monthly
+                payroll, and understand profit in one Ghana-ready workspace.
               </p>
               <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
                 <a href={starterSignupHref} className={homePrimaryBtn}>

@@ -17,6 +17,13 @@ import { FeaturesScreenshotDialog } from "@/components/features/features-screens
 import { JobsMaterialsDemo } from "@/components/product-demo/jobs-materials-demo";
 import { IncomingDocumentsPreview } from "@/components/product-demo/incoming-documents-preview";
 import { CustomerStatementPreview } from "@/components/product-demo/customer-statement-preview";
+import { PayrollPreview } from "@/components/product-demo/payroll-preview";
+import {
+  PAYROLL_FEATURES_HEADING,
+  PAYROLL_HOME_CAPABILITIES,
+  PAYROLL_PAGE_PATH,
+  PAYROLL_WORKFLOW_STEPS,
+} from "@/lib/payroll-content";
 import {
   homeHeroPrimaryBtn,
   homeHeroSecondaryBtn,
@@ -109,7 +116,7 @@ const ANCHORS = [
   { href: "#jobs-materials", label: "Jobs & materials" },
   { href: "#invoice-collect", label: "Invoice & collect" },
   { href: "#documents-costs", label: "Documents & costs" },
-  { href: "#payroll-team", label: "Payroll & team" },
+  { href: "#payroll-team", label: "Payroll" },
   { href: "#reports-controls", label: "Reports" },
   { href: "#finza-assist", label: "Assist" },
 ] as const;
@@ -396,7 +403,7 @@ export function FeaturesDocumentsCostsSection() {
   );
 }
 
-/* ── F. Payroll & team ─────────────────────────────────────────────── */
+/* ── F. Payroll ────────────────────────────────────────────────────── */
 
 export function FeaturesPayrollTeamSection() {
   return (
@@ -409,37 +416,48 @@ export function FeaturesPayrollTeamSection() {
       )}
     >
       <Container>
-        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-10">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[1fr_1.35fr] lg:gap-10">
           <div className="space-y-4">
-            <PlanBadge tone="professional">Professional</PlanBadge>
-            <h2 className={sectionTitle}>
-              Payroll and team access.
-            </h2>
+            <PlanBadge tone="professional">Professional and Business</PlanBadge>
+            <h2 className={sectionTitle}>{PAYROLL_FEATURES_HEADING}</h2>
             <p className={sectionLead}>
-              Manage salary workflows and control which team members can
-              access business information.
+              Run monthly payroll inside Finza: Ghana PAYE and pension
+              contributions, salary advances, employee payslips, and
+              salary-payment recording.
+            </p>
+            <p className="rounded-lg border border-emerald-200/80 bg-white px-3 py-2 text-xs font-semibold text-emerald-950">
+              {PAYROLL_WORKFLOW_STEPS.join(" → ")}
             </p>
             <ul className="space-y-2 text-sm text-zinc-700">
-              {[
-                "Prepare and review payroll records",
-                "Record salary advances",
-                "Add team members with controlled roles",
-                "Manage permissions for sensitive records",
-              ].map((item) => (
+              {PAYROLL_HOME_CAPABILITIES.map((item) => (
                 <li key={item} className="flex items-start gap-2">
-                  <Users className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" aria-hidden />
+                  <Wallet
+                    className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700"
+                    aria-hidden
+                  />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
+            <div className="rounded-lg border border-zinc-200 bg-zinc-50/80 p-3.5">
+              <p className="flex items-center gap-2 text-sm font-bold text-zinc-900">
+                <Users className="h-4 w-4 text-zinc-500" aria-hidden />
+                Team permissions
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-zinc-600">
+                Separate who can view, prepare, approve, pay, and export
+                payroll.
+              </p>
+            </div>
+            <Link
+              href={PAYROLL_PAGE_PATH}
+              className="inline-flex text-sm font-semibold text-zinc-900 underline underline-offset-2 hover:text-zinc-700"
+            >
+              Explore payroll software for Ghana
+            </Link>
           </div>
 
-          <ShotFrame
-            src="/images/finza/payroll.png"
-            alt="Finza payroll screen showing salary and payroll records"
-            sizes="(max-width: 1024px) 96vw, 55vw"
-            cropTop
-          />
+          <PayrollPreview />
         </div>
       </Container>
     </section>

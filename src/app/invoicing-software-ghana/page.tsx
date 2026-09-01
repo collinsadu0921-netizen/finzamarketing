@@ -368,7 +368,7 @@ export default function InvoicingSoftwareGhanaPage() {
           { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll workflow" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
           { href: "/features", label: "Features", desc: "Explore capabilities" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
           { href: "/demo", label: "Demo", desc: "See how it works" },

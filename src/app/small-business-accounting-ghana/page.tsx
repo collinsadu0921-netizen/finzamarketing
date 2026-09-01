@@ -116,7 +116,7 @@ export default function SmallBusinessAccountingGhanaPage() {
                 },
                 {
                   t: "What payroll changed",
-                  d: "Keep payroll records closer to business review.",
+                  d: "Run monthly payroll with PAYE, pensions, and payslips.",
                 },
                 {
                   t: "What needs accountant review",

@@ -131,7 +131,12 @@ export default function PricingPage() {
 
             <RelatedClusterLinks
                 related={[
-                    { href: "/features", label: "Features", desc: "Invoices, quotes, reports" },
+                    { href: "/features", label: "Features", desc: "Invoices, quotes, payroll, reports" },
+                    {
+                        href: "/payroll-software-ghana",
+                        label: "Payroll software Ghana",
+                        desc: "Built-in monthly payroll",
+                    },
                     {
                         href: "/invoicing-software-ghana",
                         label: "Invoicing software Ghana",

@@ -67,7 +67,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
               Accounting for service businesses in Ghana should follow the work
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              This guide explains the records a service business should keep around each job: scope, quote, invoice, payment, receipt, job costs, supporting documents, payroll context, and accountant review in GHS.
+              This guide explains the records a service business should keep around each job: scope, quote, invoice, payment, receipt, job costs, supporting documents, payroll, and accountant review in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -125,7 +125,7 @@ export default function AccountingForServiceBusinessGhanaPage() {
                 },
                 {
                   t: "For the team",
-                  d: "Payroll records and operational records connected to the business.",
+                  d: "Monthly payroll with PAYE, pensions, and payslips alongside operational records.",
                 },
                 {
                   t: "For review",

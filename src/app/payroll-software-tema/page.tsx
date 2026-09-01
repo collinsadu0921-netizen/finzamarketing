@@ -101,7 +101,7 @@ export default function PayrollSoftwareTemaPage() {
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The solution</p>
             <h2 className="text-3xl font-bold text-zinc-900">Monthly payroll with Ghana rules, not a generic HR suite</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza supports <strong className="text-zinc-900">PAYE</strong> on progressive bands, <strong className="text-zinc-900">SSNIT</strong> employee and employer contributions from basic salary (per your setup), bonus and overtime where inputs require different treatment, and <strong className="text-zinc-900">approval</strong> before payroll is official. After approval, generate payslips and send by email or WhatsApp. For the full national payroll story, read{" "}
+              Finza supports <strong className="text-zinc-900">PAYE</strong> on progressive bands, <strong className="text-zinc-900">SSNIT</strong> employee and employer contributions from basic salary (per your setup), bonus and overtime where inputs require different treatment, and <strong className="text-zinc-900">approval</strong> before payroll is official. After approval, generate payslips and send by email or WhatsApp. Built-in payroll is included in Professional and Business. For the full national payroll story, read{" "}
               <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 payroll software Ghana
               </Link>

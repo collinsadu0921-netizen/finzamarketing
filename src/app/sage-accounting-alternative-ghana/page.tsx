@@ -52,7 +52,7 @@ const comparisonRows = [
     questionName: "Can the team avoid implementation-heavy accounting workflows?",
     matters:
       "Some SMEs need operational records and accountant handoff before they need a heavy finance implementation.",
-    finza: "Finza keeps service work, billing, payments, expenses, payroll records, and review context in one workflow.",
+    finza: "Finza keeps service work, billing, payments, expenses, built-in payroll, and review context in one workflow.",
   },
   {
     questionName: "Can records be reviewed in GHS?",
@@ -176,7 +176,7 @@ export default function SageAccountingAlternativeGhanaPage() {
                 "Create client documents without a heavy setup",
                 "Track payments and customer balances",
                 "Record expenses and supplier bills earlier",
-                "Keep payroll records near business records",
+                "Run built-in monthly payroll",
                 "Support review workflows as the team grows",
                 "Show Ghana tax lines where they apply",
                 "Prepare cleaner records for accountant review",
@@ -203,9 +203,13 @@ export default function SageAccountingAlternativeGhanaPage() {
               <Link href="/expense-tracking-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 expense tracking software Ghana
               </Link>
-              , and{" "}
+              ,{" "}
               <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 bookkeeping software Ghana
+              </Link>
+              , and{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                payroll software Ghana
               </Link>
               .
             </p>
@@ -220,13 +224,13 @@ export default function SageAccountingAlternativeGhanaPage() {
               Accounting depth should not block daily use
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Sage may suit teams that need deep accounting configuration. Finza is aimed at service businesses that first need operators to keep GHS documents, payment records, expenses, and payroll context clean enough for review.
+              Sage may suit teams that need deep accounting configuration. Finza is aimed at service businesses that first need operators to keep GHS documents, payment records, expenses, and built-in payroll clean enough for review.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
               <li>Pricing shown in Ghana cedis</li>
               <li>Operator-friendly service workflows</li>
               <li>Ghana tax-line presentation where applicable</li>
-              <li>Payment, expense, and payroll records near daily activity</li>
+              <li>Payment, expense, and built-in payroll in the same workspace</li>
               <li>Review workflows that can grow with the team</li>
             </ul>
           </div>

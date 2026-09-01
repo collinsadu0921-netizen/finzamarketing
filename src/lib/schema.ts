@@ -29,7 +29,7 @@ export const organizationAndWebsiteGraph = {
   ],
 };
 
-/** SoftwareApplication for accounting hub — matches /accounting-software-ghana on-page claims. */
+/** SoftwareApplication — visible, verified product capabilities. */
 export function softwareApplicationSchema() {
   return {
     "@context": "https://schema.org",
@@ -43,8 +43,21 @@ export function softwareApplicationSchema() {
       name: "Ghana",
     },
     description:
-      "Accounting software for Ghana: reports and tax summaries in GHS, collaboration with professional advisers, invoices and quotes in one place. Ghana tax lines (VAT, NHIL, GETFund) supported where applicable.",
+      "Business software for Ghana: invoices, quotes, and reports in GHS, plus built-in monthly payroll with Ghana PAYE, pension contributions, payslips, salary-payment recording, and payroll journals. Ghana tax lines (VAT, NHIL, GETFund) supported where applicable.",
     url: `${BASE}/accounting-software-ghana`,
+    featureList: [
+      "Quotes, invoices, and payment tracking in GHS",
+      "Built-in monthly payroll",
+      "Ghana PAYE calculations",
+      "Employee and employer pension contributions",
+      "SSNIT/Tier 1 and Tier 2 breakdowns",
+      "Salary advances and repayments",
+      "Employee payslips with email and WhatsApp-link sharing",
+      "Salary-payment recording against cash, bank, and mobile-money accounts",
+      "Payroll summary, PAYE, GRA DT 107A, SSNIT, and obligations exports",
+      "Approved payroll journals and payroll liabilities",
+      "Ghana tax lines (VAT, NHIL, GETFund) where applicable",
+    ],
     offers: {
       "@type": "AggregateOffer",
       lowPrice: "149",
@@ -216,44 +229,7 @@ export const bookkeepingSoftwareGhanaFaqForSchema = [
   },
 ];
 
-/** Must match /payroll-software-ghana FAQ accordion exactly. */
-export const payrollSoftwareGhanaFaqForSchema = [
-  {
-    questionName: "Does Finza support payroll for businesses in Ghana?",
-    acceptedAnswerText:
-      "Yes. Finza is built for Ghana payroll: monthly payroll runs, PAYE and SSNIT calculations based on your payroll setup, approval before payroll becomes official, and payslips you can share by email or WhatsApp—without positioning the product as a full HR suite or global payroll.",
-  },
-  {
-    questionName: "Does Finza calculate PAYE and SSNIT?",
-    acceptedAnswerText:
-      "Yes. PAYE follows Ghana progressive tax bands on taxable income from gross pay and applicable deductions, where applicable. SSNIT uses employee and employer contributions based on basic salary, according to the payroll inputs and staff type. Calculations use the payroll month as the effective date. Confirm final positions with your professional adviser or the relevant authorities.",
-  },
-  {
-    questionName: "Can Finza handle bonus and overtime in payroll?",
-    acceptedAnswerText:
-      "Yes. Bonus and overtime can be included in the payroll run, with tax treatment that can differ depending on the payroll case and how items are entered. Your setup and inputs determine how they flow—work with your professional adviser where you are unsure.",
-  },
-  {
-    questionName: "Can I send payslips to employees?",
-    acceptedAnswerText:
-      "Yes. After payroll is approved, you can generate payslips and send them through channels your team already uses—email or WhatsApp—so staff receive a clear breakdown without manual document prep for every person.",
-  },
-  {
-    questionName: "Does payroll update accounting records?",
-    acceptedAnswerText:
-      "After you approve payroll, records become official in Finza and totals are calculated from the approved run. Approved payroll can post into accounting so staff costs stay aligned with your books—subject to your plan and configuration.",
-  },
-  {
-    questionName: "Can I track salary advances?",
-    acceptedAnswerText:
-      "Yes. Salary advances can be recorded and repayment tracked against approved or locked payroll so advances are visible in the system instead of handled off-book.",
-  },
-  {
-    questionName: "Can different team members have different payroll permissions?",
-    acceptedAnswerText:
-      "Yes. Role-based payroll permissions let you separate who can view payroll, create runs, approve or lock payroll, and generate payslips—so owners can delegate work without giving everyone approval control.",
-  },
-];
+export { payrollSoftwareGhanaFaqForSchema } from "./payroll-content";
 
 /** Must match /accounting-software-accra FAQ accordion exactly. */
 export const accountingSoftwareAccraFaqForSchema = [
@@ -422,7 +398,7 @@ export const pricingPageFaqForSchema = [
   {
     questionName: "Which plan should I start with?",
     acceptedAnswerText:
-      "Start with Essentials if you mainly need customers and customer statements, quotes and proforma invoices, invoices (including recurring invoices) and credit notes, receipts and record payments, expenses and incoming documents (upload, OCR, review, and convert to expenses), plus your VAT report, Profit and Loss, Balance Sheet, Finza Assist, and Ghana tax lines where applicable. Choose Professional if you need supplier bills and convert supported supplier documents into supplier bills, plus materials and billable material lines, jobs and projects, payroll and salary advances, VAT filings, WHT, fixed assets, Cash Flow report, Changes in Equity, team permissions, and the accounting audit log. Choose Business if you need general ledger controls, journals, accounting periods, period locking, CIT, the system audit log, and advanced accounting controls inside the Service workspace.",
+      "Start with Essentials if you mainly need customers and customer statements, quotes and proforma invoices, invoices (including recurring invoices) and credit notes, receipts and record payments, expenses and incoming documents (upload, OCR, review, and convert to expenses), plus your VAT report, Profit and Loss, Balance Sheet, Finza Assist, and Ghana tax lines where applicable. Choose Professional if you need supplier bills and convert supported supplier documents into supplier bills, plus materials and billable material lines, jobs and projects, built-in monthly payroll and salary advances, VAT filings, WHT, fixed assets, Cash Flow report, Changes in Equity, team permissions, and the accounting audit log. Choose Business if you need general ledger controls, journals, accounting periods, period locking, CIT, the system audit log, and advanced accounting controls inside the Service workspace—including Professional payroll.",
   },
   {
     questionName: "Does Finza replace professional advice?",

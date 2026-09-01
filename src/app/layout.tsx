@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Finza",
   },
   description:
-    "Accounting and invoicing software for businesses in Ghana. Send invoices online, track payments in GHS, quotes, expenses, and reports—Ghana tax lines (VAT, NHIL, GETFund) where applicable. Built for Ghanaian service businesses.",
+    "Accounting and invoicing software for businesses in Ghana. Send invoices online, track payments in GHS, run monthly payroll, manage quotes and expenses, and review reports—Ghana tax lines (VAT, NHIL, GETFund) where applicable. Built for Ghanaian service businesses.",
   keywords: [
     "Ghana accounting software",
     "VAT Ghana",

@@ -22,13 +22,13 @@ export const PLAN_FIT_SUMMARIES: Record<
   professional: {
     name: "Professional",
     description:
-      "For growing service businesses that need stronger document workflows, reports, customer statements, payroll, and better business control.",
+      "For growing service businesses that need stronger document workflows, reports, customer statements, built-in payroll, and better business control.",
     planParam: "professional",
   },
   business: {
     name: "Business",
     description:
-      "For teams that need more users, advanced setup, stronger reporting, Ghana tax readiness, and guided onboarding.",
+      "For teams that need more users, advanced setup, stronger reporting, Ghana tax readiness, guided onboarding, and Professional capabilities including built-in payroll.",
     planParam: "business",
   },
 };
@@ -86,7 +86,7 @@ export const pricingPlansData = [
     id: "professional" as const,
     name: "Professional",
     subtitle:
-      "For growing teams that need supplier bill workflows, materials and jobs, payroll, and stronger reporting.",
+      "For growing teams that need supplier bill workflows, materials and jobs, built-in monthly payroll, salary advances, and stronger reporting.",
     price: 449,
     quarterlyPrice: 1280,
     annualPrice: 4490,
@@ -98,10 +98,10 @@ export const pricingPlansData = [
       "Supplier bills",
       "Convert supported supplier documents into supplier bills",
       "Materials: keep material records, purchases, and stock quantities",
-      "Billable material lines: add billable materials to invoices",
       "Jobs and projects: track material usage and costs through supported fulfilment and billing flows",
-      "Payroll",
-      "Salary advances",
+      "Built-in monthly payroll",
+      "Salary advances and repayments",
+      "Billable material lines: add billable materials to invoices",
       "VAT filings",
       "WHT",
       "Fixed assets",
@@ -115,7 +115,7 @@ export const pricingPlansData = [
     id: "business" as const,
     name: "Business",
     subtitle:
-      "For teams that need advanced accounting controls, period locking, and system audit logs.",
+      "For teams that need everything in Professional — including built-in payroll — plus advanced accounting controls, period locking, and system audit logs.",
     price: 949,
     quarterlyPrice: 2708,
     annualPrice: 9490,

@@ -3,23 +3,34 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/container";
 import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+import { cn } from "@/lib/utils";
 
 const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
+const navLinks = [
+  { href: "/features", label: "Features" },
+  { href: "/payroll-software-ghana", label: "Payroll" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/blog", label: "Blog" },
+] as const;
+
+function isActivePath(pathname: string, href: string) {
+  if (href === "/payroll-software-ghana") {
+    return pathname === href || pathname.startsWith("/payroll-software-");
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const menuId = useId();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
-
-  const navLinks = [
-    { href: "/features", label: "Features" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/blog", label: "Blog" },
-  ];
 
   useEffect(() => {
     if (!isOpen) return;
@@ -50,15 +61,22 @@ export function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           <div className="flex items-center gap-6 text-sm font-medium text-zinc-600">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="transition-colors duration-200 hover:text-zinc-900"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = isActivePath(pathname, link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "transition-colors duration-200 hover:text-zinc-900",
+                    active && "font-semibold text-zinc-900"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="flex items-center gap-3">
@@ -96,17 +114,24 @@ export function Navbar() {
           className="absolute left-0 top-[68px] w-full border-t border-zinc-100 bg-white shadow-lg md:hidden"
         >
           <Container className="flex flex-col gap-1 py-4">
-            {navLinks.map((link, index) => (
-              <Link
-                key={link.href}
-                ref={index === 0 ? firstLinkRef : undefined}
-                href={link.href}
-                className="block rounded-md py-2.5 text-sm font-medium text-zinc-600 transition-colors duration-200 hover:text-zinc-900"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link, index) => {
+              const active = isActivePath(pathname, link.href);
+              return (
+                <Link
+                  key={link.href}
+                  ref={index === 0 ? firstLinkRef : undefined}
+                  href={link.href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "block rounded-md py-2.5 text-sm font-medium transition-colors duration-200 hover:text-zinc-900",
+                    active ? "font-semibold text-zinc-900" : "text-zinc-600"
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <hr className="my-2 border-zinc-100" />
             <a
               href="https://app.finza.africa/login"

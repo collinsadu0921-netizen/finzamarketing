@@ -111,6 +111,19 @@ export function PricingTiers() {
                                             </li>
                                         ))}
                                     </ul>
+                                    {plan.id !== "essentials" ? (
+                                        <p className="mt-3 text-sm text-zinc-600">
+                                            <Link
+                                                href="/payroll-software-ghana"
+                                                className="font-semibold text-zinc-900 underline underline-offset-2 hover:text-zinc-700"
+                                            >
+                                                Built-in payroll
+                                            </Link>
+                                            {plan.id === "business"
+                                                ? " is included from Professional."
+                                                : " is included on Professional and Business."}
+                                        </p>
+                                    ) : null}
                                     {plan.items.length > 6 ? (
                                         <div className="mt-3">
                                             <details>

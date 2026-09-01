@@ -31,7 +31,7 @@ export async function Footer() {
               <Image src="/logo.png" alt="Finza" width={100} height={30} className="h-7 w-auto" />
             </Link>
             <p className="text-sm leading-relaxed text-zinc-600">
-              Quotes, jobs, invoices, payments and business records in one Ghana-ready workspace.
+              Quotes, jobs, invoices, payments, payroll and business records in one Ghana-ready workspace.
             </p>
           </div>
 

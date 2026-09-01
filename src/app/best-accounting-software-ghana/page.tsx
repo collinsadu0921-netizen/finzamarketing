@@ -127,8 +127,8 @@ export default function BestAccountingSoftwareGhanaPage() {
                   d: "Can documents show VAT, NHIL, GETFund, and WHT where applicable?",
                 },
                 {
-                  t: "Payroll records",
-                  d: "Can payroll activity sit closer to the rest of the business records?",
+                  t: "Built-in payroll",
+                  d: "Can you run monthly payroll with PAYE, pensions, and payslips in the same workspace?",
                 },
                 {
                   t: "Accountant-ready records",
@@ -359,7 +359,7 @@ export default function BestAccountingSoftwareGhanaPage() {
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax line clarity" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
           { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />

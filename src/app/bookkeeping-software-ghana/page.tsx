@@ -364,7 +364,7 @@ export default function BookkeepingSoftwareGhanaPage() {
           { href: "/expense-tracking-software-ghana", label: "Expense tracking", desc: "Costs and receipts" },
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals to invoice" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
-          { href: "/payroll-software-ghana", label: "Payroll", desc: "Payroll records" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
           { href: "/demo", label: "Demo", desc: "See how Finza works" },
         ]}

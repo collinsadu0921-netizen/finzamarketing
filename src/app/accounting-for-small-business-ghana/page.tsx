@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting for Small Businesses in Ghana | Finza",
   description:
-    "A practical guide to accounting for small businesses in Ghana: daily records, unpaid invoices, expenses, receipts, payroll context, and accountant review.",
+    "A practical guide to accounting for small businesses in Ghana: daily records, unpaid invoices, expenses, receipts, payroll, and accountant review.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-for-small-business-ghana",
   },

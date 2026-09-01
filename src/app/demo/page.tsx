@@ -70,7 +70,7 @@ const AUDIENCE_AND_CAPABILITIES: { label: string; tone?: keyof typeof chipToneCl
     { label: "GHS invoices", tone: "gold" },
     { label: "Customer statements", tone: "gold" },
     { label: "Mobile Money details", tone: "green" },
-    { label: "Payroll records", tone: "navy" },
+    { label: "Built-in payroll", tone: "navy" },
 ];
 
 const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);

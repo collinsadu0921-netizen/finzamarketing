@@ -41,6 +41,7 @@ export function GhanaProofChips({
 
 export const PRICING_PROOF_CHIPS: GhanaProofChip[] = [
   { label: "GHS pricing", tone: "gold" },
+  { label: "Built-in payroll", tone: "navy" },
   { label: "Ghana tax-ready records", tone: "gold" },
   { label: "Setup walkthrough", tone: "navy" },
 ];

@@ -9,6 +9,13 @@ import {
   Sparkles,
   Wallet,
 } from "lucide-react";
+import { PayrollPreview } from "@/components/product-demo/payroll-preview";
+import {
+  PAYROLL_HOME_CAPABILITIES,
+  PAYROLL_HOME_DESCRIPTION,
+  PAYROLL_HOME_HEADING,
+  PAYROLL_PAGE_PATH,
+} from "@/lib/payroll-content";
 import { Container } from "@/components/container";
 import { MarketingReveal } from "@/components/motion/marketing-reveal";
 import { StaggerIn, StaggerInItem } from "@/components/motion/stagger-in";
@@ -19,6 +26,7 @@ import {
   homeCardMuted,
   homeHeroPrimaryBtn,
   homeHeroSecondaryBtn,
+  homePrimaryBtn,
   sectionLead,
   sectionTitle,
 } from "@/components/home/home-ui";
@@ -205,7 +213,47 @@ export function HomeDocumentsCostsSection() {
   );
 }
 
-/** Section 5 — Performance in GHS */
+/** Section 5 — Built-in payroll */
+export function HomePayrollSection() {
+  return (
+    <section className={`home-section-surface border-b border-zinc-200/70 ${sectionPad}`}>
+      <Container>
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-10">
+          <div className="min-w-0 space-y-5">
+            <div className="space-y-3">
+              <span className="inline-flex rounded-full border border-blue-200/90 bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-800">
+                Professional and Business
+              </span>
+              <h2 className={sectionTitle}>{PAYROLL_HOME_HEADING}</h2>
+              <p className={sectionLead}>{PAYROLL_HOME_DESCRIPTION}</p>
+            </div>
+            <ul className="space-y-2.5 text-sm text-zinc-700">
+              {PAYROLL_HOME_CAPABILITIES.map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" aria-hidden />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
+              <Link href={PAYROLL_PAGE_PATH} className={homePrimaryBtn}>
+                Explore payroll
+              </Link>
+              <p className="text-sm font-medium text-zinc-500">
+                Included in Professional and Business.
+              </p>
+            </div>
+          </div>
+          <div className="relative min-w-0 w-full">
+            <PayrollPreview />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+/** Section 6 — Performance in GHS */
 export function HomePerformanceSection() {
   return (
     <section className={`home-section-emerald border-b border-zinc-200/70 ${sectionPad}`}>
@@ -348,6 +396,7 @@ export function HomeRelatedGuidesSection() {
             {[
               { href: "/accounting-software-ghana", label: "Accounting software Ghana" },
               { href: "/invoicing-software-ghana", label: "Invoicing software Ghana" },
+              { href: "/payroll-software-ghana", label: "Payroll software Ghana" },
               { href: "/features", label: "Features" },
               { href: "/security", label: "Security" },
             ].map((link) => (

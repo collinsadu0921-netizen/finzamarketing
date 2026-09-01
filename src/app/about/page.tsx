@@ -129,7 +129,7 @@ export default function AboutPage() {
                 },
                 {
                   t: "Payroll",
-                  d: "Keep payroll records closer to the rest of the business activity.",
+                  d: "Run monthly payroll with Ghana PAYE, pensions, payslips, and salary-payment recording.",
                 },
                 {
                   t: "Reports",
