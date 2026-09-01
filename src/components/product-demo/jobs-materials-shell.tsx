@@ -48,9 +48,7 @@ export function JobsMaterialsShell({ scene, showCursor, compact = false }: JobsM
               Edit
             </span>
             <span className="relative inline-flex">
-              <button
-                type="button"
-                tabIndex={-1}
+              <span
                 aria-hidden
                 className={cn(
                   "inline-flex items-center gap-1 rounded-md bg-emerald-600 px-2 py-1 text-[9px] font-semibold text-white transition-transform duration-300 sm:text-[10px]",
@@ -60,7 +58,7 @@ export function JobsMaterialsShell({ scene, showCursor, compact = false }: JobsM
               >
                 <ArrowRight className="h-3 w-3" aria-hidden />
                 Invoice
-              </button>
+              </span>
               {showInvoiceCursor ? (
                 <motion.span
                   aria-hidden

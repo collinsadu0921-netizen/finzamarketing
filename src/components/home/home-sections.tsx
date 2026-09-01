@@ -13,7 +13,8 @@ import { Container } from "@/components/container";
 import { MarketingReveal } from "@/components/motion/marketing-reveal";
 import { StaggerIn, StaggerInItem } from "@/components/motion/stagger-in";
 import { JobsMaterialsDemo } from "@/components/product-demo/jobs-materials-demo";
-import { MarketingScreenshot } from "@/components/site/marketing-screenshot";
+import { IncomingDocumentsPreview } from "@/components/product-demo/incoming-documents-preview";
+import { CustomerStatementPreview } from "@/components/product-demo/customer-statement-preview";
 import {
   homeCardMuted,
   homeHeroPrimaryBtn,
@@ -164,14 +165,7 @@ export function HomeDocumentsCostsSection() {
           <div className="relative order-2 min-w-0 w-full lg:order-1">
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-amber-500/5 blur-xl" aria-hidden />
             <MarketingReveal variant="clip-scale" className="relative">
-              <MarketingScreenshot
-                src="/images/finza/finza-incoming-documents.webp"
-                alt="Finza incoming documents screen for uploading, reviewing, and converting business documents"
-                width={2400}
-                height={1350}
-                sizes="(max-width: 1024px) 96vw, 58vw"
-                className="relative"
-              />
+              <IncomingDocumentsPreview />
             </MarketingReveal>
           </div>
           <div className="order-1 min-w-0 space-y-5 lg:order-2">
@@ -239,14 +233,7 @@ export function HomePerformanceSection() {
           <div className="relative min-w-0 w-full">
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-emerald-500/5 blur-xl" aria-hidden />
             <MarketingReveal variant="scale-settle" className="relative">
-              <MarketingScreenshot
-                src="/images/finza/customer-statement.png"
-                alt="Finza customer statement showing invoices, payments, and outstanding balances"
-                width={2400}
-                height={1350}
-                sizes="(max-width: 1024px) 96vw, 60vw"
-                className="relative"
-              />
+              <CustomerStatementPreview />
             </MarketingReveal>
           </div>
         </div>

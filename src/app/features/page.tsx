@@ -4,12 +4,13 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema } from "@/lib/schema";
 import {
   FeaturesAssistSection,
-  FeaturesCostsPayrollSection,
+  FeaturesDocumentsCostsSection,
   FeaturesExploreNav,
   FeaturesFinalCtaSection,
   FeaturesHero,
   FeaturesInvoiceCollectSection,
   FeaturesJobsMaterialsSection,
+  FeaturesPayrollTeamSection,
   FeaturesReportsControlsSection,
   FeaturesWinWorkSection,
 } from "@/components/features/features-sections";
@@ -38,7 +39,8 @@ export default function FeaturesPage() {
       <FeaturesWinWorkSection />
       <FeaturesJobsMaterialsSection />
       <FeaturesInvoiceCollectSection />
-      <FeaturesCostsPayrollSection />
+      <FeaturesDocumentsCostsSection />
+      <FeaturesPayrollTeamSection />
       <FeaturesReportsControlsSection />
       <FeaturesAssistSection />
       <FeaturesFinalCtaSection />
