@@ -17,7 +17,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accounting Software in Ghana for Service Businesses | Finza",
+  title: "Accounting Software in Ghana for Service Businesses",
   description:
     "Finza is accounting software for Ghanaian service businesses that need month-end visibility, GHS reports, receivables, payables, and cleaner professional review handoff.",
   alternates: {
