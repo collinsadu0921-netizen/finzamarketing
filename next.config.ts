@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/blog/best-accounting-software-ghana",
+        destination: "/best-accounting-software-ghana",
+        permanent: true,
+      },
+      {
         source: "/invoice-software-ghana",
         destination: "/invoicing-software-ghana",
         permanent: true,
