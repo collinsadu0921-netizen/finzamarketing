@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return { title: "Article" };
   return {
-    title: `${post.title} | Finza Blog`,
+    title: `${post.title} | Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `https://www.finza.africa/blog/${post.slug}`,
