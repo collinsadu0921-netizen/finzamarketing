@@ -14,7 +14,7 @@ import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Bookkeeping Software in Ghana for Service Businesses | Finza",
+  title: "Bookkeeping Software in Ghana for Service Businesses",
   description:
     "Finza bookkeeping software helps Ghanaian service businesses capture receipts, expenses, supplier bills, incoming documents, and weekly records before accountant review.",
   alternates: {
