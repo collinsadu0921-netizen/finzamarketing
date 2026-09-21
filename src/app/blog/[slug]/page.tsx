@@ -8,7 +8,10 @@ import { JsonLd } from "@/components/json-ld";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { articleSchema, breadcrumbListSchema } from "@/lib/schema";
 import { getBlogClusterForSlug } from "@/lib/blog-cluster-links";
+import { GhanaInvoiceTemplateCta, GhanaInvoiceTemplateLead } from "@/components/blog/ghana-invoice-template";
 import { getAllSlugs, getPostBySlug } from "@/lib/blog-posts";
+
+const GHANA_INVOICE_TEMPLATE_SLUG = "invoice-template-ghana";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -79,6 +82,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const cluster = getBlogClusterForSlug(slug);
   const cta = getBlogCtaCopy(cluster?.core.href);
+  const isGhanaInvoiceTemplate = slug === GHANA_INVOICE_TEMPLATE_SLUG;
 
   return (
     <main className="min-h-screen bg-white">
@@ -115,15 +119,26 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.title}
               </h1>
               <p className="mt-4 text-lg text-zinc-600">{post.excerpt}</p>
+              {isGhanaInvoiceTemplate ? (
+                <div className="mt-8">
+                  <GhanaInvoiceTemplateLead />
+                </div>
+              ) : null}
             </div>
           </Container>
         </header>
         <Container>
-          <div className="mx-auto max-w-3xl py-12">
+          <div className={`mx-auto max-w-3xl ${isGhanaInvoiceTemplate ? "py-10" : "py-12"}`}>
             <ReactMarkdown
               components={{
                 h2: ({ children }) => (
-                  <h2 className="mb-4 mt-10 text-2xl font-bold tracking-tight text-zinc-900 first:mt-0">
+                  <h2
+                    className={
+                      isGhanaInvoiceTemplate
+                        ? "mb-4 mt-12 text-2xl font-bold tracking-tight text-zinc-900 first:mt-0"
+                        : "mb-4 mt-10 text-2xl font-bold tracking-tight text-zinc-900 first:mt-0"
+                    }
+                  >
                     {children}
                   </h2>
                 ),
@@ -133,17 +148,35 @@ export default async function BlogPostPage({ params }: Props) {
                   </h3>
                 ),
                 p: ({ children }) => (
-                  <p className="mb-5 text-base leading-7 text-zinc-600">
+                  <p
+                    className={
+                      isGhanaInvoiceTemplate
+                        ? "mb-6 text-base leading-7 text-zinc-600"
+                        : "mb-5 text-base leading-7 text-zinc-600"
+                    }
+                  >
                     {children}
                   </p>
                 ),
                 ul: ({ children }) => (
-                  <ul className="mb-6 list-disc space-y-2 pl-6 text-base leading-7 text-zinc-600">
+                  <ul
+                    className={
+                      isGhanaInvoiceTemplate
+                        ? "mb-8 list-disc space-y-2.5 pl-6 text-base leading-7 text-zinc-600"
+                        : "mb-6 list-disc space-y-2 pl-6 text-base leading-7 text-zinc-600"
+                    }
+                  >
                     {children}
                   </ul>
                 ),
                 ol: ({ children }) => (
-                  <ol className="mb-6 list-decimal space-y-2 pl-6 text-base leading-7 text-zinc-600">
+                  <ol
+                    className={
+                      isGhanaInvoiceTemplate
+                        ? "mb-8 list-decimal space-y-2.5 pl-6 text-base leading-7 text-zinc-600"
+                        : "mb-6 list-decimal space-y-2 pl-6 text-base leading-7 text-zinc-600"
+                    }
+                  >
                     {children}
                   </ol>
                 ),
@@ -179,32 +212,36 @@ export default async function BlogPostPage({ params }: Props) {
               {post.body}
             </ReactMarkdown>
           </div>
-          <div className="mx-auto max-w-3xl border-t border-zinc-100 px-4 py-10 md:px-0">
-            <h2 className="text-lg font-bold leading-snug text-zinc-900">
-              {cta.heading}
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-600">
-              {cta.body}
-            </p>
-            <ul className="mt-4 list-inside list-disc space-y-1 text-sm leading-relaxed text-zinc-600">
-              {cta.bullets.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {cluster ? (
-                <Link href={cluster.core.href} className="font-semibold text-zinc-900 underline underline-offset-2">
-                  {cluster.core.label}
+          {isGhanaInvoiceTemplate ? (
+            <GhanaInvoiceTemplateCta />
+          ) : (
+            <div className="mx-auto max-w-3xl border-t border-zinc-100 px-4 py-10 md:px-0">
+              <h2 className="text-lg font-bold leading-snug text-zinc-900">
+                {cta.heading}
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                {cta.body}
+              </p>
+              <ul className="mt-4 list-inside list-disc space-y-1 text-sm leading-relaxed text-zinc-600">
+                {cta.bullets.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                {cluster ? (
+                  <Link href={cluster.core.href} className="font-semibold text-zinc-900 underline underline-offset-2">
+                    {cluster.core.label}
+                  </Link>
+                ) : null}
+                <Link href="/pricing#plans" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  Compare plans
                 </Link>
-              ) : null}
-              <Link href="/pricing#plans" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Compare plans
-              </Link>
-              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Product tour
-              </Link>
-            </p>
-          </div>
+                <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  Product tour
+                </Link>
+              </p>
+            </div>
+          )}
           {cluster ? (
             <div className="mx-auto max-w-3xl border-t border-zinc-100 px-4 pb-16 pt-2 md:px-0">
               <h2 className="text-lg font-bold text-zinc-900">Related reading</h2>

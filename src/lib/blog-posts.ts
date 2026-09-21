@@ -148,13 +148,7 @@ A clear opening position, then consistent recording. Corrections should leave a 
       "Download a free Ghana invoice template you can open in Excel or import into Google Sheets, with GHS line items, payment details, and optional tax fields.",
     publishedAt: "2026-04-10",
     author: "Finza",
-    body: `## Download the free Ghana invoice template
-
-[Download the Ghana invoice template (CSV)](/templates/ghana-invoice-template.csv)
-
-The template opens in **Microsoft Excel** and can also be imported into **Google Sheets**. It is set up for **Ghana cedis (GHS)** and includes space for business details, customer details, invoice number, dates, line items, payment instructions, and optional tax or levy lines.
-
-## What the template includes
+    body: `## What the template includes
 
 - Business name, address, phone, email, and tax identification fields
 - Customer name and billing details
