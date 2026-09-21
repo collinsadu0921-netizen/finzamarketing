@@ -1,0 +1,28 @@
+FREE GHANA INVOICE TEMPLATE,,,,
+Business Name,[enter business name],,,
+Business Address,[enter address],,,
+Phone / Email,[enter contact details],,,
+Tax ID / TIN (if applicable),[enter ID],,,
+Customer Name,[enter customer],,,
+Customer Address,[enter customer address],,,
+Invoice Number,[INV-001],Invoice Date,[YYYY-MM-DD],
+Due Date,[YYYY-MM-DD],Currency,GHS,
+,,,,
+Item,Description,Quantity,Unit Price (GHS),Amount (GHS)
+1,,1,0,=C12*D12
+2,,1,0,=C13*D13
+3,,1,0,=C14*D14
+4,,1,0,=C15*D15
+5,,1,0,=C16*D16
+,,,Subtotal,=SUM(E12:E16)
+,,,Optional tax / levy 1,0
+,,,Optional tax / levy 2,0
+,,,Optional withholding / adjustment,0
+,,,TOTAL DUE,=SUM(E17:E20)
+,,,,
+Payment Method,[Bank / Mobile Money],,,
+Payment Details,[enter bank or MoMo details],,,
+Payment Reference,[enter reference instructions],,,
+Notes,[enter notes],,,
+,,,,
+IMPORTANT,Enter only tax or levy treatment that applies to your business. Confirm rates and treatment with your accountant tax adviser or GRA.,,,
