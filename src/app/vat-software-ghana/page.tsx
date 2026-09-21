@@ -13,7 +13,7 @@ import {
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "VAT Software in Ghana for Service Businesses | Finza",
+  title: "VAT Software in Ghana for Service Businesses",
   description:
     "Finza helps Ghanaian service businesses show VAT, NHIL, GETFund, WHT, and other applicable Ghana tax lines on documents, payments, reports, and accountant-ready records in GHS.",
   alternates: {
