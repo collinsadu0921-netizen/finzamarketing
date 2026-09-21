@@ -14,7 +14,7 @@ import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Invoicing Software in Ghana for Service Businesses | Finza",
+  title: "Invoicing Software in Ghana for Service Businesses",
   description:
     "Create and send invoices in GHS with Finza. Prepare quotes, proformas, invoices, receipts, payment instructions, and Ghana tax-line documents where applicable.",
   alternates: {
