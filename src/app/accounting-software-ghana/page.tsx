@@ -17,9 +17,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accounting Software in Ghana for Service Businesses",
+  title: "Accounting Software in Ghana | Invoicing, Payroll & Reports",
   description:
-    "Finza is accounting software for Ghanaian service businesses that need month-end visibility, GHS reports, receivables, payables, and cleaner professional review handoff.",
+    "Finza is accounting software for Ghanaian businesses. Run invoices, payments, expenses, payroll, reports, and accountant-ready records in one GHS workspace. 14-day free trial.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-ghana",
   },
@@ -199,24 +199,39 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Who this accounting software is for</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built for Ghanaian service businesses that want more structure than spreadsheets, WhatsApp messages, PDFs, and scattered folders.
+              Finza is accounting software for Ghanaian businesses that need invoices, payments, expenses, payroll records, reports, and professional review in GHS. Service companies that sell client work — cleaning, contractors, consultants, agencies, and maintenance teams — should see the{" "}
+              <Link href="/accounting-software-for-service-businesses-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                service-business accounting workflow
+              </Link>
+              . Owner-led SMEs can start with{" "}
+              <Link href="/small-business-accounting-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                small-business accounting software
+              </Link>
+              .
             </p>
-            <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-4">
-              {[
-                "Cleaning companies",
-                "Contractors",
-                "Consultants",
-                "Maintenance teams",
-                "Agencies",
-                "Professional service providers",
-                "Field-service businesses",
-                "Growing SMEs preparing for professional review",
-              ].map((item) => (
-                <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
-                  {item}
-                </div>
-              ))}
-            </div>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Compare options in the{" "}
+              <Link href="/best-accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                2026 buyer guide
+              </Link>
+              , then look at connected products:{" "}
+              <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                invoicing software in Ghana
+              </Link>
+              ,{" "}
+              <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                bookkeeping
+              </Link>
+              ,{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                payroll for PAYE and SSNIT
+              </Link>
+              , and{" "}
+              <Link href="/vat-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                VAT, NHIL, GETFund and WHT lines
+              </Link>
+              {" "}where they apply.
+            </p>
           </div>
         </Container>
       </section>
@@ -345,10 +360,11 @@ export default function AccountingSoftwareGhanaPage() {
           { href: "/features", label: "Features", desc: "Capabilities" },
           { href: "/pricing", label: "Pricing", desc: "GHS plans" },
           { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Send & track" },
-          { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Track costs" },
-          { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE & SSNIT" },
+          { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
+          { href: "/best-accounting-software-ghana", label: "Buyer guide", desc: "Compare accounting software" },
+          { href: "/accounting-software-for-service-businesses-ghana", label: "Service businesses", desc: "Vertical accounting workflow" },
           { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />

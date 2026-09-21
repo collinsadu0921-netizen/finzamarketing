@@ -261,8 +261,8 @@ export function AccountingSerpClusterStrip({ className = "bg-zinc-50" }: { class
             </Link>
           </li>
           <li>
-            <Link href="/blog/best-accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-              Blog: choose without hype
+            <Link href="/best-accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+              Buyer guide: best accounting software Ghana
             </Link>
           </li>
           <li>

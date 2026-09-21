@@ -421,7 +421,7 @@ export default function AccountingVsExcelGhanaPage() {
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping Ghana", desc: "Daily records" },
           { href: "/quotation-software-ghana", label: "Quotations Ghana", desc: "Quotes to invoice" },
           { href: "/invoice-calculator-ghana", label: "Try the invoice calculator", desc: "Preview invoice totals" },
-          { href: "/best-accounting-software-ghana", label: "Choosing software", desc: "Buyer guide" },
+          { href: "/best-accounting-software-ghana", label: "Best accounting software Ghana", desc: "2026 buyer guide" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
           { href: "/demo", label: "Demo", desc: "See how Finza works" },
           { href: "/contact", label: "Contact", desc: "Talk to the team" },

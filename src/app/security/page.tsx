@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Security and Trust | Finza Business Software for Ghana",
+  title: "Security & Trust — Finza Business Software for Ghana",
   description:
     "Learn how Finza supports business separation, role-based access, audit logs, period controls, tokenized public document links, and payment-provider secret handling for Ghanaian businesses.",
   alternates: {

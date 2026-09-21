@@ -6,7 +6,7 @@ import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Finza Blog — Accounting, VAT & Ghana Business",
+  title: "Blog — Accounting, VAT & Ghana Business",
   description:
     "Articles on accounting, records, VAT/NHIL/GETFund, and moving off spreadsheets. From Finza, built for Ghanaian service businesses.",
   alternates: {
@@ -80,8 +80,8 @@ export default function BlogIndexPage() {
         related={[
           {
             href: "/best-accounting-software-ghana",
-            label: "Choosing software",
-            desc: "Neutral comparison",
+            label: "Best accounting software Ghana",
+            desc: "2026 buyer guide",
           },
           { href: "/quotation-software-ghana", label: "Quotations Ghana", desc: "Quote before you bill" },
         ]}

@@ -13,9 +13,9 @@ import {
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "VAT Software in Ghana for Service Businesses",
+  title: "VAT Software in Ghana | VAT, NHIL, GETFund & WHT",
   description:
-    "Finza helps Ghanaian service businesses show VAT, NHIL, GETFund, WHT, and other applicable Ghana tax lines on documents, payments, reports, and accountant-ready records in GHS.",
+    "Finza helps Ghanaian businesses show VAT, NHIL, GETFund, and WHT tax lines clearly on invoices, payments, and reports in GHS. Confirm final treatment with your adviser.",
   alternates: {
     canonical: "https://www.finza.africa/vat-software-ghana",
   },

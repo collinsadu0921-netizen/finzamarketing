@@ -6,7 +6,7 @@ import { GhanaVatCalculator } from "@/components/ghana-vat-calculator";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
-  title: "Ghana VAT Calculator — VAT, NHIL & GETFund (Illustrative) | Finza",
+  title: "Ghana VAT Calculator — VAT, NHIL & GETFund (Illustrative)",
   description:
     "Estimate VAT (15%), NHIL (2.5%), and GETFund (2.5%) on a net amount. Illustrative tool for planning; use Finza for ledger-accurate posting and reports your accountant can review.",
   alternates: {

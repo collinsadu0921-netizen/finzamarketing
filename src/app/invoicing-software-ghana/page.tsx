@@ -14,9 +14,9 @@ import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Invoicing Software in Ghana for Service Businesses",
+  title: "Invoicing Software in Ghana | GHS, WhatsApp & Payments",
   description:
-    "Create and send invoices in GHS with Finza. Prepare quotes, proformas, invoices, receipts, payment instructions, and Ghana tax-line documents where applicable.",
+    "Create GHS invoices, quotes, and proformas with Finza. Send PDFs or WhatsApp links, record full or partial payments, issue receipts, and track customer balances.",
   alternates: {
     canonical: "https://www.finza.africa/invoicing-software-ghana",
   },
@@ -207,7 +207,19 @@ export default function InvoicingSoftwareGhanaPage() {
               Some clients need a quote before approval. Others need a proforma before payment. Finza supports those earlier document stages so your invoice does not start from scratch.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              You can prepare the client offer, confirm the details, and continue the workflow into the invoice stage.
+              You can prepare the client offer, confirm the details, and continue the workflow into the invoice stage. See{" "}
+              <Link href="/quotation-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                quotation software in Ghana
+              </Link>{" "}
+              for quotes and proformas,{" "}
+              <Link href="/invoice-tracking-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                invoice tracking
+              </Link>{" "}
+              for unpaid balances, or download a{" "}
+              <Link href="/blog/invoice-template-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                free Ghana invoice template
+              </Link>{" "}
+              if you still work in Excel or Google Sheets.
             </p>
             <div className="grid gap-4 text-left sm:grid-cols-2">
               {[
@@ -365,13 +377,13 @@ export default function InvoicingSoftwareGhanaPage() {
         related={[
           { href: "/quotation-software-ghana", label: "Quotations", desc: "Quote to invoice" },
           { href: "/invoice-tracking-software-ghana", label: "Invoice tracking", desc: "Unpaid and overdue balances" },
+          { href: "/blog/invoice-template-ghana", label: "Free invoice template", desc: "Excel and Google Sheets" },
           { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
-          { href: "/invoice-calculator-ghana", label: "Ghana invoice calculator", desc: "Preview invoice totals" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
+          { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
           { href: "/features", label: "Features", desc: "Explore capabilities" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how it works" },
         ]}
       />
       <Footer />

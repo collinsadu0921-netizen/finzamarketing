@@ -8,7 +8,7 @@ import { MidPageCtaBand, WhyBusinessesTrustFinza } from "@/components/seo-market
 import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Invoice Software for Contractors in Ghana - GHS, Milestones & Quotes | Finza",
+  title: "Invoice Software for Contractors in Ghana — GHS, Milestones & Quotes",
   description:
     "Bill construction and project work in Ghana cedis: approved scopes, progress invoices, and unpaid tracking, without losing the thread in WhatsApp. Start a 14-day free trial.",
   alternates: {

@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema, payrollSoftwareTemaFaqForSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Payroll Software in Tema for PAYE, SSNIT & Payslips | Finza",
+  title: "Payroll Software in Tema — PAYE, SSNIT & Employee Payslips",
   description:
     "Run monthly payroll in Tema with PAYE and SSNIT handling, approved payroll records, and payslips by email or WhatsApp.",
   alternates: {

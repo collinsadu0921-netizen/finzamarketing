@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting Software for Service Businesses in Ghana",
   description:
-    "Finza accounting software helps Ghanaian service businesses run client work, billing, payments, expenses, payroll records, and accountant handoff in one GHS workspace.",
+    "Finza accounting software for Ghanaian service businesses connects proposals, quotes, invoices, payments, expenses, payroll records, and accountant-ready reports in GHS.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-service-businesses-ghana",
   },
@@ -93,7 +93,19 @@ export default function ServiceBusinessAccountingGhanaPage() {
               The product workflow for service teams
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Service teams need software that follows the work from client request to billing and review. Finza keeps those operating records closer together so the product is not just an end-of-month reporting tool.
+              Service teams need software that follows the work from client request to billing and review. That includes{" "}
+              <Link href="/quotation-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                quotes and proformas
+              </Link>
+              ,{" "}
+              <Link href="/invoicing-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                invoices and collections
+              </Link>
+              , expenses,{" "}
+              <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                payroll records
+              </Link>
+              , and accountant handoff. Cleaning firms, contractors, consultants, agencies, and maintenance businesses all follow some version of this path.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
               When these records are scattered across WhatsApp, email, folders, notebooks, and spreadsheets, the accountant receives an incomplete business story.
@@ -361,6 +373,10 @@ export default function ServiceBusinessAccountingGhanaPage() {
         related={[
           { href: "/features", label: "Features", desc: "Product capabilities" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
+          { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Quotes to receipts" },
+          { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals and quotes" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE and payslips" },
+          { href: "/accounting-software-ghana", label: "Accounting", desc: "GHS reports and records" },
           { href: "/accounting-for-service-business-ghana", label: "Service accounting guide", desc: "Practical workflow guidance" },
         ]}
       />

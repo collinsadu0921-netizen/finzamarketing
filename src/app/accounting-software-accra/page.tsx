@@ -13,9 +13,9 @@ import { JsonLd } from "@/components/json-ld";
 import { accountingSoftwareAccraFaqForSchema, breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accounting Software in Accra for Businesses in Ghana",
+  title: "Accounting Software in Accra | Ghana Business Software",
   description:
-    "Manage invoices, bookkeeping, and reports in GHS with accounting software built for businesses in Accra and across Ghana.",
+    "Cloud accounting software in Accra for growing Ghanaian service businesses. Invoicing, expenses, payroll, reports, and accountant handoff in GHS.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-accra",
   },

@@ -16,7 +16,7 @@ import {
 } from "@/components/features/features-sections";
 
 export const metadata: Metadata = {
-  title: "Features | Finza Business Software for Ghanaian Service Businesses",
+  title: "Features — Accounting, Invoicing, Payroll & Reports in Ghana",
   description:
     "Explore Finza features for Ghanaian service businesses: proposals, quotes, invoices, payments, expenses, incoming documents, built-in monthly payroll, reports, Ghana tax lines, and records for professional review.",
   alternates: {

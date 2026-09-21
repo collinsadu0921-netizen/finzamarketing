@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
-  title: "How VAT Works in Ghana — Guide for Businesses | Finza",
+  title: "How VAT Works in Ghana — Guide for Businesses",
   description:
     "Understand Ghana VAT (15%), output vs input tax, filing context, and how multi-levy supplies relate to bookkeeping. Finza supports Ghana VAT line presentation where applicable.",
   alternates: {

@@ -20,12 +20,8 @@ export const blogClusterLinks: Record<string, BlogClusterLink> = {
     relatedSlugs: ["bookkeeping-checklist-ghana", "how-to-track-expenses-small-business-ghana", "accounting-mistakes-small-businesses-ghana"],
     core: { href: "/bookkeeping-software-ghana", label: "Bookkeeping software Ghana" },
   },
-  "best-accounting-software-ghana": {
-    relatedSlugs: ["ledger-first-accounting-ghana", "accounting-mistakes-small-businesses-ghana", "spreadsheets-to-ledger-migration"],
-    core: { href: "/accounting-software-ghana", label: "Accounting software for Ghana" },
-  },
   "ledger-first-accounting-ghana": {
-    relatedSlugs: ["spreadsheets-to-ledger-migration", "accounting-mistakes-small-businesses-ghana", "best-accounting-software-ghana"],
+    relatedSlugs: ["spreadsheets-to-ledger-migration", "accounting-mistakes-small-businesses-ghana", "bookkeeping-tips-small-businesses-ghana"],
     core: { href: "/accounting-software-ghana", label: "Accounting software for Ghana" },
   },
   "vat-nhil-getfund-2026-framework": {

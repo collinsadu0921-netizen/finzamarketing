@@ -22,9 +22,9 @@ import {
 } from "@/components/home/home-ui";
 
 export const metadata: Metadata = {
-  title: "Built-in Payroll Software for Ghanaian Businesses",
+  title: "Payroll Software in Ghana | PAYE, SSNIT & Payslips",
   description:
-    "Manage monthly payroll inside Finza—from salary calculations and approvals to payslips, payment tracking, and accounting records. Available on Professional and Business plans.",
+    "Run Ghana payroll in Finza: monthly salary calculations, PAYE, SSNIT/Tier 1 and Tier 2 pensions, payslips by email or WhatsApp, and salary-payment records.",
   alternates: {
     canonical: "https://www.finza.africa/payroll-software-ghana",
   },

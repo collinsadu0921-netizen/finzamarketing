@@ -22,7 +22,7 @@ import {
 } from "@/components/home/home-ui";
 
 export const metadata: Metadata = {
-  title: "Book a Finza Walkthrough | Contact",
+  title: "Book a Finza Walkthrough — Contact Sales",
   description:
     "Book a Finza walkthrough for your Ghanaian service business. Tell us what your business needs and we will help with setup and pricing in GHS.",
   alternates: {

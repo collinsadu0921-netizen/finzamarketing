@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
-  title: "NHIL and GETFund Explained for Ghana Businesses | Finza",
+  title: "NHIL and GETFund Explained for Ghana Businesses",
   description:
     "NHIL (2.5%) and GETFund (2.5%): what they are, how they differ from VAT, and input tax deduction treatment effective 1 January 2026. Links to VAT software and accounting for Ghana.",
   alternates: {
