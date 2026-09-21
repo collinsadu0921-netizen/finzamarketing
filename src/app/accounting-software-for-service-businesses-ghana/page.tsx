@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accounting Software for Service Businesses in Ghana | Finza",
+  title: "Accounting Software for Service Businesses in Ghana",
   description:
     "Finza accounting software helps Ghanaian service businesses run client work, billing, payments, expenses, payroll records, and accountant handoff in one GHS workspace.",
   alternates: {
