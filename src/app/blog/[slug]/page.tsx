@@ -119,8 +119,65 @@ export default async function BlogPostPage({ params }: Props) {
           </Container>
         </header>
         <Container>
-          <div className="prose prose-zinc mx-auto max-w-3xl py-12 prose-headings:font-bold prose-p:text-zinc-600 prose-li:text-zinc-600 prose-a:text-zinc-900 prose-a:font-semibold">
-            <ReactMarkdown>{post.body}</ReactMarkdown>
+          <div className="mx-auto max-w-3xl py-12">
+            <ReactMarkdown
+              components={{
+                h2: ({ children }) => (
+                  <h2 className="mb-4 mt-10 text-2xl font-bold tracking-tight text-zinc-900 first:mt-0">
+                    {children}
+                  </h2>
+                ),
+                h3: ({ children }) => (
+                  <h3 className="mb-3 mt-8 text-xl font-bold text-zinc-900">
+                    {children}
+                  </h3>
+                ),
+                p: ({ children }) => (
+                  <p className="mb-5 text-base leading-7 text-zinc-600">
+                    {children}
+                  </p>
+                ),
+                ul: ({ children }) => (
+                  <ul className="mb-6 list-disc space-y-2 pl-6 text-base leading-7 text-zinc-600">
+                    {children}
+                  </ul>
+                ),
+                ol: ({ children }) => (
+                  <ol className="mb-6 list-decimal space-y-2 pl-6 text-base leading-7 text-zinc-600">
+                    {children}
+                  </ol>
+                ),
+                li: ({ children }) => <li>{children}</li>,
+                strong: ({ children }) => (
+                  <strong className="font-semibold text-zinc-900">{children}</strong>
+                ),
+                a: ({ href = "", children }) => {
+                  const isTemplateDownload = href === "/templates/ghana-invoice-template.csv";
+                  if (isTemplateDownload) {
+                    return (
+                      <a
+                        href={href}
+                        download
+                        className="mb-6 mt-2 inline-flex items-center justify-center rounded-md bg-[#0F172A] px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#0F172A]/90"
+                      >
+                        {children}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <a
+                      href={href}
+                      className="font-semibold text-zinc-900 underline underline-offset-2 hover:text-zinc-700"
+                    >
+                      {children}
+                    </a>
+                  );
+                },
+              }}
+            >
+              {post.body}
+            </ReactMarkdown>
           </div>
           <div className="mx-auto max-w-3xl border-t border-zinc-100 px-4 py-10 md:px-0">
             <h2 className="text-lg font-bold leading-snug text-zinc-900">
