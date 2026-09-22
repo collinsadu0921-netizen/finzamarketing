@@ -8,7 +8,7 @@ import { MidPageCtaBand, WhyBusinessesTrustFinza } from "@/components/seo-market
 import { breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accounting Software for Cleaning Businesses in Ghana (2026) | Finza",
+  title: "Accounting Software for Cleaning Businesses in Ghana",
   description:
     "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicable, without spreadsheet chaos. Start a 14-day free trial.",
   alternates: {

@@ -13,9 +13,9 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Small Business Accounting Software in Ghana | Finza",
+  title: "Small Business Accounting Software in Ghana",
   description:
-    "Finza small business accounting software helps Ghanaian SMEs see invoices, payments, expenses, payroll records, reports, and accountant handoff in GHS.",
+    "Finza small business accounting software gives owner-led Ghanaian SMEs visibility over receivables, expenses, payroll records, GHS reports, and accountant handoff.",
   alternates: {
     canonical: "https://www.finza.africa/small-business-accounting-ghana",
   },
@@ -347,6 +347,7 @@ export default function SmallBusinessAccountingGhanaPage() {
         related={[
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
+          { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, SSNIT & payslips" },
           { href: "/accounting-for-small-business-ghana", label: "Small business guide", desc: "Daily records first" },
         ]}
       />

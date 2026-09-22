@@ -21,7 +21,7 @@ import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-    title: "Product Tour | See How Finza Works",
+    title: "Product Tour — See How Finza Works for Ghana Businesses",
     description:
         "Watch a Finza product tour for Ghanaian service businesses. See quotes, invoices, payments, expenses, payroll, reports, and records in one workflow.",
     alternates: {

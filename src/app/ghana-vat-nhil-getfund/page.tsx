@@ -5,7 +5,7 @@ import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
 export const metadata: Metadata = {
-  title: "Ghana VAT, NHIL and GETFund — How They Work | Finza",
+  title: "Ghana VAT, NHIL and GETFund — How They Work",
   description:
     "A complete guide to Ghana's indirect tax structure effective 1 January 2026 — VAT (15%), NHIL (2.5%), and GETFund (2.5%) with input tax deduction treatment for NHIL and GETFund — and how Finza structures records for all three.",
   alternates: {

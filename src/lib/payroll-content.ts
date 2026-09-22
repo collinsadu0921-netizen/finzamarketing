@@ -2,10 +2,10 @@
 
 export const PAYROLL_PAGE_PATH = "/payroll-software-ghana";
 
-export const PAYROLL_H1 = "Built-in payroll software for Ghanaian businesses";
+export const PAYROLL_H1 = "Payroll software in Ghana for PAYE, SSNIT, and payslips";
 
 export const PAYROLL_OPENING =
-  "Manage monthly payroll inside Finza—from salary calculations and approvals to payslips, payment tracking, and accounting records. Available on Professional and Business plans.";
+  "Run monthly payroll in Ghana inside Finza: salary calculations, Ghana PAYE, SSNIT/Tier 1 and Tier 2 pension breakdowns, approvals, employee payslips, salary-payment tracking, and accounting records. Available on Professional and Business plans.";
 
 export const PAYROLL_HOME_HEADING = "Built-in payroll. Connected to your business.";
 

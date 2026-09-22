@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Quotation Software in Ghana for Service Businesses | Finza",
+  title: "Quotation Software in Ghana — Quotes, Proformas & Invoices",
   description:
     "Create professional quotes, proposals, proformas, and invoices in GHS with Finza. Send client-ready documents, track approvals, payments, and accountant-ready records for your Ghanaian service business.",
   alternates: {

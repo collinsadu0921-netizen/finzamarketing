@@ -396,7 +396,10 @@ export function HomeRelatedGuidesSection() {
             {[
               { href: "/accounting-software-ghana", label: "Accounting software Ghana" },
               { href: "/invoicing-software-ghana", label: "Invoicing software Ghana" },
+              { href: "/bookkeeping-software-ghana", label: "Bookkeeping software Ghana" },
               { href: "/payroll-software-ghana", label: "Payroll software Ghana" },
+              { href: "/vat-software-ghana", label: "VAT software Ghana" },
+              { href: "/best-accounting-software-ghana", label: "Best accounting software Ghana" },
               { href: "/features", label: "Features" },
               { href: "/security", label: "Security" },
             ].map((link) => (

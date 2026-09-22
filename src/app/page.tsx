@@ -13,7 +13,10 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Business Software for Service Businesses in Ghana | Finza",
+  title: {
+    absolute:
+      "Finza — Accounting & Invoicing Software for Ghanaian Service Businesses",
+  },
   description:
     "Finza helps Ghanaian service businesses create proposals, quotes and invoices, track payments, capture expenses and incoming documents, manage payroll, and keep records for professional review in GHS.",
   alternates: {

@@ -14,9 +14,9 @@ import { ProductProofSection } from "@/components/product-proof-section";
 import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Bookkeeping Software in Ghana for Service Businesses | Finza",
+  title: "Bookkeeping Software in Ghana | Expenses, Bills & Receipts",
   description:
-    "Finza bookkeeping software helps Ghanaian service businesses capture receipts, expenses, supplier bills, incoming documents, and weekly records before accountant review.",
+    "Finza bookkeeping software helps Ghanaian SMEs capture receipts, expenses, supplier bills, and incoming documents in GHS—weekly records, not year-end panic.",
   alternates: {
     canonical: "https://www.finza.africa/bookkeeping-software-ghana",
   },
@@ -241,7 +241,19 @@ export default function BookkeepingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Hand over cleaner bookkeeping, not a folder dump</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps daily business activity create better records as work happens. Receipts, supplier bills, payments, expenses, and documents stay easier to review.
+              Finza helps daily business activity create better records as work happens. Receipts, supplier bills, payments, expenses, and documents stay easier to review. For weekly habits, see{" "}
+              <Link href="/bookkeeping-for-small-business-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                bookkeeping for small businesses in Ghana
+              </Link>
+              . For cost capture specifically, see{" "}
+              <Link href="/expense-tracking-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                expense tracking software
+              </Link>
+              . Reports and month-end sit on{" "}
+              <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+                accounting software in Ghana
+              </Link>
+              .
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Behind the scenes, Finza supports accounting-grade workflows such as ledger records, journals, chart of accounts, trial balance, period controls, audit logs, and exports.
@@ -362,11 +374,11 @@ export default function BookkeepingSoftwareGhanaPage() {
         related={[
           { href: "/bookkeeping-for-small-business-ghana", label: "Small business bookkeeping", desc: "Bookkeeping habits for SMEs" },
           { href: "/expense-tracking-software-ghana", label: "Expense tracking", desc: "Costs and receipts" },
-          { href: "/quotation-software-ghana", label: "Quotations", desc: "Proposals to invoice" },
+          { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
+          { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
           { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
         ]}
       />
       <Footer />

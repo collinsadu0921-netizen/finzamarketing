@@ -27,7 +27,7 @@ import {
 } from "@/components/home/home-ui";
 
 export const metadata: Metadata = {
-    title: "Pricing | Find the Right Finza Plan",
+    title: "Pricing — Finza Plans in Ghana Cedis (GHS)",
     description:
         "Find the right Finza plan for your Ghanaian service business. Answer a few questions or book a walkthrough. Plans start from GH₵149/month.",
     alternates: {

@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema, faqPageSchema, invoicingSoftwareKumasiFaqForSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Invoicing Software in Kumasi for Service Businesses | Finza",
+  title: "Invoicing Software in Kumasi — GHS Quotes, Invoices & Payments",
   description:
     "Send invoices in GHS, track payments, and manage customer balances with invoicing software built for Kumasi businesses.",
   alternates: {
