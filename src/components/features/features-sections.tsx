@@ -136,12 +136,12 @@ export function FeaturesHero() {
             Features
           </p>
           <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-4xl md:text-[2.75rem]">
-            From the first quote to clearer business records.
+            Accounting features for Ghanaian businesses
           </h1>
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-zinc-600">
-            Finza connects proposals, jobs, materials, invoices, payments,
-            expenses, incoming documents, payroll, and reports in one
-            Ghana-ready Service workspace.
+            Quotes and invoices, online payments through your own Hubtel
+            account, expenses and supplier bills, payroll, and the reports
+            behind them — in Ghana cedis.
           </p>
           <div className="flex flex-col items-stretch justify-center gap-3 pt-1 sm:flex-row sm:items-center">
             <a href={starterSignupHref} className={homePrimaryBtn}>
@@ -554,7 +554,7 @@ export function FeaturesAssistSection() {
     >
       <Container>
         <div className="mx-auto max-w-2xl space-y-4 text-center">
-          <PlanBadge tone="neutral">Included with the Service workspace</PlanBadge>
+          <PlanBadge tone="neutral">Included on Finza plans</PlanBadge>
           <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-[#0F172A] text-white">
             <Sparkles className="h-5 w-5" aria-hidden />
           </span>
@@ -596,7 +596,7 @@ export function FeaturesFinalCtaSection() {
       <Container>
         <div className="relative mx-auto max-w-2xl space-y-4">
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-            See how Finza fits your service business.
+            See how Finza fits your business.
           </h2>
           <p className="text-base leading-relaxed text-zinc-300">
             Start with a 14-day free trial or compare the three plans in Ghana

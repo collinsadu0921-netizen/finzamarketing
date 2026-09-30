@@ -34,7 +34,7 @@ export default function VatSoftwareGhanaPage() {
             {
               questionName: "Is Finza VAT software for Ghanaian businesses?",
               acceptedAnswerText:
-                "Yes. Finza helps Ghanaian service businesses show VAT and related Ghana tax lines where applicable on supported documents, payments, reports, and accountant-ready records.",
+                "Yes. Finza helps Ghanaian businesses show VAT and related Ghana tax lines where applicable on supported documents, payments, reports, and accountant-ready records.",
             },
             {
               questionName: "Does Finza support NHIL and GETFund?",
@@ -64,10 +64,10 @@ export default function VatSoftwareGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              VAT software in Ghana for service businesses
+              VAT software in Ghana for businesses
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps Ghanaian service businesses prepare clearer records with VAT, NHIL, GETFund, WHT, and other applicable Ghana tax lines shown where they belong - on supported documents, payment records, reports, and accountant-ready exports.
+              Finza helps Ghanaian businesses prepare clearer records with VAT, NHIL, GETFund, WHT, and other applicable Ghana tax lines shown where they belong - on supported documents, payment records, reports, and accountant-ready exports.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -189,7 +189,7 @@ export default function VatSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Useful for VAT-registered and growing businesses</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is useful for Ghanaian service businesses that need clearer tax records, especially when invoices, payments, supplier bills, WHT deductions, and accountant review are part of the workflow.
+              Finza is useful for Ghanaian businesses that need clearer tax records, especially when invoices, payments, supplier bills, WHT deductions, and accountant review are part of the workflow.
             </p>
             <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-3">
               {[
@@ -225,12 +225,9 @@ export default function VatSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Tax software support, not tax advice</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Tax lines on records, not a VAT return</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps organize business records, documents, payments, and reports. It does not guarantee tax compliance, replace your accountant, replace GRA guidance, or remove the need to review important financial information.
-            </p>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Your accountant or tax adviser should confirm the correct tax treatment for your business.
+              Finza can show VAT, NHIL, GETFund, and WHT on supported documents and reports where they apply. It does not file those returns or guarantee that the treatment is correct for your business. Your accountant or GRA confirms what applies before you submit anything.
             </p>
           </div>
         </Container>
@@ -245,7 +242,7 @@ export default function VatSoftwareGhanaPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>Is Finza VAT software for Ghanaian businesses?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza helps Ghanaian service businesses show VAT and related Ghana tax lines where applicable on supported documents, payments, reports, and accountant-ready records.
+                  Yes. Finza helps Ghanaian businesses show VAT and related Ghana tax lines where applicable on supported documents, payments, reports, and accountant-ready records.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">

@@ -80,6 +80,10 @@ export const blogClusterLinks: Record<string, BlogClusterLink> = {
     relatedSlugs: ["bookkeeping-tips-small-businesses-ghana", "bookkeeping-checklist-ghana", "spreadsheets-to-ledger-migration"],
     core: { href: "/bookkeeping-software-ghana", label: "Bookkeeping software Ghana" },
   },
+  "accept-mobile-money-payments-on-invoices-ghana": {
+    relatedSlugs: ["how-to-create-invoice-in-ghana", "invoice-vs-receipt-ghana", "how-to-manage-cash-flow-ghana"],
+    core: { href: "/invoicing-software-ghana", label: "Invoicing software in Ghana" },
+  },
   "invoice-errors-service-businesses-ghana": {
     relatedSlugs: ["how-to-create-invoice-in-ghana", "invoice-template-ghana", "invoice-vs-receipt-ghana"],
     core: { href: "/invoicing-software-ghana", label: "Invoicing software in Ghana" },

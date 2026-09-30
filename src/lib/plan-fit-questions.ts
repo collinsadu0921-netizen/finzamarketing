@@ -11,11 +11,12 @@ export const PLAN_FIT_QUESTIONS: PlanFitQuestion[] = [
     id: "businessType",
     label: "What type of business do you run?",
     options: [
+      { value: "sme", label: "Small or growing business" },
       { value: "service", label: "Service business" },
       { value: "professional", label: "Professional services" },
-      { value: "agency", label: "Agency or consultancy" },
+      { value: "trading", label: "Trading or distribution" },
       { value: "contractor", label: "Construction or contractor" },
-      { value: "other-service", label: "Other service business" },
+      { value: "other", label: "Another type of business" },
     ],
   },
   {

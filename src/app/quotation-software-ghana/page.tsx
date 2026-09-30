@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Quotation Software in Ghana — Quotes, Proformas & Invoices",
   description:
-    "Create professional quotes, proposals, proformas, and invoices in GHS with Finza. Send client-ready documents, track approvals, payments, and accountant-ready records for your Ghanaian service business.",
+    "Create professional quotes, proposals, proformas, and invoices in GHS with Finza. Send client-ready documents, track approvals, payments, and accountant-ready records for your Ghanaian business.",
   alternates: {
     canonical: "https://www.finza.africa/quotation-software-ghana",
   },
@@ -34,7 +34,7 @@ export default function QuotationSoftwareGhanaPage() {
             {
               questionName: "Is Finza quotation software for Ghanaian businesses?",
               acceptedAnswerText:
-                "Yes. Finza helps Ghanaian service businesses create quotes in GHS and continue the workflow into proformas, invoices, payments, receipts, and reports.",
+                "Yes. Finza helps Ghanaian businesses create quotes in GHS and continue the workflow into proformas, invoices, payments, receipts, and reports.",
             },
             {
               questionName: "Can I create proposals as well as quotes?",
@@ -64,10 +64,10 @@ export default function QuotationSoftwareGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Quotation software in Ghana for service businesses
+              Quotation software in Ghana for businesses
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Finza helps Ghanaian service businesses prepare professional quotes, proposals, proformas, and invoices in GHS, then continue the workflow into payment tracking, receipts, reports, and accountant-ready records.
+              Finza helps Ghanaian businesses prepare professional quotes, proposals, proformas, and invoices in GHS, then continue the workflow into payment tracking, receipts, reports, and accountant-ready records.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact"
@@ -78,7 +78,7 @@ export default function QuotationSoftwareGhanaPage() {
               <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">
-              No card required to start. Built for service businesses that send client offers before billing.
+              No card required to start. Built for businesses that send quotes before they bill.
             </p>
           </div>
         </Container>
@@ -90,7 +90,7 @@ export default function QuotationSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">A quote should not be the end of the workflow</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Many service businesses start with a client request, site visit, scope of work, or price discussion. The quote is only one step.
+              Many businesses start with a client request, site visit, scope of work, or price discussion. The quote is only one step.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Finza helps you manage the full document flow from proposal to quote, proforma, invoice, payment, receipt, and reports without rebuilding the same customer and pricing details again.
@@ -236,7 +236,7 @@ export default function QuotationSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Who this quotation software is for</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built for Ghanaian service businesses that prepare prices, scopes, proposals, quotes, or proformas before invoicing clients.
+              Finza is built for Ghanaian businesses that prepare prices, scopes, proposals, quotes, or proformas before invoicing clients.
             </p>
             <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-4">
               {[
@@ -262,12 +262,9 @@ export default function QuotationSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Document support, not a replacement for professional advice</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Quotes your accountant can follow</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps organize quotes, proposals, invoices, payments, documents, and reports. It does not replace your accountant, tax adviser, lawyer, or the need to review important business information.
-            </p>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Your accountant, tax adviser, or legal adviser should confirm the correct treatment for your business and client agreements.
+              Finza keeps quotes, proformas, invoices, and payments together so the agreed price and the later invoice match. Tax lines on those documents, where they apply, are not a filing. Your accountant or GRA confirms the treatment, and your own agreements still govern the client work.
             </p>
           </div>
         </Container>
@@ -282,7 +279,7 @@ export default function QuotationSoftwareGhanaPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>Is Finza quotation software for Ghanaian businesses?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza helps Ghanaian service businesses create quotes in GHS and continue the workflow into proformas, invoices, payments, receipts, and reports.
+                  Yes. Finza helps Ghanaian businesses create quotes in GHS and continue the workflow into proformas, invoices, payments, receipts, and reports.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">

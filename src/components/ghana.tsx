@@ -10,7 +10,7 @@ export function Ghana() {
                 <div className="text-center max-w-3xl mx-auto mb-20 relative z-10">
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-6">Built for Ghana</h2>
                     <p className="text-xl text-muted-foreground leading-relaxed">
-                        Built for Ghanaian service businesses with practical workflows for daily operations.
+                        Built for Ghanaian businesses, with practical workflows for daily operations.
                     </p>
                 </div>
 
@@ -33,7 +33,7 @@ export function Ghana() {
                         </div>
                         <h3 className="text-lg font-bold text-primary mb-3">VAT Logic</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Structured for Ghana VAT presentation so service-business records stay clearer for review.
+                            Structured for Ghana VAT presentation so business records stay clearer for review.
                         </p>
                     </div>
 

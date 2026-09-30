@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     staticEntry("https://www.finza.africa/bookkeeping-for-small-business-ghana", "monthly", 0.73),
     staticEntry("https://www.finza.africa/small-business-accounting-ghana", "monthly", 0.8),
     staticEntry("https://www.finza.africa/ghana-vat-nhil-getfund", "monthly", 0.75),
-    staticEntry("https://www.finza.africa/accounting-software-for-service-businesses-ghana", "monthly", 0.8),
+    staticEntry("https://www.finza.africa/accounting-software-for-service-businesses-ghana", "monthly", 0.7),
 
     // ── Topic cluster (informational) ─────────────────────────────────────
     staticEntry("https://www.finza.africa/how-vat-works-ghana", "monthly", 0.72),

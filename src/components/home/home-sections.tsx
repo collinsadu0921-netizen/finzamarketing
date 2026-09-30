@@ -31,6 +31,13 @@ import {
   sectionTitle,
 } from "@/components/home/home-ui";
 import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+import { homePageFaqForSchema } from "@/lib/schema";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
@@ -293,7 +300,7 @@ export function HomePerformanceSection() {
   );
 }
 
-/** Section 6 — Ghana service businesses */
+/** Section 6 — Why Ghana */
 export function HomeGhanaSection() {
   const items = [
     {
@@ -327,10 +334,11 @@ export function HomeGhanaSection() {
       <Container>
         <div className="mx-auto max-w-4xl space-y-7 text-center">
           <div className="space-y-3">
-            <h2 className={sectionTitle}>Built for Ghanaian service businesses</h2>
+            <h2 className={sectionTitle}>Built for businesses in Ghana</h2>
             <p className={sectionLead}>
-              Finza is built around service work in Ghana cedis — quotes, jobs, invoices, payments,
-              and reports in one Service workspace.
+              Amounts stay in Ghana cedis. Invoices can show VAT, NHIL, GETFund, and WHT where they
+              apply, and customers can pay through your own Hubtel account, including Mobile Money
+              methods Hubtel offers that account.
             </p>
           </div>
           <StaggerIn variant="cards" className="grid gap-4 text-left sm:grid-cols-2">
@@ -366,7 +374,7 @@ export function HomeFinalCtaSection() {
       <Container>
         <div className="relative mx-auto max-w-2xl space-y-5">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Ready to run your business with clearer numbers?
+            Ready to keep your Ghana business accounts in one place?
           </h2>
           <p className="text-base leading-relaxed text-zinc-300">
             Start your 14-day free trial and explore Finza with no card required.
@@ -385,6 +393,27 @@ export function HomeFinalCtaSection() {
   );
 }
 
+/** Visible FAQ — copy must match homePageFaqForSchema. */
+export function HomeFaqSection() {
+  return (
+    <section className="border-b border-zinc-100 bg-white py-12 md:py-16">
+      <Container>
+        <div className="mx-auto max-w-3xl">
+          <h2 className={sectionTitle}>Questions about Finza</h2>
+          <Accordion type="single" collapsible className="mt-6 w-full">
+            {homePageFaqForSchema.map((item) => (
+              <AccordionItem key={item.questionName} value={item.questionName}>
+                <AccordionTrigger>{item.questionName}</AccordionTrigger>
+                <AccordionContent>{item.acceptedAnswerText}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 /** Quiet related guides — not part of the main conversion journey */
 export function HomeRelatedGuidesSection() {
   return (
@@ -395,13 +424,15 @@ export function HomeRelatedGuidesSection() {
           <div className="flex flex-wrap justify-center gap-2">
             {[
               { href: "/accounting-software-ghana", label: "Accounting software Ghana" },
+              { href: "/small-business-accounting-ghana", label: "Small business accounting" },
               { href: "/invoicing-software-ghana", label: "Invoicing software Ghana" },
               { href: "/bookkeeping-software-ghana", label: "Bookkeeping software Ghana" },
+              { href: "/expense-tracking-software-ghana", label: "Expense tracking" },
               { href: "/payroll-software-ghana", label: "Payroll software Ghana" },
               { href: "/vat-software-ghana", label: "VAT software Ghana" },
-              { href: "/best-accounting-software-ghana", label: "Best accounting software Ghana" },
-              { href: "/features", label: "Features" },
-              { href: "/security", label: "Security" },
+              { href: "/quickbooks-alternative-ghana", label: "QuickBooks alternative" },
+              { href: "/sage-accounting-alternative-ghana", label: "Sage alternative" },
+              { href: "/best-accounting-software-ghana", label: "Buyer guide" },
             ].map((link) => (
               <Link
                 key={link.href}

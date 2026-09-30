@@ -20,7 +20,7 @@ export function HomeHero() {
           <MarketingReveal variant="hero-settle">
             <div className="min-w-0 space-y-5">
               <h1 className="text-4xl font-extrabold leading-[1.08] tracking-tight text-zinc-900 sm:text-5xl lg:text-[3.15rem]">
-                Run your business with clearer numbers.{" "}
+                Accounting software built for Ghanaian businesses.{" "}
                 <svg
                   viewBox="0 0 640 480"
                   aria-label="Ghana flag"
@@ -34,8 +34,9 @@ export function HomeHero() {
                 </svg>
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-zinc-600">
-                Create quotes, manage jobs and materials, send invoices, track payments, run monthly
-                payroll, and understand profit in one Ghana-ready workspace.
+                Create invoices, accept Mobile Money payments through your own Hubtel account, track
+                expenses and supplier bills, run payroll, and see how your business is performing — all
+                in one place.
               </p>
               <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
                 <a href={starterSignupHref} className={homePrimaryBtn}>

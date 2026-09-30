@@ -39,12 +39,12 @@ export default function AccountingForSmallBusinessGhanaPage() {
             {
               questionName: "Can Finza help with accounting for small businesses in Ghana?",
               acceptedAnswerText:
-                "Yes. Finza helps Ghanaian small service businesses organize proposals, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.",
+                "Yes. Finza helps Ghanaian small businesses organize proposals, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.",
             },
             {
-              questionName: "Does Finza replace my accountant?",
+              questionName: "Can my accountant work from Finza?",
               acceptedAnswerText:
-                "No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.",
+                "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.",
             },
             {
               questionName: "Can Finza help with unpaid invoices?",
@@ -77,7 +77,7 @@ export default function AccountingForSmallBusinessGhanaPage() {
               <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
             </div>
             <p className="text-sm text-zinc-500">
-              No card required to start. Built for small service businesses that want cleaner records before accountant review.
+              No card required to start. Built for small businesses that want cleaner records before accountant review.
             </p>
           </div>
         </Container>
@@ -171,10 +171,10 @@ export default function AccountingForSmallBusinessGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              Built for Ghanaian small service businesses
+              Built for Ghanaian small businesses
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza is especially useful for Ghanaian service businesses that work in GHS, send client documents, track payments, manage expenses, and prepare information for accountant review.
+              Finza is especially useful for Ghanaian businesses that work in GHS, send client documents, track payments, manage expenses, and prepare information for accountant review.
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2 lg:grid-cols-4">
               {[
@@ -274,13 +274,10 @@ export default function AccountingForSmallBusinessGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              Software support, not professional advice
+              Records you and your accountant can review
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize business records, documents, payments, reports, tax lines where applicable, and accountant-ready information. It does not guarantee tax compliance, automatically file statutory returns, or replace accountant, tax, payroll, legal, or GRA guidance.
-            </p>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Your accountant or adviser should confirm the correct treatment for your business.
+              Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. It does not file statutory returns or guarantee tax compliance. Your accountant or GRA confirms the treatment for your business.
             </p>
           </div>
         </Container>
@@ -300,13 +297,13 @@ export default function AccountingForSmallBusinessGhanaPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Can Finza help with accounting for small businesses in Ghana?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza helps Ghanaian small service businesses organize proposals, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.
+                  Yes. Finza helps Ghanaian small businesses organize proposals, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.
+                  Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">

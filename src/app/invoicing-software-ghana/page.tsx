@@ -151,7 +151,7 @@ export default function InvoicingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Send documents clients can understand</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              This page focuses on invoice creation and sending. When collections become the main problem, use invoice tracking to follow unpaid and overdue balances.
+              This page focuses on invoice creation and sending. You can print Mobile Money or bank details on the invoice and record the payment when it arrives. If you connect your own Hubtel merchant account, customers can also pay from the public invoice page on Hubtel checkout, including Mobile Money methods available on that Hubtel account. Finza records the payment after Hubtel confirms it and does not hold the funds. When collections become the main problem, use invoice tracking to follow unpaid and overdue balances.
             </p>
             <ul className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-3">
               {[
@@ -160,6 +160,7 @@ export default function InvoicingSoftwareGhanaPage() {
                 "Email sending",
                 "WhatsApp sharing links",
                 "Bank and Mobile Money details",
+                "Hubtel checkout on the invoice, using your own Hubtel account",
                 "Receipts after payment",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
@@ -274,7 +275,7 @@ export default function InvoicingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Who this invoicing software is for</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built for Ghanaian service businesses that send client invoices and need better control over payment tracking and business records.
+              Finza is built for Ghanaian businesses that send client invoices and need better control over payment tracking and business records.
             </p>
             <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-4">
               {[
@@ -300,12 +301,9 @@ export default function InvoicingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Invoice support, not a replacement for professional advice</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Invoices your accountant can follow</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps organize invoices, payments, documents, and reports. It does not guarantee tax compliance, replace your accountant, or remove the need to review important financial information.
-            </p>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Your accountant or tax adviser should confirm the correct treatment for your business.
+              Finza keeps quotes, invoices, receipts, and payments in one place, including Ghana tax lines where they apply. Those lines are not a VAT return. Your accountant or GRA confirms the treatment for your business.
             </p>
           </div>
         </Container>

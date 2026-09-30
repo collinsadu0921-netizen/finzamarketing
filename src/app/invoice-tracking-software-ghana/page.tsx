@@ -39,9 +39,9 @@ const invoiceTrackingFaqForSchema = [
       "Yes. Finza helps you identify overdue and outstanding invoices so your business can follow up with clearer information.",
   },
   {
-    questionName: "Does Finza replace my accountant?",
+    questionName: "Can my accountant work from Finza?",
     acceptedAnswerText:
-      "No. Finza helps organize invoice and payment records so your accountant has cleaner information to review.",
+      "Yes. Finza keeps invoices, part-payments, and outstanding balances together so you and your accountant can see who still owes what.",
   },
   {
     questionName: "Can I try Finza before paying?",
@@ -221,7 +221,7 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Ghana tax lines and payment records</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              For Ghanaian service businesses, invoice tracking also needs to stay connected to tax lines where they apply. Finza helps show Ghana tax breakdowns on relevant documents and keeps payment records connected to the invoice trail.
+              For Ghanaian businesses, invoice tracking also needs to stay connected to tax lines where they apply. Finza helps show Ghana tax breakdowns on relevant documents and keeps payment records connected to the invoice trail.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
               <li>Invoice totals in GHS</li>
@@ -246,7 +246,7 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Who this page is for</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza is useful for service businesses that send invoices and need a clearer way to follow up on money owed.
+              Finza is useful for businesses that send invoices and need a clearer way to follow up on money owed.
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
@@ -294,9 +294,8 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Important disclaimer</h2>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize invoice and payment records for business review. It does not replace your accountant, bookkeeper, tax adviser, or legal adviser. You remain responsible for reviewing your records and getting professional advice where needed.
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Finza keeps invoices, part-payments, and outstanding balances together so you and your accountant can see who still owes what.
             </p>
           </div>
         </Container>
@@ -326,9 +325,9 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize invoice and payment records so your accountant has cleaner information to review.
+                  Yes. Finza keeps invoices, part-payments, and outstanding balances together so you and your accountant can see who still owes what.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -349,7 +348,7 @@ export default function InvoiceTrackingSoftwareGhanaPage() {
               Track invoices before they become a problem
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to keep invoices, payments, balances, receipts, and customer records connected in one workspace for Ghanaian service businesses.
+              Use Finza to keep invoices, payments, balances, receipts, and customer records connected in one workspace for Ghanaian businesses.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"

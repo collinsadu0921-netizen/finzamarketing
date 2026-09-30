@@ -7,7 +7,7 @@ export function Audience() {
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-6">Who It’s For</h2>
                     <p className="text-xl text-muted-foreground leading-relaxed">
-                        Built for Ghanaian service businesses and growing teams.
+                        Built for Ghanaian businesses, growing teams, and their accountants.
                     </p>
                 </div>
 

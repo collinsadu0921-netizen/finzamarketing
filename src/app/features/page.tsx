@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Features — Accounting, Invoicing, Payroll & Reports in Ghana",
   description:
-    "Explore Finza features for Ghanaian service businesses: proposals, quotes, invoices, payments, expenses, incoming documents, built-in monthly payroll, reports, Ghana tax lines, and records for professional review.",
+    "Finza features for Ghanaian businesses: quotes, invoices, Hubtel invoice payments, expenses, supplier bills, payroll, reports, and Ghana tax lines where applicable.",
   alternates: {
     canonical: "https://www.finza.africa/features",
   },

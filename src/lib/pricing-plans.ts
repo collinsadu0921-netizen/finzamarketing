@@ -22,7 +22,7 @@ export const PLAN_FIT_SUMMARIES: Record<
   professional: {
     name: "Professional",
     description:
-      "For growing service businesses that need stronger document workflows, reports, customer statements, built-in payroll, and better business control.",
+      "For growing businesses that need stronger document workflows, reports, customer statements, built-in payroll, and better business control.",
     planParam: "professional",
   },
   business: {
@@ -56,7 +56,7 @@ export const pricingPlansData = [
     id: "essentials" as const,
     name: "Essentials",
     subtitle:
-      "For service businesses that need clean invoices, payment tracking, expenses, and core business records.",
+      "For businesses that need clean invoices, payment tracking, expenses, and core business records.",
     price: 149,
     quarterlyPrice: 425,
     annualPrice: 1490,
@@ -130,7 +130,7 @@ export const pricingPlansData = [
       "Period locking",
       "CIT",
       "System audit log",
-      "Advanced accounting controls inside the Service workspace",
+      "Advanced accounting controls",
     ],
   },
 ];

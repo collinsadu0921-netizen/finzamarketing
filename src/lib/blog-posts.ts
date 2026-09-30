@@ -441,7 +441,7 @@ Read [bookkeeping tips](/blog/bookkeeping-tips-small-businesses-ghana), the [che
   },
   {
     slug: "invoice-errors-service-businesses-ghana",
-    title: "Invoice errors service businesses in Ghana make (Finza checklist)",
+    title: "Invoice errors Ghanaian businesses make, including service businesses",
     excerpt:
       "Wrong tax lines, vague descriptions, and no follow-up on unpaid GHS—fix the billing mistakes that hurt cash flow and accountant trust.",
     publishedAt: "2026-04-22",
@@ -456,13 +456,58 @@ Show whether totals are **inclusive or exclusive** of VAT and other levies **whe
 
 ## No single unpaid list
 
-If you are still using Excel for invoices, you will miss follow-ups. **Finza invoicing software Ghana** teams track status in one place.
+If invoices still live in Excel, follow-up gets missed. One unpaid list in Ghana cedis is easier to trust.
 
 ## Fix the basics
 
 Review [how to create an invoice](/blog/how-to-create-invoice-in-ghana), [invoice template Ghana](/blog/invoice-template-ghana), and [invoice vs receipt](/blog/invoice-vs-receipt-ghana).
 
 Run billing on [invoicing software in Ghana](/invoicing-software-ghana). Contractors may also read our [invoice software for contractors](/invoice-software-for-contractors-ghana) page.`,
+  },
+  {
+    slug: "accept-mobile-money-payments-on-invoices-ghana",
+    title: "How to accept Mobile Money payments on invoices in Ghana",
+    excerpt:
+      "Two practical ways Ghanaian businesses collect Mobile Money against an invoice: show wallet details and record the payment, or connect your own Hubtel account so the customer pays on Hubtel checkout.",
+    publishedAt: "2026-09-30",
+    author: "Finza",
+    body: `## Start with the invoice, not the wallet
+
+A Mobile Money payment is only useful if it is tied to a specific invoice. The customer should see who they are paying, the amount in Ghana cedis (GHS), and what is still outstanding after a part payment.
+
+## Option 1: Show Mobile Money details and record the payment
+
+Many businesses put a Mobile Money number, account name, and a payment reference on the invoice or in the message that sends it. The customer pays from their own wallet. Someone in the business then records that payment against the invoice.
+
+This does not confirm the transfer automatically. Match the reference, amount, and date before you mark the invoice paid. The same habit works for bank transfers and cash.
+
+## Option 2: Let the customer pay on Hubtel checkout
+
+Finza can send the customer to Hubtel Online Checkout from the public invoice page when the business has connected its own Hubtel account.
+
+What that requires:
+
+- A Hubtel merchant or collection account in the business's name
+- The business's Hubtel API ID and API key, stored for that business
+- Hubtel's own approval of the account
+
+The customer pays on Hubtel, using the methods Hubtel offers that account. Those methods can include Mobile Money. Finza does not choose every network, and it does not hold the money. Finza records the invoice payment only after Hubtel confirms the transaction.
+
+Finza subscription billing is separate. Connecting Hubtel here is for customer invoices, not for paying Finza.
+
+## Checkout and a written Mobile Money number are different
+
+A wallet number on an invoice is not Hubtel checkout. With the written number, someone in the business records the payment after they have matched the amount, date, and reference. Finza does not confirm that transfer by itself.
+
+With Hubtel, the customer pays on Hubtel’s page using the methods available on the business’s own Hubtel account, which can include Mobile Money. Finza updates the invoice only after Hubtel confirms the payment. Finza does not hold that money.
+
+If Hubtel checkout is not set up, use the bank or Mobile Money details on the invoice and record the payment when you can see it.
+
+## Keep the books in one place
+
+Whichever path you use, the unpaid list should update in GHS. Partial payments should reduce the balance instead of creating a second spreadsheet.
+
+See [how to create an invoice in Ghana](/blog/how-to-create-invoice-in-ghana) and [invoicing software in Ghana](/invoicing-software-ghana). For the wider product, start with [accounting software for Ghana](/accounting-software-ghana).`,
   },
 ];
 

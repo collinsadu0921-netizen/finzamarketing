@@ -52,9 +52,9 @@ export default function AccountingSoftwareGhanaPage() {
                 "Finza is designed to support cleaner professional review with reports, exports, ledger-supported workflows, audit logs, and period controls.",
             },
             {
-              questionName: "Does Finza replace professional advice?",
+              questionName: "Can my accountant work from these records?",
               acceptedAnswerText:
-                "No. Finza helps organize business records and reports. Your professional adviser or tax adviser should confirm the correct treatment for your business.",
+                "Yes. Finza keeps invoices, payments, expenses, payroll, and reports together so you and your accountant can review the same file. Your accountant or GRA still confirms the tax treatment for your business.",
             },
             {
               questionName: "Is there a free trial?",
@@ -69,7 +69,7 @@ export default function AccountingSoftwareGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Accounting software in Ghana for month-end clarity
+              Accounting software for businesses in Ghana
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
               Finza helps owners and professional advisers see receivables, payables, expenses, payroll impact, Ghana tax lines, and reports in one GHS workspace before month-end turns into a spreadsheet chase.
@@ -93,7 +93,7 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Accounting starts before month-end</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              For many service businesses in Ghana, accounting problems do not start with the final report. They start earlier - when proposals are sent in one place, invoices are created somewhere else, receipts stay on phones, payments are tracked manually, and payroll records are separated from the rest of the business.
+              For many businesses in Ghana, accounting problems do not start with the final report. They start earlier - when proposals are sent in one place, invoices are created somewhere else, receipts stay on phones, payments are tracked manually, and payroll records are separated from the rest of the business.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Finza helps bring those records into one connected workspace so your business and professional adviser have cleaner information to work with.
@@ -282,12 +282,9 @@ export default function AccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Accounting support, not a replacement for professional advice</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Records you and your accountant can review</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps organize business records, documents, payments, and reports. It does not guarantee tax compliance, replace professional advice, or remove the need to review important financial information.
-            </p>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Your professional adviser or tax adviser should confirm the correct treatment for your business.
+              Finza keeps invoices, payments, expenses, payroll, and reports in one workspace. Tax lines such as VAT, NHIL, GETFund, and WHT appear where they apply. That is not a filing, and it does not guarantee the treatment is correct for your business. Your accountant or GRA confirms what applies.
             </p>
           </div>
         </Container>
@@ -318,9 +315,9 @@ export default function AccountingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace professional advice?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from these records?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize business records and reports. Your professional adviser or tax adviser should confirm the correct treatment for your business.
+                  Yes. Finza keeps invoices, payments, expenses, payroll, and reports together so you and your accountant can review the same file. Your accountant or GRA still confirms the tax treatment for your business.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -364,7 +361,7 @@ export default function AccountingSoftwareGhanaPage() {
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE & SSNIT" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/best-accounting-software-ghana", label: "Buyer guide", desc: "Compare accounting software" },
-          { href: "/accounting-software-for-service-businesses-ghana", label: "Service businesses", desc: "Vertical accounting workflow" },
+          { href: "/accounting-software-for-service-businesses-ghana", label: "Service businesses", desc: "A use case, not the whole product" },
           { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />

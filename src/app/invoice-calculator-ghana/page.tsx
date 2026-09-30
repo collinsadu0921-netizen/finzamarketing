@@ -10,7 +10,7 @@ import { breadcrumbListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Ghana Invoice Calculator | Preview Invoice Totals, VAT and Balance Due",
   description:
-    "Preview a Ghana service invoice with line items, tax examples, payments and balance due. Finza helps service businesses create clearer invoices and accountant-ready records.",
+    "Preview a Ghana invoice with line items, tax examples, payments, and balance due. Finza helps businesses create clearer invoices and accountant-ready records.",
   alternates: {
     canonical: "https://www.finza.africa/invoice-calculator-ghana",
   },
@@ -30,7 +30,7 @@ export default function InvoiceCalculatorGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl text-center space-y-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Ghana invoice calculator for service businesses
+              Ghana invoice calculator
             </h1>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-zinc-600">
               Preview how a service invoice could look before you send it. Add service lines, apply Ghana tax line examples, record a partial payment, and see the total and balance due.
@@ -67,7 +67,7 @@ export default function InvoiceCalculatorGhanaPage() {
           <article className="prose prose-zinc mx-auto max-w-3xl prose-headings:font-bold prose-p:text-zinc-600">
             <h2>What this calculator shows</h2>
             <p>
-              This preview connects service line details, tax examples, partial payment tracking, and customer balance visibility in one place. Finza helps service businesses keep invoice records clearer so teams and accountants can review what was billed, paid, and still due.
+              This preview connects line items, tax examples, partial payment tracking, and customer balance visibility in one place. Finza helps businesses keep invoice records clearer so teams and accountants can review what was billed, paid, and still due.
             </p>
           </article>
         </Container>
