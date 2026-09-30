@@ -35,7 +35,7 @@ export default function BookkeepingSoftwareGhanaPage() {
             {
               questionName: "Is Finza bookkeeping software for Ghanaian businesses?",
               acceptedAnswerText:
-                "Yes. Finza helps Ghanaian service businesses keep invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, and reports organized in GHS.",
+                "Yes. Finza helps Ghanaian businesses keep invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, and reports organized in GHS.",
             },
             {
               questionName: "Can I upload receipts and supplier bills?",
@@ -91,7 +91,7 @@ export default function BookkeepingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Bookkeeping becomes harder when records are scattered</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              For many service businesses, bookkeeping problems come from missing or disconnected records. Invoices are saved as PDFs, receipts stay on phones, supplier bills arrive in different places, and payments are marked manually.
+              For many businesses, bookkeeping problems come from missing or disconnected records. Invoices are saved as PDFs, receipts stay on phones, supplier bills arrive in different places, and payments are marked manually.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
               Finza helps bring those records into one workspace so your business has cleaner information to review before month-end.
@@ -271,7 +271,7 @@ export default function BookkeepingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Who this bookkeeping software is for</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built for Ghanaian service businesses that want better bookkeeping structure without relying only on spreadsheets, WhatsApp messages, folders, and manual payment notes.
+              Finza is built for Ghanaian businesses that want better bookkeeping structure without relying only on spreadsheets, WhatsApp messages, folders, and manual payment notes.
             </p>
             <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-4">
               {[
@@ -297,12 +297,9 @@ export default function BookkeepingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Bookkeeping support, not a replacement for professional advice</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">Books your accountant can review</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza helps organize business records, documents, payments, and reports. It does not guarantee tax compliance, replace your accountant, or remove the need to review important financial information.
-            </p>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Your accountant or tax adviser should confirm the correct treatment for your business.
+              Finza keeps sales, expenses, supplier bills, and payments together so a weekly review starts from organized records. Tax amounts shown on those records are not a filing. Your accountant or GRA confirms the treatment for your business.
             </p>
           </div>
         </Container>
@@ -317,7 +314,7 @@ export default function BookkeepingSoftwareGhanaPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>Is Finza bookkeeping software for Ghanaian businesses?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza helps Ghanaian service businesses keep invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, and reports organized in GHS.
+                  Yes. Finza helps Ghanaian businesses keep invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, and reports organized in GHS.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">

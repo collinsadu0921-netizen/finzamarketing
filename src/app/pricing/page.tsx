@@ -29,7 +29,7 @@ import {
 export const metadata: Metadata = {
     title: "Pricing — Finza Plans in Ghana Cedis (GHS)",
     description:
-        "Find the right Finza plan for your Ghanaian service business. Answer a few questions or book a walkthrough. Plans start from GH₵149/month.",
+        "Finza plans for Ghanaian businesses and SMEs, priced in Ghana cedis. Compare Essentials, Professional, and Business. Plans start from GH₵149/month.",
     alternates: {
         canonical: "https://www.finza.africa/pricing",
     },

@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting vs Excel in Ghana | When Spreadsheets Stop Being Enough",
   description:
-    "Compare Excel with business software for Ghanaian service businesses. See when spreadsheets are still useful, where they become risky, and how Finza helps organize proposals, invoices, payments, expenses, documents, payroll, and accountant-ready records.",
+    "Compare Excel with business software for Ghanaian businesses. See when spreadsheets are still useful, where they become risky, and how Finza helps organize proposals, invoices, payments, expenses, documents, payroll, and accountant-ready records.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-vs-excel-ghana",
   },
@@ -38,9 +38,9 @@ const accountingVsExcelFaqForSchema = [
       "No. You can still use Excel for planning, budgets, and analysis. Finza is intended to help manage daily business records and workflows more clearly.",
   },
   {
-    questionName: "Does Finza replace my accountant?",
+    questionName: "Can my accountant work from Finza?",
     acceptedAnswerText:
-      "No. Finza helps organize records so your accountant has cleaner information to review. It does not replace professional accounting or tax advice.",
+      "Finza keeps invoices, payments, expenses, and reports organized so you and your accountant can work from the same records. Your accountant still confirms tax treatment and any filing.",
   },
   {
     questionName: "Can I try Finza before paying?",
@@ -68,7 +68,7 @@ export default function AccountingVsExcelGhanaPage() {
               Accounting vs Excel in Ghana: when spreadsheets stop being enough
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Excel is often the first tool a Ghanaian business owner uses to track money. It is flexible, familiar, and cheap to start with. But as your service business grows, the problem is no longer whether Excel can hold numbers. The problem is whether your records still connect clearly from client work to payment, expenses, documents, payroll, and accountant review.
+              Excel is often the first tool a Ghanaian business owner uses to track money. It is flexible, familiar, and cheap to start with. But as your business grows, the problem is no longer whether Excel can hold numbers. The problem is whether your records still connect clearly from client work to payment, expenses, documents, payroll, and accountant review.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -146,9 +146,9 @@ export default function AccountingVsExcelGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What service businesses need instead</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">What growing businesses need instead</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              A growing service business needs connected records. The owner should be able to see what was proposed, what was accepted, what was invoiced, what has been paid, what is overdue, what was spent, and what documents support the numbers.
+              A growing business needs connected records. The owner should be able to see what was proposed, what was accepted, what was invoiced, what has been paid, what is overdue, what was spent, and what documents support the numbers.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
               For related product pages, see{" "}
@@ -300,9 +300,9 @@ export default function AccountingVsExcelGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Built for Ghanaian service businesses</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Built for Ghanaian businesses</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza is built for service businesses in Ghana that need practical control over daily records. It is useful for businesses that send quotes or invoices, collect payments, handle expenses, manage supporting documents, and want cleaner records before accountant review.
+              Finza is built for businesses in Ghana that need practical control over daily records. It is useful for businesses that send quotes or invoices, collect payments, handle expenses, manage supporting documents, and want cleaner records before accountant review.
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
@@ -340,9 +340,8 @@ export default function AccountingVsExcelGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Important disclaimer</h2>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize business records and show Ghana tax lines where they apply. It does not replace your accountant, bookkeeper, tax adviser, or legal adviser. You remain responsible for reviewing your records and getting professional advice where needed.
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Ghana tax lines in Finza are for the records you and your accountant review. They are not a filing.
             </p>
           </div>
         </Container>
@@ -372,9 +371,9 @@ export default function AccountingVsExcelGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records so your accountant has cleaner information to review. It does not replace professional accounting or tax advice.
+                  Finza keeps invoices, payments, expenses, and reports organized so you and your accountant can work from the same records. Your accountant still confirms tax treatment and any filing.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -395,7 +394,7 @@ export default function AccountingVsExcelGhanaPage() {
               Move beyond spreadsheet-only records
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Start with proposals, invoices, payments, expenses, documents, payroll, and reports in one connected workspace built for Ghanaian service businesses.
+              Start with proposals, invoices, payments, expenses, documents, payroll, and reports in one connected workspace built for Ghanaian businesses.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"

@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Expense Tracking Software in Ghana | Track Spending, Receipts and Bills",
   description:
-    "Track expenses in GHS with Finza. Capture receipts, supplier bills, business outflows, and supporting documents for your Ghanaian service business, with cleaner records for review.",
+    "Track expenses in GHS with Finza. Capture receipts, supplier bills, business outflows, and supporting documents for your Ghanaian business, with cleaner records for review.",
   alternates: {
     canonical: "https://www.finza.africa/expense-tracking-software-ghana",
   },
@@ -38,9 +38,9 @@ const expenseTrackingFaqForSchema = [
       "Yes. Finza includes supplier bill workflows so businesses can keep bill records separate from immediate expenses where needed.",
   },
   {
-    questionName: "Does Finza replace my accountant?",
+    questionName: "Can my accountant work from Finza?",
     acceptedAnswerText:
-      "No. Finza helps organize expense and document records so your accountant has cleaner information to review.",
+      "Yes. Finza keeps expenses, supplier bills, and supporting documents together so you and your accountant can review the same records.",
   },
   {
     questionName: "Can I try Finza before paying?",
@@ -68,7 +68,7 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
               Expense tracking software in Ghana for receipts, bills and business spending
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Business expenses are easy to lose when receipts sit in WhatsApp, supplier bills arrive late, and payments are recorded in different places. Finza helps Ghanaian service businesses keep expenses, bills, receipts, supporting documents, and reports closer to the same workflow.
+              Business expenses are easy to lose when receipts sit in WhatsApp, supplier bills arrive late, and payments are recorded in different places. Finza helps Ghanaian businesses keep expenses, bills, receipts, supporting documents, and reports closer to the same workflow.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -193,7 +193,7 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Supplier bills and business outflows</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Some expenses are paid immediately. Others arrive as supplier bills and are paid later. Finza helps service businesses separate day-to-day expenses from bills that need to be tracked and reviewed.
+              Some expenses are paid immediately. Others arrive as supplier bills and are paid later. Finza helps businesses separate day-to-day expenses from bills that need to be tracked and reviewed.
             </p>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -247,7 +247,7 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Who this page is for</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza is built for Ghanaian service businesses that want cleaner expense records without relying only on notebooks, WhatsApp messages, or spreadsheets.
+              Finza is built for Ghanaian businesses that want cleaner expense records without relying only on notebooks, WhatsApp messages, or spreadsheets.
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
@@ -295,9 +295,8 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Important disclaimer</h2>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize expense, bill, and document records for business review. It does not replace your accountant, bookkeeper, tax adviser, or legal adviser. You remain responsible for reviewing your records and getting professional advice where needed.
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Finza keeps expenses, supplier bills, and supporting documents together so you and your accountant can review the same records.
             </p>
           </div>
         </Container>
@@ -327,9 +326,9 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize expense and document records so your accountant has cleaner information to review.
+                  Yes. Finza keeps expenses, supplier bills, and supporting documents together so you and your accountant can review the same records.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -350,7 +349,7 @@ export default function ExpenseTrackingSoftwareGhanaPage() {
               Track expenses before records go missing
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use Finza to keep expenses, receipts, supplier bills, documents, and reports connected in one workspace for your Ghanaian service business.
+              Use Finza to keep expenses, receipts, supplier bills, documents, and reports connected in one workspace for your Ghanaian business.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"

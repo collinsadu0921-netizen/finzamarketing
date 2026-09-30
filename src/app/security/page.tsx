@@ -258,7 +258,7 @@ export default function SecurityPage() {
                 "Specific secret-handling logic for payment-provider credentials",
                 "Admin-level care required for provider setup",
                 "Provider availability depends on the configured payment flow",
-                "Hubtel invoice payments (optional): Accept online invoice payments through Hubtel using your connected merchant account. Hubtel approval and credentials are required.",
+                "Hubtel invoice payments (optional): connect your own Hubtel merchant account so customers can pay an invoice on Hubtel checkout. Hubtel approval and credentials are required. Finza records the payment after Hubtel confirms it and does not hold the funds.",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2">
                   {item}

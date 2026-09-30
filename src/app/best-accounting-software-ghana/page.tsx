@@ -35,12 +35,12 @@ export default function BestAccountingSoftwareGhanaPage() {
             {
               questionName: "What is the best accounting software in Ghana?",
               acceptedAnswerText:
-                "The best accounting software depends on your business needs. Ghanaian service businesses should look for software that supports invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.",
+                "The best accounting software depends on your business needs. Ghanaian businesses should look for software that supports invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.",
             },
             {
-              questionName: "Is Finza accounting software for Ghanaian service businesses?",
+              questionName: "Is Finza accounting software for Ghanaian businesses?",
               acceptedAnswerText:
-                "Yes. Finza is built for Ghanaian service businesses that need to manage proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.",
+                "Yes. Finza is built for Ghanaian businesses that need to manage proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.",
             },
             {
               questionName: "Is Finza only for invoicing?",
@@ -48,9 +48,9 @@ export default function BestAccountingSoftwareGhanaPage() {
                 "No. Finza includes invoicing, but it also supports proposals, quotes, proformas, receipts, payments, expenses, supplier bills, incoming documents, payroll, reports, and accountant-ready records.",
             },
             {
-              questionName: "Does Finza replace an accountant?",
+              questionName: "Can my accountant work from Finza?",
               acceptedAnswerText:
-                "No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.",
+                "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.",
             },
             {
               questionName: "Can I try Finza before paying?",
@@ -71,7 +71,7 @@ export default function BestAccountingSoftwareGhanaPage() {
               Best accounting software in Ghana: a 2026 buyer guide
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              “Best” depends on your business. This guide compares what Ghanaian businesses should check before buying, then looks at Finza and established alternatives including QuickBooks, Sage, Zoho Books, and Odoo. Finza publishes this guide and is one of the products discussed.
+              “Best” depends on your business. This guide compares what Ghanaian businesses should check before buying, then looks at Finza alongside QuickBooks, Sage, Zoho Books, and Odoo. Businesses in Ghana may also come across local products such as SikaKasa and SikaBooks. Those products are not compared in the table below.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -178,7 +178,7 @@ export default function BestAccountingSoftwareGhanaPage() {
                     <td className="py-3 px-3">Quotes, proformas, invoices, receipts, WhatsApp sharing</td>
                     <td className="py-3 px-3">Built-in Ghana PAYE, SSNIT/Tier 1 & Tier 2, payslips</td>
                     <td className="py-3 px-3">Ledger, reports, accountant exports, period controls</td>
-                    <td className="py-3 pl-3">Ghanaian service businesses and owner-led SMEs</td>
+                    <td className="py-3 pl-3">Ghanaian businesses and owner-led SMEs</td>
                   </tr>
                   <tr className="border-b border-zinc-100">
                     <td className="py-3 pr-4 font-semibold text-zinc-900">QuickBooks</td>
@@ -241,7 +241,7 @@ export default function BestAccountingSoftwareGhanaPage() {
               <a href="https://www.odoo.com/app/invoicing" className="underline underline-offset-2">
                 Odoo Invoicing
               </a>
-              ; Finza product pages on this site. Details change — verify with each vendor.
+              ; Finza product pages on this site. Details change — check each vendor before you buy.
             </div>
           </div>
         </Container>
@@ -253,16 +253,17 @@ export default function BestAccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">When Finza may fit</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is built for Ghanaian service businesses that need the daily workflow and the records behind it in one place: proposals, quotes, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant handoff, all in GHS.
+              Finza is built for Ghanaian businesses that need the daily workflow and the records behind it in one place: proposals, quotes, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and accountant handoff, all in GHS.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-zinc-700">
               {[
                 "Ghana-focused records and tax-line support where applicable",
-                "Service workflows: quotes to invoices to receipts",
+                "Quotes that continue into invoices and receipts",
                 "GHS invoicing and customer balance tracking",
                 "Built-in monthly payroll with PAYE and SSNIT/Tier 1 & Tier 2",
                 "Payslips by email or WhatsApp link",
-                "Salary-payment recording against bank, cash, or MoMo accounts",
+                "Optional Hubtel invoice checkout using the business's own Hubtel account, including Mobile Money methods that Hubtel offers that account",
+                "Salary-payment recording against bank, cash, or mobile-money accounts",
                 "Expense and supplier-bill capture",
                 "Reports and exports for accountant review",
                 "14-day free trial; no card required",
@@ -345,12 +346,9 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">Software support, not a compliance guarantee</h2>
+            <h2 className="text-3xl font-bold text-zinc-900">How to read tax and payroll claims</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Accounting software can organize records, tax lines where applicable, reports, and exports, but it does not guarantee tax compliance, file statutory returns automatically, or replace an accountant, tax adviser, payroll adviser, or GRA guidance.
-            </p>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Confirm the correct treatment and filing steps for your business with the relevant professional or authority.
+              Accounting software can organize records, show tax lines where applicable, and export reports. It does not file your returns or guarantee that a tax or payroll figure is correct for your business. Confirm treatment and filing steps with your accountant or the relevant authority.
             </p>
           </div>
         </Container>
@@ -365,13 +363,13 @@ export default function BestAccountingSoftwareGhanaPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>What is the best accounting software in Ghana?</AccordionTrigger>
                 <AccordionContent>
-                  The best accounting software depends on your business needs. Ghanaian service businesses should look for software that supports invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.
+                  The best accounting software depends on your business needs. Ghanaian businesses should look for software that supports invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">
-                <AccordionTrigger>Is Finza accounting software for Ghanaian service businesses?</AccordionTrigger>
+                <AccordionTrigger>Is Finza accounting software for Ghanaian businesses?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is built for Ghanaian service businesses that need to manage proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.
+                  Yes. Finza is built for Ghanaian businesses that need to manage proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
@@ -381,9 +379,9 @@ export default function BestAccountingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace an accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.
+                  Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
@@ -401,7 +399,7 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-[#0F172A] py-16 text-center">
         <Container>
           <div className="mx-auto max-w-2xl space-y-6">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">Try Finza for your Ghanaian service business</h2>
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">Try Finza for your Ghanaian business</h2>
             <p className="text-zinc-300">
               Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>

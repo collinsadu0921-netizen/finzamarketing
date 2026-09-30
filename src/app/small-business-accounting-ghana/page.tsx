@@ -39,7 +39,7 @@ export default function SmallBusinessAccountingGhanaPage() {
             {
               questionName: "Is Finza built for small businesses in Ghana?",
               acceptedAnswerText:
-                "Yes. Finza is built for Ghanaian small service businesses that need to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.",
+                "Yes. Finza is built for Ghanaian small businesses that need to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.",
             },
             {
               questionName: "Can Finza help with invoices and payments?",
@@ -145,9 +145,9 @@ export default function SmallBusinessAccountingGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Built for Ghanaian small service businesses</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Built for Ghanaian small businesses</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza is especially useful for small service businesses that work with clients, send documents, track payments, manage expenses, and prepare records for accountant review.
+              Finza is especially useful for small businesses that work with clients, send documents, track payments, manage expenses, and prepare records for accountant review.
             </p>
             <p className="text-base text-zinc-600 leading-relaxed">
               It is designed for businesses that need more than a simple invoice template but are not ready for disconnected spreadsheets and manual record chasing.
@@ -266,12 +266,9 @@ export default function SmallBusinessAccountingGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Software support, not professional advice</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Records you and your accountant can review</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize business records, documents, payments, reports, tax lines where applicable, and accountant-ready information. It does not guarantee tax compliance, automatically file statutory returns, or replace accountant, tax, payroll, legal, or GRA guidance.
-            </p>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Your accountant or adviser should confirm the correct treatment for your business.
+              Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. It does not file statutory returns or guarantee tax compliance. Your accountant or GRA confirms the treatment for your business.
             </p>
           </div>
         </Container>
@@ -292,7 +289,7 @@ export default function SmallBusinessAccountingGhanaPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Is Finza built for small businesses in Ghana?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is built for Ghanaian small service businesses that need to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.
+                  Yes. Finza is built for Ghanaian small businesses that need to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in GHS.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">

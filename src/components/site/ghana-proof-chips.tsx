@@ -47,7 +47,7 @@ export const PRICING_PROOF_CHIPS: GhanaProofChip[] = [
 ];
 
 export const CONTACT_PROOF_CHIPS: GhanaProofChip[] = [
-  { label: "Ghana service businesses", tone: "navy" },
+  { label: "Ghanaian businesses", tone: "navy" },
   { label: "WhatsApp follow-up", tone: "green" },
   { label: "Setup guidance", tone: "navy" },
 ];

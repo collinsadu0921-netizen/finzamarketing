@@ -45,12 +45,12 @@ export default function AccountingForServiceBusinessGhanaPage() {
               questionName:
                 "Can Finza help Ghanaian service businesses organize accounting records?",
               acceptedAnswerText:
-                "Yes. Finza helps Ghanaian service businesses organize proposals, invoices, payments, expenses, documents, payroll records, reports, Ghana tax lines where applicable, and accountant-ready records.",
+                "Finza is accounting software for Ghanaian businesses. Service businesses can use it to organize proposals, invoices, payments, expenses, documents, payroll records, reports, and Ghana tax lines where applicable.",
             },
             {
-              questionName: "Does Finza replace my accountant?",
+              questionName: "Can my accountant work from Finza?",
               acceptedAnswerText:
-                "No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.",
+                "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.",
             },
             {
               questionName: "Can I try Finza before paying?",
@@ -64,10 +64,10 @@ export default function AccountingForServiceBusinessGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Accounting for service businesses in Ghana should follow the work
+              Accounting for service businesses in Ghana
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              This guide explains the records a service business should keep around each job: scope, quote, invoice, payment, receipt, job costs, supporting documents, payroll, and accountant review in GHS.
+              Finza is accounting software for Ghanaian businesses. This guide is the service-business use case: the records to keep around each job, from scope and quote through invoice, payment, costs, payroll, and accountant review in GHS.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -279,13 +279,10 @@ export default function AccountingForServiceBusinessGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              Software support, not professional advice
+              Records you and your accountant can review
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize business records, documents, payments, reports, tax lines where applicable, and accountant-ready information. It does not guarantee tax compliance, automatically file statutory returns, or replace accountant, tax, payroll, legal, or GRA guidance.
-            </p>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Your accountant or adviser should confirm the correct treatment for your business.
+              Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. It does not file statutory returns or guarantee tax compliance. Your accountant or GRA confirms the treatment for your business.
             </p>
           </div>
         </Container>
@@ -311,13 +308,13 @@ export default function AccountingForServiceBusinessGhanaPage() {
               <AccordionItem value="q3">
                 <AccordionTrigger>Can Finza help Ghanaian service businesses organize accounting records?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza helps Ghanaian service businesses organize proposals, invoices, payments, expenses, documents, payroll records, reports, Ghana tax lines where applicable, and accountant-ready records.
+                  Finza is accounting software for Ghanaian businesses. Service businesses can use it to organize proposals, invoices, payments, expenses, documents, payroll records, reports, and Ghana tax lines where applicable.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.
+                  Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">

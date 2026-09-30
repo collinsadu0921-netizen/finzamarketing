@@ -25,16 +25,17 @@ const quickBooksAlternativeFaqForSchema = [
   {
     questionName: "Is Finza a QuickBooks replacement?",
     acceptedAnswerText:
-      "Finza can be considered by Ghanaian service businesses comparing QuickBooks with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.",
+      "Finza can be considered by Ghanaian businesses comparing QuickBooks with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.",
   },
   {
-    questionName: "Does Finza work for service businesses in Ghana?",
+    questionName: "Can Ghanaian businesses use Finza?",
     acceptedAnswerText:
-      "Yes. Finza is built around service-business workflows such as proposals, quotes, invoices, payments, expenses, documents, payroll records, and accountant-ready review.",
+      "Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.",
   },
   {
-    questionName: "Does Finza replace my accountant?",
-    acceptedAnswerText: "No. Finza helps organize records so your accountant has cleaner information to review.",
+    questionName: "Can my accountant work from Finza?",
+    acceptedAnswerText:
+      "Yes. Finza keeps quotes, invoices, payments, expenses, and reports together for review. Your accountant still confirms tax treatment and filings.",
   },
   {
     questionName: "Can Finza help with Ghana tax lines?",
@@ -70,9 +71,9 @@ const comparisonRows = [
     finza: "Finza supports Ghana tax-line presentation where applicable.",
   },
   {
-    questionName: "Does it replace professional advice?",
-    matters: "Software should support review, not replace professional judgment.",
-    finza: "Finza helps organize records for accountant review.",
+    questionName: "Can an accountant review the records?",
+    matters: "Day-to-day records should be organized enough for an accountant to review.",
+    finza: "Invoices, payments, expenses, and reports stay in one file for that review.",
   },
 ];
 
@@ -254,7 +255,7 @@ export default function QuickbooksAlternativeGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">When Finza may be worth considering</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza may be a better fit when your service business wants a simpler Ghana-focused workflow from client work to accountant-ready records.
+              Finza may be a better fit when your business wants a simpler Ghana-focused workflow from client work to accountant-ready records.
             </p>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -263,7 +264,7 @@ export default function QuickbooksAlternativeGhanaPage() {
                 "You want expense records and receipts in one place",
                 "You work mainly in GHS",
                 "You want cleaner handover to your accountant",
-                "You want software shaped around Ghanaian service businesses",
+                "You want software shaped around Ghanaian businesses",
               ].map((item) => (
                 <div key={item} className="rounded-xl border border-zinc-200 bg-white p-4 text-sm text-zinc-700">
                   {item}
@@ -307,7 +308,7 @@ export default function QuickbooksAlternativeGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Who this page is for</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              This page is for Ghanaian service-business owners comparing software options and trying to choose a practical system for daily operations and record review.
+              This page is for Ghanaian business owners comparing software options and trying to choose a practical system for daily operations and record review.
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
@@ -345,8 +346,7 @@ export default function QuickbooksAlternativeGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Important disclaimer</h2>
-            <p className="text-base text-zinc-600 leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-500">
               Finza is not legal, tax, accounting, or financial advice. Finza helps organize business records, documents, invoices, payments, expenses, and reports for review. You remain responsible for checking your records and working with qualified professionals where needed.
             </p>
           </div>
@@ -361,19 +361,19 @@ export default function QuickbooksAlternativeGhanaPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>Is Finza a QuickBooks replacement?</AccordionTrigger>
                 <AccordionContent>
-                  Finza can be considered by Ghanaian service businesses comparing QuickBooks with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.
+                  Finza can be considered by Ghanaian businesses comparing QuickBooks with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">
-                <AccordionTrigger>Does Finza work for service businesses in Ghana?</AccordionTrigger>
+                <AccordionTrigger>Can Ghanaian businesses use Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is built around service-business workflows such as proposals, quotes, invoices, payments, expenses, documents, payroll records, and accountant-ready review.
+                  Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records so your accountant has cleaner information to review.
+                  Yes. Finza keeps quotes, invoices, payments, expenses, and reports together for review. Your accountant still confirms tax treatment and filings.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">

@@ -10,7 +10,7 @@ export function CTA() {
             <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
                 <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight leading-[1.1]">Ready for clearer records?</h2>
                 <p className="text-xl md:text-2xl mb-12 opacity-80 leading-relaxed max-w-2xl mx-auto">
-                    See how Finza helps Ghanaian service businesses run quotes, invoices, payments, and records in GHS.
+                    See how Finza helps Ghanaian businesses run quotes, invoices, payments, and records in GHS.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">

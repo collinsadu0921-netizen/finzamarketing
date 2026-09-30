@@ -8,7 +8,7 @@ import { blogPosts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: "Blog — Accounting, VAT & Ghana Business",
   description:
-    "Articles on accounting, records, VAT/NHIL/GETFund, and moving off spreadsheets. From Finza, built for Ghanaian service businesses.",
+    "Practical guides on accounting, invoicing, VAT, NHIL, GETFund, and bookkeeping for businesses in Ghana. From Finza, accounting software for Ghanaian businesses.",
   alternates: {
     canonical: "https://www.finza.africa/blog",
   },

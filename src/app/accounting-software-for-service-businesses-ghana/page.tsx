@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting Software for Service Businesses in Ghana",
   description:
-    "Finza accounting software for Ghanaian service businesses connects proposals, quotes, invoices, payments, expenses, payroll records, and accountant-ready reports in GHS.",
+    "How service businesses in Ghana use Finza, accounting software for Ghanaian businesses: proposals, quotes, invoices, payments, expenses, payroll, and reports in GHS.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-service-businesses-ghana",
   },
@@ -42,7 +42,7 @@ export default function ServiceBusinessAccountingGhanaPage() {
             {
               questionName: "Is Finza built for service businesses in Ghana?",
               acceptedAnswerText:
-                "Yes. Finza is built for Ghanaian service businesses that need proposals, quotes, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.",
+                "Finza is accounting software for Ghanaian businesses. Service businesses can use it for proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and Ghana tax lines where applicable.",
             },
             {
               questionName: "Can Finza help with proposals and quotes?",
@@ -50,9 +50,9 @@ export default function ServiceBusinessAccountingGhanaPage() {
                 "Yes. Finza supports proposals, quotes, proformas, invoices, and receipts as part of the service business workflow.",
             },
             {
-              questionName: "Does Finza replace my accountant?",
+              questionName: "Can my accountant work from Finza?",
               acceptedAnswerText:
-                "No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.",
+                "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.",
             },
             {
               questionName: "Can I try Finza before paying?",
@@ -66,10 +66,10 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="max-w-4xl space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl leading-[1.1]">
-              Accounting software for Ghanaian service businesses
+              Accounting software for service businesses in Ghana
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              Use this page for the commercial service-business software view: client documents, billing, payments, expenses, payroll records, reports, and accountant handoff in one GHS workspace.
+              Finza is accounting software for Ghanaian businesses. This page is for service businesses that quote work, invoice clients, track payments, and want those records in the same GHS system as expenses, payroll, and reports.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact"
@@ -290,13 +290,10 @@ export default function ServiceBusinessAccountingGhanaPage() {
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-              Software support, not professional advice
+              Records you and your accountant can review
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza helps organize business records, documents, payments, reports, tax lines where applicable, and accountant-ready information. It does not guarantee tax compliance, automatically file statutory returns, or replace accountant, tax, payroll, legal, or GRA guidance.
-            </p>
-            <p className="text-base text-zinc-600 leading-relaxed">
-              Your accountant or adviser should confirm the correct treatment for your business.
+              Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. It does not file statutory returns or guarantee tax compliance. Your accountant or GRA confirms the treatment for your business.
             </p>
           </div>
         </Container>
@@ -316,7 +313,7 @@ export default function ServiceBusinessAccountingGhanaPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Is Finza built for service businesses in Ghana?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is built for Ghanaian service businesses that need proposals, quotes, invoices, payments, expenses, documents, payroll, reports, Ghana tax lines where applicable, and accountant-ready records.
+                  Finza is accounting software for Ghanaian businesses. Service businesses can use it for proposals, quotes, invoices, payments, expenses, documents, payroll, reports, and Ghana tax lines where applicable.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
@@ -326,9 +323,9 @@ export default function ServiceBusinessAccountingGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records for accountant review. Your accountant or tax adviser should still confirm the correct treatment for your business.
+                  Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">

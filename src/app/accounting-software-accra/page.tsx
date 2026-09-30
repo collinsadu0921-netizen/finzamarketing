@@ -15,7 +15,7 @@ import { accountingSoftwareAccraFaqForSchema, breadcrumbListSchema, faqPageSchem
 export const metadata: Metadata = {
   title: "Accounting Software in Accra | Ghana Business Software",
   description:
-    "Cloud accounting software in Accra for growing Ghanaian service businesses. Invoicing, expenses, payroll, reports, and accountant handoff in GHS.",
+    "Cloud accounting software in Accra for growing Ghanaian businesses. Invoicing, expenses, payroll, reports, and accountant handoff in GHS.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-accra",
   },
@@ -72,7 +72,7 @@ export default function AccountingSoftwareAccraPage() {
         <Container>
           <div className="mx-auto max-w-3xl space-y-6">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Who we often see in Accra</p>
-            <h2 className="text-2xl font-bold text-zinc-900">Professional service businesses and growing companies</h2>
+            <h2 className="text-2xl font-bold text-zinc-900">Professional firms and growing companies</h2>
             <p className="text-base leading-relaxed text-zinc-600">
               Categories we hear about often include <strong className="text-zinc-900">creative and marketing agencies</strong>,{" "}
               <strong className="text-zinc-900">management and IT consultancies</strong>, <strong className="text-zinc-900">clinics and outpatient practices</strong>,{" "}

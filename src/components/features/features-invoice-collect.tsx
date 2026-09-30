@@ -223,11 +223,15 @@ export function FeaturesInvoiceCollectExperience() {
       <aside className="mt-8 rounded-2xl border border-amber-200/90 bg-gradient-to-r from-amber-50/90 via-white to-amber-50/60 px-5 py-4 shadow-sm shadow-amber-900/[0.04] sm:px-6">
         <p className="text-xs font-bold uppercase tracking-widest text-amber-800">Optional integration</p>
         <p className="mt-1.5 text-sm font-semibold leading-relaxed text-zinc-900 sm:text-base">
-          Accept online invoice payments through Hubtel using your connected merchant account. Hubtel
-          approval and credentials are required.
+          Accept Mobile Money and other Hubtel checkout methods on your invoices.
+          Connect your own Hubtel merchant account. Customers pay on Hubtel from
+          the invoice page, and Finza records the payment after Hubtel confirms
+          it. Hubtel holds the collection; Finza does not.
         </p>
         <p className="mt-1.5 text-sm leading-relaxed text-zinc-600">
-          Hubtel is for customer invoice payments, not Finza subscription billing.
+          Hubtel approval and your own API credentials are required. This is for
+          customer invoice payments, not Finza subscription billing. You can also
+          show Mobile Money details on an invoice and record that payment yourself.
         </p>
       </aside>
     </div>

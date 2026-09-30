@@ -46,7 +46,7 @@ function getBlogCtaCopy(coreHref?: string) {
     return {
       heading: "Move from quote to invoice without retyping",
       body:
-        "Finza helps service businesses prepare client offers, confirm scope, and continue into invoicing when the work is approved.",
+        "Finza helps Ghanaian businesses prepare quotes, confirm scope, and continue into invoicing when the work is approved.",
       bullets: ["Prepare quotes and proformas", "Keep scope and pricing clear", "Continue into invoice records in GHS"],
     };
   }

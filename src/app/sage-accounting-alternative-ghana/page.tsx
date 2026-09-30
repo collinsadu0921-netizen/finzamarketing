@@ -15,7 +15,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Sage Accounting Alternative in Ghana | Compare a Ghana-Focused Workflow",
   description:
-    "Comparing Sage accounting alternatives in Ghana? See how Finza balances service-business workflow, GHS records, accounting review, and simpler SME usability.",
+    "Comparing Sage accounting alternatives in Ghana? See how Finza handles day-to-day records, GHS records, accounting review, and simpler SME usability.",
   alternates: {
     canonical: "https://www.finza.africa/sage-accounting-alternative-ghana",
   },
@@ -25,16 +25,17 @@ const sageAccountingAlternativeFaqForSchema = [
   {
     questionName: "Is Finza a Sage replacement?",
     acceptedAnswerText:
-      "Finza can be considered by Ghanaian service businesses comparing Sage with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.",
+      "Finza can be considered by Ghanaian businesses comparing Sage with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.",
   },
   {
-    questionName: "Does Finza work for service businesses in Ghana?",
+    questionName: "Can Ghanaian businesses use Finza?",
     acceptedAnswerText:
-      "Yes. Finza is built around service-business workflows such as proposals, quotes, invoices, payments, expenses, documents, payroll records, and accountant-ready review.",
+      "Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.",
   },
   {
-    questionName: "Does Finza replace my accountant?",
-    acceptedAnswerText: "No. Finza helps organize records so your accountant has cleaner information to review.",
+    questionName: "Can my accountant work from Finza?",
+    acceptedAnswerText:
+      "Yes. Finza keeps quotes, invoices, payments, expenses, and reports together for review. Your accountant still confirms tax treatment and filings.",
   },
   {
     questionName: "Can Finza help with Ghana tax lines?",
@@ -70,9 +71,9 @@ const comparisonRows = [
     finza: "Finza supports Ghana tax-line presentation where applicable.",
   },
   {
-    questionName: "Does it replace professional advice?",
-    matters: "Software should support review, not replace professional judgment.",
-    finza: "Finza helps organize records for accountant review.",
+    questionName: "Can an accountant review the records?",
+    matters: "Day-to-day records should be organized enough for an accountant to review.",
+    finza: "Invoices, payments, expenses, and reports stay in one file for that review.",
   },
 ];
 
@@ -123,7 +124,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               What to compare before choosing accounting software
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              A useful Sage comparison should look at fit and operating burden, not only accounting depth. For Ghanaian service businesses, the right system should support the team that creates records every day.
+              A useful Sage comparison should look at fit and operating burden, not only accounting depth. For Ghanaian businesses, the right system should support the team that creates records every day.
             </p>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -224,7 +225,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               Accounting depth should not block daily use
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Sage may suit teams that need deep accounting configuration. Finza is aimed at service businesses that first need operators to keep GHS documents, payment records, expenses, and built-in payroll clean enough for review.
+              Sage may suit teams that need deep accounting configuration. Finza is aimed at businesses that first need operators to keep GHS documents, payment records, expenses, and built-in payroll clean enough for review.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
               <li>Pricing shown in Ghana cedis</li>
@@ -244,7 +245,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               Sage may still be the right fit for some businesses
             </h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Some businesses may prefer Sage because they already use it, their accountant or finance team is already configured around it, or they need accounting depth beyond a simpler service-business workflow. The right choice depends on your business model, internal process, accountant, and reporting needs.
+              Some businesses may prefer Sage because they already use it, their accountant or finance team is already configured around it, or they need accounting depth beyond a simpler day-to-day workflow. The right choice depends on your business model, internal process, accountant, and reporting needs.
             </p>
           </div>
         </Container>
@@ -255,7 +256,7 @@ export default function SageAccountingAlternativeGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">When Finza may be worth considering</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Finza may be worth considering when your Ghanaian service business wants a more direct workflow from customer work to financial records.
+              Finza may be worth considering when your Ghanaian business wants a more direct workflow from customer work to financial records.
             </p>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -308,7 +309,7 @@ export default function SageAccountingAlternativeGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Who this page is for</h2>
             <p className="text-base text-zinc-600 leading-relaxed">
-              This page is for Ghanaian service-business owners comparing accounting software options and deciding whether they need a broad accounting system or a Ghana-focused workflow for daily business records.
+              This page is for Ghanaian business owners comparing accounting software options and deciding whether they need a broad accounting system or a Ghana-focused workflow for daily business records.
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
@@ -342,8 +343,7 @@ export default function SageAccountingAlternativeGhanaPage() {
       <section className="border-b border-zinc-100 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900">Important disclaimer</h2>
-            <p className="text-base text-zinc-600 leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-500">
               Finza is not legal, tax, accounting, or financial advice. Finza helps organize business records, documents, invoices, payments, expenses, payroll records, and reports for review. You remain responsible for checking your records and working with qualified professionals where needed.
             </p>
           </div>
@@ -358,19 +358,19 @@ export default function SageAccountingAlternativeGhanaPage() {
               <AccordionItem value="q1">
                 <AccordionTrigger>Is Finza a Sage replacement?</AccordionTrigger>
                 <AccordionContent>
-                  Finza can be considered by Ghanaian service businesses comparing Sage with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.
+                  Finza can be considered by Ghanaian businesses comparing Sage with a Ghana-focused workflow. The right choice depends on your business needs, accountant, team, and reporting requirements.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">
-                <AccordionTrigger>Does Finza work for service businesses in Ghana?</AccordionTrigger>
+                <AccordionTrigger>Can Ghanaian businesses use Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is built around service-business workflows such as proposals, quotes, invoices, payments, expenses, documents, payroll records, and accountant-ready review.
+                  Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
-                <AccordionTrigger>Does Finza replace my accountant?</AccordionTrigger>
+                <AccordionTrigger>Can my accountant work from Finza?</AccordionTrigger>
                 <AccordionContent>
-                  No. Finza helps organize records so your accountant has cleaner information to review.
+                  Yes. Finza keeps quotes, invoices, payments, expenses, and reports together for review. Your accountant still confirms tax treatment and filings.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q4">
@@ -397,7 +397,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               Compare Finza with your current workflow
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use the free trial to see whether Finza&apos;s service-business workflow is simpler for your Ghanaian team before choosing a heavier accounting implementation.
+              Use the free trial to see whether Finza&apos;s day-to-day workflow is simpler for your Ghanaian team before choosing a heavier accounting implementation.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
               <Link href="/contact"

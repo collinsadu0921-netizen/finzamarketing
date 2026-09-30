@@ -23,7 +23,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
     title: "Product Tour — See How Finza Works for Ghana Businesses",
     description:
-        "Watch a Finza product tour for Ghanaian service businesses. See quotes, invoices, payments, expenses, payroll, reports, and records in one workflow.",
+        "Watch a Finza product tour for Ghanaian businesses. See quotes, invoices, payments, expenses, payroll, reports, and records in one workflow.",
     alternates: {
         canonical: "https://www.finza.africa/demo",
     },
@@ -88,7 +88,7 @@ export default function DemoPage() {
                                 See how Finza works from proposal to payment
                             </h1>
                             <p className={`${sectionLead} mx-auto max-w-xl font-medium lg:mx-0`}>
-                                Watch Finza handle client documents, invoices, payments, expenses, payroll, and reports for a Ghanaian service business.
+                                Watch Finza handle client documents, invoices, payments, expenses, payroll, and reports for a Ghanaian business.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
                                 <Link href="#watch-tour" className={homePrimaryBtn}>
@@ -172,7 +172,7 @@ export default function DemoPage() {
             <section className="home-section-surface border-b border-zinc-200/80 py-10 md:py-12">
                 <Container>
                     <div className="mx-auto max-w-4xl space-y-4">
-                        <h2 className={sectionTitle}>Built for Ghanaian service businesses</h2>
+                        <h2 className={sectionTitle}>Built for Ghanaian businesses</h2>
                         <p className={sectionLead}>
                             For teams that send proposals, issue invoices, track payments, manage expenses and payroll, and work with an accountant.
                         </p>
@@ -191,8 +191,7 @@ export default function DemoPage() {
                             ))}
                         </ul>
                         <p className="text-sm leading-relaxed text-zinc-500">
-                            Finza keeps records easier to review. It does not replace your accountant or
-                            tax adviser — confirm the correct treatment for your business.
+                            The walkthrough shows invoices, payments, expenses, and reports in one place, so you and your accountant can review the same records.
                         </p>
                     </div>
                 </Container>

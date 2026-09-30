@@ -24,7 +24,7 @@ import {
 export const metadata: Metadata = {
   title: "Book a Finza Walkthrough — Contact Sales",
   description:
-    "Book a Finza walkthrough for your Ghanaian service business. Tell us what your business needs and we will help with setup and pricing in GHS.",
+    "Book a Finza walkthrough for your Ghanaian business. Tell us what your business needs and we will help with setup and pricing in GHS.",
   alternates: {
     canonical: "https://www.finza.africa/contact",
   },
@@ -153,10 +153,6 @@ export default function ContactPage() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <p className="text-sm leading-relaxed text-zinc-500">
-              Finza keeps records easier to review. It does not replace accountant review,
-              tax advice, payroll advice, legal advice, or GRA guidance.
-            </p>
           </div>
         </Container>
       </section>

@@ -41,7 +41,7 @@ export default function InvoicingSoftwareKumasiPage() {
               Kumasi · Invoices · GHS
             </span>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Invoicing software in Kumasi for service businesses
+              Invoicing software in Kumasi
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-zinc-600">
               Kumasi runs on relationships - construction crews, fit-out contractors, equipment hire, training outfits, and traders who also do project work. The weak link is usually billing: an agreed price in conversation, a handwritten note, then a scramble to remember who still owes what.{" "}
@@ -161,9 +161,9 @@ export default function InvoicingSoftwareKumasiPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="kumasi">
-                <AccordionTrigger>Is Finza suitable for service businesses in Kumasi?</AccordionTrigger>
+                <AccordionTrigger>Is Finza suitable for businesses in Kumasi?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Service companies, contractors, and growing SMEs in Kumasi that bill clients regularly are a strong fit-especially when quotes become invoices without retyping.
+                  Yes. Businesses in Kumasi use the same Ghana product: invoices in GHS, payment tracking, and quotes that can become invoices without retyping. Service companies and contractors are included.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="quotes">

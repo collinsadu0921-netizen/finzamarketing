@@ -14,18 +14,18 @@ const BASE_URL = "https://www.finza.africa";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Finza — Accounting & Invoicing Software for Ghana (GHS)",
+    default: "Finza — Accounting Software for Ghanaian Businesses",
     template: "%s | Finza",
   },
   description:
-    "Accounting and invoicing software for businesses in Ghana. Send invoices online, track payments in GHS, run monthly payroll, manage quotes and expenses, and review reports—Ghana tax lines (VAT, NHIL, GETFund) where applicable. Built for Ghanaian service businesses.",
+    "Accounting software for Ghanaian businesses and SMEs. Send invoices, track payments in GHS, record expenses, run payroll, and review reports. Ghana tax lines (VAT, NHIL, GETFund) where applicable.",
   keywords: [
-    "Ghana accounting software",
-    "VAT Ghana",
-    "GRA compliance",
-    "business accounting Ghana",
-    "ledger software",
+    "accounting software Ghana",
+    "accounting software for SMEs Ghana",
+    "invoicing software Ghana",
+    "bookkeeping Ghana",
     "Finza",
+    "VAT Ghana",
     "NHIL",
     "GETFund",
   ],
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     locale: "en_GH",
     url: BASE_URL,
     siteName: "Finza",
-    title: "Finza — Accounting & Invoicing Software for Ghana (GHS)",
+    title: "Finza — Accounting Software for Ghanaian Businesses",
     description:
-      "Invoices, quotes, and reports in Ghana cedis. Built for Ghanaian service businesses.",
+      "Accounting software for Ghanaian businesses. Invoices, expenses, payroll, and reports in Ghana cedis.",
     images: [
       {
         url: "/og-image.png",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Finza — Accounting & Invoicing Software for Ghana (GHS)",
+    title: "Finza — Accounting Software for Ghanaian Businesses",
     description:
-      "Run quotes, invoices, payments, payroll, and business records in one place, in Ghana cedis.",
+      "Accounting software for Ghanaian businesses. Invoices, Mobile Money payments through Hubtel, payroll, and reports in Ghana cedis.",
     images: ["/og-image.png"],
     creator: "@finzagh",
   },

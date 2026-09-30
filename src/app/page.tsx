@@ -6,19 +6,22 @@ import {
   HomeGhanaSection,
   HomeJobsMaterialsSection,
   HomePayrollSection,
+  HomeFaqSection,
   HomePerformanceSection,
   HomeRelatedGuidesSection,
   HomeWorkflowSection,
 } from "@/components/home/home-sections";
+import { JsonLd } from "@/components/json-ld";
+import { faqPageSchema, homePageFaqForSchema, softwareApplicationSchema } from "@/lib/schema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Finza — Accounting & Invoicing Software for Ghanaian Service Businesses",
+      "Finza — Accounting Software for Ghanaian Businesses",
   },
   description:
-    "Finza helps Ghanaian service businesses create proposals, quotes and invoices, track payments, capture expenses and incoming documents, manage payroll, and keep records for professional review in GHS.",
+    "Finza is accounting software for Ghanaian businesses and SMEs. Create invoices, accept Mobile Money payments through your own Hubtel account, track expenses and supplier bills, run payroll, and see how the business is performing in GHS.",
   alternates: {
     canonical: "https://www.finza.africa",
   },
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="flex flex-col max-md:pb-28">
+      <JsonLd data={[softwareApplicationSchema(), faqPageSchema(homePageFaqForSchema)]} />
       <HomeHero />
       <HomeWorkflowSection />
       <HomeJobsMaterialsSection />
@@ -34,6 +38,7 @@ export default function Home() {
       <HomePayrollSection />
       <HomePerformanceSection />
       <HomeGhanaSection />
+      <HomeFaqSection />
       <HomeFinalCtaSection />
       <HomeRelatedGuidesSection />
       <Footer />

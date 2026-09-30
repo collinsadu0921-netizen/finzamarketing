@@ -8,6 +8,8 @@ export const organizationAndWebsiteGraph = {
       "@id": `${BASE}/#organization`,
       name: "Finza",
       url: BASE,
+      description:
+        "Finza is accounting software for businesses in Ghana. It covers invoicing, bookkeeping, expenses, payroll, and financial reports in Ghana cedis.",
       logo: {
         "@type": "ImageObject",
         url: `${BASE}/og-image.png`,
@@ -34,6 +36,7 @@ export function softwareApplicationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": `${BASE}/#software`,
     name: "Finza",
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Accounting Software",
@@ -43,10 +46,14 @@ export function softwareApplicationSchema() {
       name: "Ghana",
     },
     description:
-      "Business software for Ghana: invoices, quotes, and reports in GHS, plus built-in monthly payroll with Ghana PAYE, pension contributions, payslips, salary-payment recording, and payroll journals. Ghana tax lines (VAT, NHIL, GETFund) supported where applicable.",
-    url: `${BASE}/accounting-software-ghana`,
+      "Accounting software for Ghanaian businesses and SMEs. Create invoices in GHS, record payments, optionally accept online invoice payments through the business's own Hubtel account, track expenses and supplier bills, run monthly payroll, and review financial reports. Ghana tax lines (VAT, NHIL, GETFund, WHT) are supported where applicable.",
+    url: BASE,
     featureList: [
-      "Quotes, invoices, and payment tracking in GHS",
+      "Quotes, proforma invoices, invoices, receipts, and payment tracking in GHS",
+      "Optional Hubtel Online Checkout on public invoices using the business's own Hubtel merchant account",
+      "Recording of cash, bank, and mobile-money payments",
+      "Expenses and incoming documents",
+      "Supplier bills on Professional and Business plans",
       "Built-in monthly payroll",
       "Ghana PAYE calculations",
       "Employee and employer pension contributions",
@@ -56,8 +63,15 @@ export function softwareApplicationSchema() {
       "Salary-payment recording against cash, bank, and mobile-money accounts",
       "Payroll summary, PAYE, GRA DT 107A, SSNIT, and obligations exports",
       "Approved payroll journals and payroll liabilities",
-      "Ghana tax lines (VAT, NHIL, GETFund) where applicable",
+      "Profit and Loss, Balance Sheet, and VAT report",
+      "General ledger, journals, and period locking on the Business plan",
+      "Ghana tax lines (VAT, NHIL, GETFund, WHT) where applicable",
     ],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Ghanaian businesses and SMEs",
+      geographicArea: { "@type": "Country", name: "Ghana" },
+    },
     offers: {
       "@type": "AggregateOffer",
       lowPrice: "149",
@@ -102,9 +116,24 @@ export function faqPageSchema(
 /** Must match homepage FAQ accordion exactly. */
 export const homePageFaqForSchema = [
   {
+    questionName: "What is Finza?",
+    acceptedAnswerText:
+      "Finza is accounting software for businesses in Ghana. It is used to create invoices and quotes, track payments, record expenses and supplier bills, run payroll, and review financial reports in Ghana cedis (GHS).",
+  },
+  {
     questionName: "Is Finza for small businesses in Ghana?",
     acceptedAnswerText:
-      "Yes. Finza is for small businesses and service companies in Ghana that want to send invoices online, track payments in GHS, and manage bookkeeping without spreadsheet chaos. Professional advisers managing Ghanaian clients can also use Finza for cleaner client files.",
+      "Yes. Finza is accounting software for small businesses, growing businesses, and other Ghanaian SMEs that want to send invoices, track payments in GHS, record expenses, and keep books without spreadsheet chaos. Accountants and other professional advisers can also review client records in Finza.",
+  },
+  {
+    questionName: "Can customers pay invoices with Mobile Money?",
+    acceptedAnswerText:
+      "Yes. You can show Mobile Money or bank details on an invoice and record the payment yourself. If you connect your own Hubtel merchant account, customers can also pay from the public invoice page through Hubtel Online Checkout, including the Mobile Money methods available on that Hubtel account. Finza records the payment after Hubtel confirms it. Finza does not hold the funds.",
+  },
+  {
+    questionName: "Does Finza work with Hubtel?",
+    acceptedAnswerText:
+      "Yes. A business can connect its own Hubtel API ID, API key, and merchant account so customers pay invoices on Hubtel checkout. Hubtel approval is required. Finza subscription billing is separate from these customer invoice payments.",
   },
   {
     questionName: "How does Finza handle Ghana tax lines?",
@@ -124,7 +153,7 @@ export const homePageFaqForSchema = [
   {
     questionName: "Where can I see full features and plans?",
     acceptedAnswerText:
-      "See the Features page for capabilities and the Pricing page for Service workspace plans in GHS (Essentials, Professional, Business).",
+      "See the Features page for capabilities and the Pricing page for plans in GHS (Essentials, Professional, Business).",
   },
   {
     questionName: "What is Finza Assist?",
@@ -151,9 +180,9 @@ export const accountingSoftwareGhanaFaqForSchema = [
       "No. Tax lines and registration depend on your business and supply type. Finza supports common presentations where applicable; your professional adviser or GRA confirms what applies to you.",
   },
   {
-    questionName: "Can service businesses in Ghana use Finza?",
+    questionName: "Can small businesses and SMEs in Ghana use Finza?",
     acceptedAnswerText:
-      "Yes. Service companies are a core fit—especially when you invoice often and need customer balances and reports in one system. See pricing for plans in GHS.",
+      "Yes. Finza is built for Ghanaian businesses and SMEs that invoice customers, track expenses, and need reports in GHS. Service businesses, contractors, and professional firms can use it too. See pricing for plans in GHS.",
   },
 ];
 
@@ -177,7 +206,7 @@ export const invoicingSoftwareGhanaFaqForSchema = [
   {
     questionName: "Is invoicing only for big companies?",
     acceptedAnswerText:
-      "No. Small businesses and service companies in Ghana use online invoicing to look professional and stay on top of who owes what.",
+      "No. Small businesses and growing SMEs in Ghana use online invoicing to look professional and stay on top of who owes what.",
   },
 ];
 
@@ -201,7 +230,7 @@ export const quotationSoftwareGhanaFaqForSchema = [
   {
     questionName: "Who is quotation software for in Ghana?",
     acceptedAnswerText:
-      "Service businesses that sell on proposals—agencies, consultants, contractors, and professional firms—before they bill.",
+      "Ghanaian businesses that price work before they bill—including agencies, consultants, contractors, professional firms, and other SMEs that send quotes or proformas.",
   },
 ];
 
@@ -268,9 +297,9 @@ export const invoicingSoftwareKumasiFaqForSchema = [
       "Yes. You see outstanding balances by customer, which invoices are unpaid or overdue, and when payments are recorded—so collections are not a separate spreadsheet.",
   },
   {
-    questionName: "Is Finza suitable for service businesses in Kumasi?",
+    questionName: "Is Finza suitable for businesses in Kumasi?",
     acceptedAnswerText:
-      "Yes. Service companies, contractors, and growing SMEs in Kumasi that bill clients regularly are a strong fit—especially when quotes become invoices without retyping.",
+      "Yes. Businesses in Kumasi use the same Ghana product: invoices in GHS, payment tracking, and quotes that can become invoices without retyping. Service companies and contractors are included.",
   },
   {
     questionName: "Can quotes and invoices work together?",
@@ -398,12 +427,12 @@ export const pricingPageFaqForSchema = [
   {
     questionName: "Which plan should I start with?",
     acceptedAnswerText:
-      "Start with Essentials if you mainly need customers and customer statements, quotes and proforma invoices, invoices (including recurring invoices) and credit notes, receipts and record payments, expenses and incoming documents (upload, OCR, review, and convert to expenses), plus your VAT report, Profit and Loss, Balance Sheet, Finza Assist, and Ghana tax lines where applicable. Choose Professional if you need supplier bills and convert supported supplier documents into supplier bills, plus materials and billable material lines, jobs and projects, built-in monthly payroll and salary advances, VAT filings, WHT, fixed assets, Cash Flow report, Changes in Equity, team permissions, and the accounting audit log. Choose Business if you need general ledger controls, journals, accounting periods, period locking, CIT, the system audit log, and advanced accounting controls inside the Service workspace—including Professional payroll.",
+      "Start with Essentials if you mainly need customers and customer statements, quotes and proforma invoices, invoices (including recurring invoices) and credit notes, receipts and record payments, expenses and incoming documents (upload, OCR, review, and convert to expenses), plus your VAT report, Profit and Loss, Balance Sheet, Finza Assist, and Ghana tax lines where applicable. Choose Professional if you need supplier bills and convert supported supplier documents into supplier bills, plus materials and billable material lines, jobs and projects, built-in monthly payroll and salary advances, VAT filings, WHT, fixed assets, Cash Flow report, Changes in Equity, team permissions, and the accounting audit log. Choose Business if you need general ledger controls, journals, accounting periods, period locking, CIT, the system audit log, and advanced accounting controls—including Professional payroll.",
   },
   {
-    questionName: "Does Finza replace professional advice?",
+    questionName: "Can my accountant work from Finza?",
     acceptedAnswerText:
-      "No. Finza helps organize your business records and reports. Your professional advisers should confirm the correct treatment for your business.",
+      "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant should still confirm tax treatment for your business.",
   },
 ];
 
@@ -421,6 +450,7 @@ export function articleSchema(input: {
     description: input.description,
     url: `${BASE}${input.urlPath}`,
     datePublished: input.datePublished,
+    dateModified: input.datePublished,
     author: {
       "@type": "Organization",
       name: input.authorName,
