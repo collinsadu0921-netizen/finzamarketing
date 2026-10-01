@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/navbar";
 import { StickySignupCta } from "@/components/sticky-signup-cta";
@@ -95,6 +96,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <StickySignupCta />
+        <Analytics />
       </body>
     </html>
   );
