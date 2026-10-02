@@ -68,6 +68,11 @@ export const PAYROLL_CAPABILITY_GROUPS = [
 /** Must match the payroll page FAQ markup exactly. */
 export const payrollSoftwareGhanaFaqForSchema = [
   {
+    questionName: "When did the revised 2026 Ghana PAYE bands take effect?",
+    acceptedAnswerText:
+      "GRA states that the revised resident income tax bands took effect on 1 September 2026. The first GH₵588 of monthly chargeable income is tax-free. If September payroll has already been processed, review the rates used with your accountant before making corrections to payslips or tax returns.",
+  },
+  {
     questionName: "Does Finza have built-in payroll?",
     acceptedAnswerText:
       "Yes. Finza includes built-in monthly payroll. You can calculate salaries, review Ghana PAYE and pension contributions, manage salary advances, generate payslips, record salary payments, and post approved payroll journals in the same workspace.",

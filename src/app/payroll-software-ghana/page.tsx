@@ -77,6 +77,39 @@ export default function PayrollSoftwareGhanaPage() {
         </Container>
       </section>
 
+      <section className="border-b border-zinc-100 bg-white py-12 md:py-16" aria-labelledby="paye-2026-heading">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-5">
+            <h2 id="paye-2026-heading" className={sectionTitle}>Ghana PAYE rates from September 2026</h2>
+            <p className={sectionLead}>
+              GRA states that the revised resident income tax bands took effect on 1 September 2026.
+              The first GH₵588 of monthly chargeable income is tax-free. These bands apply to chargeable income, rather than gross salary.
+            </p>
+            <div className="overflow-x-auto rounded-xl border border-zinc-200">
+              <table className="w-full text-left text-base">
+                <caption className="sr-only">Resident monthly PAYE bands published by GRA, effective 1 September 2026</caption>
+                <thead className="bg-zinc-50"><tr><th scope="col" className="px-5 py-3">Monthly chargeable income</th><th scope="col" className="px-5 py-3">Rate</th></tr></thead>
+                <tbody className="divide-y divide-zinc-200">
+                  {[
+                    ["First GH₵588", "0%"],
+                    ["Next GH₵80", "5%"],
+                    ["Next GH₵100", "10%"],
+                    ["Next GH₵2,900", "17.5%"],
+                    ["Next GH₵16,000", "25%"],
+                    ["Next GH₵30,332", "30%"],
+                    ["Above GH₵50,000", "35%"],
+                  ].map(([band, rate]) => <tr key={band}><th scope="row" className="px-5 py-3 font-normal">{band}</th><td className="px-5 py-3">{rate}</td></tr>)}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Already processed September payroll? Review the rates used with your accountant before making any corrections to payslips or tax returns.
+            </p>
+            <a href="https://gra.gov.gh/domestic-tax/tax-types/paye/" className="inline-block text-base font-semibold text-zinc-900 underline underline-offset-4">Source: GRA PAYE rates and effective date</a>
+          </div>
+        </Container>
+      </section>
+
       <section className="border-b border-zinc-100 bg-white py-12 md:py-16">
         <Container>
           <div className="mx-auto max-w-4xl space-y-4 text-center">
