@@ -10,7 +10,7 @@ import type { FinzaProductAssetId } from "@/lib/finza-product-assets";
 
 export type FinzaProductProofPageKey =
   | "homepage"
-  | "pricing"
+  | "guided-trial"
   | "invoicing"
   | "invoice-tracking"
   | "bookkeeping"
@@ -38,12 +38,12 @@ export const FINZA_PRODUCT_PROOF_PLACEMENTS: FinzaProductProofPlacement[] = [
     notes: "Hero and product proof use finza-dashboard-hero.webp.",
   },
   {
-    page: "pricing",
-    route: "/pricing",
-    file: "src/app/pricing/page.tsx",
-    sectionHint: "After PricingTiers or before PlanFitQuestionnaire",
+    page: "guided-trial",
+    route: "/request-trial",
+    file: "src/app/request-trial/page.tsx",
+    sectionHint: "After the guided trial request form or before the FAQ",
     assetIds: ["dashboard", "invoice-sample"],
-    notes: "Compact proof strip reinforcing plan comparison with real UI.",
+    notes: "Product proof reinforcing the capabilities a guided trial covers.",
   },
   {
     page: "invoicing",

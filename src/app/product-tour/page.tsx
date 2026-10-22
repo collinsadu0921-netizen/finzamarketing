@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 
@@ -18,13 +17,8 @@ const statusStyle: Record<string, string> = {
     Overdue: "bg-red-100 text-red-700",
 };
 
-export default function ServiceDemoPage() {
-    const [businessName, setBusinessName] = useState("Service Business");
-
-    useEffect(() => {
-        const stored = localStorage.getItem("finza_demo_business");
-        if (stored) queueMicrotask(() => setBusinessName(stored));
-    }, []);
+export default function ProductTourPage() {
+    const businessName = "Sample Business";
 
     return (
         <div className="flex flex-col h-screen bg-zinc-50 font-sans text-zinc-900 overflow-hidden">
@@ -38,12 +32,12 @@ export default function ServiceDemoPage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block" />
                     Preview environment — not live data
                 </span>
-                <a
-                    href="/pricing"
+                <Link
+                    href="/request-trial?from=product_tour"
                     className="rounded-md bg-[#0F172A] text-white px-3 py-1 text-xs font-semibold hover:bg-[#0F172A]/90 transition-colors"
                 >
-                    Create account
-                </a>
+                    Request a guided trial
+                </Link>
             </div>
 
             <div className="flex flex-1 overflow-hidden">
@@ -51,7 +45,7 @@ export default function ServiceDemoPage() {
                 <aside className="w-60 border-r border-zinc-200 bg-white hidden md:flex flex-col flex-shrink-0">
                     <div className="p-5 border-b border-zinc-100 flex items-center gap-2">
                         <div className="w-6 h-6 bg-blue-600 rounded-md" />
-                        <span className="font-bold text-base tracking-tight">Finza Service</span>
+                        <span className="font-bold text-base tracking-tight">Finza</span>
                     </div>
                     <nav className="flex-1 p-3 space-y-0.5">
                         {[
@@ -81,7 +75,7 @@ export default function ServiceDemoPage() {
                             </div>
                             <div className="text-sm min-w-0">
                                 <div className="font-semibold truncate">{businessName}</div>
-                                <div className="text-xs text-zinc-500">Service Admin</div>
+                                <div className="text-xs text-zinc-500">Workspace Admin</div>
                             </div>
                         </div>
                     </div>
@@ -90,7 +84,10 @@ export default function ServiceDemoPage() {
                 {/* Main */}
                 <main className="flex-1 overflow-y-auto">
                     <header className="h-14 border-b border-zinc-200 bg-white flex items-center justify-between px-6 sticky top-0 z-10">
-                        <h1 className="text-sm font-semibold text-zinc-900">Dashboard</h1>
+                        <div className="flex items-baseline gap-2">
+                            <h1 className="text-sm font-semibold text-zinc-900">Finza Product Tour</h1>
+                            <span className="text-xs text-zinc-500">Dashboard preview</span>
+                        </div>
                         <div className="flex items-center gap-3">
                             <span className="text-xs text-zinc-500">Mar 2026</span>
                             <div className="w-7 h-7 rounded-full bg-zinc-100 border border-zinc-200" />
@@ -230,26 +227,26 @@ export default function ServiceDemoPage() {
                             <div>
                                 <p className="text-sm font-semibold text-zinc-900">Ready to use Finza with your real data?</p>
                                 <p className="text-xs text-zinc-500 mt-0.5">
-                                    Demo only — billed plans are on{" "}
-                                    <a href="/pricing" className="font-semibold text-zinc-700 underline underline-offset-2">
-                                        Pricing
-                                    </a>{" "}
-                                    (Essentials from GHS 149/month).
+                                    Preview only — request a{" "}
+                                    <Link href="/request-trial?from=product_tour" className="font-semibold text-zinc-700 underline underline-offset-2">
+                                        guided trial
+                                    </Link>{" "}
+                                    to use Finza with your own data.
                                 </p>
                             </div>
-                            <a
-                                href="/pricing"
+                            <Link
+                                href="/request-trial?from=product_tour"
                                 className="flex-shrink-0 rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0F172A]/90 transition-colors"
                             >
-                                Get started free →
-                            </a>
+                                Request a guided trial →
+                            </Link>
                         </div>
 
                         <RelatedClusterLinks
                             related={[
                                 {
-                                    href: "/accounting-for-service-business-ghana",
-                                    label: "Service accounting guide",
+                                    href: "/accounting-for-small-business-ghana",
+                                    label: "Accounting guide",
                                     desc: "Invoices & AR",
                                 },
                                 { href: "/invoicing-software-ghana", label: "Invoicing software", desc: "Ghana billing" },

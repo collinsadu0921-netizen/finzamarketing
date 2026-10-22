@@ -84,7 +84,7 @@ export const blogClusterLinks: Record<string, BlogClusterLink> = {
     relatedSlugs: ["how-to-create-invoice-in-ghana", "invoice-vs-receipt-ghana", "how-to-manage-cash-flow-ghana"],
     core: { href: "/invoicing-software-ghana", label: "Invoicing software in Ghana" },
   },
-  "invoice-errors-service-businesses-ghana": {
+  "invoice-errors-businesses-ghana": {
     relatedSlugs: ["how-to-create-invoice-in-ghana", "invoice-template-ghana", "invoice-vs-receipt-ghana"],
     core: { href: "/invoicing-software-ghana", label: "Invoicing software in Ghana" },
   },

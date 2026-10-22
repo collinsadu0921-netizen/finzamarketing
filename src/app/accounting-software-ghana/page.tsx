@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Accounting Software in Ghana | Invoicing, Payroll & Reports",
   description:
-    "Finza is accounting software for Ghanaian businesses. Run invoices, payments, expenses, payroll, reports, and accountant-ready records in one GHS workspace. 14-day free trial.",
+    "Finza is accounting software for Ghanaian businesses. Run invoices, payments, expenses, payroll, reports, and accountant-ready records in one GHS workspace. Request a guided trial.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-ghana",
   },
@@ -57,8 +57,8 @@ export default function AccountingSoftwareGhanaPage() {
                 "Yes. Finza keeps invoices, payments, expenses, payroll, and reports together so you and your accountant can review the same file. Your accountant or GRA still confirms the tax treatment for your business.",
             },
             {
-              questionName: "Is there a free trial?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How do I start using Finza?",
+              acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
           ]),
         ]}
@@ -75,14 +75,12 @@ export default function AccountingSoftwareGhanaPage() {
               Finza helps owners and professional advisers see receivables, payables, expenses, payroll impact, Ghana tax lines, and reports in one GHS workspace before month-end turns into a spreadsheet chase.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
-            <p className="max-w-3xl text-sm text-zinc-500">No card required to start. Built around Ghanaian business records and GHS.</p>
+            <p className="max-w-3xl text-sm text-zinc-500">Guided trial with the Finza team. Built around Ghanaian business records and GHS.</p>
           </div>
         </Container>
       </section>
@@ -130,7 +128,7 @@ export default function AccountingSoftwareGhanaPage() {
                 },
                 {
                   t: "Controls",
-                  d: "Use audit logs, period controls, and accounting workflows where your plan supports them.",
+                  d: "Use audit logs, period controls, and accounting workflows.",
                 },
                 {
                   t: "Tax-line review",
@@ -199,13 +197,13 @@ export default function AccountingSoftwareGhanaPage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">Who this accounting software is for</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza is accounting software for Ghanaian businesses that need invoices, payments, expenses, payroll records, reports, and professional review in GHS. Service companies that sell client work — cleaning, contractors, consultants, agencies, and maintenance teams — should see the{" "}
-              <Link href="/accounting-software-for-service-businesses-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-                service-business accounting workflow
-              </Link>
-              . Owner-led SMEs can start with{" "}
+              Finza is accounting software for Ghanaian businesses that need invoices, payments, expenses, payroll records, reports, and professional review in GHS. Owner-led SMEs and growing teams can start with{" "}
               <Link href="/small-business-accounting-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 small-business accounting software
+              </Link>{" "}
+              or review the{" "}
+              <Link href="/features" className="font-semibold text-zinc-900 underline underline-offset-2">
+                full product workflow
               </Link>
               .
             </p>
@@ -321,9 +319,9 @@ export default function AccountingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Is there a free trial?</AccordionTrigger>
+                <AccordionTrigger>How do I start using Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -340,12 +338,8 @@ export default function AccountingSoftwareGhanaPage() {
               Use Finza to review balances, costs, payroll records, tax lines, reports, and professional review handoff from one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <Link href="/contact" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">
-                Find my plan
-              </Link>
+              <Link href="/request-trial?from=landing_page" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -355,13 +349,13 @@ export default function AccountingSoftwareGhanaPage() {
         mode="no-primary"
         related={[
           { href: "/features", label: "Features", desc: "Capabilities" },
-          { href: "/pricing", label: "Pricing", desc: "GHS plans" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
           { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Send & track" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Track costs" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE & SSNIT" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/best-accounting-software-ghana", label: "Buyer guide", desc: "Compare accounting software" },
-          { href: "/accounting-software-for-service-businesses-ghana", label: "Service businesses", desc: "A use case, not the whole product" },
+          { href: "/accounting-for-small-business-ghana", label: "Accounting guide", desc: "Practical records workflow" },
           { href: "/security", label: "Security", desc: "Trust and controls" },
         ]}
       />

@@ -43,11 +43,11 @@ export default function BlogIndexPage() {
               <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 bookkeeping software Ghana
               </Link>
-              . Compare plans on{" "}
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                pricing
-              </Link>
-              .
+              .{" "}
+              <Link href="/request-trial?from=blog" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Request a guided trial
+              </Link>{" "}
+              and the Finza team will guide you through the product.
             </p>
           </div>
         </Container>

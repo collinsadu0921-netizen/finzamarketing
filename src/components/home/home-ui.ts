@@ -1,4 +1,4 @@
-/** Shared marketing-site visual tokens (homepage + pricing, contact, demo) */
+/** Shared marketing-site visual tokens (homepage, guided trial, contact, product tour) */
 
 export const sectionTitle =
   "text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl";

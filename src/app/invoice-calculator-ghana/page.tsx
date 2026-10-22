@@ -33,23 +33,18 @@ export default function InvoiceCalculatorGhanaPage() {
               Ghana invoice calculator
             </h1>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Preview how a service invoice could look before you send it. Add service lines, apply Ghana tax line examples, record a partial payment, and see the total and balance due.
+              Preview how an invoice could look before you send it. Add line items, apply Ghana tax line examples, record a partial payment, and see the total and balance due.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="inline-flex items-center rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
-                href="/pricing#find-plan"
+                href="/product-tour"
                 className="inline-flex items-center rounded-lg border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 hover:bg-zinc-50"
-              >
-                Find my plan
-              </Link>
+              >Explore the product tour</Link>
             </div>
-            <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
+            <p className="text-sm text-zinc-500">Guided trial with the Finza team. No payment details needed.</p>
           </div>
         </Container>
       </section>
@@ -89,12 +84,9 @@ export default function InvoiceCalculatorGhanaPage() {
               Use Finza to create quotes, invoices, payment records and accountant-ready business records in one workflow.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="inline-flex items-center rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
                 href="/invoicing-software-ghana"
                 className="inline-flex items-center rounded-lg border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 hover:bg-zinc-100"
@@ -112,7 +104,7 @@ export default function InvoiceCalculatorGhanaPage() {
           {
             href: "/invoicing-software-ghana",
             label: "Invoicing software for Ghana",
-            desc: "Create and track service invoices",
+            desc: "Create and track invoices",
           },
           {
             href: "/accounting-software-ghana",

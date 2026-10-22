@@ -20,13 +20,13 @@ export function Hero() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <Button size="lg" className="h-14 px-8 text-base font-semibold shadow-lg hover:shadow-xl transition-all gap-2" asChild>
-                            <Link href="/contact">
-                                Book a walkthrough <ArrowRight className="w-4 h-4" />
+                            <Link href="/request-trial?from=landing_page">
+                                Request a guided trial <ArrowRight className="w-4 h-4" />
                             </Link>
                         </Button>
                         <Button size="lg" variant="outline" className="h-14 px-8 text-base font-semibold border-2 hover:bg-muted/50 gap-2" asChild>
-                            <Link href="/pricing#find-plan">
-                                Find my plan
+                            <Link href="/product-tour">
+                                Explore the product tour
                             </Link>
                         </Button>
                     </div>

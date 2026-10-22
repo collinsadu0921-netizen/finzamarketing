@@ -53,8 +53,8 @@ export default function BookkeepingSoftwareGhanaPage() {
                 "Finza supports Ghana tax lines such as VAT, NHIL, GETFund, and WHT where applicable. The correct tax treatment depends on your business registration, supply type, and accountant or GRA guidance.",
             },
             {
-              questionName: "Can I try Finza before paying?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How can I evaluate Finza?",
+              acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
           ]),
         ]}
@@ -71,15 +71,13 @@ export default function BookkeepingSoftwareGhanaPage() {
               Finza helps teams capture receipts, expenses, supplier bills, incoming documents, and payment records before they disappear into WhatsApp, email, phone galleries, or spreadsheets.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
             <p className="text-sm text-zinc-500">
-              No card required to start. Work in GHS with records built around Ghanaian business needs.
+              Guided trial with the Finza team. Work in GHS with records built around Ghanaian business needs.
             </p>
           </div>
         </Container>
@@ -275,14 +273,12 @@ export default function BookkeepingSoftwareGhanaPage() {
             </p>
             <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-4">
               {[
-                "Cleaning companies",
-                "Contractors",
-                "Consultants",
-                "Maintenance teams",
-                "Agencies",
-                "Professional service providers",
-                "Field-service businesses",
-                "Growing SMEs working with an accountant",
+                "Ghanaian businesses",
+                "Small and growing businesses",
+                "Business owners and finance teams",
+                "Businesses with supplier bills and receipts",
+                "Businesses preparing records for accountant review",
+                "Businesses working with accountants or professional advisers",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -336,9 +332,9 @@ export default function BookkeepingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -355,12 +351,8 @@ export default function BookkeepingSoftwareGhanaPage() {
               Use Finza to capture receipts, expenses, supplier bills, payment records, incoming documents, and review notes in one GHS workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <Link href="/contact" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">
-                Find my plan
-              </Link>
+              <Link href="/request-trial?from=landing_page" className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900">Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -375,7 +367,7 @@ export default function BookkeepingSoftwareGhanaPage() {
           { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
           { href: "/vat-software-ghana", label: "VAT software", desc: "Tax lines" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },
-          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
         ]}
       />
       <Footer />

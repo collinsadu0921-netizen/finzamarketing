@@ -3,16 +3,9 @@
 import { useState } from "react";
 import { homePrimaryBtn, siteFormInput } from "@/components/home/home-ui";
 
-type ContactFormProps = {
-  /** Passed to POST /api/contact; defaults to walkthrough_request on /contact */
-  source?: "walkthrough_request" | "website_contact";
-};
-
-export function ContactForm({ source = "walkthrough_request" }: ContactFormProps) {
+export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
   const [error, setError] = useState("");
-
-  const isWalkthrough = source === "walkthrough_request";
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,20 +16,14 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
     const company = (form.elements.namedItem("company") as HTMLInputElement).value.trim();
     const phone = (form.elements.namedItem("phone") as HTMLInputElement).value.trim();
     const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
-    const rawMessage = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
-
-    const message = isWalkthrough
-      ? [`Walkthrough request from contact page.`, `Business: ${company}`, `Phone / WhatsApp: ${phone}`, rawMessage]
-          .filter(Boolean)
-          .join("\n\n")
-      : rawMessage;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          source,
+          source: "website_contact",
           name,
           company,
           phone,
@@ -62,9 +49,7 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
     <form onSubmit={onSubmit} className="space-y-5">
       {status === "ok" && (
         <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-          {isWalkthrough
-            ? "Thanks. We have received your walkthrough request and will use these details to respond."
-            : "Thanks. We have received your message and will use these details to respond."}
+          Thanks. We have received your message and will use these details to respond.
         </p>
       )}
       {(status === "err" || error) && (
@@ -126,7 +111,7 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
       </div>
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-zinc-700">
-          {isWalkthrough ? "What do you want help with?" : "Message"} <span className="text-red-500">*</span>
+          Message <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
@@ -134,11 +119,7 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
           required
           minLength={10}
           rows={6}
-          placeholder={
-            isWalkthrough
-              ? "e.g. invoices, payroll, Ghana tax lines, customer statements, or choosing a plan"
-              : "How can we help?"
-          }
+          placeholder="How can we help?"
           className={siteFormInput}
         />
       </div>
@@ -147,10 +128,10 @@ export function ContactForm({ source = "walkthrough_request" }: ContactFormProps
         disabled={status === "sending"}
         className={`${homePrimaryBtn} w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto`}
       >
-        {status === "sending" ? "Sending…" : isWalkthrough ? "Request walkthrough" : "Send message"}
+        {status === "sending" ? "Sending..." : "Send message"}
       </button>
       <p className="text-xs text-zinc-500">
-        We&apos;ll only use these details to respond to your Finza request. No spam.
+        We&apos;ll only use these details to respond to your message. No spam.
       </p>
       <p className="text-xs text-zinc-500">
         You can also email{" "}

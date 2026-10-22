@@ -1,56 +1,69 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  getPlanMonthlyPriceGhs,
-  PLAN_FIT_SUMMARIES,
-  type PlanTierId,
-} from "@/lib/pricing-plans";
-import { formatPlanFitAnswersForDisplay } from "@/lib/plan-fit-questions";
-import type { PlanFitAnswers } from "@/lib/plan-fit-scoring";
+import { normalizeTrialPlacement } from "@/lib/trial-request";
 
-const PLAN_FIT_SOURCE = "pricing_plan_fit";
-const VALID_PLAN_IDS = new Set<PlanTierId>(["essentials", "professional", "business"]);
+const GUIDED_TRIAL_SOURCE = "guided_trial_request";
+const DUPLICATE_WINDOW_MS = 10 * 60 * 1000;
+const recentDeliveries = new Map<string, number>();
+
+const LIMITS = {
+  name: 120,
+  company: 200,
+  email: 200,
+  phone: 40,
+  primaryNeed: 2000,
+  role: 120,
+  businessType: 120,
+  teamSize: 60,
+  context: 2000,
+  message: 5000,
+  placement: 40,
+} as const;
 
 function escapeHtml(value: string) {
-  return String(value).replace(/</g, "&lt;");
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function cleanText(value: unknown, maxLength: number) {
+  if (typeof value !== "string") return "";
+  // Drop control characters (including CR/LF for header-safe single-line values),
+  // then normalise whitespace and cap the length.
+  return value
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
+    .replace(/\r\n?/g, "\n")
+    .trim()
+    .slice(0, maxLength);
+}
+
+function cleanSingleLine(value: unknown, maxLength: number) {
+  return cleanText(value, maxLength).replace(/\s+/g, " ");
 }
 
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-function parsePlanFitAnswers(value: unknown): Record<string, unknown> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) {
-    return {};
-  }
-  return value as Record<string, unknown>;
+function isValidPhone(value: string) {
+  return /^[+0-9()\s.-]{7,40}$/.test(value) && value.replace(/\D/g, "").length >= 7;
 }
 
-function buildPlanFitMessage(payload: {
-  recommended_plan_name: string;
-  recommended_plan: string;
-  recommended_plan_monthly_price: number;
-  questionnaire_answers: Record<string, unknown>;
-  optional_message: string;
-}): string {
-  const answersText =
-    Object.keys(payload.questionnaire_answers).length > 0
-      ? formatPlanFitAnswersForDisplay(payload.questionnaire_answers as PlanFitAnswers)
-      : "—";
-
-  const lines = [
-    "Walkthrough request from plan-fit questionnaire.",
-    `Recommended plan: ${payload.recommended_plan_name} (${payload.recommended_plan})`,
-    `Monthly price shown to visitor: GH₵${payload.recommended_plan_monthly_price.toLocaleString()}/month`,
-    "",
-    "Questionnaire answers:",
-    answersText,
-  ];
-
-  if (payload.optional_message) {
-    lines.push("", "Optional message:", payload.optional_message);
+function pruneRecentDeliveries() {
+  const cutoff = Date.now() - DUPLICATE_WINDOW_MS;
+  for (const [key, timestamp] of recentDeliveries) {
+    if (timestamp < cutoff) recentDeliveries.delete(key);
   }
+}
 
-  return lines.join("\n");
+function duplicateKey(payload: { email: string; phone: string; company: string }) {
+  return [
+    payload.email.toLowerCase(),
+    payload.phone.replace(/\D/g, ""),
+    payload.company.toLowerCase().replace(/\s+/g, " "),
+  ].join("|");
 }
 
 type LeadPayload = {
@@ -60,12 +73,13 @@ type LeadPayload = {
   email: string;
   phone: string;
   message: string;
-  optional_message: string;
-  recommended_plan: string;
-  recommended_plan_name: string;
-  recommended_plan_monthly_price: number | null;
-  questionnaire_answers: Record<string, unknown>;
   subject: string;
+  placement?: string;
+  role?: string;
+  businessType?: string;
+  teamSize?: string;
+  primaryNeed?: string;
+  context?: string;
 };
 
 type DeliverResult = {
@@ -76,102 +90,30 @@ type DeliverResult = {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const source = typeof body.source === "string" ? body.source.trim() : "";
+    const source = cleanSingleLine(body.source, LIMITS.placement) || "finza_contact_form";
 
-    if (source === PLAN_FIT_SOURCE) {
-      const trimmedName = typeof body.name === "string" ? body.name.trim() : "";
-      const trimmedCompany = typeof body.company === "string" ? body.company.trim() : "";
-      const trimmedPhone = typeof body.phone === "string" ? body.phone.trim() : "";
-      const trimmedEmail = typeof body.email === "string" ? body.email.trim() : "";
-      const recommendedPlan =
-        typeof body.recommended_plan === "string" ? body.recommended_plan.trim() : "";
-
-      if (!trimmedName || !trimmedCompany || !trimmedPhone || !trimmedEmail) {
-        return NextResponse.json(
-          { error: "Full name, business name, phone, and email are required." },
-          { status: 400 }
-        );
-      }
-      if (!isValidEmail(trimmedEmail)) {
-        return NextResponse.json({ error: "A valid email address is required." }, { status: 400 });
-      }
-      if (!VALID_PLAN_IDS.has(recommendedPlan as PlanTierId)) {
-        return NextResponse.json({ error: "Recommended plan is required." }, { status: 400 });
-      }
-
-      const planId = recommendedPlan as PlanTierId;
-      const planSummary = PLAN_FIT_SUMMARIES[planId];
-      const recommendedPlanName =
-        typeof body.recommended_plan_name === "string" && body.recommended_plan_name.trim()
-          ? body.recommended_plan_name.trim()
-          : planSummary.name;
-
-      let monthlyPrice: number;
-      if (typeof body.recommended_plan_monthly_price === "number" && Number.isFinite(body.recommended_plan_monthly_price)) {
-        monthlyPrice = Math.round(body.recommended_plan_monthly_price);
-      } else if (
-        typeof body.recommended_plan_monthly_price === "string" &&
-        body.recommended_plan_monthly_price.trim() !== ""
-      ) {
-        const parsed = Number(body.recommended_plan_monthly_price);
-        monthlyPrice = Number.isFinite(parsed) ? Math.round(parsed) : getPlanMonthlyPriceGhs(planId);
-      } else {
-        monthlyPrice = getPlanMonthlyPriceGhs(planId);
-      }
-
-      const questionnaireAnswers = parsePlanFitAnswers(body.questionnaire_answers);
-      const optionalMessage =
-        typeof body.optional_message === "string" ? body.optional_message.trim() : "";
-
-      const message = buildPlanFitMessage({
-        recommended_plan_name: recommendedPlanName,
-        recommended_plan: planId,
-        recommended_plan_monthly_price: monthlyPrice,
-        questionnaire_answers: questionnaireAnswers,
-        optional_message: optionalMessage,
-      });
-
-      const delivery = await deliverLead({
-        source: PLAN_FIT_SOURCE,
-        name: trimmedName,
-        company: trimmedCompany,
-        email: trimmedEmail,
-        phone: trimmedPhone,
-        message,
-        optional_message: optionalMessage,
-        recommended_plan: planId,
-        recommended_plan_name: recommendedPlanName,
-        recommended_plan_monthly_price: monthlyPrice,
-        questionnaire_answers: questionnaireAnswers,
-        subject: `Plan-fit walkthrough — ${trimmedCompany} (${planId})`,
-      });
-
-      if (!delivery.configured) {
-        return NextResponse.json(
-          { error: "Lead delivery is not configured." },
-          { status: 500 }
-        );
-      }
-      if (!delivery.delivered) {
-        return NextResponse.json(
-          { error: "We could not deliver your request. Please try again or email hello@finza.africa." },
-          { status: 502 }
-        );
-      }
-
-      return NextResponse.json({ ok: true });
+    if (source === GUIDED_TRIAL_SOURCE) {
+      return handleGuidedTrial(body);
     }
 
-    const { name, email, message, company, phone } = body;
-    const trimmedName = typeof name === "string" ? name.trim() : "";
-    const trimmedCompany = typeof company === "string" ? company.trim() : "";
-    const trimmedPhone = typeof phone === "string" ? phone.trim() : "";
-    const trimmedEmail = typeof email === "string" ? email.trim() : "";
-    const trimmedMessage = typeof message === "string" ? message.trim() : "";
+    const trimmedName = cleanSingleLine(body.name, LIMITS.name);
+    const trimmedCompany = cleanSingleLine(body.company, LIMITS.company);
+    const trimmedPhone = cleanSingleLine(body.phone, LIMITS.phone);
+    const trimmedEmail = cleanSingleLine(body.email, LIMITS.email);
+    const trimmedMessage = cleanText(body.message, LIMITS.message);
 
-    if (!trimmedName || !trimmedCompany || !trimmedPhone || !trimmedEmail || trimmedMessage.length < 10) {
+    if (
+      !trimmedName ||
+      !trimmedCompany ||
+      !trimmedPhone ||
+      !trimmedEmail ||
+      trimmedMessage.length < 10
+    ) {
       return NextResponse.json(
-        { error: "Full name, business name, phone, email, and a message (at least 10 characters) are required." },
+        {
+          error:
+            "Full name, business name, phone, email, and a message (at least 10 characters) are required.",
+        },
         { status: 400 }
       );
     }
@@ -180,17 +122,12 @@ export async function POST(req: NextRequest) {
     }
 
     const delivery = await deliverLead({
-      source: source || "finza_contact_form",
+      source,
       name: trimmedName,
       company: trimmedCompany,
       email: trimmedEmail,
       phone: trimmedPhone,
       message: trimmedMessage,
-      optional_message: "",
-      recommended_plan: "",
-      recommended_plan_name: "",
-      recommended_plan_monthly_price: null,
-      questionnaire_answers: {},
       subject: `Website contact — ${trimmedName || trimmedEmail}`,
     });
 
@@ -209,6 +146,99 @@ export async function POST(req: NextRequest) {
     console.error("[contact]", e);
     return NextResponse.json({ error: "Submission failed." }, { status: 500 });
   }
+}
+
+async function handleGuidedTrial(body: Record<string, unknown>) {
+  // Honeypot checks silently accept the request so bots do not learn which
+  // signal caught them. Nothing is delivered.
+  const honeypot = typeof body.website === "string" ? body.website.trim() : "";
+  if (honeypot) {
+    return NextResponse.json({ ok: true });
+  }
+
+  const name = cleanSingleLine(body.name, LIMITS.name);
+  const email = cleanSingleLine(body.email, LIMITS.email);
+  const phone = cleanSingleLine(body.phone, LIMITS.phone);
+  const company = cleanSingleLine(body.company, LIMITS.company);
+  const primaryNeed = cleanText(body.primary_need, LIMITS.primaryNeed);
+  const role = cleanSingleLine(body.role, LIMITS.role);
+  const businessType = cleanSingleLine(body.business_type, LIMITS.businessType);
+  const teamSize = cleanSingleLine(body.team_size, LIMITS.teamSize);
+  const context = cleanText(body.context, LIMITS.context);
+  const placement = normalizeTrialPlacement(cleanSingleLine(body.placement, LIMITS.placement));
+  const privacyConsent = body.privacy_consent === true;
+
+  const fieldErrors: Record<string, string> = {};
+  if (name.length < 2) fieldErrors.name = "Enter your full name.";
+  if (!isValidEmail(email)) fieldErrors.email = "Enter a valid work email address.";
+  if (!isValidPhone(phone)) fieldErrors.phone = "Enter a valid phone or WhatsApp number.";
+  if (company.length < 2) fieldErrors.company = "Enter your business or company name.";
+  if (primaryNeed.length < 10) {
+    fieldErrors.primary_need = "Tell us about your business need or capabilities of interest.";
+  }
+  if (!privacyConsent) fieldErrors.privacy_consent = "Privacy consent is required.";
+
+  if (Object.keys(fieldErrors).length > 0) {
+    return NextResponse.json(
+      {
+        error: "Please check the highlighted fields and submit the request again.",
+        fields: fieldErrors,
+      },
+      { status: 400 }
+    );
+  }
+
+  const messageLines = [
+    "Guided trial request.",
+    `Business: ${company}`,
+    `Phone / WhatsApp: ${phone}`,
+    `Primary business need: ${primaryNeed}`,
+  ];
+  if (role) messageLines.push(`Role: ${role}`);
+  if (businessType) messageLines.push(`Business type: ${businessType}`);
+  if (teamSize) messageLines.push(`Team or business size: ${teamSize}`);
+  if (context) messageLines.push("", "Additional context:", context);
+
+  const key = duplicateKey({ email, phone, company });
+  pruneRecentDeliveries();
+  if (recentDeliveries.has(key)) {
+    return NextResponse.json({ ok: true });
+  }
+
+  const delivery = await deliverLead({
+    source: GUIDED_TRIAL_SOURCE,
+    name,
+    company,
+    email,
+    phone,
+    message: messageLines.join("\n"),
+    subject: `Guided trial request — ${company}`,
+    placement,
+    role,
+    businessType,
+    teamSize,
+    primaryNeed,
+    context,
+  });
+
+  if (!delivery.configured) {
+    return NextResponse.json(
+      { error: "Request delivery is not configured. Please email hello@finza.africa." },
+      { status: 500 }
+    );
+  }
+  if (!delivery.delivered) {
+    return NextResponse.json(
+      {
+        error:
+          "We could not deliver your request. Please try again or email hello@finza.africa.",
+      },
+      { status: 502 }
+    );
+  }
+
+  recentDeliveries.set(key, Date.now());
+  return NextResponse.json({ ok: true });
 }
 
 async function deliverLead(payload: LeadPayload): Promise<DeliverResult> {
@@ -234,11 +264,12 @@ async function deliverLead(payload: LeadPayload): Promise<DeliverResult> {
     email: payload.email,
     phone: payload.phone,
     message: payload.message,
-    recommended_plan: payload.recommended_plan || undefined,
-    recommended_plan_name: payload.recommended_plan_name || undefined,
-    recommended_plan_monthly_price: payload.recommended_plan_monthly_price ?? undefined,
-    questionnaire_answers: payload.questionnaire_answers,
-    optional_message: payload.optional_message || undefined,
+    placement: payload.placement || undefined,
+    role: payload.role || undefined,
+    business_type: payload.businessType || undefined,
+    team_size: payload.teamSize || undefined,
+    primary_need: payload.primaryNeed || undefined,
+    context: payload.context || undefined,
   };
 
   if (webhookConfigured && webhookUrl) {
@@ -260,19 +291,34 @@ async function deliverLead(payload: LeadPayload): Promise<DeliverResult> {
   }
 
   if (resendConfigured && resendKey && notifyEmail) {
-    const answersBlock =
-      payload.source === PLAN_FIT_SOURCE && Object.keys(payload.questionnaire_answers).length > 0
-        ? `<pre style="white-space:pre-wrap;font-family:sans-serif;font-size:13px;">${escapeHtml(
-            JSON.stringify(payload.questionnaire_answers, null, 2)
-          )}</pre>`
-        : "";
+    const isGuidedTrial = payload.source === GUIDED_TRIAL_SOURCE;
 
-    const answersReadable =
-      payload.source === PLAN_FIT_SOURCE && Object.keys(payload.questionnaire_answers).length > 0
-        ? `<pre style="white-space:pre-wrap;font-family:sans-serif;font-size:13px;">${escapeHtml(
-            formatPlanFitAnswersForDisplay(payload.questionnaire_answers as PlanFitAnswers)
+    const optionalRows = [
+      payload.placement
+        ? `<p><strong>CTA placement:</strong> ${escapeHtml(payload.placement)}</p>`
+        : "",
+      payload.role ? `<p><strong>Role:</strong> ${escapeHtml(payload.role)}</p>` : "",
+      payload.businessType
+        ? `<p><strong>Business type:</strong> ${escapeHtml(payload.businessType)}</p>`
+        : "",
+      payload.teamSize
+        ? `<p><strong>Team or business size:</strong> ${escapeHtml(payload.teamSize)}</p>`
+        : "",
+      payload.primaryNeed
+        ? `<p><strong>Primary business need:</strong></p><pre style="white-space:pre-wrap;font-family:sans-serif;">${escapeHtml(
+            payload.primaryNeed
           )}</pre>`
-        : "";
+        : "",
+      payload.context
+        ? `<p><strong>Additional context:</strong></p><pre style="white-space:pre-wrap;font-family:sans-serif;">${escapeHtml(
+            payload.context
+          )}</pre>`
+        : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const heading = isGuidedTrial ? "Guided trial request" : "Website contact";
 
     try {
       const resendRes = await fetch("https://api.resend.com/emails", {
@@ -287,39 +333,15 @@ async function deliverLead(payload: LeadPayload): Promise<DeliverResult> {
           reply_to: payload.email,
           subject: payload.subject,
           html: `
+          <h2>${escapeHtml(heading)}</h2>
           <p><strong>Source:</strong> ${escapeHtml(payload.source)}</p>
           <p><strong>Name:</strong> ${escapeHtml(payload.name || "—")}</p>
           <p><strong>Company:</strong> ${escapeHtml(payload.company || "—")}</p>
           <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
           <p><strong>Phone:</strong> ${escapeHtml(payload.phone || "—")}</p>
-          ${
-            payload.recommended_plan
-              ? `<p><strong>Recommended plan (id):</strong> ${escapeHtml(payload.recommended_plan)}</p>`
-              : ""
-          }
-          ${
-            payload.recommended_plan_name
-              ? `<p><strong>Recommended plan (name):</strong> ${escapeHtml(payload.recommended_plan_name)}</p>`
-              : ""
-          }
-          ${
-            payload.recommended_plan_monthly_price != null
-              ? `<p><strong>Monthly price shown:</strong> GH₵${escapeHtml(
-                  String(payload.recommended_plan_monthly_price)
-                )}/month</p>`
-              : ""
-          }
-          ${
-            payload.optional_message
-              ? `<p><strong>Optional message:</strong></p><pre style="white-space:pre-wrap;font-family:sans-serif;">${escapeHtml(
-                  payload.optional_message
-                )}</pre>`
-              : ""
-          }
+          ${optionalRows}
           <p><strong>Full message:</strong></p>
           <pre style="white-space:pre-wrap;font-family:sans-serif;">${escapeHtml(payload.message)}</pre>
-          ${answersReadable ? `<p><strong>Questionnaire answers:</strong></p>${answersReadable}` : ""}
-          ${answersBlock ? `<p><strong>Questionnaire answers (JSON):</strong></p>${answersBlock}` : ""}
           <p><strong>Submitted:</strong> ${new Date().toLocaleString("en-GH", { timeZone: "Africa/Accra" })}</p>
         `,
         }),

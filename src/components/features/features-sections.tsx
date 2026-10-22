@@ -32,32 +32,26 @@ import {
   sectionLead,
   sectionTitle,
 } from "@/components/home/home-ui";
-import {
-  getPlanSignupHref,
-  PLANS_STARTING_PRICE_GHS,
-  pricingPlansData,
-} from "@/lib/pricing-plans";
+import { getGuidedTrialHref } from "@/lib/trial-request";
 import { cn } from "@/lib/utils";
 
-const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 const scrollMt = "scroll-mt-28 md:scroll-mt-32";
 
 /* ── Shared primitives ─────────────────────────────────────────────── */
 
 const SECTION_Y = "py-14 md:py-16";
 
-function PlanBadge({
+function SectionBadge({
   children,
-  tone = "essentials",
+  tone = "neutral",
 }: {
   children: React.ReactNode;
-  tone?: "essentials" | "professional" | "business" | "neutral";
+  tone?: "neutral" | "blue" | "emerald";
 }) {
   const tones = {
-    essentials: "border-zinc-200 bg-zinc-100 text-zinc-800",
-    professional: "border-blue-200 bg-blue-50 text-blue-800",
-    business: "border-fuchsia-200 bg-fuchsia-50 text-fuchsia-900",
-    neutral: "border-emerald-200 bg-emerald-50 text-emerald-900",
+    neutral: "border-zinc-200 bg-zinc-100 text-zinc-800",
+    blue: "border-blue-200 bg-blue-50 text-blue-800",
+    emerald: "border-emerald-200 bg-emerald-50 text-emerald-900",
   };
   return (
     <span
@@ -144,16 +138,13 @@ export function FeaturesHero() {
             behind them — in Ghana cedis.
           </p>
           <div className="flex flex-col items-stretch justify-center gap-3 pt-1 sm:flex-row sm:items-center">
-            <a href={starterSignupHref} className={homePrimaryBtn}>
-              Start free trial
-            </a>
-            <Link href="/pricing#plans" className={homeSecondaryBtn}>
-              Compare plans
+            <Link href={getGuidedTrialHref("features")} className={homePrimaryBtn}>
+              Request a guided trial
             </Link>
+            <Link href="/product-tour" className={homeSecondaryBtn}>Explore the product tour</Link>
           </div>
           <p className="text-sm text-zinc-500">
-            Plans from GH₵{PLANS_STARTING_PRICE_GHS.toLocaleString()}/month ·
-            14-day trial · No card required
+            Guided trials with the Finza team · Ghana cedis · Ghana tax lines where applicable
           </p>
         </div>
       </Container>
@@ -231,7 +222,7 @@ export function FeaturesWinWorkSection() {
           </MarketingReveal>
 
           <div className="space-y-5">
-            <PlanBadge>Essentials</PlanBadge>
+            <SectionBadge>Quotes &amp; invoices</SectionBadge>
             <h2 className={sectionTitle}>
               Turn client requests into professional documents.
             </h2>
@@ -281,12 +272,12 @@ export function FeaturesJobsMaterialsSection() {
       <Container>
         <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-10">
           <div className="space-y-5">
-            <PlanBadge tone="professional">Professional</PlanBadge>
+            <SectionBadge tone="blue">Jobs &amp; projects</SectionBadge>
             <h2 className={sectionTitle}>
               Deliver jobs and manage materials.
             </h2>
             <p className={sectionLead}>
-              Organize service delivery, track material usage, and keep
+              Organize job delivery, track material usage, and keep
               customer work connected to invoicing.
             </p>
             <ul className="space-y-2 text-sm text-zinc-700">
@@ -370,7 +361,7 @@ export function FeaturesDocumentsCostsSection() {
 
             <div className="space-y-3">
               <div className="rounded-lg border border-zinc-200 bg-zinc-50/80 p-3.5">
-                <PlanBadge>Essentials</PlanBadge>
+                <SectionBadge>Expense records</SectionBadge>
                 <ul className="mt-2.5 space-y-1.5 text-sm text-zinc-700">
                   <li className="flex items-start gap-2">
                     <FolderOpen className="mt-0.5 h-4 w-4 shrink-0 text-zinc-500" aria-hidden />
@@ -383,7 +374,7 @@ export function FeaturesDocumentsCostsSection() {
                 </ul>
               </div>
               <div className="rounded-lg border border-blue-200/80 bg-blue-50/50 p-3.5">
-                <PlanBadge tone="professional">Professional</PlanBadge>
+                <SectionBadge tone="blue">Supplier bills</SectionBadge>
                 <ul className="mt-2.5 space-y-1.5 text-sm text-zinc-700">
                   <li className="flex items-start gap-2">
                     <FileText className="mt-0.5 h-4 w-4 shrink-0 text-blue-700" aria-hidden />
@@ -418,7 +409,7 @@ export function FeaturesPayrollTeamSection() {
       <Container>
         <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[1fr_1.35fr] lg:gap-10">
           <div className="space-y-4">
-            <PlanBadge tone="professional">Professional and Business</PlanBadge>
+            <SectionBadge tone="blue">Payroll</SectionBadge>
             <h2 className={sectionTitle}>{PAYROLL_FEATURES_HEADING}</h2>
             <p className={sectionLead}>
               Run monthly payroll inside Finza: Ghana PAYE and pension
@@ -506,20 +497,20 @@ export function FeaturesReportsControlsSection() {
 
             <div className="space-y-2.5">
               <div className="rounded-lg border border-zinc-200 bg-white/90 p-3.5 shadow-sm shadow-zinc-900/[0.03]">
-                <PlanBadge>Essentials</PlanBadge>
+                <SectionBadge>Core reports</SectionBadge>
                 <p className="mt-2 text-sm text-zinc-700">
                   VAT Report · Profit and Loss · Balance Sheet
                 </p>
               </div>
               <div className="rounded-lg border border-blue-200/80 bg-blue-50/50 p-3.5">
-                <PlanBadge tone="professional">Professional</PlanBadge>
+                <SectionBadge tone="blue">Management reports</SectionBadge>
                 <p className="mt-2 text-sm text-zinc-700">
                   Cash Flow · Changes in Equity · Fixed Assets · WHT · VAT
                   filings · Audit log
                 </p>
               </div>
-              <div className="rounded-lg border border-fuchsia-200/80 bg-fuchsia-50/40 p-3.5">
-                <PlanBadge tone="business">Business</PlanBadge>
+              <div className="rounded-lg border border-emerald-200/80 bg-emerald-50/40 p-3.5">
+                <SectionBadge tone="emerald">Accounting controls</SectionBadge>
                 <p className="mt-2 text-sm text-zinc-700">
                   General Ledger · Journals · Period locking · CIT · System
                   audit log · Advanced controls
@@ -554,7 +545,7 @@ export function FeaturesAssistSection() {
     >
       <Container>
         <div className="mx-auto max-w-2xl space-y-4 text-center">
-          <PlanBadge tone="neutral">Included on Finza plans</PlanBadge>
+          <SectionBadge tone="emerald">Included in Finza</SectionBadge>
           <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-[#0F172A] text-white">
             <Sparkles className="h-5 w-5" aria-hidden />
           </span>
@@ -599,16 +590,14 @@ export function FeaturesFinalCtaSection() {
             See how Finza fits your business.
           </h2>
           <p className="text-base leading-relaxed text-zinc-300">
-            Start with a 14-day free trial or compare the three plans in Ghana
-            cedis.
+            Tell us about your business and the Finza team will guide you through
+            the capabilities that matter to you.
           </p>
           <div className="flex flex-col items-stretch justify-center gap-3 pt-1 sm:flex-row sm:items-center">
-            <a href={starterSignupHref} className={homeHeroPrimaryBtn}>
-              Start free trial
-            </a>
-            <Link href="/pricing#plans" className={homeHeroSecondaryBtn}>
-              Compare plans
+            <Link href={getGuidedTrialHref("features")} className={homeHeroPrimaryBtn}>
+              Request a guided trial
             </Link>
+            <Link href="/product-tour" className={homeHeroSecondaryBtn}>Explore the product tour</Link>
           </div>
         </div>
       </Container>

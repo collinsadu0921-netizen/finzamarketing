@@ -53,7 +53,7 @@ export function softwareApplicationSchema() {
       "Optional Hubtel Online Checkout on public invoices using the business's own Hubtel merchant account",
       "Recording of cash, bank, and mobile-money payments",
       "Expenses and incoming documents",
-      "Supplier bills on Professional and Business plans",
+      "Supplier bills",
       "Built-in monthly payroll",
       "Ghana PAYE calculations",
       "Employee and employer pension contributions",
@@ -64,20 +64,13 @@ export function softwareApplicationSchema() {
       "Payroll summary, PAYE, GRA DT 107A, SSNIT, and obligations exports",
       "Approved payroll journals and payroll liabilities",
       "Profit and Loss, Balance Sheet, and VAT report",
-      "General ledger, journals, and period locking on the Business plan",
+      "General ledger, journals, and period locking",
       "Ghana tax lines (VAT, NHIL, GETFund, WHT) where applicable",
     ],
     audience: {
       "@type": "BusinessAudience",
       audienceType: "Ghanaian businesses and SMEs",
       geographicArea: { "@type": "Country", name: "Ghana" },
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      lowPrice: "149",
-      highPrice: "949",
-      priceCurrency: "GHS",
-      offerCount: "3",
     },
     publisher: { "@id": `${BASE}/#organization` },
   };
@@ -133,7 +126,7 @@ export const homePageFaqForSchema = [
   {
     questionName: "Does Finza work with Hubtel?",
     acceptedAnswerText:
-      "Yes. A business can connect its own Hubtel API ID, API key, and merchant account so customers pay invoices on Hubtel checkout. Hubtel approval is required. Finza subscription billing is separate from these customer invoice payments.",
+      "Yes. A business can connect its own Hubtel API ID, API key, and merchant account so customers pay invoices on Hubtel checkout. Hubtel approval is required. These payments go to your own Hubtel merchant account, and Finza records the invoice payment after Hubtel confirms it.",
   },
   {
     questionName: "How does Finza handle Ghana tax lines?",
@@ -146,14 +139,14 @@ export const homePageFaqForSchema = [
       "Yes. Finza is built so professional advisers can review organized records, tax summaries, and reports instead of rebuilding from PDFs and scattered sheets.",
   },
   {
-    questionName: "Do I need to pay before trying Finza?",
+    questionName: "How do I start using Finza?",
     acceptedAnswerText:
-      "No. Finza offers a 14-day free trial from pricing, with no card required to start. You choose a paid plan in GHS when you are ready.",
+      "Request a guided trial from the Finza website. Tell us about your business and the Finza team will contact you to understand your needs and arrange a guided trial.",
   },
   {
-    questionName: "Where can I see full features and plans?",
+    questionName: "Where can I see Finza's features?",
     acceptedAnswerText:
-      "See the Features page for capabilities and the Pricing page for plans in GHS (Essentials, Professional, Business).",
+      "See the Features page for capabilities. If you want help evaluating how those capabilities fit your business, request a guided trial and the Finza team will guide you.",
   },
   {
     questionName: "What is Finza Assist?",
@@ -182,7 +175,7 @@ export const accountingSoftwareGhanaFaqForSchema = [
   {
     questionName: "Can small businesses and SMEs in Ghana use Finza?",
     acceptedAnswerText:
-      "Yes. Finza is built for Ghanaian businesses and SMEs that invoice customers, track expenses, and need reports in GHS. Service businesses, contractors, and professional firms can use it too. See pricing for plans in GHS.",
+      "Yes. Finza is built for Ghanaian businesses and SMEs that invoice customers, track expenses, and need reports in GHS. Small and growing businesses across Ghana can use it. Request a guided trial to see how Finza fits your business.",
   },
 ];
 
@@ -230,7 +223,7 @@ export const quotationSoftwareGhanaFaqForSchema = [
   {
     questionName: "Who is quotation software for in Ghana?",
     acceptedAnswerText:
-      "Ghanaian businesses that price work before they bill—including agencies, consultants, contractors, professional firms, and other SMEs that send quotes or proformas.",
+      "Ghanaian businesses that price work before they bill, including small and growing businesses and owner-led teams that send quotes or proformas.",
   },
 ];
 
@@ -265,7 +258,7 @@ export const accountingSoftwareAccraFaqForSchema = [
   {
     questionName: "Is Finza suitable for businesses in Accra?",
     acceptedAnswerText:
-      "Yes. Finza is built for Ghana businesses operating from Accra and anywhere else in the country—cloud software with plans in GHS. It fits growing companies and professional service firms that invoice often, record expenses, and need reports and tax summaries without spreadsheet chaos.",
+      "Yes. Finza is built for Ghana businesses operating from Accra and anywhere else in the country - cloud software built around Ghana cedi workflows. It fits growing companies and finance teams that invoice often, record expenses, and need reports and tax summaries without spreadsheet chaos.",
   },
   {
     questionName: "Can Finza handle accounting in Ghana cedis?",
@@ -299,7 +292,7 @@ export const invoicingSoftwareKumasiFaqForSchema = [
   {
     questionName: "Is Finza suitable for businesses in Kumasi?",
     acceptedAnswerText:
-      "Yes. Businesses in Kumasi use the same Ghana product: invoices in GHS, payment tracking, and quotes that can become invoices without retyping. Service companies and contractors are included.",
+      "Yes. Businesses in Kumasi use the same Ghana product: invoices in GHS, payment tracking, and quotes that can become invoices without retyping.",
   },
   {
     questionName: "Can quotes and invoices work together?",
@@ -328,7 +321,7 @@ export const payrollSoftwareTemaFaqForSchema = [
   {
     questionName: "Does payroll connect to accounting records?",
     acceptedAnswerText:
-      "After approval, payroll records are official in Finza and approved payroll can post into accounting so staff costs align with your books—subject to your plan and configuration.",
+      "After approval, payroll records are official in Finza and approved payroll can post into accounting so staff costs align with your books.",
   },
 ];
 
@@ -337,7 +330,7 @@ export const accountingSoftwareGhanaPaaFaqForSchema = [
   {
     questionName: "What is the best accounting software in Ghana?",
     acceptedAnswerText:
-      "The best fit depends on your business: invoicing frequency, whether you need clear VAT/NHIL/GETFund lines, and how you work with professional advisers. Compare options in our buyer guide, then trial software that keeps quotes, invoices, and reports in one place in GHS.",
+      "The best fit depends on your business: invoicing frequency, whether you need clear VAT/NHIL/GETFund lines, and how you work with professional advisers. Compare options in our buyer guide, then evaluate software that keeps quotes, invoices, and reports in one place in GHS.",
   },
   {
     questionName: "Do I need accounting software for a small business?",
@@ -360,7 +353,7 @@ export const invoicingSoftwareGhanaPaaFaqForSchema = [
   {
     questionName: "What is the best invoicing software in Ghana?",
     acceptedAnswerText:
-      "Look for GHS-first invoices, clear unpaid balances, optional quotation-to-invoice flow, and tax lines where applicable. The best tool is the one your team actually uses—start with a 14-day free trial and real customer data.",
+      "Look for GHS-first invoices, clear unpaid balances, optional quotation-to-invoice flow, and tax lines where applicable. The best tool is the one your team actually uses—request a guided trial and evaluate it with real customer data when you are ready.",
   },
   {
     questionName: "Can small businesses send invoices online in Ghana?",
@@ -402,37 +395,32 @@ export const bookkeepingSoftwareGhanaPaaFaqForSchema = [
   },
 ];
 
-/** Must match pricing page FAQ accordion exactly (visible text only). */
-export const pricingPageFaqForSchema = [
+/** Must match the /request-trial FAQ accordion exactly (visible text only). */
+export const guidedTrialFaqForSchema = [
   {
-    questionName: "Is there a free trial?",
+    questionName: "What happens after I request a guided trial?",
     acceptedAnswerText:
-      "Yes. Finza offers a 14-day free trial. No card is required to start.",
+      "The Finza team will contact you using the details you provide, understand your business needs, and take you through Finza.",
   },
   {
-    questionName: "Can I change plans later?",
+    questionName: "Do I need to provide payment details?",
     acceptedAnswerText:
-      "Yes. You can change plans as your business needs change. Plan changes take effect from the next billing period unless otherwise shown during checkout. Finza does not apply prorated adjustments or credits for unused time.",
+      "No. The request form asks for business and contact details only.",
   },
   {
-    questionName: "Can I cancel?",
+    questionName: "What can we cover in the guided trial?",
     acceptedAnswerText:
-      "Yes. You can cancel before your next billing date to avoid renewal. If you cancel, access continues until the end of the paid billing period.",
+      "Tell us what matters to your business. The conversation can cover invoicing, quotes, payments, expenses, supplier bills, payroll, reports, Ghana tax lines where applicable, and how you work with your accountant.",
   },
   {
-    questionName: "Do the prices include payment processing fees?",
+    questionName: "Can I still request a guided trial if I am not sure what I need?",
     acceptedAnswerText:
-      "The plan price covers your Finza subscription. Any payment processing fees, provider charges, or taxes that apply are shown separately where relevant.",
+      "Yes. Describe your business and your current process in the form. The Finza team will help you identify the capabilities worth evaluating.",
   },
   {
-    questionName: "Which plan should I start with?",
+    questionName: "Can I explore the product before requesting a guided trial?",
     acceptedAnswerText:
-      "Start with Essentials if you mainly need customers and customer statements, quotes and proforma invoices, invoices (including recurring invoices) and credit notes, receipts and record payments, expenses and incoming documents (upload, OCR, review, and convert to expenses), plus your VAT report, Profit and Loss, Balance Sheet, Finza Assist, and Ghana tax lines where applicable. Choose Professional if you need supplier bills and convert supported supplier documents into supplier bills, plus materials and billable material lines, jobs and projects, built-in monthly payroll and salary advances, VAT filings, WHT, fixed assets, Cash Flow report, Changes in Equity, team permissions, and the accounting audit log. Choose Business if you need general ledger controls, journals, accounting periods, period locking, CIT, the system audit log, and advanced accounting controls—including Professional payroll.",
-  },
-  {
-    questionName: "Can my accountant work from Finza?",
-    acceptedAnswerText:
-      "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant should still confirm tax treatment for your business.",
+      "Yes. Use the product tour to explore Finza at your own pace, then request a guided trial when you want the Finza team to take you through it.",
   },
 ];
 

@@ -28,10 +28,10 @@ function money(value: number) {
 }
 
 export function InvoiceCalculatorGhana() {
-  const [businessName, setBusinessName] = useState("Your Service Business");
+  const [businessName, setBusinessName] = useState("Your Business");
   const [customerName, setCustomerName] = useState("Customer Name");
   const [lineItems, setLineItems] = useState<LineItem[]>([
-    { id: 1, description: "Service line", quantity: "1", unitPrice: "1000" },
+    { id: 1, description: "Line item", quantity: "1", unitPrice: "1000" },
   ]);
   const [discount, setDiscount] = useState("0");
   const [taxMode, setTaxMode] = useState<TaxMode>("vat_bundle");
@@ -105,7 +105,7 @@ export function InvoiceCalculatorGhana() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="text-sm text-zinc-700">
-            Business/service name
+            Business name
             <input
               value={businessName}
               onChange={(e) => setBusinessName(e.target.value)}
@@ -257,7 +257,7 @@ export function InvoiceCalculatorGhana() {
                   const total = qty * unit;
                   return (
                     <div key={item.id} className="grid grid-cols-12 text-xs text-zinc-700">
-                      <span className="col-span-6 truncate">{item.description || "Service line"}</span>
+                      <span className="col-span-6 truncate">{item.description || "Line item"}</span>
                       <span className="col-span-2 text-right">{qty}</span>
                       <span className="col-span-2 text-right">{money(unit)}</span>
                       <span className="col-span-2 text-right font-semibold">{money(total)}</span>

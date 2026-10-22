@@ -29,10 +29,10 @@ export default function NotFound() {
                             Back to Home
                         </Link>
                         <Link
-                            href="/pricing#find-plan"
+                            href="/request-trial?from=landing_page"
                             className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors w-full sm:w-auto text-center"
                         >
-                            Find my plan
+                            Request a guided trial
                         </Link>
                     </div>
                 </div>

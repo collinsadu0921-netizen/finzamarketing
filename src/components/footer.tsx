@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import { Container } from "@/components/container";
 import { getSocialLinks } from "@/lib/site-settings-public";
+import { getGuidedTrialHref } from "@/lib/trial-request";
 
 function TikTokGlyph({ className }: { className?: string }) {
   return (
@@ -44,8 +45,16 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing#plans" className="transition-colors hover:text-zinc-900">
-                  Pricing
+                <Link
+                  href={getGuidedTrialHref("footer")}
+                  className="transition-colors hover:text-zinc-900"
+                >
+                  Request a guided trial
+                </Link>
+              </li>
+              <li>
+                <Link href="/product-tour" className="transition-colors hover:text-zinc-900">
+                  Explore the product tour
                 </Link>
               </li>
               <li>

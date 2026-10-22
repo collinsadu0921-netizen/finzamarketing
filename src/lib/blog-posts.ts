@@ -440,8 +440,8 @@ Catching up once a quarter trains nobody to trust the numbers. A **weekly habit*
 Read [bookkeeping tips](/blog/bookkeeping-tips-small-businesses-ghana), the [checklist](/blog/bookkeeping-checklist-ghana), and [spreadsheet migration](/blog/spreadsheets-to-ledger-migration). Start from [bookkeeping software Ghana](/bookkeeping-software-ghana) when receipts and weekly records need structure.`,
   },
   {
-    slug: "invoice-errors-service-businesses-ghana",
-    title: "Invoice errors Ghanaian businesses make, including service businesses",
+    slug: "invoice-errors-businesses-ghana",
+    title: "Invoice errors Ghanaian businesses commonly make",
     excerpt:
       "Wrong tax lines, vague descriptions, and no follow-up on unpaid GHS—fix the billing mistakes that hurt cash flow and accountant trust.",
     publishedAt: "2026-04-22",
@@ -493,7 +493,7 @@ What that requires:
 
 The customer pays on Hubtel, using the methods Hubtel offers that account. Those methods can include Mobile Money. Finza does not choose every network, and it does not hold the money. Finza records the invoice payment only after Hubtel confirms the transaction.
 
-Finza subscription billing is separate. Connecting Hubtel here is for customer invoices, not for paying Finza.
+Connecting Hubtel here is for customer invoices only; it is not used to pay for Finza.
 
 ## Checkout and a written Mobile Money number are different
 

@@ -73,10 +73,6 @@
     linear-gradient(180deg, rgb(236 253 245 / 0.5) 0%, rgb(248 250 252 / 0.95) 100%);
 }
 
-.home-pricing-glow {
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgb(14 165 233 / 0.08), transparent 65%);
-}
-
 .site-hero-glow {
   background:
     radial-gradient(ellipse 70% 50% at 50% -20%, rgb(14 165 233 / 0.08), transparent 58%),

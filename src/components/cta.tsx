@@ -15,13 +15,11 @@ export function CTA() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                     <Button size="lg" variant="secondary" className="h-16 px-12 text-lg font-bold shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto text-primary bg-white hover:bg-white/90" asChild>
-                        <Link href="/contact">
-                            Book a walkthrough
-                        </Link>
+                        <Link href="/request-trial?from=landing_page">Request a guided trial</Link>
                     </Button>
                     <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-semibold border-2 border-white/40 text-white hover:bg-white/10 w-full sm:w-auto" asChild>
-                        <Link href="/pricing#find-plan">
-                            Find my plan
+                        <Link href="/product-tour">
+                            Explore the product tour
                         </Link>
                     </Button>
                     </div>

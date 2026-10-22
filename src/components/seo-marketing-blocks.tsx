@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/container";
+import { getGuidedTrialHref } from "@/lib/trial-request";
 
 const whyPoints = [
   "Built for Ghana, not adapted later",
@@ -14,10 +15,9 @@ const whoItems = [
   { title: "Freelancers", desc: "Simple invoicing, payment tracking, and tax-ready lines without a finance department." },
   { title: "Small teams", desc: "Shared visibility on quotes, bills, and who has paid, designed for real workflows in Ghana." },
   { title: "Growing businesses", desc: "More customers and repeat work without losing control of receivables in GHS." },
-  { title: "Cleaning businesses", desc: "Recurring jobs, quotes, and steady invoicing in GHS." },
-  { title: "Consultants & agencies", desc: "Proposals, milestones, and collections without a second spreadsheet." },
+  { title: "Retail & distribution", desc: "Sales, supplier bills, and customer balances in one place." },
   { title: "Logistics & transport", desc: "Runs, fees, and customer balances in one place." },
-  { title: "Clinics & service providers", desc: "Professional billing and records your professional advisers can review." },
+  { title: "Clinics & care providers", desc: "Professional billing and records your professional advisers can review." },
 ];
 
 const dayToDayPoints = [
@@ -37,7 +37,7 @@ const trustPoints = [
 /** Mid-scroll CTA - pair with hero + footer CTAs for conversion coverage. */
 export function MidPageCtaBand({
   title,
-  subtitle = "14-day free trial. No card required to start.",
+  subtitle = "Tell us about your business and the Finza team will guide you.",
   className = "bg-zinc-100 py-12",
 }: {
   title: string;
@@ -53,17 +53,13 @@ export function MidPageCtaBand({
             <p className="mt-2 text-xl font-extrabold tracking-tight text-white sm:text-2xl">{title}</p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-shrink-0 sm:flex-row">
-            <Link href="/contact"
+            <Link href="/request-trial?from=landing_page"
               className="rounded-md bg-white px-6 py-3 text-center text-sm font-bold text-zinc-900 shadow-sm hover:bg-zinc-100"
-            >
-              Book a walkthrough
-            </Link>
+            >Request a guided trial</Link>
             <Link
-              href="/pricing#find-plan"
+              href="/product-tour"
               className="rounded-md border border-zinc-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/10"
-            >
-              Find my plan
-            </Link>
+            >Explore the product tour</Link>
           </div>
         </div>
       </Container>
@@ -126,9 +122,9 @@ export function WhyBusinessesChooseFinza({ className = "bg-zinc-50" }: { classNa
             <Link href="/features" className="font-semibold text-zinc-900 underline underline-offset-2">
               features
             </Link>
-            , compare{" "}
-            <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-              pricing in GHS
+            ,{" "}
+            <Link href={getGuidedTrialHref("landing_page")} className="font-semibold text-zinc-900 underline underline-offset-2">
+              request a guided trial
             </Link>
             , or read{" "}
             <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
@@ -169,9 +165,9 @@ export function WhoUsesFinza({ className = "bg-white" }: { className?: string })
             <Link href="/best-accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
               how Finza compares
             </Link>
-            ? Start there, then view{" "}
-            <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-              plans
+            ? Start there, then{" "}
+            <Link href={getGuidedTrialHref("landing_page")} className="font-semibold text-zinc-900 underline underline-offset-2">
+              request a guided trial
             </Link>
             .
           </p>
@@ -215,8 +211,8 @@ export function HowFinzaHelpsDayToDay({
                 invoicing software in Ghana
               </Link>
               , and{" "}
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                pricing in GHS
+              <Link href={getGuidedTrialHref("landing_page")} className="font-semibold text-zinc-900 underline underline-offset-2">
+                request a guided trial
               </Link>
               . Looking for{" "}
               <Link href="/bookkeeping-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
@@ -321,8 +317,8 @@ export function InvoicingSerpClusterStrip({ className = "bg-white" }: { classNam
             </Link>
           </li>
           <li>
-            <Link href="/blog/invoice-errors-service-businesses-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
-              Blog: invoice errors (services)
+            <Link href="/blog/invoice-errors-businesses-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
+              Blog: invoice errors to avoid
             </Link>
           </li>
           <li>

@@ -44,7 +44,7 @@ export default function AccountingSoftwareAccraPage() {
               Accounting software in Accra for growing businesses
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-zinc-600">
-              Accra pulls in fast-moving service companies - agencies, consultancies, clinics, law and professional firms where clients expect clear invoices and leadership expects numbers that survive a board or lender conversation. Finza is{" "}
+              Accra is home to businesses of every size, from owner-led teams to established companies, where clients expect clear invoices and leadership expects numbers that survive a board or lender conversation. Finza is{" "}
               <strong className="text-zinc-900">cloud accounting software</strong> in{" "}
               <strong className="text-zinc-900">Ghana cedis (GHS)</strong> for teams based in Accra or working across the country: one place for billing, spending, and reports instead of five half-updated files before month-end.
             </p>
@@ -52,17 +52,10 @@ export default function AccountingSoftwareAccraPage() {
               You do not need a separate &quot;Accra edition&quot; - the same Finza workspace supports businesses operating from the capital and elsewhere. This page is for how those teams tend to work: more clients, more recurring work, and more pressure to hand a clean file to an accountant.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                See how it works
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -72,11 +65,9 @@ export default function AccountingSoftwareAccraPage() {
         <Container>
           <div className="mx-auto max-w-3xl space-y-6">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Who we often see in Accra</p>
-            <h2 className="text-2xl font-bold text-zinc-900">Professional firms and growing companies</h2>
+            <h2 className="text-2xl font-bold text-zinc-900">Growing companies and finance teams</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Categories we hear about often include <strong className="text-zinc-900">creative and marketing agencies</strong>,{" "}
-              <strong className="text-zinc-900">management and IT consultancies</strong>, <strong className="text-zinc-900">clinics and outpatient practices</strong>,{" "}
-              <strong className="text-zinc-900">training providers</strong>, and <strong className="text-zinc-900">B2B suppliers</strong> billing corporate clients on net terms. The pattern is the same: many invoices, follow-ups, and a finance contact or accountant who needs structure, not screenshots.
+              Accra businesses cross many sectors, from owner-led teams to established companies, and many bill corporate clients on net terms. The pattern is common: many invoices, follow-ups, and a finance contact or accountant who needs structure, not screenshots.
             </p>
           </div>
         </Container>
@@ -142,11 +133,11 @@ export default function AccountingSoftwareAccraPage() {
           <div className="mx-auto max-w-3xl space-y-4 text-center sm:text-left">
             <h2 className="text-xl font-bold text-zinc-900">Built for Ghana, used from major cities</h2>
             <p className="text-sm leading-relaxed text-zinc-600">
-              Finza is designed for real Ghana workflows-GHS, local tax line presentation where applicable, and operators who work with accountants. Whether your team sits in Accra, Kumasi, or several towns, you run the same product on published{" "}
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                pricing in GHS
-              </Link>
-              .
+              Finza is designed for real Ghana workflows-GHS, local tax line presentation where applicable, and operators who work with accountants. Whether your team sits in Accra, Kumasi, or several towns, you run the same product.{" "}
+              <Link href="/request-trial?from=landing_page" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Request a guided trial
+              </Link>{" "}
+              to see how it fits your team.
             </p>
           </div>
         </Container>
@@ -160,7 +151,7 @@ export default function AccountingSoftwareAccraPage() {
               <AccordionItem value="accra">
                 <AccordionTrigger>Is Finza suitable for businesses in Accra?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza is built for Ghana businesses operating from Accra and anywhere else in the country - cloud software with plans in GHS. It fits growing companies and professional service firms that invoice often, record expenses, and need reports and tax summaries without spreadsheet chaos.
+                  Yes. Finza is built for Ghana businesses operating from Accra and anywhere else in the country - cloud software built around Ghana cedi workflows. It fits growing companies and finance teams that invoice often, record expenses, and need reports and tax summaries without spreadsheet chaos.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="ghs">
@@ -191,14 +182,10 @@ export default function AccountingSoftwareAccraPage() {
           <div className="mx-auto max-w-xl space-y-4">
             <h2 className="text-2xl font-extrabold text-white">Cleaner books for Accra operators</h2>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">Explore the product tour</Link>
             </div>
           </div>
         </Container>

@@ -21,7 +21,7 @@ export type FinzaProductAssetId = (typeof FINZA_PRODUCT_ASSET_IDS)[number];
 
 export type FinzaProductAssetUsage =
   | "homepage"
-  | "pricing"
+  | "guided-trial"
   | "invoicing"
   | "invoice-tracking"
   | "bookkeeping"
@@ -29,7 +29,7 @@ export type FinzaProductAssetUsage =
   | "vat-tax"
   | "security"
   | "about"
-  | "demo";
+  | "product-tour";
 
 export type FinzaProductAsset = {
   id: FinzaProductAssetId;
@@ -60,7 +60,7 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
       "A central workspace for daily records, customer activity, and business visibility.",
     width: 2400,
     height: 1350,
-    intendedUsage: ["homepage", "pricing", "demo"],
+    intendedUsage: ["homepage", "guided-trial", "product-tour"],
   },
   "invoice-create": {
     id: "invoice-create",
@@ -86,7 +86,7 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
     caption: "A cleaner invoice format for customers, payment follow-up, and record keeping.",
     width: 2400,
     height: 1350,
-    intendedUsage: ["invoicing", "pricing", "vat-tax"],
+    intendedUsage: ["invoicing", "guided-trial", "vat-tax"],
   },
   "receipt-payment": {
     id: "receipt-payment",
@@ -135,7 +135,7 @@ const ASSETS: Record<FinzaProductAssetId, FinzaProductAsset> = {
     title: "Built-in monthly payroll",
     description:
       "Run monthly payroll with Ghana PAYE, pension breakdowns, salary advances, payslips, and salary-payment recording.",
-    caption: "Demo payroll run with PAYE, pensions, net salary, and payment tracking.",
+    caption: "Sample payroll run with PAYE, pensions, net salary, and payment tracking.",
     width: 2400,
     height: 1350,
     intendedUsage: ["payroll"],

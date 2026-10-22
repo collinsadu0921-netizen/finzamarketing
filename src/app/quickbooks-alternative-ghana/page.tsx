@@ -30,7 +30,7 @@ const quickBooksAlternativeFaqForSchema = [
   {
     questionName: "Can Ghanaian businesses use Finza?",
     acceptedAnswerText:
-      "Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.",
+      "Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review.",
   },
   {
     questionName: "Can my accountant work from Finza?",
@@ -43,8 +43,8 @@ const quickBooksAlternativeFaqForSchema = [
       "Finza supports Ghana tax-line presentation where applicable, so invoice and record review can be clearer.",
   },
   {
-    questionName: "Can I try Finza before paying?",
-    acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+    questionName: "How can I evaluate Finza?",
+    acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
   },
 ];
 
@@ -58,11 +58,11 @@ const comparisonRows = [
   {
     questionName: "Can records be reviewed in GHS?",
     matters: "Local currency clarity makes owner review and accountant handover easier.",
-    finza: "Finza is priced and positioned around Ghana cedi workflows.",
+    finza: "Finza is built around Ghana cedi workflows.",
   },
   {
     questionName: "Can client documents move into invoices easily?",
-    matters: "Service businesses often quote first, then bill after approval.",
+    matters: "Businesses often quote first, then bill after approval.",
     finza: "Finza supports quotes, proformas, invoices, receipts, and sharing links in one workspace.",
   },
   {
@@ -100,19 +100,15 @@ export default function QuickbooksAlternativeGhanaPage() {
               If QuickBooks feels broader than your Ghana SME needs, compare how quickly your team can create GHS invoices, track payments, review customer balances, and hand cleaner records to your accountant.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
-                href="/pricing#find-plan"
+                href="/product-tour"
                 className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
-              >
-                Find my plan
-              </Link>
+              >Explore the product tour</Link>
             </div>
-            <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
+            <p className="text-sm text-zinc-500">Guided trial with the Finza team. No payment details needed.</p>
           </div>
         </Container>
       </section>
@@ -220,7 +216,7 @@ export default function QuickbooksAlternativeGhanaPage() {
               Ghana SMEs often need practical invoice links, bank or Mobile Money payment instructions, customer follow-up, and GHS balances. Finza keeps that local operating layer visible before month-end review.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
-              <li>Pricing shown in Ghana cedis</li>
+              <li>Amounts and reports in Ghana cedis</li>
               <li>Invoices and records prepared around GHS workflows</li>
               <li>Payment instructions customers can follow</li>
               <li>Tax-line presentation for Ghana business documents</li>
@@ -312,12 +308,12 @@ export default function QuickbooksAlternativeGhanaPage() {
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
-                "Cleaning and facility service businesses",
-                "Contractors and maintenance teams",
-                "Agencies and consultants",
-                "Professional service firms",
-                "SMEs moving away from spreadsheet-only records",
-                "Businesses preparing cleaner records for professional review",
+                "Ghanaian businesses",
+                "Small and growing businesses",
+                "Business owners and finance teams",
+                "Businesses moving away from spreadsheet-only records",
+                "Businesses preparing records for accountant review",
+                "Businesses working with accountants or professional advisers",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -325,10 +321,8 @@ export default function QuickbooksAlternativeGhanaPage() {
               ))}
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Need a walkthrough before you decide? Book{" "}
-              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
-                how it works
-              </Link>
+              Want to explore Finza before you decide?{" "}
+              <Link href="/product-tour" className="font-semibold text-zinc-900 underline underline-offset-2">Explore the product tour</Link>
               {" "}or{" "}
               <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
                 contact Finza
@@ -367,7 +361,7 @@ export default function QuickbooksAlternativeGhanaPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Can Ghanaian businesses use Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.
+                  Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
@@ -383,9 +377,9 @@ export default function QuickbooksAlternativeGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -400,20 +394,15 @@ export default function QuickbooksAlternativeGhanaPage() {
               Compare Finza with your current workflow
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use the free trial to see whether Finza&apos;s GHS invoicing, payment tracking, and owner visibility fit your Ghanaian SME better than spreadsheet-only records or a broader system you do not need yet.
+              Use the guided trial to see whether Finza&apos;s GHS invoicing, payment tracking, and owner visibility fit your Ghanaian SME better than spreadsheet-only records or a broader system you do not need yet.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="w-full rounded-md bg-white px-8 py-3.5 text-center text-base font-bold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-100 sm:w-auto"
-              >
-                Book a walkthrough
-              </Link>
-              <Link
-                href="/demo"
+              >Request a guided trial</Link>
+              <Link href="/product-tour"
                 className="w-full rounded-md border border-zinc-500 px-8 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
-              >
-                See how it works
-              </Link>
+              >Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -424,7 +413,7 @@ export default function QuickbooksAlternativeGhanaPage() {
         related={[
           { href: "/sage-accounting-alternative-ghana", label: "Sage alternative Ghana", desc: "Neutral comparison lens" },
           { href: "/accounting-software-ghana", label: "Accounting Ghana", desc: "Finza overview in GHS" },
-          { href: "/pricing#plans", label: "Pricing", desc: "Compare public GHS plans" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
         ]}
       />
       <Footer />

@@ -1,29 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { trackFinzaEvent } from "@/lib/analytics";
-import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+import { getGuidedTrialHref } from "@/lib/trial-request";
 
-const HIDDEN_PREFIXES = ["/admin"];
+const HIDDEN_PREFIXES = ["/admin", "/request-trial"];
 const SCROLL_SHOW_THRESHOLD = 380;
 const BOTTOM_HIDE_OFFSET = 300;
-const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
-/** Mobile-focused sticky trial bar after scroll (excludes admin). */
-export function StickySignupCta() {
+/** Mobile-focused sticky guided-trial bar after scroll (excludes admin and the form page). */
+export function StickyTrialCta() {
   const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
   const [nearBottom, setNearBottom] = useState(false);
   const [contactFormInView, setContactFormInView] = useState(false);
   const hidden = !pathname || HIDDEN_PREFIXES.some((p) => pathname.startsWith(p));
   const onContactPage = pathname === "/contact";
-  const onPricingPage = pathname === "/pricing";
   const show =
-    !hidden &&
-    scrollY > SCROLL_SHOW_THRESHOLD &&
-    !nearBottom &&
-    !(onContactPage && contactFormInView);
+    !hidden && scrollY > SCROLL_SHOW_THRESHOLD && !nearBottom && !(onContactPage && contactFormInView);
 
   useEffect(() => {
     if (hidden) return;
@@ -64,31 +59,23 @@ export function StickySignupCta() {
     return null;
   }
 
-  const primaryHref = onPricingPage ? "/pricing#plans" : starterSignupHref;
-  const primaryLabel = onPricingPage ? "Compare plans" : "Start free trial";
-
   return (
     <div
       className="fixed bottom-0 left-0 right-0 z-50 border-t border-zinc-200/90 bg-white/95 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-3 shadow-[0_-8px_32px_rgba(15,23,42,0.12)] backdrop-blur-lg md:hidden"
       role="region"
-      aria-label="Get started"
+      aria-label="Request a guided trial"
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4">
         <p className="min-w-0 text-sm text-zinc-600">
-          <span className="font-bold text-zinc-900">Start free trial</span>
-          <span className="text-zinc-500"> · 14 days · No card</span>
+          <span className="font-bold text-zinc-900">Want to see Finza?</span>
+          <span className="text-zinc-500"> · We will guide you</span>
         </p>
-        <a
-          href={primaryHref}
+        <Link
+          href={getGuidedTrialHref("sticky_mobile")}
           className="shrink-0 rounded-lg bg-[#0F172A] px-4 py-2.5 text-center text-sm font-bold text-white shadow-md shadow-slate-900/15 transition-colors duration-200 hover:bg-[#1e293b]"
-          onClick={() =>
-            trackFinzaEvent("sticky_cta_trial_click", {
-              cta_label: onPricingPage ? "compare_plans" : "start_free_trial",
-            })
-          }
         >
-          {primaryLabel}
-        </a>
+          Request a guided trial
+        </Link>
       </div>
     </div>
   );

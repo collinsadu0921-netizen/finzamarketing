@@ -4,9 +4,7 @@ import { MarketingReveal } from "@/components/motion/marketing-reveal";
 import { HeroDashboard } from "@/components/home/hero-dashboard";
 import { HeroDashboardShell } from "@/components/home/hero-dashboard-shell";
 import { homePrimaryBtn, homeSecondaryBtn } from "@/components/home/home-ui";
-import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
-
-const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
+import { getGuidedTrialHref } from "@/lib/trial-request";
 
 export function HomeHero() {
   return (
@@ -39,15 +37,13 @@ export function HomeHero() {
                 in one place.
               </p>
               <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
-                <a href={starterSignupHref} className={homePrimaryBtn}>
-                  Start free trial
-                </a>
-                <Link href="/pricing" className={homeSecondaryBtn}>
-                  View pricing
+                <Link href={getGuidedTrialHref("homepage")} className={homePrimaryBtn}>
+                  Request a guided trial
                 </Link>
+                <Link href="/product-tour" className={homeSecondaryBtn}>Explore the product tour</Link>
               </div>
               <p className="text-sm text-zinc-500">
-                14-day free trial · No card required · Plans in Ghana cedis
+                Guided trials with the Finza team · Ghana cedis · Ghana tax lines where applicable
               </p>
             </div>
           </MarketingReveal>

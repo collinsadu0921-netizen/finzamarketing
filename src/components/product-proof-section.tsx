@@ -51,7 +51,7 @@ export async function ProductProofSection({
           {showIntro && (
             <div className="mx-auto max-w-2xl space-y-2 text-center">
               {eyebrow && (
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">{eyebrow}</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">{eyebrow}</p>
               )}
               {heading && <h2 className={sectionTitle}>{heading}</h2>}
               {lead && <p className={sectionLead}>{lead}</p>}

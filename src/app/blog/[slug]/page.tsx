@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
@@ -71,6 +71,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.excerpt,
     alternates: {
       canonical: `https://www.finza.africa/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      locale: "en_GH",
+      url: `https://www.finza.africa/blog/${post.slug}`,
+      siteName: "Finza",
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/og-image.png"],
+      creator: "@finzagh",
     },
   };
 }
@@ -233,12 +258,10 @@ export default async function BlogPostPage({ params }: Props) {
                     {cluster.core.label}
                   </Link>
                 ) : null}
-                <Link href="/pricing#plans" className="font-semibold text-zinc-900 underline underline-offset-2">
-                  Compare plans
+                <Link href="/request-trial?from=blog" className="font-semibold text-zinc-900 underline underline-offset-2">
+                  Request a guided trial
                 </Link>
-                <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
-                  Product tour
-                </Link>
+                <Link href="/product-tour" className="font-semibold text-zinc-900 underline underline-offset-2">Explore the product tour</Link>
               </p>
             </div>
           )}
@@ -274,7 +297,7 @@ export default async function BlogPostPage({ params }: Props) {
           cluster
             ? { href: cluster.core.href, label: cluster.core.label, desc: "Related Finza product page" }
             : { href: "/accounting-software-ghana", label: "Accounting software Ghana", desc: "GHS records and reports" },
-          { href: "/pricing#plans", label: "Pricing", desc: "Compare plans in GHS" },
+          { href: "/request-trial?from=blog", label: "Request a guided trial", desc: "Tell us about your business" },
         ]}
       />
       <Footer />

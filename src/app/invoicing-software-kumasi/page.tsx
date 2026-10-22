@@ -52,17 +52,10 @@ export default function InvoicingSoftwareKumasiPage() {
               Finza is the same product nationwide - you choose Kumasi on this page because the work patterns here lean hard on quotes, milestones, and follow-up. You are not buying a different SKU; you are choosing wording that matches how you sell.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                See how it works
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -72,10 +65,9 @@ export default function InvoicingSoftwareKumasiPage() {
         <Container>
           <div className="mx-auto max-w-3xl space-y-6">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Local reality</p>
-            <h2 className="text-2xl font-bold text-zinc-900">Service work, retainers, and suppliers you invoice monthly</h2>
+            <h2 className="text-2xl font-bold text-zinc-900">Client work, retainers, and suppliers you invoice monthly</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Teams in and around Kumasi often mix <strong className="text-zinc-900">contractors</strong>, <strong className="text-zinc-900">cleaning and facilities crews</strong>,{" "}
-              <strong className="text-zinc-900">small manufacturers</strong> selling B2B, and <strong className="text-zinc-900">professional service providers</strong> who quote first and bill after sign-off. The win is simple: every issued invoice updates the same unpaid list - whether the client pays by bank, MoMo, or cash.
+              Businesses in and around Kumasi often quote first, deliver in stages, and invoice after sign-off, across trades, manufacturing, distribution, and other sectors. The win is simple: every issued invoice updates the same unpaid list - whether the client pays by bank, MoMo, or cash.
             </p>
           </div>
         </Container>
@@ -133,11 +125,11 @@ export default function InvoicingSoftwareKumasiPage() {
           <div className="mx-auto max-w-3xl space-y-4 text-center sm:text-left">
             <h2 className="text-xl font-bold text-zinc-900">Practical control, Ghana-wide product</h2>
             <p className="text-sm leading-relaxed text-zinc-600">
-              Finza is built for Ghana businesses in major cities and smaller towns alike. Plans and trials are in{" "}
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                Ghana cedis on Pricing
-              </Link>
-              . Same software whether your team is based in Adum or you work regionally.
+              Finza is built for Ghana businesses in major cities and smaller towns alike.{" "}
+              <Link href="/request-trial?from=landing_page" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Request a guided trial
+              </Link>{" "}
+              to see how it fits your business. Same software whether your team is based in Adum or you work regionally.
             </p>
           </div>
         </Container>
@@ -163,7 +155,7 @@ export default function InvoicingSoftwareKumasiPage() {
               <AccordionItem value="kumasi">
                 <AccordionTrigger>Is Finza suitable for businesses in Kumasi?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Businesses in Kumasi use the same Ghana product: invoices in GHS, payment tracking, and quotes that can become invoices without retyping. Service companies and contractors are included.
+                  Yes. Businesses in Kumasi use the same Ghana product: invoices in GHS, payment tracking, and quotes that can become invoices without retyping.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="quotes">
@@ -182,11 +174,9 @@ export default function InvoicingSoftwareKumasiPage() {
           <div className="mx-auto max-w-xl space-y-4">
             <h2 className="text-2xl font-extrabold text-white">Invoice in GHS. Know who paid.</h2>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link href="/quotation-software-ghana" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
                 Quotations in Ghana
               </Link>

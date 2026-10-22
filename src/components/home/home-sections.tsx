@@ -30,7 +30,7 @@ import {
   sectionLead,
   sectionTitle,
 } from "@/components/home/home-ui";
-import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+import { getGuidedTrialHref } from "@/lib/trial-request";
 import { homePageFaqForSchema } from "@/lib/schema";
 import {
   Accordion,
@@ -38,8 +38,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 const sectionPad = "py-12 md:py-16";
 
@@ -138,7 +136,7 @@ export function HomeJobsMaterialsSection() {
           <div className="min-w-0 space-y-5">
             <div className="space-y-3">
               <span className="inline-flex rounded-full border border-blue-200/90 bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-800">
-                Professional
+                Jobs &amp; projects
               </span>
               <h2 className={sectionTitle}>Manage jobs and materials in one place</h2>
               <p className={sectionLead}>
@@ -187,7 +185,7 @@ export function HomeDocumentsCostsSection() {
             <h2 className={sectionTitle}>Keep documents and costs organized</h2>
             <p className={sectionLead}>
               Capture receipts and supplier documents as work happens, then turn supported documents
-              into organized expense or bill records based on your plan.
+              into organized expense or bill records.
             </p>
             <ul className="space-y-3 text-sm text-zinc-700">
               <li className="flex items-start gap-3">
@@ -196,17 +194,11 @@ export function HomeDocumentsCostsSection() {
               </li>
               <li className="flex items-start gap-3">
                 <Wallet className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" aria-hidden />
-                <span>
-                  <span className="font-semibold text-zinc-900">Essentials:</span> convert supported
-                  documents into expenses
-                </span>
+                <span>Convert supported documents into expenses</span>
               </li>
               <li className="flex items-start gap-3">
                 <FileText className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" aria-hidden />
-                <span>
-                  <span className="font-semibold text-zinc-900">Professional:</span> convert supported
-                  supplier documents into bills
-                </span>
+                <span>Convert supported supplier documents into bills</span>
               </li>
               <li className="flex items-start gap-3">
                 <Receipt className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" aria-hidden />
@@ -229,7 +221,7 @@ export function HomePayrollSection() {
           <div className="min-w-0 space-y-5">
             <div className="space-y-3">
               <span className="inline-flex rounded-full border border-blue-200/90 bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-800">
-                Professional and Business
+                Payroll
               </span>
               <h2 className={sectionTitle}>{PAYROLL_HOME_HEADING}</h2>
               <p className={sectionLead}>{PAYROLL_HOME_DESCRIPTION}</p>
@@ -246,9 +238,7 @@ export function HomePayrollSection() {
               <Link href={PAYROLL_PAGE_PATH} className={homePrimaryBtn}>
                 Explore payroll
               </Link>
-              <p className="text-sm font-medium text-zinc-500">
-                Included in Professional and Business.
-              </p>
+              <p className="text-sm font-medium text-zinc-500">Built into Finza payroll.</p>
             </div>
           </div>
           <div className="relative min-w-0 w-full">
@@ -377,15 +367,13 @@ export function HomeFinalCtaSection() {
             Ready to keep your Ghana business accounts in one place?
           </h2>
           <p className="text-base leading-relaxed text-zinc-300">
-            Start your 14-day free trial and explore Finza with no card required.
+            Tell us about your business and the Finza team will guide you through the product.
           </p>
           <div className="flex flex-col items-stretch justify-center gap-3 pt-1 sm:flex-row sm:items-center">
-            <a href={starterSignupHref} className={homeHeroPrimaryBtn}>
-              Start free trial
-            </a>
-            <Link href="/pricing" className={homeHeroSecondaryBtn}>
-              View pricing
+            <Link href={getGuidedTrialHref("homepage")} className={homeHeroPrimaryBtn}>
+              Request a guided trial
             </Link>
+            <Link href="/product-tour" className={homeHeroSecondaryBtn}>Explore the product tour</Link>
           </div>
         </div>
       </Container>

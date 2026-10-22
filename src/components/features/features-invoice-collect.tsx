@@ -47,10 +47,10 @@ const CAPABILITIES = [
   "Share documents through supported channels",
 ] as const;
 
-function PlanBadge() {
+function WorkflowBadge() {
   return (
     <span className="inline-flex rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-zinc-800">
-      Essentials
+      Invoice workflow
     </span>
   );
 }
@@ -205,7 +205,7 @@ export function FeaturesInvoiceCollectExperience() {
     <div className="mx-auto max-w-6xl">
       <div className="flex flex-col gap-5 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-start lg:gap-x-8 lg:gap-y-4">
         <header className="order-1 space-y-3 lg:col-start-1 lg:row-start-1">
-          <PlanBadge />
+          <WorkflowBadge />
           <h2 className={sectionTitle}>Invoice clearly and stay on top of what customers owe.</h2>
           <p className={sectionLead}>
             Create invoices in GHS, record full or partial payments, issue receipts, and review customer
@@ -230,8 +230,8 @@ export function FeaturesInvoiceCollectExperience() {
         </p>
         <p className="mt-1.5 text-sm leading-relaxed text-zinc-600">
           Hubtel approval and your own API credentials are required. This is for
-          customer invoice payments, not Finza subscription billing. You can also
-          show Mobile Money details on an invoice and record that payment yourself.
+          customer invoice payments only; it is not used to pay for Finza. You can
+          also show Mobile Money details on an invoice and record that payment yourself.
         </p>
       </aside>
     </div>

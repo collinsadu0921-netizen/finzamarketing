@@ -5,7 +5,7 @@ export const PAYROLL_PAGE_PATH = "/payroll-software-ghana";
 export const PAYROLL_H1 = "Payroll software in Ghana for PAYE, SSNIT, and payslips";
 
 export const PAYROLL_OPENING =
-  "Run monthly payroll in Ghana inside Finza: salary calculations, Ghana PAYE, SSNIT/Tier 1 and Tier 2 pension breakdowns, approvals, employee payslips, salary-payment tracking, and accounting records. Available on Professional and Business plans.";
+  "Run monthly payroll in Ghana inside Finza: salary calculations, Ghana PAYE, SSNIT/Tier 1 and Tier 2 pension breakdowns, approvals, employee payslips, salary-payment tracking, and accounting records. Built into Finza.";
 
 export const PAYROLL_HOME_HEADING = "Built-in payroll. Connected to your business.";
 
@@ -73,9 +73,9 @@ export const payrollSoftwareGhanaFaqForSchema = [
       "Yes. Finza includes built-in monthly payroll. You can calculate salaries, review Ghana PAYE and pension contributions, manage salary advances, generate payslips, record salary payments, and post approved payroll journals in the same workspace.",
   },
   {
-    questionName: "Which plans include payroll?",
+    questionName: "Is payroll included in Finza?",
     acceptedAnswerText:
-      "Built-in payroll is included in Professional and Business plans.",
+      "Yes. Built-in monthly payroll is included in Finza.",
   },
   {
     questionName: "Can Finza calculate Ghana PAYE and pension contributions?",

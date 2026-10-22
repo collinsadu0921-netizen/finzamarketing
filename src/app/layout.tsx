@@ -3,10 +3,10 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/navbar";
-import { StickySignupCta } from "@/components/sticky-signup-cta";
+import { StickyTrialCta } from "@/components/sticky-trial-cta";
 import { JsonLd } from "@/components/json-ld";
+import { TrialCtaAnalytics } from "@/components/trial-cta-analytics";
 import { organizationAndWebsiteGraph } from "@/lib/schema";
-import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,20 +82,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased h-full`}>
         <JsonLd data={organizationAndWebsiteGraph} />
-        <div className="w-full border-b border-zinc-200/80 bg-zinc-50 px-4 py-2 text-center text-sm text-zinc-700">
-          <Link
-            href="/pricing"
-            className="inline-flex flex-wrap items-center justify-center gap-x-1.5 font-medium transition-colors hover:text-zinc-900"
-          >
-            <span>Plans from GH₵149/month · Start with a 14-day free trial — no card required.</span>
-            <span className="font-semibold text-[#0F172A] underline underline-offset-2">
-              Compare plans
-            </span>
-          </Link>
-        </div>
         <Navbar />
         {children}
-        <StickySignupCta />
+        <StickyTrialCta />
+        <TrialCtaAnalytics />
         <Analytics />
       </body>
     </html>

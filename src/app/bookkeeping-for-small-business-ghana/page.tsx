@@ -52,8 +52,8 @@ export default function BookkeepingForSmallBusinessGhanaPage() {
                 "Yes. Finza supports incoming documents, uploaded receipts, PDFs, bills, and supporting records for review.",
             },
             {
-              questionName: "Can I try Finza before paying?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How can I evaluate Finza?",
+              acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
           ]),
         ]}
@@ -69,15 +69,13 @@ export default function BookkeepingForSmallBusinessGhanaPage() {
               This guide is about the weekly bookkeeping habit: collect receipts, record expenses, keep supplier bills, match payment notes, and stop leaving records inside WhatsApp or spreadsheets.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Find my plan</Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
             <p className="text-sm text-zinc-500">
-              No card required to start. Built for small businesses that want cleaner bookkeeping records before accountant review.
+              Guided trial with the Finza team. Built for small businesses that want cleaner bookkeeping records before accountant review.
             </p>
           </div>
         </Container>
@@ -175,14 +173,12 @@ export default function BookkeepingForSmallBusinessGhanaPage() {
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2 lg:grid-cols-4">
               {[
-                "Cleaning companies",
-                "Contractors",
-                "Consultants",
-                "Maintenance teams",
-                "Agencies",
-                "Professional service providers",
-                "Field-service businesses",
-                "Growing SMEs",
+                "Ghanaian businesses",
+                "Small and growing businesses",
+                "Business owners and finance teams",
+                "Businesses with supplier bills and receipts",
+                "Businesses preparing records for accountant review",
+                "Businesses working with accountants or professional advisers",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -309,9 +305,9 @@ export default function BookkeepingForSmallBusinessGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -329,17 +325,13 @@ export default function BookkeepingForSmallBusinessGhanaPage() {
               Use Finza to keep receipts, expenses, supplier bills, incoming documents, payroll records, and review notes in one GHS workspace.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="w-full rounded-md bg-white px-8 py-3.5 text-center text-base font-bold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-100 sm:w-auto"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
-                href="/pricing#find-plan"
+                href="/product-tour"
                 className="w-full rounded-md border border-zinc-500 px-8 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
-              >
-                Find my plan
-              </Link>
+              >Explore the product tour</Link>
             </div>
           </div>
         </Container>

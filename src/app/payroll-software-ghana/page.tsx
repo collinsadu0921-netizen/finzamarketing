@@ -13,7 +13,6 @@ import {
   PAYROLL_WORKFLOW_STEPS,
   payrollSoftwareGhanaFaqForSchema,
 } from "@/lib/payroll-content";
-import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
 import {
   homePrimaryBtn,
   homeSecondaryBtn,
@@ -34,8 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
-
 export default function PayrollSoftwareGhanaPage() {
   return (
     <main className="flex min-h-screen flex-col bg-white max-md:pb-28">
@@ -54,22 +51,20 @@ export default function PayrollSoftwareGhanaPage() {
           <div className="mx-auto max-w-6xl grid items-start gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-10">
             <div className="max-w-2xl space-y-6">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">
-                Professional and Business
+                Payroll
               </p>
               <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
                 {PAYROLL_H1}
               </h1>
               <p className="text-lg leading-relaxed text-zinc-600">{PAYROLL_OPENING}</p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <a href={starterSignupHref} className={homePrimaryBtn}>
-                  Start free trial
-                </a>
-                <Link href="/pricing#plans" className={homeSecondaryBtn}>
-                  Compare plans
+                <Link href="/request-trial?from=landing_page" className={homePrimaryBtn}>
+                  Request a guided trial
                 </Link>
+                <Link href="/product-tour" className={homeSecondaryBtn}>Explore the product tour</Link>
               </div>
               <p className="text-sm text-zinc-500">
-                14-day free trial · No card required · Plans in Ghana cedis
+                Guided trial with the Finza team · Ghana cedis
               </p>
             </div>
             <PayrollPreview />
@@ -149,21 +144,21 @@ export default function PayrollSoftwareGhanaPage() {
               Run monthly payroll inside Finza
             </h2>
             <p className="text-base leading-relaxed text-zinc-300">
-              Included in Professional and Business. Start a 14-day free trial or
-              compare plans in Ghana cedis.
+              Included in Finza. Request a guided trial and the Finza team
+              will guide you through payroll.
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 pt-1 sm:flex-row sm:items-center">
-              <a
-                href={starterSignupHref}
+              <Link
+                href="/request-trial?from=landing_page"
                 className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3.5 text-sm font-bold text-zinc-900 shadow-lg hover:bg-zinc-100"
               >
-                Start free trial
-              </a>
+                Request a guided trial
+              </Link>
               <Link
-                href="/pricing#plans"
+                href="/features#payroll-team"
                 className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-8 py-3.5 text-sm font-semibold text-white hover:bg-white/15"
               >
-                Compare plans
+                See payroll features
               </Link>
             </div>
           </div>
@@ -174,7 +169,7 @@ export default function PayrollSoftwareGhanaPage() {
         mode="no-primary"
         related={[
           { href: "/features#payroll-team", label: "Features", desc: "See payroll in the product" },
-          { href: "/pricing#plans", label: "Pricing", desc: "Professional and Business" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Payroll" },
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
         ]}
       />

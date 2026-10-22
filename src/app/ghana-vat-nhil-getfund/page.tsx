@@ -269,14 +269,10 @@ export default function GhanaVatNhilGetfundPage() {
               VAT, NHIL, and GETFund calculated and separated at each transaction with records your accountant can review.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <Link href="/contact" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">
-                Find my plan
-              </Link>
+              <Link href="/request-trial?from=landing_page" className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center">Request a guided trial</Link>
+              <Link href="/product-tour" className="text-base font-semibold text-zinc-400 hover:text-white transition-colors">Explore the product tour</Link>
             </div>
-            <p className="text-xs text-zinc-500 pt-1">14-day free trial. No card required to start.</p>
+            <p className="text-xs text-zinc-500 pt-1">Guided trial with the Finza team. No payment details needed.</p>
           </div>
         </Container>
       </section>

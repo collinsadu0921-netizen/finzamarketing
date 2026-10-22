@@ -71,17 +71,13 @@ export default function SecurityPage() {
               Finza helps Ghanaian businesses manage invoices, payments, documents, payroll, reports, and records for professional review with workspace separation, user permissions, audit logs, period controls, and controlled document-sharing flows.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
-                href="/pricing#find-plan"
+                href="/product-tour"
                 className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center"
-              >
-                Find my plan
-              </Link>
+              >Explore the product tour</Link>
             </div>
             <p className="text-sm text-zinc-500">
               Security is a shared responsibility. Finza provides controls to help organize and protect business records, but every business should also manage users, passwords, devices, and internal processes carefully.
@@ -114,7 +110,7 @@ export default function SecurityPage() {
               Finza supports multi-business and workspace-based access patterns so users only work inside the business contexts they are permitted to access.
             </p>
             <p className="text-base leading-relaxed text-zinc-600">
-              This helps separate service operations, accounting workflows, team access, and business records.
+              This helps separate day-to-day operations, accounting workflows, team access, and business records.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
@@ -124,7 +120,7 @@ export default function SecurityPage() {
                 },
                 {
                   t: "Workspace access",
-                  d: "Service and accounting workspaces can be handled through access-aware routes and layouts.",
+                  d: "Operational and accounting workspaces can be handled through access-aware routes and layouts.",
                 },
                 {
                   t: "User permissions",
@@ -373,11 +369,9 @@ export default function SecurityPage() {
               Use Finza to manage invoices, payments, documents, payroll, reports, access controls, and records for professional review in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
                 href="/contact"
                 className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center"
@@ -392,8 +386,8 @@ export default function SecurityPage() {
       <RelatedClusterLinks
         related={[
           { href: "/features", label: "Features", desc: "Product capabilities" },
-          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
+          { href: "/product-tour", label: "Explore the product tour", desc: "Self-guided product tour" },
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
           { href: "/privacy", label: "Privacy", desc: "Data and rights" },

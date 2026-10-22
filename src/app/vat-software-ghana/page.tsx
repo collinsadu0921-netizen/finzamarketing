@@ -52,8 +52,8 @@ export default function VatSoftwareGhanaPage() {
                 "No. Finza helps organize records and reports for review. Your accountant or tax adviser should confirm and submit the correct tax filings for your business.",
             },
             {
-              questionName: "Can I try Finza before paying?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How can I evaluate Finza?",
+              acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
           ]),
         ]}
@@ -70,14 +70,12 @@ export default function VatSoftwareGhanaPage() {
               Finza helps Ghanaian businesses prepare clearer records with VAT, NHIL, GETFund, WHT, and other applicable Ghana tax lines shown where they belong - on supported documents, payment records, reports, and accountant-ready exports.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">Find my plan</Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 transition-colors text-center">Explore the product tour</Link>
             </div>
-            <p className="text-sm text-zinc-500">No card required to start. Work in GHS with Ghana tax lines where applicable.</p>
+            <p className="text-sm text-zinc-500">Guided trial with the Finza team. Work in GHS with Ghana tax lines where applicable.</p>
           </div>
         </Container>
       </section>
@@ -193,11 +191,11 @@ export default function VatSoftwareGhanaPage() {
             </p>
             <div className="grid gap-2 text-sm text-zinc-700 sm:grid-cols-2 md:grid-cols-3">
               {[
-                "Service businesses issuing tax invoices",
-                "Companies working with VAT, NHIL, or GETFund where applicable",
+                "Ghanaian businesses issuing tax invoices",
+                "Businesses registered for VAT, NHIL, or GETFund where applicable",
                 "Businesses that receive WHT deductions from customers",
-                "Contractors and professional service providers",
-                "Growing SMEs working with an accountant",
+                "Small and growing businesses",
+                "Businesses working with accountants or professional advisers",
                 "Businesses that need clearer document and payment records",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
@@ -264,9 +262,9 @@ export default function VatSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -283,14 +281,10 @@ export default function VatSoftwareGhanaPage() {
               Use Finza to manage invoices, payments, WHT deductions, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="inline-block w-full rounded-md bg-white px-8 py-3 text-center text-base font-bold text-zinc-900 shadow sm:w-auto"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="inline-block w-full text-center text-base font-semibold text-zinc-300 underline-offset-4 hover:text-white sm:w-auto">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -299,8 +293,8 @@ export default function VatSoftwareGhanaPage() {
       <RelatedClusterLinks
         related={[
           { href: "/features", label: "Features", desc: "Product capabilities" },
-          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
+          { href: "/product-tour", label: "Explore the product tour", desc: "Self-guided product tour" },
           { href: "/accounting-software-ghana", label: "Accounting", desc: "Reports and records" },
           { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
           { href: "/invoice-calculator-ghana", label: "Try the invoice calculator", desc: "Preview invoice totals" },

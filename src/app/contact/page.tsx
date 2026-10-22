@@ -22,9 +22,9 @@ import {
 } from "@/components/home/home-ui";
 
 export const metadata: Metadata = {
-  title: "Book a Finza Walkthrough — Contact Sales",
+  title: "Contact Finza - Questions and Support",
   description:
-    "Book a Finza walkthrough for your Ghanaian business. Tell us what your business needs and we will help with setup and pricing in GHS.",
+    "Contact Finza with questions about the product, records, payroll, or partnerships. Request a guided trial to have the Finza team take you through the product.",
   alternates: {
     canonical: "https://www.finza.africa/contact",
   },
@@ -41,13 +41,13 @@ export default function ContactPage() {
           ]),
           faqPageSchema([
             {
-              questionName: "Can I try Finza before contacting you?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How can I evaluate Finza?",
+              acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
             {
-              questionName: "Can I contact Finza before choosing a plan?",
+              questionName: "Can I contact Finza before requesting a guided trial?",
               acceptedAnswerText:
-                "Yes. You can contact Finza if you need help understanding which plan fits your business.",
+                "Yes. Use this page for general questions. Request a guided trial when you want the Finza team to understand your business and take you through Finza.",
             },
             {
               questionName: "Can accountants contact Finza?",
@@ -74,21 +74,19 @@ export default function ContactPage() {
           <div className="relative mx-auto max-w-4xl space-y-4">
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Contact</p>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              Book a Finza walkthrough
+              Contact Finza
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-              Tell us what your business needs. We&apos;ll help you choose the right Finza setup and
-              pricing in GHS.
+              Send a message if you have a question. If you want the Finza team to understand your
+              business and take you through Finza, request a guided trial.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link href="#contact-form" className={homePrimaryBtn}>
-                Request walkthrough
+              <Link href="/request-trial?from=contact" className={homePrimaryBtn}>
+                Request a guided trial
               </Link>
               <p className="text-sm text-zinc-500">
-                Not ready to talk yet?{" "}
-                <Link href="/demo" className="font-medium text-zinc-700 underline underline-offset-2">
-                  Watch the product tour first.
-                </Link>
+                Prefer to explore first?{" "}
+                <Link href="/product-tour" className="font-medium text-zinc-700 underline underline-offset-2">Explore the product tour</Link>
               </p>
             </div>
             <GhanaProofChips chips={CONTACT_PROOF_CHIPS} size="xs" className="max-w-md md:hidden" />
@@ -103,10 +101,9 @@ export default function ContactPage() {
         <Container>
           <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-start lg:gap-10">
             <div className="space-y-3 lg:pt-1">
-              <h2 className={sectionTitle}>Request a walkthrough</h2>
+              <h2 className={sectionTitle}>Send a message</h2>
               <p className={sectionLead}>
-                Fill in your details and we&apos;ll contact you to discuss the best setup for your
-                business.
+                Fill in your details and we&apos;ll respond to your question.
               </p>
               <GhanaProofChips chips={CONTACT_PROOF_CHIPS} size="xs" className="hidden max-w-sm md:flex" />
             </div>
@@ -123,15 +120,15 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold text-zinc-900">Common questions</h2>
             <Accordion type="single" collapsible className="w-full rounded-2xl border border-zinc-200/90 bg-white px-4 shadow-sm sm:px-6">
               <AccordionItem value="q1">
-                <AccordionTrigger>Can I try Finza before contacting you?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q2">
-                <AccordionTrigger>Can I contact Finza before choosing a plan?</AccordionTrigger>
+                <AccordionTrigger>Can I contact Finza before requesting a guided trial?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. You can contact Finza if you need help understanding which plan fits your business.
+                  Yes. Use this page for general questions. Request a guided trial when you want the Finza team to understand your business and take you through Finza.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
@@ -159,8 +156,8 @@ export default function ContactPage() {
 
       <RelatedClusterLinks
         related={[
-          { href: "/demo", label: "Product tour", desc: "See how Finza works" },
-          { href: "/pricing#find-plan", label: "Pricing", desc: "Find your plan" },
+          { href: "/product-tour", label: "Explore the product tour", desc: "Self-guided product tour" },
+          { href: "/request-trial?from=contact", label: "Request a guided trial", desc: "Tell us about your business" },
           { href: "/features", label: "Features", desc: "See Finza features" },
         ]}
       />

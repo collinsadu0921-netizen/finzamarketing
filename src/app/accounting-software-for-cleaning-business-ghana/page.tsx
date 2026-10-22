@@ -10,7 +10,7 @@ import { breadcrumbListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accounting Software for Cleaning Businesses in Ghana",
   description:
-    "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicable, without spreadsheet chaos. Start a 14-day free trial.",
+    "Recurring jobs, quotes, and steady invoicing in GHS. Track what each contract owes and stay ready for VAT lines where applicable, without spreadsheet chaos. Request a guided trial.",
   alternates: {
     canonical: "https://www.finza.africa/accounting-software-for-cleaning-business-ghana",
   },
@@ -42,16 +42,14 @@ export default function AccountingSoftwareCleaningGhanaPage() {
               <strong className="text-zinc-700">Finza</strong> fits teams that bill often and need one place for receivables, expenses, and reports your accountant can review.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white"
-              >
-                Book a walkthrough
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
+                Explore the product tour
               </Link>
               <Link href="/invoicing-software-ghana" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
                 Invoicing in GHS
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900">
-                Pricing
               </Link>
             </div>
           </div>
@@ -80,7 +78,7 @@ export default function AccountingSoftwareCleaningGhanaPage() {
 
       <MidPageCtaBand
         title="Put this month's contracts in one receivables view - then chase with confidence."
-        subtitle="14-day free trial. No card required to start."
+        subtitle="Guided trial with the Finza team. No payment details needed."
       />
 
       <section className="border-b border-zinc-100 py-16">
@@ -121,8 +119,8 @@ export default function AccountingSoftwareCleaningGhanaPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                    Pricing
+                  <Link href="/request-trial?from=landing_page" className="font-semibold text-zinc-900 underline underline-offset-2">
+                    Request a guided trial
                   </Link>
                 </li>
               </ul>

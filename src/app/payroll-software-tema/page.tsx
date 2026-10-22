@@ -45,24 +45,17 @@ export default function PayrollSoftwareTemaPage() {
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-zinc-600">
               Tema&apos;s economy leans on movement and scale - <strong className="text-zinc-900">logistics and haulage</strong>,{" "}
-              <strong className="text-zinc-900">warehousing and distribution</strong>, <strong className="text-zinc-900">industrial maintenance</strong>, and service firms supporting port-side and corridor traffic. More staff and shift-style work mean payroll mistakes show up fast: wrong SSNIT base, PAYE bands applied loosely, or payslips that never leave HR&apos;s inbox. Finza helps{" "}
+              <strong className="text-zinc-900">warehousing and distribution</strong>, <strong className="text-zinc-900">industrial maintenance</strong>, and businesses supporting port-side and corridor traffic. More staff and shift-style work mean payroll mistakes show up fast: wrong SSNIT base, PAYE bands applied loosely, or payslips that never leave HR&apos;s inbox. Finza helps{" "}
               <strong className="text-zinc-900">employers in Tema</strong> run a proper monthly cycle: draft review, approval, then payslips your crew can open on email or WhatsApp.
             </p>
             <p className="max-w-2xl text-sm leading-relaxed text-zinc-500">
               Finza does not claim a physical office in Tema; you use the same secure cloud payroll as teams anywhere in Ghana. This page speaks to how payroll pressure tends to show up when operations are busy and headcount is not trivial.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/demo" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                See how it works
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -76,7 +69,7 @@ export default function PayrollSoftwareTemaPage() {
             <p className="text-base leading-relaxed text-zinc-600">
               Categories that commonly need tighter payroll include <strong className="text-zinc-900">fleet and transport coordinators</strong>,{" "}
               <strong className="text-zinc-900">third-party logistics</strong>, <strong className="text-zinc-900">cold-chain and distribution</strong>,{" "}
-              <strong className="text-zinc-900">security and facilities contractors</strong>, and <strong className="text-zinc-900">manufacturing support services</strong>. The thread is headcount, overtime, and bonuses that cannot be &quot;eyeballed&quot; on a calculator every month.
+              <strong className="text-zinc-900">security and facilities teams</strong>, and <strong className="text-zinc-900">manufacturing operations</strong>. The thread is headcount, overtime, and bonuses that cannot be &quot;eyeballed&quot; on a calculator every month.
             </p>
           </div>
         </Container>
@@ -101,7 +94,7 @@ export default function PayrollSoftwareTemaPage() {
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">The solution</p>
             <h2 className="text-3xl font-bold text-zinc-900">Monthly payroll with Ghana rules, not a generic HR suite</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Finza supports <strong className="text-zinc-900">PAYE</strong> on progressive bands, <strong className="text-zinc-900">SSNIT</strong> employee and employer contributions from basic salary (per your setup), bonus and overtime where inputs require different treatment, and <strong className="text-zinc-900">approval</strong> before payroll is official. After approval, generate payslips and send by email or WhatsApp. Built-in payroll is included in Professional and Business. For the full national payroll story, read{" "}
+              Finza supports <strong className="text-zinc-900">PAYE</strong> on progressive bands, <strong className="text-zinc-900">SSNIT</strong> employee and employer contributions from basic salary (per your setup), bonus and overtime where inputs require different treatment, and <strong className="text-zinc-900">approval</strong> before payroll is official. After approval, generate payslips and send by email or WhatsApp. Built-in payroll is included in Finza. For the full national payroll story, read{" "}
               <Link href="/payroll-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
                 payroll software Ghana
               </Link>
@@ -121,7 +114,7 @@ export default function PayrollSoftwareTemaPage() {
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-zinc-600">
               <li>Keep staff salary, allowances, and deductions current before the month closes.</li>
               <li>Open the monthly payroll run and review draft gross, PAYE, SSNIT, and net pay.</li>
-              <li>Approve payroll so the run becomes the official record, and can update accounting where your plan allows.</li>
+              <li>Approve payroll so the run becomes the official record, and can update accounting.</li>
               <li>Generate payslips and send them so drivers, warehouse staff, and office teams see the same numbers.</li>
             </ol>
           </div>
@@ -133,9 +126,9 @@ export default function PayrollSoftwareTemaPage() {
           <div className="mx-auto max-w-3xl space-y-4 text-center sm:text-left">
             <h2 className="text-xl font-bold text-zinc-900">Built for Ghana payroll workflows</h2>
             <p className="text-sm leading-relaxed text-zinc-600">
-              Whether your team is in Tema, Takoradi, or Tamale, you run Ghana payroll in GHS with the same controls. See{" "}
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                pricing in GHS
+              Whether your team is in Tema, Takoradi, or Tamale, you run Ghana payroll in GHS with the same controls.{" "}
+              <Link href="/request-trial?from=landing_page" className="font-semibold text-zinc-900 underline underline-offset-2">
+                Request a guided trial
               </Link>{" "}
               and tie staff costs back to wider books via{" "}
               <Link href="/accounting-software-ghana" className="font-semibold text-zinc-900 underline underline-offset-2">
@@ -173,7 +166,7 @@ export default function PayrollSoftwareTemaPage() {
               <AccordionItem value="accounting">
                 <AccordionTrigger>Does payroll connect to accounting records?</AccordionTrigger>
                 <AccordionContent>
-                  After approval, payroll records are official in Finza and approved payroll can post into accounting so staff costs align with your books - subject to your plan and configuration.
+                  After approval, payroll records are official in Finza and approved payroll can post into accounting so staff costs align with your books.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -186,11 +179,9 @@ export default function PayrollSoftwareTemaPage() {
           <div className="mx-auto max-w-xl space-y-4">
             <h2 className="text-2xl font-extrabold text-white">Payroll your crew can trust</h2>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link href="/payroll-software-ghana" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
                 Full payroll guide
               </Link>

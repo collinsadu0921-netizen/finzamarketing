@@ -39,7 +39,7 @@ export default function AboutPage() {
             {
               questionName: "Who is Finza built for?",
               acceptedAnswerText:
-                "Finza is built for Ghanaian businesses such as cleaning companies, contractors, consultants, agencies, maintenance teams, field-service businesses, and growing SMEs working with professional advisers.",
+                "Finza is built for Ghanaian businesses, including small and growing businesses, business owners and finance teams, and businesses working with accountants or professional advisers.",
             },
             {
               questionName: "Is Finza only invoicing software?",
@@ -52,8 +52,8 @@ export default function AboutPage() {
                 "Yes. Finza keeps invoices, payments, expenses, payroll records, and reports together for review. Your accountant or GRA still confirms tax and payroll treatment.",
             },
             {
-              questionName: "Can I try Finza before paying?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How can I evaluate Finza?",
+              acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
           ]),
         ]}
@@ -70,12 +70,10 @@ export default function AboutPage() {
               Finza is accounting software that helps businesses in Ghana manage the work that happens before, during, and after getting paid - proposals, quotes, proformas, invoices, payments, receipts, expenses, supplier bills, incoming documents, payroll, reports, and records for professional review.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90 transition-colors text-center"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors text-center">Find my plan</Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50 transition-colors text-center">Explore the product tour</Link>
             </div>
             <p className="text-sm text-zinc-500">
               Built for business owners who want clearer records in GHS and better information for professional review.
@@ -207,14 +205,11 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-zinc-700">
               {[
-                "Cleaning companies",
-                "Contractors",
-                "Consultants",
-                "Maintenance teams",
-                "Agencies",
-                "Professional service providers",
-                "Field-service businesses",
-                "Growing SMEs",
+                "Ghanaian businesses",
+                "Small and growing businesses",
+                "Business owners and finance teams",
+                "Businesses that invoice customers",
+                "Businesses working with accountants or professional advisers",
                 "Businesses preparing for stronger financial control",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
@@ -287,7 +282,7 @@ export default function AboutPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Who is Finza built for?</AccordionTrigger>
                 <AccordionContent>
-                  Finza is built for Ghanaian businesses such as cleaning companies, contractors, consultants, agencies, maintenance teams, field-service businesses, and growing SMEs working with professional advisers.
+                  Finza is built for Ghanaian businesses, including small and growing businesses, business owners and finance teams, and businesses working with accountants or professional advisers.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
@@ -303,9 +298,9 @@ export default function AboutPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -324,14 +319,10 @@ export default function AboutPage() {
               Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and records for professional review in one connected workspace.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-white px-8 py-3.5 text-base font-bold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors w-full sm:w-auto text-center"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-center">Explore the product tour</Link>
             </div>
           </div>
         </Container>

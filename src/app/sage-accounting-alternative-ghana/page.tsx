@@ -30,7 +30,7 @@ const sageAccountingAlternativeFaqForSchema = [
   {
     questionName: "Can Ghanaian businesses use Finza?",
     acceptedAnswerText:
-      "Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.",
+      "Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review.",
   },
   {
     questionName: "Can my accountant work from Finza?",
@@ -43,8 +43,8 @@ const sageAccountingAlternativeFaqForSchema = [
       "Finza supports Ghana tax-line presentation where applicable, so invoice and record review can be clearer.",
   },
   {
-    questionName: "Can I try Finza before paying?",
-    acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+    questionName: "How can I evaluate Finza?",
+    acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
   },
 ];
 
@@ -53,12 +53,12 @@ const comparisonRows = [
     questionName: "Can the team avoid implementation-heavy accounting workflows?",
     matters:
       "Some SMEs need operational records and accountant handoff before they need a heavy finance implementation.",
-    finza: "Finza keeps service work, billing, payments, expenses, built-in payroll, and review context in one workflow.",
+    finza: "Finza keeps client work, billing, payments, expenses, built-in payroll, and review context in one workflow.",
   },
   {
     questionName: "Can records be reviewed in GHS?",
     matters: "Local currency visibility helps owners and accountants review records more clearly.",
-    finza: "Finza is priced and positioned around Ghana cedi workflows.",
+    finza: "Finza is built around Ghana cedi workflows.",
   },
   {
     questionName: "Can accounting depth stay connected to daily work?",
@@ -97,22 +97,18 @@ export default function SageAccountingAlternativeGhanaPage() {
               Sage accounting alternative in Ghana for teams that need simpler operations
             </h1>
             <p className="max-w-3xl text-lg text-zinc-600 leading-relaxed">
-              If Sage feels implementation-heavy for your current team, compare how Finza connects service work, invoicing, expenses, payroll records, GHS reports, and accountant review without separating operations from accounting.
+              If Sage feels implementation-heavy for your current team, compare how Finza connects client work, invoicing, expenses, payroll records, GHS reports, and accountant review without separating operations from accounting.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
-                href="/pricing#find-plan"
+                href="/product-tour"
                 className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
-              >
-                Find my plan
-              </Link>
+              >Explore the product tour</Link>
             </div>
-            <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
+            <p className="text-sm text-zinc-500">Guided trial with the Finza team. No payment details needed.</p>
           </div>
         </Container>
       </section>
@@ -130,7 +126,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               {[
                 "Setup burden",
                 "Operator usability",
-                "Service workflow fit",
+                "Workflow fit",
                 "GHS reporting",
                 "Supplier and expense records",
                 "Payroll record context",
@@ -228,8 +224,8 @@ export default function SageAccountingAlternativeGhanaPage() {
               Sage may suit teams that need deep accounting configuration. Finza is aimed at businesses that first need operators to keep GHS documents, payment records, expenses, and built-in payroll clean enough for review.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-base text-zinc-600 leading-relaxed">
-              <li>Pricing shown in Ghana cedis</li>
-              <li>Operator-friendly service workflows</li>
+              <li>Amounts and reports in Ghana cedis</li>
+              <li>Operator-friendly business workflows</li>
               <li>Ghana tax-line presentation where applicable</li>
               <li>Payment, expense, and built-in payroll in the same workspace</li>
               <li>Review workflows that can grow with the team</li>
@@ -313,12 +309,12 @@ export default function SageAccountingAlternativeGhanaPage() {
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
-                "Cleaning and facility service businesses",
-                "Contractors and maintenance teams",
-                "Agencies and consultants",
-                "Professional service firms",
-                "SMEs moving away from spreadsheet-only records",
-                "Businesses preparing cleaner records for professional review",
+                "Ghanaian businesses",
+                "Small and growing businesses",
+                "Business owners and finance teams",
+                "Businesses moving away from spreadsheet-only records",
+                "Businesses preparing records for accountant review",
+                "Businesses working with accountants or professional advisers",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -326,10 +322,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               ))}
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              Explore{" "}
-              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
-                how Finza works
-              </Link>
+              <Link href="/product-tour" className="font-semibold text-zinc-900 underline underline-offset-2">Explore the product tour</Link>
               , talk to us via{" "}
               <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
                 contact
@@ -364,7 +357,7 @@ export default function SageAccountingAlternativeGhanaPage() {
               <AccordionItem value="q2">
                 <AccordionTrigger>Can Ghanaian businesses use Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review. Service businesses can use the same workflow.
+                  Yes. Ghanaian businesses use Finza for quotes, invoices, payments, expenses, documents, payroll records, and accountant review.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q3">
@@ -380,9 +373,9 @@ export default function SageAccountingAlternativeGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -397,20 +390,15 @@ export default function SageAccountingAlternativeGhanaPage() {
               Compare Finza with your current workflow
             </h2>
             <p className="text-base text-zinc-300 leading-relaxed">
-              Use the free trial to see whether Finza&apos;s day-to-day workflow is simpler for your Ghanaian team before choosing a heavier accounting implementation.
+              Use the guided trial to see whether Finza&apos;s day-to-day workflow is simpler for your Ghanaian team before choosing a heavier accounting implementation.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="w-full rounded-md bg-white px-8 py-3.5 text-center text-base font-bold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-100 sm:w-auto"
-              >
-                Book a walkthrough
-              </Link>
-              <Link
-                href="/demo"
+              >Request a guided trial</Link>
+              <Link href="/product-tour"
                 className="w-full rounded-md border border-zinc-500 px-8 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
-              >
-                See how it works
-              </Link>
+              >Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -421,7 +409,7 @@ export default function SageAccountingAlternativeGhanaPage() {
         related={[
           { href: "/quickbooks-alternative-ghana", label: "QuickBooks alternative Ghana", desc: "Neutral comparison lens" },
           { href: "/accounting-software-ghana", label: "Accounting Ghana", desc: "Finza overview in GHS" },
-          { href: "/pricing#plans", label: "Pricing", desc: "Compare public GHS plans" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
         ]}
       />
       <Footer />

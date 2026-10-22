@@ -53,8 +53,9 @@ export default function BestAccountingSoftwareGhanaPage() {
                 "Yes. Finza keeps invoices, payments, expenses, and reports together so you and your accountant can review the same records. Your accountant still confirms tax treatment and any filing.",
             },
             {
-              questionName: "Can I try Finza before paying?",
-              acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+              questionName: "How can I evaluate Finza?",
+              acceptedAnswerText:
+                "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
             },
           ]),
         ]}
@@ -74,15 +75,16 @@ export default function BestAccountingSoftwareGhanaPage() {
               “Best” depends on your business. This guide compares what Ghanaian businesses should check before buying, then looks at Finza alongside QuickBooks, Sage, Zoho Books, and Odoo. Businesses in Ghana may also come across local products such as SikaKasa and SikaBooks. Those products are not compared in the table below.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
               >
-                Book a Finza walkthrough
+                Request a guided trial
               </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Compare Finza plans</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50">Explore the product tour</Link>
             </div>
             <p className="text-sm text-zinc-500">
-              14-day free trial, no card required. Verify competitor pricing and features on their official sites before choosing.
+              Verify competitor features on their official sites before choosing. Request a guided
+              trial to see how Finza fits your business.
             </p>
           </div>
         </Container>
@@ -124,8 +126,8 @@ export default function BestAccountingSoftwareGhanaPage() {
                   d: "Do profit, position, receivables, and tax-summary reports match how you run the business?",
                 },
                 {
-                  t: "Pricing model",
-                  d: "Is pricing fixed in GHS, or USD-based? Are payroll, users, and modules billed separately?",
+                  t: "Data ownership and export",
+                  d: "Can you export your records and reports in a form your accountant can review?",
                 },
                 {
                   t: "Business size",
@@ -182,7 +184,7 @@ export default function BestAccountingSoftwareGhanaPage() {
                   </tr>
                   <tr className="border-b border-zinc-100">
                     <td className="py-3 pr-4 font-semibold text-zinc-900">QuickBooks</td>
-                    <td className="py-3 px-3">Ghana appears on Intuit’s global country list. A Ghana-specific GHS price list and GRA tax pack were not confirmed on Intuit pages reviewed.</td>
+                    <td className="py-3 px-3">Ghana appears on Intuit’s global country list. A Ghana-specific GRA tax pack was not confirmed on Intuit pages reviewed.</td>
                     <td className="py-3 px-3">Yes — official site covers invoicing, recording payments, and expense tracking</td>
                     <td className="py-3 px-3">Not confirmed for Ghana PAYE or SSNIT from Intuit pages reviewed</td>
                     <td className="py-3 px-3">Yes — official site positions QuickBooks as accounting/bookkeeping software with reporting</td>
@@ -190,7 +192,7 @@ export default function BestAccountingSoftwareGhanaPage() {
                   </tr>
                   <tr className="border-b border-zinc-100">
                     <td className="py-3 pr-4 font-semibold text-zinc-900">Sage</td>
-                    <td className="py-3 px-3">Ghana is listed on Sage Africa’s Accounting country selector. Published signup pricing observed in South African Rands, not GHS.</td>
+                    <td className="py-3 px-3">Ghana is listed on Sage Africa’s Accounting country selector.</td>
                     <td className="py-3 px-3">Yes — Sage Accounting covers invoices, payments, cash-flow tracking, and expenses</td>
                     <td className="py-3 px-3">Sage payroll products publish Ghana tax summaries for 2026. Confirm which Sage product and Ghana coverage you need.</td>
                     <td className="py-3 px-3">Yes — Sage Accounting is positioned as accounting software for small businesses and sole traders</td>
@@ -202,7 +204,7 @@ export default function BestAccountingSoftwareGhanaPage() {
                     <td className="py-3 px-3">Yes — official site covers invoices, quotes, and online payment links</td>
                     <td className="py-3 px-3">Not confirmed for Ghana PAYE or SSNIT from official Zoho Payroll pages reviewed</td>
                     <td className="py-3 px-3">Yes — invoicing, expenses, inventory, projects, and reports on the official site</td>
-                    <td className="py-3 pl-3">SMEs wanting a general cloud accounting suite, including a free plan for very small volume</td>
+                    <td className="py-3 pl-3">SMEs wanting a general cloud accounting suite</td>
                   </tr>
                   <tr className="border-b border-zinc-100">
                     <td className="py-3 pr-4 font-semibold text-zinc-900">Odoo</td>
@@ -220,10 +222,6 @@ export default function BestAccountingSoftwareGhanaPage() {
               <strong className="text-zinc-700">Sources consulted (2026):</strong>{" "}
               <a href="https://quickbooks.intuit.com/global/" className="underline underline-offset-2">
                 Intuit QuickBooks Global
-              </a>
-              ;{" "}
-              <a href="https://quickbooks.intuit.com/global/pricing/" className="underline underline-offset-2">
-                QuickBooks Global pricing
               </a>
               ;{" "}
               <a href="https://www.sage.com/africa/sage-business-cloud/accounting/" className="underline underline-offset-2">
@@ -266,7 +264,7 @@ export default function BestAccountingSoftwareGhanaPage() {
                 "Salary-payment recording against bank, cash, or mobile-money accounts",
                 "Expense and supplier-bill capture",
                 "Reports and exports for accountant review",
-                "14-day free trial; no card required",
+                "Guided trial with the Finza team",
               ].map((item) => (
                 <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -289,7 +287,7 @@ export default function BestAccountingSoftwareGhanaPage() {
               {[
                 {
                   t: "You already run on QuickBooks or Sage",
-                  d: "If your accountant and team are trained there and the cost works, switching may not be worth the disruption.",
+                  d: "If your accountant and team are trained there and the workflow works, switching may not be worth the disruption.",
                 },
                 {
                   t: "You need heavy inventory or manufacturing",
@@ -297,7 +295,7 @@ export default function BestAccountingSoftwareGhanaPage() {
                 },
                 {
                   t: "You are a micro business with very few transactions",
-                  d: "A simple spreadsheet or free Zoho Books tier may be enough until volume grows.",
+                  d: "A simple spreadsheet may be enough until volume grows.",
                 },
                 {
                   t: "You need local GRA e-filing automation",
@@ -318,37 +316,12 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-zinc-50 py-24">
         <Container>
           <div className="mx-auto max-w-4xl space-y-8">
-            <h2 className="text-3xl font-bold text-zinc-900">How to compare total cost</h2>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Look beyond the headline monthly price. Add up users, modules, payroll, accountant seats, exchange-rate risk, implementation time, training, and data migration. A product that looks cheaper on the landing page can become expensive once you add what you actually need.
-            </p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-zinc-700">
-              {[
-                "Base subscription",
-                "Per-user fees",
-                "Payroll module or add-on",
-                "Multi-currency or GHS pricing",
-                "Implementation or partner setup",
-                "Training and support",
-                "Data migration from spreadsheets",
-                "Year-one total, not just month one",
-              ].map((item) => (
-                <li key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </section>
-
-      {/* SECTION 6 */}
-      <section className="border-b border-zinc-100 py-24">
-        <Container>
-          <div className="mx-auto max-w-4xl space-y-8">
             <h2 className="text-3xl font-bold text-zinc-900">How to read tax and payroll claims</h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Accounting software can organize records, show tax lines where applicable, and export reports. It does not file your returns or guarantee that a tax or payroll figure is correct for your business. Confirm treatment and filing steps with your accountant or the relevant authority.
+              Accounting software can organize records, show tax lines where applicable, and export
+              reports. It does not file your returns or guarantee that a tax or payroll figure is
+              correct for your business. Confirm treatment and filing steps with your accountant or
+              the relevant authority.
             </p>
           </div>
         </Container>
@@ -385,9 +358,9 @@ export default function BestAccountingSoftwareGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -399,19 +372,15 @@ export default function BestAccountingSoftwareGhanaPage() {
       <section className="border-b border-zinc-100 bg-[#0F172A] py-16 text-center">
         <Container>
           <div className="mx-auto max-w-2xl space-y-6">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">Try Finza for your Ghanaian business</h2>
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">See whether Finza fits your Ghanaian business</h2>
             <p className="text-zinc-300">
               Use Finza to manage proposals, invoices, payments, expenses, documents, payroll, reports, and accountant-ready records in one connected workspace.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:justify-center">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-white px-8 py-3 text-sm font-bold text-zinc-900"
-              >
-                Book a walkthrough
-              </Link>
-              <Link href="/pricing#find-plan" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">
-                Find my plan
-              </Link>
+              >Request a guided trial</Link>
+              <Link href="/product-tour" className="rounded-md border border-zinc-500 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10">Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -422,8 +391,8 @@ export default function BestAccountingSoftwareGhanaPage() {
         related={[
           { href: "/accounting-software-ghana", label: "Accounting software Ghana", desc: "Reports and records" },
           { href: "/features", label: "Features", desc: "Product capabilities" },
-          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
+          { href: "/product-tour", label: "Explore the product tour", desc: "Self-guided product tour" },
           { href: "/invoicing-software-ghana", label: "Invoicing", desc: "Invoices and payments" },
           { href: "/bookkeeping-software-ghana", label: "Bookkeeping", desc: "Daily records" },
           { href: "/payroll-software-ghana", label: "Payroll", desc: "PAYE, payslips & advances" },

@@ -6,17 +6,16 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/container";
-import { getPlanSignupHref, pricingPlansData } from "@/lib/pricing-plans";
+import { getGuidedTrialHref } from "@/lib/trial-request";
 import { cn } from "@/lib/utils";
-
-const starterSignupHref = getPlanSignupHref(pricingPlansData[0].planParam);
 
 const navLinks = [
   { href: "/features", label: "Features" },
   { href: "/payroll-software-ghana", label: "Payroll" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
 ] as const;
+
+const guidedTrialHref = getGuidedTrialHref("navbar");
 
 function isActivePath(pathname: string, href: string) {
   if (href === "/payroll-software-ghana") {
@@ -86,12 +85,12 @@ export function Navbar() {
             >
               Login
             </a>
-            <a
-              href={starterSignupHref}
+            <Link
+              href={guidedTrialHref}
               className="rounded-lg bg-[#0F172A] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-slate-900/20 transition-all duration-200 hover:bg-[#1e293b] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
             >
-              Start free trial
-            </a>
+              Request a guided trial
+            </Link>
           </div>
         </div>
 
@@ -140,13 +139,13 @@ export function Navbar() {
             >
               Login
             </a>
-            <a
-              href={starterSignupHref}
+            <Link
+              href={guidedTrialHref}
               className="mt-1 rounded-lg bg-[#0F172A] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#1e293b]"
               onClick={() => setIsOpen(false)}
             >
-              Start free trial
-            </a>
+              Request a guided trial
+            </Link>
           </Container>
         </div>
       ) : null}

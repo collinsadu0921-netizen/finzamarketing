@@ -21,8 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // ── Core pages (highest priority) ─────────────────────────────────────
     staticEntry("https://www.finza.africa", "weekly", 1),
     staticEntry("https://www.finza.africa/features", "weekly", 0.85),
-    staticEntry("https://www.finza.africa/pricing", "monthly", 0.85),
-    staticEntry("https://www.finza.africa/demo", "yearly", 0.8),
+    staticEntry("https://www.finza.africa/request-trial", "monthly", 0.85),
+    staticEntry("https://www.finza.africa/product-tour", "monthly", 0.7),
     staticEntry("https://www.finza.africa/privacy", "yearly", 0.5),
     staticEntry("https://www.finza.africa/terms", "yearly", 0.5),
     staticEntry("https://www.finza.africa/about", "yearly", 0.65),
@@ -48,7 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     staticEntry("https://www.finza.africa/bookkeeping-for-small-business-ghana", "monthly", 0.73),
     staticEntry("https://www.finza.africa/small-business-accounting-ghana", "monthly", 0.8),
     staticEntry("https://www.finza.africa/ghana-vat-nhil-getfund", "monthly", 0.75),
-    staticEntry("https://www.finza.africa/accounting-software-for-service-businesses-ghana", "monthly", 0.7),
 
     // ── Topic cluster (informational) ─────────────────────────────────────
     staticEntry("https://www.finza.africa/how-vat-works-ghana", "monthly", 0.72),
@@ -56,7 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     staticEntry("https://www.finza.africa/ghana-vat-calculator", "monthly", 0.7),
     staticEntry("https://www.finza.africa/invoice-calculator-ghana", "monthly", 0.7),
     staticEntry("https://www.finza.africa/accounting-for-small-business-ghana", "monthly", 0.72),
-    staticEntry("https://www.finza.africa/accounting-for-service-business-ghana", "monthly", 0.72),
     staticEntry("https://www.finza.africa/accounting-vs-excel-ghana", "monthly", 0.72),
     staticEntry("https://www.finza.africa/best-accounting-software-ghana", "monthly", 0.72),
 

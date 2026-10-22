@@ -43,8 +43,8 @@ const accountingVsExcelFaqForSchema = [
       "Finza keeps invoices, payments, expenses, and reports organized so you and your accountant can work from the same records. Your accountant still confirms tax treatment and any filing.",
   },
   {
-    questionName: "Can I try Finza before paying?",
-    acceptedAnswerText: "Yes. Finza offers a 14-day free trial. No card is required to start.",
+    questionName: "How can I evaluate Finza?",
+    acceptedAnswerText: "Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.",
   },
 ];
 
@@ -71,19 +71,15 @@ export default function AccountingVsExcelGhanaPage() {
               Excel is often the first tool a Ghanaian business owner uses to track money. It is flexible, familiar, and cheap to start with. But as your business grows, the problem is no longer whether Excel can hold numbers. The problem is whether your records still connect clearly from client work to payment, expenses, documents, payroll, and accountant review.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#0F172A]/90"
-              >
-                Book a walkthrough
-              </Link>
+              >Request a guided trial</Link>
               <Link
-                href="/pricing#find-plan"
+                href="/product-tour"
                 className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
-              >
-                Find my plan
-              </Link>
+              >Explore the product tour</Link>
             </div>
-            <p className="text-sm text-zinc-500">14-day free trial. No card required to start.</p>
+            <p className="text-sm text-zinc-500">Guided trial with the Finza team. No payment details needed.</p>
           </div>
         </Container>
       </section>
@@ -306,12 +302,12 @@ export default function AccountingVsExcelGhanaPage() {
             </p>
             <div className="grid grid-cols-1 gap-2 text-sm text-zinc-700 md:grid-cols-2">
               {[
-                "Cleaning and facility service businesses",
-                "Contractors and field service teams",
-                "Agencies and consultants",
-                "Maintenance and repair businesses",
-                "Professional service firms",
-                "Growing SMEs that need better records in GHS",
+                "Ghanaian businesses",
+                "Small and growing businesses",
+                "Business owners and finance teams",
+                "Businesses moving away from spreadsheet-only records",
+                "Businesses preparing records for accountant review",
+                "Businesses working with accountants or professional advisers",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white px-3 py-2">
                   {item}
@@ -319,13 +315,11 @@ export default function AccountingVsExcelGhanaPage() {
               ))}
             </div>
             <p className="text-base text-zinc-600 leading-relaxed">
-              For professional review of client files, and for business owners who want to{" "}
-              <Link href="/demo" className="font-semibold text-zinc-900 underline underline-offset-2">
-                see how it works
-              </Link>
-              , start from{" "}
-              <Link href="/pricing#find-plan" className="font-semibold text-zinc-900 underline underline-offset-2">
-                pricing in GHS
+              For professional review of client files,{" "}
+              <Link href="/product-tour" className="font-semibold text-zinc-900 underline underline-offset-2">Explore the product tour</Link>
+              , request a{" "}
+              <Link href="/request-trial?from=landing_page" className="font-semibold text-zinc-900 underline underline-offset-2">
+                guided trial
               </Link>{" "}
               or{" "}
               <Link href="/contact" className="font-semibold text-zinc-900 underline underline-offset-2">
@@ -377,9 +371,9 @@ export default function AccountingVsExcelGhanaPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="q5">
-                <AccordionTrigger>Can I try Finza before paying?</AccordionTrigger>
+                <AccordionTrigger>How can I evaluate Finza?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. Finza offers a 14-day free trial. No card is required to start.
+                  Request a guided trial. Finza will contact you to understand your business needs and guide you through the product.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -397,17 +391,12 @@ export default function AccountingVsExcelGhanaPage() {
               Start with proposals, invoices, payments, expenses, documents, payroll, and reports in one connected workspace built for Ghanaian businesses.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-              <Link href="/contact"
+              <Link href="/request-trial?from=landing_page"
                 className="w-full rounded-md bg-white px-8 py-3.5 text-center text-base font-bold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-100 sm:w-auto"
-              >
-                Book a walkthrough
-              </Link>
-              <Link
-                href="/demo"
+              >Request a guided trial</Link>
+              <Link href="/product-tour"
                 className="w-full rounded-md border border-zinc-500 px-8 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
-              >
-                See how it works
-              </Link>
+              >Explore the product tour</Link>
             </div>
           </div>
         </Container>
@@ -421,8 +410,8 @@ export default function AccountingVsExcelGhanaPage() {
           { href: "/quotation-software-ghana", label: "Quotations Ghana", desc: "Quotes to invoice" },
           { href: "/invoice-calculator-ghana", label: "Try the invoice calculator", desc: "Preview invoice totals" },
           { href: "/best-accounting-software-ghana", label: "Best accounting software Ghana", desc: "2026 buyer guide" },
-          { href: "/pricing", label: "Pricing", desc: "Plans in GHS" },
-          { href: "/demo", label: "Demo", desc: "See how Finza works" },
+          { href: "/request-trial?from=landing_page", label: "Request a guided trial", desc: "Tell us about your business" },
+          { href: "/product-tour", label: "Explore the product tour", desc: "Self-guided product tour" },
           { href: "/contact", label: "Contact", desc: "Talk to the team" },
         ]}
       />

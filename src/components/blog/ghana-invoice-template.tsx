@@ -149,10 +149,10 @@ export function GhanaInvoiceTemplateCta() {
           Invoicing software in Ghana
         </Link>
         <Link
-          href="/pricing#plans"
+          href="/request-trial?from=blog"
           className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-900 shadow-sm transition-colors hover:bg-zinc-50"
         >
-          Compare plans
+          Request a guided trial
         </Link>
       </div>
     </div>
