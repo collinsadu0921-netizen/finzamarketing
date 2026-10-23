@@ -4,11 +4,10 @@ import { usePathname } from "next/navigation";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 
 /**
- * Public-page floating contact button. Hidden on form-heavy pages or pages
- * with their own prominent WhatsApp CTA, and inside the authenticated admin
- * workspace.
+ * Public-page floating contact button. Hidden on form-heavy pages where it
+ * could obscure controls, and inside the authenticated admin workspace.
  */
-const HIDDEN_PREFIXES = ["/admin", "/request-trial", "/contact", "/features"] as const;
+const HIDDEN_PREFIXES = ["/admin", "/request-trial", "/contact"] as const;
 
 export function FloatingWhatsAppButton() {
   const pathname = usePathname();

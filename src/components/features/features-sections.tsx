@@ -299,7 +299,7 @@ export function FeaturesHero() {
 
         <nav
           aria-label="Feature areas"
-          className="mx-auto mt-7 flex max-w-4xl flex-wrap items-center justify-center gap-2"
+          className="mx-auto mt-7 flex max-w-4xl flex-wrap items-center justify-center gap-2 max-md:pr-16 md:pr-0"
         >
           {heroModules.map((item) => (
             <a
@@ -325,7 +325,7 @@ export function FeaturesExploreNav() {
       className="sticky top-0 z-30 border-b border-zinc-200/80 bg-white/95 backdrop-blur-sm"
     >
       <Container>
-        <div className="flex items-center gap-3 py-2.5 sm:gap-4">
+        <div className="flex items-center gap-3 py-2.5 max-md:pr-16 sm:gap-4 md:pr-0">
           <p className="shrink-0 text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
             Explore
           </p>
