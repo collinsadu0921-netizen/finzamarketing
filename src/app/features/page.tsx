@@ -3,16 +3,18 @@ import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbListSchema } from "@/lib/schema";
 import {
+  FeaturesAccountingSection,
   FeaturesAssistSection,
-  FeaturesDocumentsCostsSection,
+  FeaturesControlsSection,
+  FeaturesExpensesSection,
   FeaturesExploreNav,
   FeaturesFinalCtaSection,
   FeaturesHero,
-  FeaturesInvoiceCollectSection,
-  FeaturesJobsMaterialsSection,
-  FeaturesPayrollTeamSection,
-  FeaturesReportsControlsSection,
-  FeaturesWinWorkSection,
+  FeaturesJobsSection,
+  FeaturesOverview,
+  FeaturesPaymentsSection,
+  FeaturesPayrollSection,
+  FeaturesSalesSection,
 } from "@/components/features/features-sections";
 
 export const metadata: Metadata = {
@@ -35,14 +37,18 @@ export default function FeaturesPage() {
       />
 
       <FeaturesHero />
-      <FeaturesExploreNav />
-      <FeaturesWinWorkSection />
-      <FeaturesJobsMaterialsSection />
-      <FeaturesInvoiceCollectSection />
-      <FeaturesDocumentsCostsSection />
-      <FeaturesPayrollTeamSection />
-      <FeaturesReportsControlsSection />
-      <FeaturesAssistSection />
+      <div>
+        <FeaturesExploreNav />
+        <FeaturesOverview />
+        <FeaturesSalesSection />
+        <FeaturesPaymentsSection />
+        <FeaturesExpensesSection />
+        <FeaturesAccountingSection />
+        <FeaturesPayrollSection />
+        <FeaturesJobsSection />
+        <FeaturesControlsSection />
+        <FeaturesAssistSection />
+      </div>
       <FeaturesFinalCtaSection />
       <Footer />
     </main>

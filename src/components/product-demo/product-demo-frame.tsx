@@ -14,6 +14,7 @@ type ProductDemoFrameProps = {
   className?: string;
   showMockup?: boolean;
   mockup?: ReactNode;
+  fadeBottom?: boolean;
 };
 
 /**
@@ -28,6 +29,7 @@ export function ProductDemoFrame({
   className,
   showMockup = false,
   mockup,
+  fadeBottom = false,
 }: ProductDemoFrameProps) {
   return (
     <div
@@ -60,6 +62,12 @@ export function ProductDemoFrame({
           >
             {mockup}
           </motion.div>
+        ) : null}
+        {fadeBottom ? (
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white via-white/70 to-transparent"
+          />
         ) : null}
       </div>
     </div>

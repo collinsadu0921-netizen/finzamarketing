@@ -15,15 +15,24 @@ type FeaturesScreenshotDialogProps = {
   src: string;
   alt: string;
   title: string;
+  width: number;
+  height: number;
 };
 
-export function FeaturesScreenshotDialog({ src, alt, title }: FeaturesScreenshotDialogProps) {
+export function FeaturesScreenshotDialog({
+  src,
+  alt,
+  title,
+  width,
+  height,
+}: FeaturesScreenshotDialogProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <button
           type="button"
-          className="inline-flex min-h-10 items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs font-semibold text-zinc-700 shadow-sm transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+          aria-label={`View larger: ${title}`}
+          className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs font-semibold text-zinc-700 shadow-sm transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
         >
           <Expand className="h-3.5 w-3.5" aria-hidden />
           View larger
@@ -38,8 +47,8 @@ export function FeaturesScreenshotDialog({ src, alt, title }: FeaturesScreenshot
           <Image
             src={src}
             alt={alt}
-            width={2400}
-            height={1350}
+            width={width}
+            height={height}
             sizes="96vw"
             className="block h-auto w-full"
           />

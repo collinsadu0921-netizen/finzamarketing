@@ -93,7 +93,7 @@ export function CustomerStatementShell({ variant = "default" }: Props) {
       </div>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-6 gap-px border-b border-zinc-100 bg-zinc-50">
+      <div className="grid grid-cols-3 gap-px border-b border-zinc-100 bg-zinc-50 sm:grid-cols-6">
         {SUMMARY.map((s) => (
           <div
             key={s.label}
@@ -128,11 +128,11 @@ export function CustomerStatementShell({ variant = "default" }: Props) {
         </div>
 
         {/* Table header */}
-        <div className="mt-2 grid grid-cols-[3fr_2fr_3fr_4fr_3fr_3fr_3fr] gap-1 border-b border-zinc-200 pb-1 text-[8px] font-bold uppercase tracking-wide text-zinc-400">
+        <div className="mt-2 grid grid-cols-[3fr_3fr_2.5fr_2.5fr_3fr] gap-1 border-b border-zinc-200 pb-1 text-[8px] font-bold uppercase tracking-wide text-zinc-400 sm:grid-cols-[3fr_2fr_3fr_4fr_3fr_3fr_3fr]">
           <span>Date</span>
-          <span>Type</span>
+          <span className="hidden sm:block">Type</span>
           <span>Reference</span>
-          <span>Description</span>
+          <span className="hidden sm:block">Description</span>
           <span className="text-right">Debit</span>
           <span className="text-right">Credit</span>
           <span className="text-right">Balance</span>
@@ -143,12 +143,12 @@ export function CustomerStatementShell({ variant = "default" }: Props) {
           {rows.map((tx, i) => (
             <div
               key={`${tx.date}-${tx.ref}-${i}`}
-              className="stmt-row grid grid-cols-[3fr_2fr_3fr_4fr_3fr_3fr_3fr] items-center gap-1 py-1.5 transition-colors"
+              className="stmt-row grid grid-cols-[3fr_3fr_2.5fr_2.5fr_3fr] items-center gap-1 py-1.5 text-[9px] transition-colors sm:grid-cols-[3fr_2fr_3fr_4fr_3fr_3fr_3fr] sm:text-[10px]"
               data-tx-index={i}
               data-tx-type={tx.type.toLowerCase()}
             >
-              <span className="tabular-nums text-zinc-600">{tx.date}</span>
-              <span>
+              <span className="whitespace-nowrap tabular-nums text-zinc-600">{tx.date}</span>
+              <span className="hidden sm:block">
                 <span
                   className={cn(
                     "inline-block rounded border px-1 py-px text-[7px] font-semibold leading-tight",
@@ -158,17 +158,17 @@ export function CustomerStatementShell({ variant = "default" }: Props) {
                   {tx.type}
                 </span>
               </span>
-              <span className="tabular-nums text-zinc-600">{tx.ref}</span>
-              <span className="text-zinc-600">{tx.description}</span>
-              <span className="text-right tabular-nums text-zinc-700">
+              <span className="whitespace-nowrap tabular-nums text-zinc-600">{tx.ref}</span>
+              <span className="hidden text-zinc-600 sm:block">{tx.description}</span>
+              <span className="whitespace-nowrap text-right tabular-nums text-zinc-700">
                 {tx.debit}
               </span>
-              <span className="text-right tabular-nums text-zinc-700">
+              <span className="whitespace-nowrap text-right tabular-nums text-zinc-700">
                 {tx.credit}
               </span>
               <span
                 className={cn(
-                  "text-right tabular-nums font-bold",
+                  "whitespace-nowrap text-right tabular-nums font-bold",
                   tx.type === "Payment"
                     ? "text-emerald-700"
                     : "text-zinc-900"

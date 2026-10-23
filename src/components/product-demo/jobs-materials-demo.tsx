@@ -16,6 +16,7 @@ export function JobsMaterialsDemo() {
         {...SCREENSHOT}
         className="relative"
         showMockup={showMockup}
+        fadeBottom
         mockup={
           <JobsMaterialsShell scene={scene} showCursor={showCursor} compact={isTablet} />
         }
