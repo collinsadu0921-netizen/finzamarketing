@@ -85,69 +85,16 @@
     radial-gradient(ellipse 50% 45% at 85% 20%, rgb(217 169 56 / 0.08), transparent 50%);
 }
 
-/* Features page — restrained ambient + stage transitions */
-@keyframes featuresAmbientDrift {
-  0%,
-  100% {
-    opacity: 0.85;
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    opacity: 1;
-    transform: translate3d(1.5%, -1%, 0);
-  }
-}
-
-.features-hero-ambient {
-  background:
-    radial-gradient(ellipse 55% 45% at 12% 70%, rgb(16 185 129 / 0.12), transparent 58%),
-    radial-gradient(ellipse 45% 40% at 88% 18%, rgb(217 169 56 / 0.1), transparent 52%),
-    radial-gradient(ellipse 40% 35% at 55% 0%, rgb(14 165 233 / 0.08), transparent 55%);
-  animation: featuresAmbientDrift 14s ease-in-out infinite;
-}
-
-.features-shot-frame {
-  transition:
-    box-shadow 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
-}
-
-.features-shot-frame:hover {
-  border-color: rgb(212 212 216);
-  box-shadow:
-    0 14px 30px -10px rgb(15 23 42 / 0.14),
-    0 4px 12px -4px rgb(15 23 42 / 0.06);
-}
-
-.features-stage-panel {
-  animation: featuresStageIn 220ms ease-out both;
-}
-
-@keyframes featuresStageIn {
-  from {
-    opacity: 0.72;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Reduced motion: content stays visible; loops and delayed entrances off */
 @media (prefers-reduced-motion: reduce) {
   .marketing-shot-float,
   .hero-card,
   .hero-glow,
-  .hero-float,
-  .features-hero-ambient,
-  .features-stage-panel {
+  .hero-float {
     animation: none !important;
   }
 
-  .home-card-lift:hover,
-  .features-shot-frame:hover {
+  .home-card-lift:hover {
     transform: none;
   }
 }

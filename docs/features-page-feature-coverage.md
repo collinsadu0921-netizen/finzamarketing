@@ -24,7 +24,7 @@ the app's own feature inventory documents.
 
 | Area | Capability | Production evidence | Availability | `/features` treatment |
 |---|---|---|---|---|
-| Overview | One dashboard for revenue, expenses, receivables, payables, cash, activity, ledger health | `app/service/dashboard/page.tsx`, service dashboard cockpit | Essentials | Overview section + hero screenshot |
+| Overview | One dashboard for revenue, expenses, receivables, payables, cash, activity, ledger health | `app/service/dashboard/page.tsx`, service dashboard cockpit | Essentials | Overview section and hero summary |
 | Sales | Customers and customer history | `/service/customers`, customer detail and statement routes | Essentials | Sales and payments |
 | Sales | Proposals | `/service/proposals` | Essentials | Sales and invoicing |
 | Sales | Quotes / estimates | `/service/quotes`, quote public route | Essentials | Sales and invoicing |
@@ -117,6 +117,29 @@ the app's own feature inventory documents.
 - No service-trial duration, automatic access, self-service signup or new form is
   introduced.
 
+## Visual presentation
+
+The final page is text-first. It does not use product screenshots, screenshot
+galleries, image dialogs, or decorative placeholders. Product screenshots remain
+in the repository for other pages but are no longer used on `/features`.
+
+Two supplied 9:16 product videos replace the two most useful screenshot areas:
+
+| Section | Video | Poster | Duration | Treatment |
+|---|---|---|---|---|
+| Payments and receivables | `/videos/payment-recording.mp4` | `/videos/payment-recording-poster.jpg` | 0:12 | Compact portrait player, native controls, click-to-play |
+| Payroll | `/videos/payroll-dt107a.mp4` | `/videos/payroll-dt107a-poster.jpg` | 0:16 | Compact portrait player, native controls, click-to-play |
+
+- Both videos are 720 × 1280 (9:16), served from the repository, and are silent.
+- The players use `preload="none"`, a poster, explicit width and height, and a
+  9:16 aspect-ratio container to avoid layout shift.
+- Autoplay and looping are disabled. Native controls provide keyboard-operable
+  playback, volume, and fullscreen controls.
+- The payroll caption states that Finza prepares records and exports for review
+  and does not file or pay GRA automatically.
+- The Payments section labels the video steps and keeps the Hubtel note scoped
+  to the customer's own merchant account.
+
 ## Page mapping
 
 | Required section | Page anchor |
@@ -142,6 +165,10 @@ the app's own feature inventory documents.
 - [x] All restricted capabilities carry a plan or workspace qualifier.
 - [x] Primary CTA remains `/request-trial`; secondary remains `/product-tour`.
 - [x] SEO metadata, canonical, breadcrumb schema and analytics remain intact.
+- [x] No oversized product screenshots or screenshot dialogs remain on
+      `/features`.
+- [x] Both supplied videos load, expose posters, play on demand, and preserve
+      their original 9:16 aspect ratio.
 - [x] Desktop, tablet and mobile layouts verified.
 - [x] Lint, typecheck, build and relevant tests pass.
 
@@ -149,28 +176,36 @@ the app's own feature inventory documents.
 
 - `npm run lint` — pass.
 - `npx tsc --noEmit` — pass.
-- `npm run build` — pass after the final visual adjustments; 72/72 static pages
-  generated.
-- Final screenshots were recaptured from the production build after the last
-  edits.
-- Browser QA with Playwright/Chrome at `1440x1000`, `834x1112`, and
-  `390x844`: no horizontal document overflow at any viewport.
-- Sales tabs: click and arrow-key navigation change the visible stage and keep
-  focus on the selected tab.
-- Screenshot dialogs: open, load the image, close on Escape, and return focus to
-  the trigger.
-- Section anchor links: scroll to the target section below the sticky section
-  navigation; the navigation stops before the final CTA.
-- Lazy images: all content images load after scroll, including the accounting
-  report.
-- The payroll section uses the live payroll preview rather than
-  `public/images/finza/payroll.png`. The screenshot shows direct “Pay GRA PAYE”
-  and “Pay SSNIT / Tier 1” actions, which are not available on `main`; the
-  preview shows the verified obligations, payment records, and export actions.
+- `npm run build` — pass; 72/72 static pages generated.
+- Production-build Playwright/Chrome checks at `1440x1000`, `834x1112`, and
+  `390x844`:
+  - No horizontal document overflow at any viewport.
+  - `main section` image count: 0. Screenshot-dialog “View larger” buttons: 0.
+  - Two video elements. Both report `autoplay=false`, `loop=false`,
+    `controls=true`, `preload="none"`, `playsInline=true`, and `tabIndex=0`.
+  - Poster requests return `200`; video requests return `206`.
+  - After playback: both report `720x1280`, `readyState=4`, and durations of 12
+    and 16 seconds. Both are silent.
+  - The videos can be focused and played; native controls remain available.
+  - Anchor navigation places `#payments` at 96 px, below the sticky navigation
+    bottom at 57 px.
+  - All checked feature strings are present, including proposals/quotes/
+    estimates/proformas, credit notes, supplier bills, incoming documents,
+    general ledger, trial balance, DT 107A, materials inventory, audit log and
+    Finza Assist.
+  - Essentials, Professional and Business labels are present.
+  - Primary CTA links resolve to `/request-trial`; secondary links resolve to
+    `/product-tour`.
+- Page height (full document):
+  - `1440`: 9,069 → 6,532 px (−2,537 px, −28.0%)
+  - `834`: 14,067 → 8,917 px (−5,150 px, −36.6%)
+  - `390`: 15,533 → 11,752 px (−3,781 px, −24.3%)
 - Screenshot artifacts (local, not committed):
-  `C:\Users\colli\AppData\Local\Temp\finza-features-redesign\`.
-  Before: `features-before-1176.png`.
-  After: `features-after-final-1176.png`,
-  `features-after-final-1440.png`, `features-after-final-834.png`,
-  `features-after-final-390.png`.
+  `C:\Users\colli\AppData\Local\Temp\finza-features-video\`.
+  Before: `features-video-before-1440.png`, `features-video-before-834.png`,
+  `features-video-before-390.png`.
+  After: `features-video-final4-1440.png`, `features-video-final4-834.png`,
+  `features-video-final4-390.png`.
+- Section captures: `after-1440-{overview,payments,payroll,controls}.png` and
+  `after-390-{overview,payments,payroll,controls}.png`.
 
