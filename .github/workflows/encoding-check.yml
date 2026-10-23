@@ -1,0 +1,28 @@
+name: Encoding check
+
+on:
+  push:
+    paths:
+      - "src/**"
+      - "public/**"
+      - "scripts/check-encoding.mjs"
+      - "package.json"
+      - ".github/workflows/encoding-check.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "public/**"
+      - "scripts/check-encoding.mjs"
+      - "package.json"
+      - ".github/workflows/encoding-check.yml"
+
+jobs:
+  encoding:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check public marketing source encoding
+        run: npm run check:encoding
