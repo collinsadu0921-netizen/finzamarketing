@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { StickyTrialCta } from "@/components/sticky-trial-cta";
 import { JsonLd } from "@/components/json-ld";
 import { TrialCtaAnalytics } from "@/components/trial-cta-analytics";
+import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button";
 import { organizationAndWebsiteGraph } from "@/lib/schema";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -85,6 +86,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <StickyTrialCta />
+        <FloatingWhatsAppButton />
         <TrialCtaAnalytics />
         <Analytics />
       </body>

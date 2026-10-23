@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { WhatsAppCta } from "@/components/whatsapp-cta";
 
 const invoices = [
     { id: "INV-2031", client: "TechStart Ltd", amount: "GHS 8,500.00", issued: "10 Mar 2026", due: "24 Mar 2026", status: "Unpaid" },
@@ -223,8 +224,8 @@ export default function ProductTourPage() {
                         </div>
 
                         {/* CTA */}
-                        <div className="rounded-xl border border-zinc-200 bg-white p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <div>
+                        <div className="rounded-xl border border-zinc-200 bg-white p-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                            <div className="min-w-0 flex-1">
                                 <p className="text-sm font-semibold text-zinc-900">Ready to use Finza with your real data?</p>
                                 <p className="text-xs text-zinc-500 mt-0.5">
                                     Preview only — request a{" "}
@@ -234,12 +235,20 @@ export default function ProductTourPage() {
                                     to use Finza with your own data.
                                 </p>
                             </div>
-                            <Link
-                                href="/request-trial?from=product_tour"
-                                className="flex-shrink-0 rounded-md bg-[#0F172A] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0F172A]/90 transition-colors"
-                            >
-                                Request a guided trial →
-                            </Link>
+                            <div className="flex flex-col gap-2 sm:flex-row sm:items-center lg:flex-shrink-0">
+                                <Link
+                                    href="/request-trial?from=product_tour"
+                                    className="rounded-md bg-[#0F172A] px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-[#0F172A]/90 transition-colors"
+                                >
+                                    Request a guided trial →
+                                </Link>
+                                <WhatsAppCta
+                                    source="product_tour"
+                                    label="Chat on WhatsApp"
+                                    className="rounded-md border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+                                    iconClassName="text-[#25D366]"
+                                />
+                            </div>
                         </div>
 
                         <RelatedClusterLinks

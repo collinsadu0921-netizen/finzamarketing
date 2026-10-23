@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/container";
 import { FeaturesInvoiceCollectExperience } from "@/components/features/features-invoice-collect";
+import { WhatsAppCta } from "@/components/whatsapp-cta";
 import {
   PAYROLL_FEATURES_HEADING,
   PAYROLL_HOME_CAPABILITIES,
@@ -284,6 +285,15 @@ export function FeaturesHero() {
           </div>
           <p className="mt-4 text-sm text-zinc-500">
             Guided trial with the Finza team · GHS · Built for Ghana
+          </p>
+          <p className="mt-2 text-sm text-zinc-500">
+            Prefer WhatsApp?{" "}
+            <WhatsAppCta
+              source="features"
+              label="Chat with Finza on WhatsApp"
+              className="font-semibold text-zinc-700 underline underline-offset-2 hover:text-zinc-950"
+              iconClassName="h-3.5 w-3.5 text-[#25D366]"
+            />
           </p>
         </div>
 
@@ -1046,7 +1056,13 @@ export function FeaturesFinalCtaSection() {
             </Link>
           </div>
           <p className="text-xs text-zinc-400">
-            Guided trial with the Finza team · Product tour available now
+            Guided trial with the Finza team · Product tour available now ·{" "}
+            <WhatsAppCta
+              source="features"
+              label="Chat on WhatsApp"
+              className="font-semibold text-zinc-300 underline underline-offset-2 hover:text-white"
+              iconClassName="h-3.5 w-3.5 text-[#25D366]"
+            />
           </p>
         </div>
       </Container>

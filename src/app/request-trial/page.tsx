@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
 import { GuidedTrialForm } from "@/components/guided-trial-form";
+import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { ProductProofSection } from "@/components/product-proof-section";
 import { GhanaProofChips, CONTACT_PROOF_CHIPS } from "@/components/site/ghana-proof-chips";
 import {
@@ -87,11 +88,19 @@ export default async function RequestTrialPage({
               understand your needs, and take you through Finza.
             </p>
             <div className="flex flex-col items-start gap-3 pt-1 sm:flex-row sm:items-center">
-              <Link href="#request-trial-form" className={homePrimaryBtn}>
-                Request a guided trial
+              <WhatsAppCta
+                source="request_trial"
+                label="Chat on WhatsApp"
+                className={homePrimaryBtn}
+                iconClassName="text-[#25D366]"
+              />
+              <Link href="#request-trial-form" className={homeSecondaryBtn}>
+                Request through form
               </Link>
-              <Link href="/product-tour" className={homeSecondaryBtn}>Explore the product tour</Link>
             </div>
+            <p className="text-sm text-zinc-500">
+              Both options start the same guided-trial conversation.
+            </p>
             <GhanaProofChips chips={CONTACT_PROOF_CHIPS} size="xs" />
           </div>
         </Container>

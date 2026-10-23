@@ -30,6 +30,7 @@ import {
   sectionLead,
   sectionTitle,
 } from "@/components/home/home-ui";
+import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { getGuidedTrialHref } from "@/lib/trial-request";
 import { homePageFaqForSchema } from "@/lib/schema";
 import {
@@ -370,11 +371,25 @@ export function HomeFinalCtaSection() {
             Tell us about your business and the Finza team will guide you through the product.
           </p>
           <div className="flex flex-col items-stretch justify-center gap-3 pt-1 sm:flex-row sm:items-center">
-            <Link href={getGuidedTrialHref("homepage")} className={homeHeroPrimaryBtn}>
+            <WhatsAppCta
+              source="homepage_footer"
+              label="Request a trial on WhatsApp"
+              className={homeHeroPrimaryBtn}
+              iconClassName="text-[#25D366]"
+            />
+            <Link href={getGuidedTrialHref("homepage")} className={homeHeroSecondaryBtn}>
               Request a guided trial
             </Link>
-            <Link href="/product-tour" className={homeHeroSecondaryBtn}>Explore the product tour</Link>
           </div>
+          <p className="text-xs text-zinc-400">
+            Guided trial with the Finza team ·{" "}
+            <Link
+              href="/product-tour"
+              className="font-semibold text-zinc-300 underline underline-offset-2 hover:text-white"
+            >
+              Explore the product tour
+            </Link>
+          </p>
         </div>
       </Container>
     </section>

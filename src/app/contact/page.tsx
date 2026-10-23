@@ -4,6 +4,7 @@ import { Container } from "@/components/container";
 import { Footer } from "@/components/footer";
 import { ContactForm } from "@/components/contact-form";
 import { RelatedClusterLinks } from "@/components/related-cluster-links";
+import { WhatsAppCta } from "@/components/whatsapp-cta";
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +16,7 @@ import { breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 import { GhanaProofChips, CONTACT_PROOF_CHIPS } from "@/components/site/ghana-proof-chips";
 import {
   homePrimaryBtn,
+  homeSecondaryBtn,
   sectionLead,
   sectionTitle,
   siteFormCard,
@@ -84,11 +86,17 @@ export default function ContactPage() {
               <Link href="/request-trial?from=contact" className={homePrimaryBtn}>
                 Request a guided trial
               </Link>
-              <p className="text-sm text-zinc-500">
-                Prefer to explore first?{" "}
-                <Link href="/product-tour" className="font-medium text-zinc-700 underline underline-offset-2">Explore the product tour</Link>
-              </p>
+              <WhatsAppCta
+                source="contact"
+                label="Chat on WhatsApp"
+                className={homeSecondaryBtn}
+                iconClassName="text-[#25D366]"
+              />
             </div>
+            <p className="text-sm text-zinc-500">
+              Prefer to explore first?{" "}
+              <Link href="/product-tour" className="font-medium text-zinc-700 underline underline-offset-2">Explore the product tour</Link>
+            </p>
             <GhanaProofChips chips={CONTACT_PROOF_CHIPS} size="xs" className="max-w-md md:hidden" />
           </div>
         </Container>
