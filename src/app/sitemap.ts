@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     staticEntry("https://www.finza.africa/product-tour", "monthly", 0.7),
     staticEntry("https://www.finza.africa/privacy", "yearly", 0.5),
     staticEntry("https://www.finza.africa/terms", "yearly", 0.5),
+    staticEntry("https://www.finza.africa/refund", "yearly", 0.5),
     staticEntry("https://www.finza.africa/about", "yearly", 0.65),
     staticEntry("https://www.finza.africa/security", "yearly", 0.65),
     staticEntry("https://www.finza.africa/contact", "yearly", 0.65),

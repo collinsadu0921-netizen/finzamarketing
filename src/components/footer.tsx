@@ -139,6 +139,11 @@ export async function Footer() {
                   Terms
                 </Link>
               </li>
+              <li>
+                <Link href="/refund" className="transition-colors hover:text-zinc-900">
+                  Refund policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
